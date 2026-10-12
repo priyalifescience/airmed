@@ -11,9 +11,9 @@ permissions:
 jobs:
   secrets:
     name: Secret scan
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0          # scan the full history, not just the last commit
           persist-credentials: false
@@ -27,13 +27,13 @@ jobs:
 
   tests:
     name: Tests and registry check
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: secrets
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Offline tests
