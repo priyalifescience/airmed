@@ -5,7 +5,7 @@ Thank you for helping. A few rules keep Airmed Éireann open, legal and safe.
 ## Before every commit
 
 ```
-python tools/secret_scan.py
+python tools/leak_scan.py
 python -m unittest discover -s tests -t .
 python -m airmed check
 ```

@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0          # scan the full history, not just the last commit
           persist-credentials: false
       - name: Airmed secret scan (tracked files)
-        run: python3 tools/secret_scan.py
+        run: python3 tools/leak_scan.py
       - name: Gitleaks (full history)
         run: |
           curl -sSfL -o gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz

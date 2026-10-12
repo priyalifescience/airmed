@@ -16,7 +16,7 @@ website code, which is a separate, private system.
 | Layer | What it does |
 |---|---|
 | `.gitignore` | Ignores secret-looking files and collected data |
-| `tools/secret_scan.py` | Blocks credential patterns and forbidden files; run before every commit and in CI |
+| `tools/leak_scan.py` | Blocks credential patterns and forbidden files; run before every commit and in CI |
 | Gitleaks in CI | Scans the **full git history** on every push and pull request |
 | Source registry | A collector refuses to run unless its source is `approved`, with licence and attribution recorded |
 | Field allow-list | Collectors request only the fields listed in the registry; personal-data field names are refused |
