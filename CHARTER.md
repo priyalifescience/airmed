@@ -1,11 +1,11 @@
-# Airmed Éireann: project charter
+# Airmid Éireann: project charter
 
-**Airmed Éireann: Ireland's Open Pharma Data Project**, by Priya Life Science.
-Data catalogue: **Tobar Airmed** ("Airmed's Well"). Tagline: *Ireland's well of open medicine data.*
+**Airmid Éireann: Ireland's Open Pharma Data Project**, by Priya Life Science.
+Data catalogue: **Tobar Airmid** ("Airmid's Well"). Tagline: *Ireland's well of open medicine data.*
 
 ## Why the name
 
-Airmed is a healer of the Tuatha Dé Danann in early Irish mythology. In *Cath Maige Tuired*, healing herbs
+Airmid is a healer of the Tuatha Dé Danann in early Irish mythology. In *Cath Maige Tuired*, healing herbs
 grow from her brother Miach's grave, and she gathers them onto her cloak and sorts them by their powers.
 This project gathers Ireland's scattered public medicine data and puts it in order.
 *Éireann* means "of Ireland"; *tobar* means "well".

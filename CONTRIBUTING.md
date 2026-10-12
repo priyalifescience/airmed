@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping. A few rules keep Airmed Éireann open, legal and safe.
+Thank you for helping. A few rules keep Airmid Éireann open, legal and safe.
 
 ## Before every commit
 

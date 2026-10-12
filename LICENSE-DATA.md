@@ -12,7 +12,7 @@ names the publisher, the licence, a link to the licence and the attribution to u
 | `hpra_medicines` | Health Products Regulatory Authority | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Source: Health Products Regulatory Authority (HPRA), CC BY 4.0. |
 
 Data compiled by Priya Life Science itself (for example, checked site locations) will be released under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), credited to "Airmed Éireann, Priya Life Science".
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), credited to "Airmid Éireann, Priya Life Science".
 
 Sources marked `blocked` in `sources/registry.json` are never collected or published here, and the
 registry says why.

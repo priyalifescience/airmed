@@ -34,12 +34,12 @@ def write_dataset(key: str, source: dict, fields: list, records: list, out_dir: 
     package = {
         "name": key.replace("_", "-"),
         "title": source["name"],
-        "description": f"Collected by Airmed Éireann from {source['publisher']}. {source['attribution']}",
+        "description": f"Collected by Airmid Éireann from {source['publisher']}. {source['attribution']}",
         "homepage": "https://priyalifescience.com/airmed",
         "created": retrieved,
         "sources": [{"title": source["publisher"], "path": source["endpoint"]}],
         "licenses": [{"title": source["licence"], "path": source["licence_url"]}],
-        "contributors": [{"title": "Priya Life Science (Airmed Éireann)", "role": "publisher"}],
+        "contributors": [{"title": "Priya Life Science (Airmid Éireann)", "role": "publisher"}],
         "resources": [
             {"name": key.replace("_", "-") + "-csv", "path": csv_path.name, "format": "csv", "mediatype": "text/csv",
              "encoding": "utf-8", "hash": "sha256:" + sha(csv_path),

@@ -1,8 +1,10 @@
-# Airmed Éireann
+![Airmid Éireann: Ireland's Open Pharma Data Project](docs/airmid-banner.jpg)
+
+# Airmid Éireann
 
 **Ireland's Open Pharma Data Project**, by [Priya Life Science](https://priyalifescience.com/airmed).
 
-*Ireland's well of open medicine data.* Airmed Éireann collects Ireland's public records on medicines,
+*Ireland's well of open medicine data.* Airmid Éireann collects Ireland's public records on medicines,
 clinical trials, approvals and shortages from official sources, checks them, and publishes them as open
 datasets, each with its source, licence and date.
 
@@ -48,5 +50,5 @@ Nothing here is medical advice.
 
 ## The name
 
-Airmed is a healer in early Irish mythology who gathered the healing herbs and sorted them by their powers.
-*Éireann* means "of Ireland"; the data catalogue is *Tobar Airmed*, "Airmed's Well".
+Airmid is a healer in early Irish mythology who gathered the healing herbs and sorted them by their powers.
+*Éireann* means "of Ireland"; the data catalogue is *Tobar Airmid*, "Airmid's Well".
