@@ -1,0 +1,39 @@
+# --- Secrets: never commit. CI (gitleaks) blocks them too. ---
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+*_key.json
+*key*.json
+*secret*
+*credential*
+*token*
+.ftp_pass
+.netrc
+id_rsa*
+id_ed25519*
+
+# --- Collected data: published only through a reviewed release, never by accident ---
+out/
+data/raw/
+data/cache/
+*.xml.gz
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

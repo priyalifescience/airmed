@@ -1,0 +1,16 @@
+[project]
+name = "airmed"
+version = "0.1.0"
+description = "Airmed Éireann: Ireland's open pharma data project. Collectors for public medicines, clinical-trial and regulatory data."
+readme = "README.md"
+license = { text = "EUPL-1.2" }
+requires-python = ">=3.10"
+dependencies = []   # standard library only, on purpose: nothing to audit but our own code
+authors = [{ name = "Priya Life Science", email = "info@priyalifescience.com" }]
+
+[project.urls]
+Homepage = "https://priyalifescience.com/airmed"
+Source = "https://github.com/priyalifescience/airmed"
+
+[project.scripts]
+airmed = "airmed.cli:main"

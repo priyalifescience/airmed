@@ -1,0 +1,68 @@
+{
+  "_about": "Every source Airmed may collect from. A collector refuses to run unless its source is listed here with status 'approved'. Changing a status needs a reviewed pull request that cites the licence page.",
+  "sources": {
+    "ctgov_ireland": {
+      "name": "ClinicalTrials.gov: studies with a site in Ireland",
+      "publisher": "U.S. National Library of Medicine",
+      "endpoint": "https://clinicaltrials.gov/api/v2/studies",
+      "licence": "Public data; see ClinicalTrials.gov Terms and Conditions",
+      "licence_url": "https://clinicaltrials.gov/about-site/terms-conditions",
+      "attribution": "Source: ClinicalTrials.gov, U.S. National Library of Medicine.",
+      "fields_kept": ["nct_id", "title", "phases", "overall_status", "lead_sponsor", "conditions", "start_date", "last_update"],
+      "fields_never": ["contacts", "investigators", "officials", "locations.contacts"],
+      "status": "approved"
+    },
+    "ema_shortages": {
+      "name": "EMA: medicine shortages (human)",
+      "publisher": "European Medicines Agency",
+      "endpoint": "https://www.ema.europa.eu/en/documents/report/shortages-output-json-report_en.json",
+      "licence": "EMA website content may be reused with acknowledgement of the source",
+      "licence_url": "https://www.ema.europa.eu/en/about-us/legal-notice",
+      "attribution": "Source: European Medicines Agency (EMA).",
+      "fields_kept": ["medicine", "inn", "status", "therapeutic_area", "forms", "strengths", "alternatives_available", "start_date", "expected_resolution", "first_published", "last_updated", "url"],
+      "fields_never": [],
+      "status": "approved"
+    },
+    "hpra_medicines": {
+      "name": "HPRA: human medicines authorised in Ireland",
+      "publisher": "Health Products Regulatory Authority",
+      "endpoint": "https://assets.hpra.ie/products/xml/latestHumanlist.xml",
+      "licence": "CC BY 4.0 (published on data.gov.ie)",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "Source: Health Products Regulatory Authority (HPRA), CC BY 4.0.",
+      "fields_kept": ["licence_number", "product_name", "holder", "authorised_date", "product_type", "market_status", "registration_status", "dosage_form", "atc_codes", "active_substances", "routes", "dispensing_status", "supply_status", "legal_basis"],
+      "fields_never": [],
+      "status": "approved"
+    },
+    "nice_ta": {
+      "name": "NICE technology appraisals",
+      "status": "blocked",
+      "reason": "Permission covers display on priyalifescience.com only, not redistribution."
+    },
+    "bfarm_shortages": {
+      "name": "BfArM medicine shortage notices (Germany)",
+      "status": "blocked",
+      "reason": "Written permission was given to Priya Life Science for its own pages only."
+    },
+    "jrct": {
+      "name": "Japan Registry of Clinical Trials",
+      "status": "blocked",
+      "reason": "MHLW approval covers Priya Life Science's own pages only."
+    },
+    "umin_ctr": {
+      "name": "UMIN Clinical Trials Registry",
+      "status": "blocked",
+      "reason": "Re-use refused (no use on a profit-making site)."
+    },
+    "eudragmdp": {
+      "name": "EudraGMDP GMP certificates",
+      "status": "blocked",
+      "reason": "No bulk re-use terms; waiting for written permission."
+    },
+    "yahoo_finance": {
+      "name": "Yahoo Finance prices",
+      "status": "blocked",
+      "reason": "Terms do not allow redistribution."
+    }
+  }
+}
