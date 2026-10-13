@@ -39,7 +39,9 @@ Options -Indexes
 DirectoryIndex index.html
 AddType text/csv .csv
 AddType text/markdown .md
-AddCharset utf-8 .csv .json .md .html
+AddType application/x-bibtex .bib
+AddType application/x-research-info-systems .ris
+AddCharset utf-8 .csv .json .md .html .bib .ris
 <IfModule mod_headers.c>
   Header set Access-Control-Allow-Origin "*"
   Header set Cache-Control "public, max-age=3600"
@@ -67,7 +69,8 @@ def _index_html(datasets: list, now: str) -> str:
         'a{color:#1F6B35}small{color:#4a6b55}</style></head><body>'
         f'<h1>Airmid Éireann · open data v1</h1><p>Release {html.escape(now)}. Machine-readable index: '
         '<a href="catalog.json">catalog.json</a> · <a href="DATA_DICTIONARY.md">data dictionary</a> · '
-        '<a href="CHANGELOG.md">changelog</a> · <a href="https://priyalifescience.com/airmed">about the project</a></p>'
+        '<a href="CHANGELOG.md">changelog</a> · <a href="https://priyalifescience.com/airmed">about the project</a> · '
+        'cite: <a href="citation.bib">BibTeX</a> · <a href="citation.ris">RIS</a></p>'
         '<p>Each dataset keeps the licence of its source. Credit the source and “Airmid Éireann, Priya Life Science”. '
         'Not medical advice.</p>'
         f'<table><tr><th>Dataset</th><th>Records</th><th>Files</th><th>Licence</th></tr>{rows}</table></body></html>')
@@ -168,6 +171,26 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
     (staged / "README.md").write_text("\n".join(readme), encoding="utf-8")
     (staged / "CHANGELOG.md").write_text("\n".join([f"# Release {now}", "", "| Dataset | Previous records | Records |", "|---|---|---|", *changes, ""]),
                                          encoding="utf-8")
+
+    # Citation files for reference managers (Zotero, Mendeley, EndNote, LaTeX).
+    year, day = now[:4], now[:10]
+    (staged / "citation.bib").write_text(
+        "@misc{airmid_eireann_" + day.replace("-", "") + ",\n"
+        "  author       = {{Priya Life Science}},\n"
+        "  title        = {Airmid {\\'E}ireann: Ireland's Open Pharma Data Project},\n"
+        f"  year         = {{{year}}},\n"
+        f"  version      = {{v1, release {day}}},\n"
+        "  howpublished = {Dataset},\n"
+        f"  url          = {{{base_url}catalog.json}},\n"
+        f"  urldate      = {{{day}}},\n"
+        "  note         = {Open datasets on medicines, clinical trials, approvals, shortages and the pharma industry; each dataset keeps the licence of its source}\n"
+        "}\n", encoding="utf-8")
+    (staged / "citation.ris").write_text("\r\n".join([
+        "TY  - DATA", "AU  - Priya Life Science", "TI  - Airmid Éireann: Ireland's Open Pharma Data Project",
+        f"PY  - {year}", f"DA  - {day.replace('-', '/')}", f"ET  - v1, release {day}", "PB  - Priya Life Science",
+        "CY  - Ireland", f"UR  - {base_url}catalog.json", "LA  - en",
+        "AB  - Open datasets on medicines, clinical trials, approvals, shortages and the pharma industry, collected from official public sources. Each dataset keeps the licence of its source.",
+        "KW  - open data", "KW  - pharmaceuticals", "KW  - clinical trials", "KW  - Ireland", "ER  - ", ""]), encoding="utf-8")
 
     (staged / "index.html").write_text(_index_html(datasets, now), encoding="utf-8")
     (staged / ".htaccess").write_text(HTACCESS, encoding="utf-8")

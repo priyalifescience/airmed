@@ -1,0 +1,16 @@
+{
+  "title": "Airmid Éireann: Ireland's Open Pharma Data Project",
+  "description": "<p>Collectors and release builder for Airmid Éireann, an open-data project by Priya Life Science. It gathers public records on medicines, clinical trials, approvals, shortages and the pharmaceutical industry from official sources (HPRA, EMA, U.S. FDA, CSO, ClinicalTrials.gov, Health Canada, NIH) and publishes them as CSV and JSON with source licences, a data dictionary and checksums.</p><p>The data itself is published at <a href=\"https://priyalifescience.com/opendata/airmid/v1/\">priyalifescience.com/opendata/airmid/v1</a>. Each dataset keeps the licence of its source. Not medical advice.</p>",
+  "upload_type": "software",
+  "creators": [
+    {"name": "Priya Life Science"}
+  ],
+  "license": "EUPL-1.2",
+  "keywords": ["open data", "pharmaceuticals", "medicines", "clinical trials", "Ireland", "drug shortages", "regulatory approvals", "EMA", "FDA", "HPRA"],
+  "related_identifiers": [
+    {"identifier": "https://priyalifescience.com/airmed", "relation": "isDocumentedBy", "resource_type": "other"},
+    {"identifier": "https://priyalifescience.com/opendata/airmid/v1/catalog.json", "relation": "isSupplementTo", "resource_type": "dataset"}
+  ],
+  "language": "eng",
+  "access_right": "open"
+}
