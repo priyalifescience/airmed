@@ -41,13 +41,13 @@ Code: EUPL-1.2. Data: each source's own licence; data compiled by Priya Life Sci
 
 Maintainer: Priya Life Science (founder: Sreepriya). Changes arrive as pull requests; a maintainer reviews
 each one. Adding or approving a source needs a pull request that cites the licence page.
-The repository stays private until the maintainers approve making it public.
+The maintainers approved making the repository public on 13 October 2026.
 
 ## Roadmap (targets)
 
 | When | Milestone |
 |---|---|
-| October 2026 | Charter, source registry, first three collectors, secret scanning |
-| December 2026 | First public release of datasets (CSV, JSON, datapackage) with a Zenodo DOI |
-| Early 2027 | Repository public; versioned JSON files as a simple API |
+| October 2026 | Charter, source registry, collectors, secret scanning; first data release (10 datasets); repository public |
+| Late 2026 | Zenodo DOIs for the data and the code; more collectors |
+| Early 2027 | Patents, sites and company data; more countries |
 | 2027 | More sources and countries; a rate-limited live API; outside contributors |
