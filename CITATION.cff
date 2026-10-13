@@ -10,7 +10,7 @@ authors:
   - name: "Priya Life Science"
     website: "https://priyalifescience.com"
     email: "info@priyalifescience.com"
-version: "v1"
+version: "1.0.0"
 date-released: "2026-10-13"
 url: "https://priyalifescience.com/airmed"
 repository-artifact: "https://priyalifescience.com/opendata/airmid/v1/catalog.json"
