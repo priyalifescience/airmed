@@ -32,6 +32,47 @@ class ReleaseRefused(Exception):
     pass
 
 
+# Served with the files on the website: static only, no site rewrites, no directory listing, readable by other apps.
+HTACCESS = """# Static open-data files (Airmid Éireann release)
+RewriteEngine Off
+Options -Indexes
+DirectoryIndex index.html
+AddType text/csv .csv
+AddType text/markdown .md
+AddCharset utf-8 .csv .json .md .html
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+  Header set Cache-Control "public, max-age=3600"
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
+"""
+
+
+def _index_html(datasets: list, now: str) -> str:
+    """A plain, script-free page listing the release for people who open the folder in a browser."""
+    import html
+    rows = "".join(
+        f'<tr><td><b>{html.escape(d["title"])}</b><br><small>{html.escape(d["attribution"])}</small></td>'
+        f'<td>{d["records"]:,}</td>'
+        f'<td><a href="{d["key"]}/{d["key"]}.csv">CSV</a> · <a href="{d["key"]}/{d["key"]}.json">JSON</a> · '
+        f'<a href="{d["key"]}/datapackage.json">datapackage</a></td>'
+        f'<td><a href="{html.escape(d["licence_url"])}">{html.escape(d["licence"])}</a></td></tr>'
+        for d in datasets)
+    return (
+        '<!doctype html><html lang="en-IE"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<title>Airmid Éireann open data, v1</title><link rel="canonical" href="https://priyalifescience.com/airmed">'
+        '<style>body{font:15px/1.6 system-ui,sans-serif;max-width:1100px;margin:40px auto;padding:0 16px;color:#0B3D1E;background:#F1F3EE}'
+        'table{width:100%;border-collapse:collapse}td,th{padding:10px;border-bottom:1px dashed #9bb3a2;text-align:left;vertical-align:top}'
+        'a{color:#1F6B35}small{color:#4a6b55}</style></head><body>'
+        f'<h1>Airmid Éireann · open data v1</h1><p>Release {html.escape(now)}. Machine-readable index: '
+        '<a href="catalog.json">catalog.json</a> · <a href="DATA_DICTIONARY.md">data dictionary</a> · '
+        '<a href="CHANGELOG.md">changelog</a> · <a href="https://priyalifescience.com/airmed">about the project</a></p>'
+        '<p>Each dataset keeps the licence of its source. Credit the source and “Airmid Éireann, Priya Life Science”. '
+        'Not medical advice.</p>'
+        f'<table><tr><th>Dataset</th><th>Records</th><th>Files</th><th>Licence</th></tr>{rows}</table></body></html>')
+
+
 def _sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -127,6 +168,9 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
     (staged / "README.md").write_text("\n".join(readme), encoding="utf-8")
     (staged / "CHANGELOG.md").write_text("\n".join([f"# Release {now}", "", "| Dataset | Previous records | Records |", "|---|---|---|", *changes, ""]),
                                          encoding="utf-8")
+
+    (staged / "index.html").write_text(_index_html(datasets, now), encoding="utf-8")
+    (staged / ".htaccess").write_text(HTACCESS, encoding="utf-8")
 
     if dist.exists():
         shutil.rmtree(dist)
