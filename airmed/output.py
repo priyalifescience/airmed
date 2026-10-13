@@ -47,8 +47,9 @@ def write_dataset(key: str, source: dict, fields: list, records: list, out_dir: 
             {"name": key.replace("_", "-") + "-json", "path": json_path.name, "format": "json", "mediatype": "application/json",
              "hash": "sha256:" + sha(json_path)},
         ],
-        "airmed": {"records": len(records), "values_blanked_by_privacy_guard": stats.get("blanked", 0)},
+        "airmed": {"records": len(records), "values_blanked_by_privacy_guard": stats.get("blanked", 0),
+                   "blanked_by_field": stats.get("by_field", {})},
     }
     with open(out / "datapackage.json", "w", encoding="utf-8") as f:
         json.dump(package, f, ensure_ascii=False, indent=1)
-    return {"dir": str(out), "records": len(records), "blanked": stats.get("blanked", 0)}
+    return {"dir": str(out), "records": len(records), "blanked": stats.get("blanked", 0), "by_field": stats.get("by_field", {})}

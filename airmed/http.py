@@ -3,6 +3,7 @@
 No API keys, tokens or cookies are ever sent. Only https URLs are allowed.
 """
 
+import json
 import time
 import urllib.error
 import urllib.request
@@ -14,7 +15,8 @@ PAUSE_SECONDS = 1.0
 _last_request = 0.0
 
 
-def fetch(url: str, timeout: int = 60, retries: int = 3) -> bytes:
+def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, headers: dict = None) -> bytes:
+    """GET (or POST when `data` is given) and return the body."""
     if not url.startswith("https://"):
         raise ValueError("only https URLs are allowed")
     global _last_request
@@ -23,7 +25,7 @@ def fetch(url: str, timeout: int = 60, retries: int = 3) -> bytes:
         if wait > 0:
             time.sleep(wait)
         _last_request = time.monotonic()
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
+        req = urllib.request.Request(url, data=data, headers={"User-Agent": USER_AGENT, "Accept": "*/*", **(headers or {})})
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return resp.read()
@@ -36,3 +38,11 @@ def fetch(url: str, timeout: int = 60, retries: int = 3) -> bytes:
                 raise
         time.sleep(5 * attempt)
     raise RuntimeError("unreachable")
+
+
+def fetch_json(url: str, timeout: int = 60, body: dict = None):
+    """GET JSON, or POST `body` as JSON and return the decoded reply."""
+    if body is None:
+        return json.loads(fetch(url, timeout=timeout))
+    return json.loads(fetch(url, timeout=timeout, data=json.dumps(body).encode("utf-8"),
+                            headers={"Content-Type": "application/json"}))

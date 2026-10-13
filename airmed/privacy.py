@@ -13,8 +13,15 @@ FORBIDDEN_FIELD_WORDS = (
 )
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
-# International or Irish-looking phone numbers: + or 0 followed by 8+ digits, spaces/dashes/brackets allowed
-PHONE_RE = re.compile(r"(?<![\w/])(?:\+|00|0)\d[\d\s().-]{7,}\d(?![\w/])")
+# Phone numbers in the formats people actually write them. Deliberately NOT "any long run of digits": product
+# codes such as NDC 0641-6024-10, licence numbers and EMA ids are data, and must survive (see tests).
+PHONE_RE = re.compile(
+    r"(?<![\w/-])(?:"
+    r"\+\d{1,3}[\s.-]?\(?\d{1,4}\)?(?:[\s.-]?\d{2,4}){2,4}"       # +353 1 234 5678, +1-866-850-2876
+    r"|\(\d{3}\)\s?\d{3}[\s.-]\d{4}"                            # (866) 850-2876
+    r"|\d{3}[\s.-]\d{3}[\s.-]\d{4}"                               # 866-850-2876, 866.850.2876
+    r"|0\d{1,4}\s\d{3,4}\s?\d{3,4}"                                # 01 234 5678, 087 123 4567
+    r")(?![\w/-])")
 
 
 class ForbiddenField(Exception):
@@ -29,17 +36,20 @@ def check_fields(fields) -> None:
                 raise ForbiddenField(f"field {name!r} looks like personal or contact data ({word!r})")
 
 
-def _scrub(value, stats: dict):
+def _scrub(value, stats: dict, field: str = ""):
     if isinstance(value, str):
-        if EMAIL_RE.search(value) or PHONE_RE.search(value):
+        is_url = value.startswith(("http://", "https://"))
+        if EMAIL_RE.search(value) or (not is_url and PHONE_RE.search(value)):
             stats["blanked"] = stats.get("blanked", 0) + 1
+            by = stats.setdefault("by_field", {})
+            by[field] = by.get(field, 0) + 1
             return ""
         return value
     if isinstance(value, list):
-        return [_scrub(v, stats) for v in value]
+        return [_scrub(v, stats, field) for v in value]
     return value
 
 
 def clean_record(record: dict, stats: dict) -> dict:
     check_fields(record.keys())
-    return {k: _scrub(v, stats) for k, v in record.items()}
+    return {k: _scrub(v, stats, k) for k, v in record.items()}

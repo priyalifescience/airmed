@@ -10,15 +10,22 @@ datasets, each with its source, licence and date.
 
 > **Status: in development.** First public data release planned for December 2026.
 
-## What it collects today
+## What it collects
 
 | Source key | Dataset | Publisher | Licence |
 |---|---|---|---|
 | `ctgov_ireland` | Clinical trials with a site in Ireland | ClinicalTrials.gov (U.S. NLM) | Public data |
-| `ema_shortages` | Medicine shortages in the EU | European Medicines Agency | Re-use with credit |
 | `hpra_medicines` | Human medicines authorised in Ireland | HPRA | CC BY 4.0 |
+| `ema_shortages` | Medicine shortages in the EU | European Medicines Agency | Re-use with credit |
+| `ema_medicines` | Human medicines evaluated by the EMA | European Medicines Agency | Re-use with credit |
+| `ema_orphans` | EU orphan designations | European Medicines Agency | Re-use with credit |
+| `fda_shortages` | US drug shortages | U.S. FDA (openFDA) | Public domain |
+| `fda_approvals` | US original approvals since 2021 | U.S. FDA (Drugs@FDA) | Public domain |
+| `hc_approvals` | Health Canada new drug approvals since 2016 | Health Canada | Open Government Licence – Canada |
+| `cso_pharma_exports` | Irish pharma exports by country, monthly | Central Statistics Office | CC BY 4.0 |
+| `nih_ireland` | NIH awards to organisations in Ireland | U.S. NIH | Public domain |
 
-Full details, and the sources we will **not** collect and why: [`sources/registry.json`](sources/registry.json)
+Full details, field descriptions, and the sources we will **not** collect and why: [`sources/registry.json`](sources/registry.json)
 and [`LICENSE-DATA.md`](LICENSE-DATA.md).
 
 ## Quick start
@@ -29,7 +36,12 @@ Python 3.10+ and nothing else (standard library only).
 python -m airmed list            # every source and its status
 python -m airmed run all         # collect all approved sources into ./out
 python -m airmed run hpra_medicines --out mydata
+python -m airmed release --src out --dist dist/v1   # build a publishable release
 ```
+
+A release adds `catalog.json` (every dataset, its licence, record count, fields and file links), a data dictionary
+and a changelog. It is refused if a source is missing, a dataset shrank by more than 20%, or a contact-like value
+slipped through.
 
 Each dataset is written as CSV and JSON plus a `datapackage.json` (Frictionless Data) recording the
 publisher, licence, retrieval time and file checksums.

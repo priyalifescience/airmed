@@ -8,9 +8,33 @@
       "licence": "Public data; see ClinicalTrials.gov Terms and Conditions",
       "licence_url": "https://clinicaltrials.gov/about-site/terms-conditions",
       "attribution": "Source: ClinicalTrials.gov, U.S. National Library of Medicine.",
-      "fields_kept": ["nct_id", "title", "phases", "overall_status", "lead_sponsor", "conditions", "start_date", "last_update"],
-      "fields_never": ["contacts", "investigators", "officials", "locations.contacts"],
-      "status": "approved"
+      "fields_kept": [
+        "nct_id",
+        "title",
+        "phases",
+        "overall_status",
+        "lead_sponsor",
+        "conditions",
+        "start_date",
+        "last_update"
+      ],
+      "fields_never": [
+        "contacts",
+        "investigators",
+        "officials",
+        "locations.contacts"
+      ],
+      "status": "approved",
+      "field_docs": {
+        "nct_id": "ClinicalTrials.gov identifier",
+        "title": "Brief study title",
+        "phases": "Trial phase(s); NA = not applicable",
+        "overall_status": "Recruitment status as registered",
+        "lead_sponsor": "Lead sponsor organisation",
+        "conditions": "Conditions studied",
+        "start_date": "Study start date (YYYY-MM or YYYY-MM-DD)",
+        "last_update": "Date the record was last updated on ClinicalTrials.gov"
+      }
     },
     "ema_shortages": {
       "name": "EMA: medicine shortages (human)",
@@ -19,9 +43,36 @@
       "licence": "EMA website content may be reused with acknowledgement of the source",
       "licence_url": "https://www.ema.europa.eu/en/about-us/legal-notice",
       "attribution": "Source: European Medicines Agency (EMA).",
-      "fields_kept": ["medicine", "inn", "status", "therapeutic_area", "forms", "strengths", "alternatives_available", "start_date", "expected_resolution", "first_published", "last_updated", "url"],
+      "fields_kept": [
+        "medicine",
+        "inn",
+        "status",
+        "therapeutic_area",
+        "forms",
+        "strengths",
+        "alternatives_available",
+        "start_date",
+        "expected_resolution",
+        "first_published",
+        "last_updated",
+        "url"
+      ],
       "fields_never": [],
-      "status": "approved"
+      "status": "approved",
+      "field_docs": {
+        "medicine": "Medicine affected",
+        "inn": "International non-proprietary name or common name",
+        "status": "Shortage status",
+        "therapeutic_area": "Therapeutic areas (MeSH)",
+        "forms": "Pharmaceutical forms affected",
+        "strengths": "Strengths affected",
+        "alternatives_available": "Whether alternatives are available",
+        "start_date": "Start of the shortage",
+        "expected_resolution": "Expected resolution",
+        "first_published": "First published by EMA",
+        "last_updated": "Last updated by EMA",
+        "url": "EMA shortage page"
+      }
     },
     "hpra_medicines": {
       "name": "HPRA: human medicines authorised in Ireland",
@@ -30,9 +81,295 @@
       "licence": "CC BY 4.0 (published on data.gov.ie)",
       "licence_url": "https://creativecommons.org/licenses/by/4.0/",
       "attribution": "Source: Health Products Regulatory Authority (HPRA), CC BY 4.0.",
-      "fields_kept": ["licence_number", "product_name", "holder", "authorised_date", "product_type", "market_status", "registration_status", "dosage_form", "atc_codes", "active_substances", "routes", "dispensing_status", "supply_status", "legal_basis"],
+      "fields_kept": [
+        "licence_number",
+        "product_name",
+        "holder",
+        "authorised_date",
+        "product_type",
+        "market_status",
+        "registration_status",
+        "dosage_form",
+        "atc_codes",
+        "active_substances",
+        "routes",
+        "dispensing_status",
+        "supply_status",
+        "legal_basis"
+      ],
       "fields_never": [],
-      "status": "approved"
+      "status": "approved",
+      "field_docs": {
+        "licence_number": "HPRA product licence number (PA, EU or other)",
+        "product_name": "Product name",
+        "holder": "Licence holder",
+        "authorised_date": "Date first authorised",
+        "product_type": "HPRA product type code",
+        "market_status": "Marketed or not marketed",
+        "registration_status": "HPRA registration status code",
+        "dosage_form": "Pharmaceutical form",
+        "atc_codes": "ATC classification codes",
+        "active_substances": "Active substances",
+        "routes": "Routes of administration",
+        "dispensing_status": "Legal dispensing status",
+        "supply_status": "Legal supply status",
+        "legal_basis": "Legal basis of the authorisation"
+      }
+    },
+    "ema_medicines": {
+      "name": "EMA: human medicines evaluated by the European Medicines Agency",
+      "publisher": "European Medicines Agency",
+      "endpoint": "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines_json-report_en.json",
+      "licence": "EMA website content may be reused with acknowledgement of the source",
+      "licence_url": "https://www.ema.europa.eu/en/about-us/legal-notice",
+      "attribution": "Source: European Medicines Agency (EMA).",
+      "fields_kept": [
+        "ema_product_number",
+        "medicine_name",
+        "inn",
+        "active_substance",
+        "status",
+        "holder",
+        "atc_code",
+        "therapeutic_area",
+        "authorisation_date",
+        "orphan",
+        "biosimilar",
+        "generic",
+        "conditional_approval",
+        "exceptional_circumstances",
+        "accelerated_assessment",
+        "prime",
+        "advanced_therapy",
+        "additional_monitoring",
+        "url",
+        "last_updated"
+      ],
+      "fields_never": [
+        "therapeutic_indication (product information text)"
+      ],
+      "status": "approved",
+      "field_docs": {
+        "ema_product_number": "EMA product number",
+        "medicine_name": "Name of the medicine",
+        "inn": "International non-proprietary name or common name",
+        "active_substance": "Active substance",
+        "status": "Authorisation status",
+        "holder": "Marketing authorisation holder / applicant",
+        "atc_code": "ATC code",
+        "therapeutic_area": "Therapeutic areas (MeSH)",
+        "authorisation_date": "Marketing authorisation date",
+        "orphan": "Orphan medicine (yes/no)",
+        "biosimilar": "Biosimilar (yes/no)",
+        "generic": "Generic (yes/no)",
+        "conditional_approval": "Conditional marketing authorisation (yes/no)",
+        "exceptional_circumstances": "Authorised under exceptional circumstances (yes/no)",
+        "accelerated_assessment": "Accelerated assessment (yes/no)",
+        "prime": "PRIME priority medicine (yes/no)",
+        "advanced_therapy": "Advanced therapy medicinal product (yes/no)",
+        "additional_monitoring": "Under additional monitoring (yes/no)",
+        "url": "EMA medicine page",
+        "last_updated": "Last updated by EMA"
+      }
+    },
+    "ema_orphans": {
+      "name": "EMA: EU orphan designations",
+      "publisher": "European Medicines Agency",
+      "endpoint": "https://www.ema.europa.eu/en/documents/report/medicines-output-orphan_designations-json-report_en.json",
+      "licence": "EMA website content may be reused with acknowledgement of the source",
+      "licence_url": "https://www.ema.europa.eu/en/about-us/legal-notice",
+      "attribution": "Source: European Medicines Agency (EMA).",
+      "fields_kept": [
+        "eu_designation_number",
+        "medicine_name",
+        "active_substance",
+        "intended_use",
+        "status",
+        "designation_date",
+        "related_ema_product_number",
+        "url",
+        "last_updated"
+      ],
+      "fields_never": [],
+      "status": "approved",
+      "field_docs": {
+        "eu_designation_number": "EU orphan designation number",
+        "medicine_name": "Medicine name",
+        "active_substance": "Active substance",
+        "intended_use": "Condition the designation is for",
+        "status": "Designation status",
+        "designation_date": "Date of designation or refusal",
+        "related_ema_product_number": "Related EMA product number, if authorised",
+        "url": "EMA designation page",
+        "last_updated": "Last updated by EMA"
+      }
+    },
+    "fda_shortages": {
+      "name": "US FDA: drug shortages",
+      "publisher": "U.S. Food and Drug Administration (openFDA)",
+      "endpoint": "https://api.fda.gov/drug/shortages.json",
+      "licence": "Public domain (U.S. government work); see openFDA terms",
+      "licence_url": "https://open.fda.gov/terms/",
+      "attribution": "Source: U.S. Food and Drug Administration, openFDA. Not endorsed by the FDA.",
+      "fields_kept": [
+        "package_ndc",
+        "generic_name",
+        "company_name",
+        "presentation",
+        "dosage_form",
+        "therapeutic_category",
+        "status",
+        "availability",
+        "shortage_reason",
+        "initial_posting_date",
+        "update_date",
+        "discontinued_date"
+      ],
+      "fields_never": [
+        "contact_info (company phone numbers)"
+      ],
+      "status": "approved",
+      "field_docs": {
+        "package_ndc": "National Drug Code of the affected package",
+        "generic_name": "Generic name",
+        "company_name": "Company",
+        "presentation": "Presentation (strength and pack)",
+        "dosage_form": "Dosage form",
+        "therapeutic_category": "FDA therapeutic categories",
+        "status": "Shortage status (e.g. Current, Resolved, To Be Discontinued)",
+        "availability": "Availability of the package",
+        "shortage_reason": "Reason given",
+        "initial_posting_date": "First posted by FDA",
+        "update_date": "Last updated by FDA",
+        "discontinued_date": "Discontinuation date, if any"
+      }
+    },
+    "fda_approvals": {
+      "name": "US FDA: original approvals since 2021 (Drugs@FDA)",
+      "publisher": "U.S. Food and Drug Administration (openFDA)",
+      "endpoint": "https://api.fda.gov/drug/drugsfda.json",
+      "licence": "Public domain (U.S. government work); see openFDA terms",
+      "licence_url": "https://open.fda.gov/terms/",
+      "attribution": "Source: U.S. Food and Drug Administration, Drugs@FDA via openFDA. Not endorsed by the FDA.",
+      "fields_kept": [
+        "application_number",
+        "application_type",
+        "sponsor_name",
+        "brand_names",
+        "active_ingredients",
+        "dosage_forms",
+        "routes",
+        "approval_date",
+        "review_priority",
+        "submission_class"
+      ],
+      "fields_never": [],
+      "status": "approved",
+      "field_docs": {
+        "application_number": "FDA application number",
+        "application_type": "NDA (new drug), BLA (biologic) or ANDA (generic)",
+        "sponsor_name": "Sponsor",
+        "brand_names": "Brand names of the products",
+        "active_ingredients": "Active ingredients",
+        "dosage_forms": "Dosage forms",
+        "routes": "Routes",
+        "approval_date": "Approval date of the original submission",
+        "review_priority": "STANDARD or PRIORITY review",
+        "submission_class": "Submission class (e.g. Type 1 - New Molecular Entity)"
+      }
+    },
+    "hc_approvals": {
+      "name": "Health Canada: New Drug Submission approvals since 2016",
+      "publisher": "Health Canada",
+      "endpoint": "https://health-products.canada.ca/api/notice-of-compliance/",
+      "licence": "Open Government Licence - Canada",
+      "licence_url": "https://open.canada.ca/en/open-government-licence-canada",
+      "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: Health Canada, Notice of Compliance database.",
+      "fields_kept": [
+        "noc_number",
+        "noc_date",
+        "company",
+        "submission_type",
+        "submission_class",
+        "product_type",
+        "therapeutic_class",
+        "brand_names",
+        "ingredients",
+        "with_conditions"
+      ],
+      "fields_never": [],
+      "status": "approved",
+      "field_docs": {
+        "noc_number": "Notice of Compliance number",
+        "noc_date": "Date of the Notice of Compliance",
+        "company": "Manufacturer",
+        "submission_type": "Submission type (NDS = New Drug Submission)",
+        "submission_class": "Submission class",
+        "product_type": "Product type",
+        "therapeutic_class": "Therapeutic class",
+        "brand_names": "Brand names",
+        "ingredients": "Medicinal ingredients",
+        "with_conditions": "Issued with conditions (yes/no)"
+      }
+    },
+    "cso_pharma_exports": {
+      "name": "CSO: Irish exports of medicinal and pharmaceutical products by country (TSM10)",
+      "publisher": "Central Statistics Office, Ireland",
+      "endpoint": "https://ws.cso.ie/public/api.jsonrpc",
+      "licence": "CC BY 4.0",
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "Source: Central Statistics Office, Ireland (table TSM10), CC BY 4.0.",
+      "fields_kept": [
+        "month",
+        "country_code",
+        "country",
+        "exports_eur_thousand"
+      ],
+      "fields_never": [],
+      "status": "approved",
+      "field_docs": {
+        "month": "Month (YYYY-MM)",
+        "country_code": "CSO country or territory code",
+        "country": "Destination country or territory",
+        "exports_eur_thousand": "Value of exports of SITC 54 medicinal and pharmaceutical products, euro thousand; empty = not published"
+      }
+    },
+    "nih_ireland": {
+      "name": "NIH RePORTER: US NIH awards to organisations in Ireland",
+      "publisher": "U.S. National Institutes of Health",
+      "endpoint": "https://api.reporter.nih.gov/v2/projects/search",
+      "licence": "Public domain (U.S. government work); see NIH RePORTER terms",
+      "licence_url": "https://reporter.nih.gov/faqs",
+      "attribution": "Source: NIH RePORTER, U.S. National Institutes of Health.",
+      "fields_kept": [
+        "project_number",
+        "fiscal_year",
+        "organisation",
+        "city",
+        "award_usd",
+        "institute",
+        "activity_code",
+        "project_title",
+        "project_start",
+        "project_end"
+      ],
+      "fields_never": [
+        "principal investigators",
+        "program officers"
+      ],
+      "status": "approved",
+      "field_docs": {
+        "project_number": "NIH project number",
+        "fiscal_year": "US federal fiscal year",
+        "organisation": "Organisation in Ireland",
+        "city": "City",
+        "award_usd": "Award amount for the fiscal year, US dollars",
+        "institute": "Administering NIH institute or centre",
+        "activity_code": "NIH activity code",
+        "project_title": "Project title",
+        "project_start": "Project start date",
+        "project_end": "Project end date"
+      }
     },
     "nice_ta": {
       "name": "NICE technology appraisals",

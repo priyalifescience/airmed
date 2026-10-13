@@ -54,6 +54,23 @@ class TestPrivacy(unittest.TestCase):
         self.assertEqual(stats["blanked"], 2)
 
 
+class TestPrivacyPrecision(unittest.TestCase):
+    """The guard must catch real phone numbers but never eat identifiers that look like long digit runs."""
+    def test_phones_caught(self):
+        from airmed.privacy import PHONE_RE
+        for v in ["+353 1 234 5678", "+1-866-850-2876", "866-850-2876", "(866) 850-2876", "Call 01 234 5678", "087 123 4567"]:
+            self.assertTrue(PHONE_RE.search(v), v)
+
+    def test_identifiers_kept(self):
+        stats = {}
+        keep = {"package_ndc": "0641-6024-10", "presentation": "Fentanyl Citrate, Injection, 50 ug/1 mL (NDC 0641-6024-10)",
+                "url": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/ema-od-0000149115",
+                "licence_number": "PA0736/003/003", "noc_number": "2026-01-15", "eu_designation_number": "EU/3/24/2954",
+                "application_number": "ANDA202725", "start_date": "2026-04-23"}
+        self.assertEqual(clean_record(keep, stats), keep)
+        self.assertEqual(stats.get("blanked", 0), 0)
+
+
 class TestParsers(unittest.TestCase):
     def test_ctgov(self):
         raw = json.dumps({"totalCount": 1, "studies": [{"protocolSection": {
@@ -111,3 +128,53 @@ class TestOutput(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestRelease(unittest.TestCase):
+    """The release builder must refuse anything unsafe or broken. Offline: small hand-made datasets."""
+
+    def _collect(self, root, override=None):
+        from airmed.collectors import ALL
+        for key, mod in ALL.items():
+            recs = (override or {}).get(key, [{f: "x" for f in mod.FIELDS} for _ in range(10)])
+            write_dataset(key, approved_source(key), mod.FIELDS, recs, Path(root), {})
+
+    def test_full_release_builds_catalog(self):
+        from airmed.release import build
+        with tempfile.TemporaryDirectory() as d:
+            self._collect(Path(d) / "out")
+            res = build(Path(d) / "out", Path(d) / "dist" / "v1")
+            cat = json.loads((Path(d) / "dist" / "v1" / "catalog.json").read_text(encoding="utf-8"))
+            self.assertEqual(res["datasets"], len(cat["datasets"]))
+            for ds in cat["datasets"]:
+                self.assertTrue(ds["licence_url"].startswith("https://"))
+                self.assertTrue(all(f["description"] for f in ds["fields"]), ds["key"])
+
+    def test_missing_dataset_refused(self):
+        from airmed.release import ReleaseRefused, build
+        with tempfile.TemporaryDirectory() as d:
+            self._collect(Path(d) / "out")
+            import shutil
+            shutil.rmtree(Path(d) / "out" / "nih_ireland")
+            with self.assertRaises(ReleaseRefused):
+                build(Path(d) / "out", Path(d) / "dist" / "v1")
+
+    def test_big_shrink_refused(self):
+        from airmed.release import ReleaseRefused, build
+        with tempfile.TemporaryDirectory() as d:
+            self._collect(Path(d) / "out")
+            build(Path(d) / "out", Path(d) / "dist" / "v1")
+            from airmed.collectors import ema_shortages
+            self._collect(Path(d) / "out2", {"ema_shortages": [{f: "x" for f in ema_shortages.FIELDS}]})
+            with self.assertRaises(ReleaseRefused):
+                build(Path(d) / "out2", Path(d) / "dist" / "v1")
+
+    def test_contact_details_refused_at_release(self):
+        from airmed.release import ReleaseRefused, build
+        from airmed.collectors import nih_ireland
+        with tempfile.TemporaryDirectory() as d:
+            bad = [{f: "x" for f in nih_ireland.FIELDS} for _ in range(10)]
+            bad[0]["project_title"] = "write to pi@example.ie"
+            self._collect(Path(d) / "out", {"nih_ireland": bad})
+            with self.assertRaises(ReleaseRefused):
+                build(Path(d) / "out", Path(d) / "dist" / "v1")

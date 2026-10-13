@@ -45,6 +45,9 @@ def main(argv=None) -> int:
     r = sub.add_parser("run")
     r.add_argument("source")
     r.add_argument("--out", default="out")
+    rel = sub.add_parser("release")
+    rel.add_argument("--src", default="out")
+    rel.add_argument("--dist", default="dist/v1")
     a = ap.parse_args(argv)
     if a.cmd == "list":
         for key, s in load_registry().items():
@@ -52,6 +55,15 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "check":
         return check()
+    if a.cmd == "release":
+        from .release import ReleaseRefused, build
+        try:
+            res = build(Path(a.src), Path(a.dist))
+        except ReleaseRefused as e:
+            print(f"REFUSED  {e}")
+            return 1
+        print(f"ok    release: {res['datasets']} datasets, {res['records']:,} records -> {res['dist']}")
+        return 0
     keys = list(ALL) if a.source == "all" else [a.source]
     rc = 0
     for key in keys:
@@ -61,7 +73,8 @@ def main(argv=None) -> int:
             continue
         try:
             res = run_one(key, Path(a.out))
-            print(f"ok    {key}: {res['records']} records -> {res['dir']} ({res['blanked']} values blanked by privacy guard)")
+            print(f"ok    {key}: {res['records']} records -> {res['dir']} ({res['blanked']} values blanked by privacy guard"
+                  + (f": {res['by_field']}" if res['by_field'] else "") + ")")
         except Exception as e:
             print(f"FAIL  {key}: {e}")
             rc = 1
