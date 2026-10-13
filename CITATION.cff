@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use these data or this software, please cite them as below, and credit the original data sources."
-type: dataset
+type: software
 title: "Airmid Éireann: Ireland's Open Pharma Data Project"
 abstract: >-
   Open datasets on medicines, clinical trials, approvals, shortages and the pharmaceutical industry,
@@ -11,6 +11,17 @@ authors:
     website: "https://priyalifescience.com"
     email: "info@priyalifescience.com"
 version: "1.0.0"
+doi: "10.5281/zenodo.23336432"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23336432"
+    description: "Concept DOI: all versions, archived on Zenodo"
+  - type: doi
+    value: "10.5281/zenodo.23336433"
+    description: "Version 1.0.0"
+  - type: url
+    value: "https://priyalifescience.com/opendata/airmid/v1/catalog.json"
+    description: "Live open data release (catalog)"
 date-released: "2026-10-13"
 url: "https://priyalifescience.com/airmed"
 repository-artifact: "https://priyalifescience.com/opendata/airmid/v1/catalog.json"

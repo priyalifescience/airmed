@@ -15,6 +15,7 @@
   <a href="https://priyalifescience.com/opendata/airmid/v1/catalog.json"><img alt="Datasets: 10" src="https://img.shields.io/badge/datasets-10-0B3D1E?style=for-the-badge"></a>
   <a href="https://priyalifescience.com/opendata/airmid/v1/CHANGELOG.md"><img alt="Refresh: weekly" src="https://img.shields.io/badge/refresh-weekly-0B3D1E?style=for-the-badge"></a>
   <a href="https://priyalifescience.com/airmed"><img alt="Website: priyalifescience.com" src="https://img.shields.io/badge/website-priyalifescience.com-6BE38F?style=for-the-badge&labelColor=0B3D1E"></a>
+  <a href="https://doi.org/10.5281/zenodo.23336432"><img alt="DOI 10.5281/zenodo.23336432" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23336432.svg"></a>
 </p>
 <p align="center">
   <a href="LICENSE"><img alt="Code licence: EUPL-1.2" src="https://img.shields.io/badge/code-EUPL--1.2-6BE38F?style=flat-square&labelColor=0B3D1E"></a>
@@ -199,6 +200,7 @@ registers and guides on the pharma, biotech and medtech industry in Ireland.
 
 - **Code:** [EUPL-1.2](LICENSE)
 - **Data:** each dataset keeps the licence of its source, listed in [`LICENSE-DATA.md`](LICENSE-DATA.md) and in every `datapackage.json`.
+- **DOI:** cite the project as [10.5281/zenodo.23336432](https://doi.org/10.5281/zenodo.23336432) (all versions, archived on Zenodo).
 - **Credit:** please credit the original source and "Airmid Éireann, [Priya Life Science](https://priyalifescience.com/airmed)". GitHub's **Cite this repository** button and the [BibTeX](https://priyalifescience.com/opendata/airmid/v1/citation.bib) / [RIS](https://priyalifescience.com/opendata/airmid/v1/citation.ris) files give a ready citation.
 - Nothing here is medical advice.
 
