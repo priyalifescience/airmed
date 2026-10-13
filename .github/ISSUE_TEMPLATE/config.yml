@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or privacy problem
+    url: https://priyalifescience.com/airmed
+    about: Please email info@priyalifescience.com with the subject "Airmed security". Do not open a public issue.
+  - name: Browse the data
+    url: https://priyalifescience.com/opendata/airmid/v1/
+    about: The current release, catalog.json and the data dictionary.

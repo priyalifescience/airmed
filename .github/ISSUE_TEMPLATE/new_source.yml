@@ -1,0 +1,26 @@
+name: Suggest a data source
+description: An official public source we could add to Airmid Éireann.
+title: "[Source] "
+labels: ["new source"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Source name and publisher
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link to the data or its API
+    validations:
+      required: true
+  - type: input
+    id: licence
+    attributes:
+      label: Licence or re-use terms (link)
+      description: We can only add sources whose terms allow redistribution.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it is useful

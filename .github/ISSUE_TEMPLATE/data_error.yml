@@ -1,0 +1,40 @@
+name: Report a data error
+description: A value in a dataset looks wrong, missing or out of date.
+title: "[Data error] "
+labels: ["data error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Please do not include anyone's personal details. Errors we fix are logged at https://priyalifescience.com/corrections
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Dataset
+      options:
+        - ctgov_ireland (clinical trials with an Irish site)
+        - hpra_medicines (medicines authorised in Ireland)
+        - ema_shortages (EU medicine shortages)
+        - ema_medicines (EU centrally authorised medicines)
+        - ema_orphans (EU orphan designations)
+        - fda_shortages (US drug shortages)
+        - fda_approvals (US original approvals since 2021)
+        - hc_approvals (Health Canada approvals since 2016)
+        - cso_pharma_exports (Irish pharma exports by country)
+        - nih_ireland (NIH awards to Irish organisations)
+    validations:
+      required: true
+  - type: input
+    id: record
+    attributes:
+      label: Which record?
+      description: An identifier from the row, e.g. NCT number, licence number, application number.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong, and what should it be?
+      description: If you can, link the official source page that shows the correct value.
+    validations:
+      required: true

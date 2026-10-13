@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use these data or this software, please cite them as below, and credit the original data sources."
+type: dataset
+title: "Airmid Éireann: Ireland's Open Pharma Data Project"
+abstract: >-
+  Open datasets on medicines, clinical trials, approvals, shortages and the pharmaceutical industry,
+  collected from official public sources (HPRA, EMA, U.S. FDA, CSO, ClinicalTrials.gov, Health Canada, NIH)
+  and published with their source licences, a data dictionary and checksums.
+authors:
+  - name: "Priya Life Science"
+    website: "https://priyalifescience.com"
+    email: "info@priyalifescience.com"
+version: "v1"
+date-released: "2026-10-13"
+url: "https://priyalifescience.com/airmed"
+repository-artifact: "https://priyalifescience.com/opendata/airmid/v1/catalog.json"
+license: EUPL-1.2
+keywords:
+  - open data
+  - pharmaceuticals
+  - medicines
+  - clinical trials
+  - Ireland
+  - drug shortages
+  - regulatory approvals
