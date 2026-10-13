@@ -178,3 +178,19 @@ class TestRelease(unittest.TestCase):
             self._collect(Path(d) / "out", {"nih_ireland": bad})
             with self.assertRaises(ReleaseRefused):
                 build(Path(d) / "out", Path(d) / "dist" / "v1")
+
+
+class TestHttpSafety(unittest.TestCase):
+    def test_plain_http_refused(self):
+        from airmed.http import fetch
+        with self.assertRaises(ValueError):
+            fetch("http://example.com/")
+
+    def test_redirect_downgrade_refused(self):
+        import urllib.error, urllib.request
+        from airmed.http import _HttpsOnlyRedirects
+        h = _HttpsOnlyRedirects()
+        req = urllib.request.Request("https://example.com/a")
+        with self.assertRaises(urllib.error.HTTPError):
+            h.redirect_request(req, None, 302, "Found", {}, "http://example.com/b")
+        self.assertIsNotNone(h.redirect_request(req, None, 302, "Found", {}, "https://example.com/b"))

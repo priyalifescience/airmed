@@ -1,4 +1,5 @@
-"""Publish a built release folder to the website over FTP.
+"""Publish a built release folder to the website over FTPS (FTP with TLS: login and files are encrypted, and the
+server certificate is verified).
 
     python tools/publish_ftp.py dist/v1 --remote /public_html/opendata/airmid/v1 --login-file ~/.airmid_ftp
 
@@ -12,6 +13,7 @@ moment between the two renames, never a half-uploaded release.
 import argparse
 import ftplib
 import os
+import ssl
 import posixpath
 import sys
 from pathlib import Path
@@ -66,8 +68,12 @@ def main():
     files = [p for p in dist.rglob("*") if p.is_file()]
     host, user, password = read_login(a.login_file)
     new, old = a.remote + ".new", a.remote + ".old"
-    with ftplib.FTP(host, timeout=120) as ftp:
+    ctx = ssl.create_default_context()          # verifies the certificate and the host name
+    ctx.minimum_version = ssl.TLSVersion.TLSv1_2
+    with ftplib.FTP_TLS(host, timeout=120, context=ctx) as ftp:
+        ftp.auth()                                # encrypt before the password is sent
         ftp.login(user, password)
+        ftp.prot_p()                              # encrypt the file transfers too
         mkdirs(ftp, posixpath.dirname(a.remote))
         for leftover in (new, old):
             if exists(ftp, leftover):

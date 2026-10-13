@@ -12,7 +12,19 @@ from . import __version__
 
 USER_AGENT = f"Airmed/{__version__} (+https://priyalifescience.com/airmed; info@priyalifescience.com)"
 PAUSE_SECONDS = 1.0
+MAX_BYTES = 400 * 1024 * 1024   # no public source we use is near this; a larger reply means something is wrong
 _last_request = 0.0
+
+
+class _HttpsOnlyRedirects(urllib.request.HTTPRedirectHandler):
+    """Follow redirects only to other https URLs (never downgrade to plain http)."""
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        if not newurl.startswith("https://"):
+            raise urllib.error.HTTPError(newurl, code, "refusing redirect away from https", headers, fp)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+_opener = urllib.request.build_opener(_HttpsOnlyRedirects)
 
 
 def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, headers: dict = None) -> bytes:
@@ -27,8 +39,11 @@ def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, hea
         _last_request = time.monotonic()
         req = urllib.request.Request(url, data=data, headers={"User-Agent": USER_AGENT, "Accept": "*/*", **(headers or {})})
         try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return resp.read()
+            with _opener.open(req, timeout=timeout) as resp:
+                body = resp.read(MAX_BYTES + 1)
+                if len(body) > MAX_BYTES:
+                    raise ValueError(f"{url}: reply larger than {MAX_BYTES} bytes, refused")
+                return body
         except urllib.error.HTTPError as e:
             # 4xx other than 429 will not get better by retrying
             if e.code != 429 and e.code < 500 or attempt == retries:
