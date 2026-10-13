@@ -35,11 +35,11 @@ def write_dataset(key: str, source: dict, fields: list, records: list, out_dir: 
         "name": key.replace("_", "-"),
         "title": source["name"],
         "description": f"Collected by Airmid Éireann from {source['publisher']}. {source['attribution']}",
-        "homepage": "https://priyalifescience.com/airmed",
+        "homepage": source.get("browse_url", "https://priyalifescience.com/airmed"),
         "created": retrieved,
         "sources": [{"title": source["publisher"], "path": source["endpoint"]}],
         "licenses": [{"title": source["licence"], "path": source["licence_url"]}],
-        "contributors": [{"title": "Priya Life Science (Airmid Éireann)", "role": "publisher"}],
+        "contributors": [{"title": "Priya Life Science (Airmid Éireann)", "role": "publisher", "path": "https://priyalifescience.com/airmed"}],
         "resources": [
             {"name": key.replace("_", "-") + "-csv", "path": csv_path.name, "format": "csv", "mediatype": "text/csv",
              "encoding": "utf-8", "hash": "sha256:" + sha(csv_path),

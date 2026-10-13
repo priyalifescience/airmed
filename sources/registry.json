@@ -34,7 +34,8 @@
         "conditions": "Conditions studied",
         "start_date": "Study start date (YYYY-MM or YYYY-MM-DD)",
         "last_update": "Date the record was last updated on ClinicalTrials.gov"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/clinical-trials-ireland"
     },
     "ema_shortages": {
       "name": "EMA: medicine shortages (human)",
@@ -72,7 +73,8 @@
         "first_published": "First published by EMA",
         "last_updated": "Last updated by EMA",
         "url": "EMA shortage page"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/eu-medicine-shortages"
     },
     "hpra_medicines": {
       "name": "HPRA: human medicines authorised in Ireland",
@@ -114,7 +116,8 @@
         "dispensing_status": "Legal dispensing status",
         "supply_status": "Legal supply status",
         "legal_basis": "Legal basis of the authorisation"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/medicines"
     },
     "ema_medicines": {
       "name": "EMA: human medicines evaluated by the European Medicines Agency",
@@ -170,7 +173,8 @@
         "additional_monitoring": "Under additional monitoring (yes/no)",
         "url": "EMA medicine page",
         "last_updated": "Last updated by EMA"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/ema-approvals"
     },
     "ema_orphans": {
       "name": "EMA: EU orphan designations",
@@ -202,7 +206,8 @@
         "related_ema_product_number": "Related EMA product number, if authorised",
         "url": "EMA designation page",
         "last_updated": "Last updated by EMA"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/ema-orphan-designations"
     },
     "fda_shortages": {
       "name": "US FDA: drug shortages",
@@ -242,7 +247,8 @@
         "initial_posting_date": "First posted by FDA",
         "update_date": "Last updated by FDA",
         "discontinued_date": "Discontinuation date, if any"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/drug-shortages"
     },
     "fda_approvals": {
       "name": "US FDA: original approvals since 2021 (Drugs@FDA)",
@@ -276,7 +282,8 @@
         "approval_date": "Approval date of the original submission",
         "review_priority": "STANDARD or PRIORITY review",
         "submission_class": "Submission class (e.g. Type 1 - New Molecular Entity)"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/fda-approvals"
     },
     "hc_approvals": {
       "name": "Health Canada: New Drug Submission approvals since 2016",
@@ -310,7 +317,8 @@
         "brand_names": "Brand names",
         "ingredients": "Medicinal ingredients",
         "with_conditions": "Issued with conditions (yes/no)"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/health-canada-approvals"
     },
     "cso_pharma_exports": {
       "name": "CSO: Irish exports of medicinal and pharmaceutical products by country (TSM10)",
@@ -332,7 +340,8 @@
         "country_code": "CSO country or territory code",
         "country": "Destination country or territory",
         "exports_eur_thousand": "Value of exports of SITC 54 medicinal and pharmaceutical products, euro thousand; empty = not published"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/ireland-pharma-exports"
     },
     "nih_ireland": {
       "name": "NIH RePORTER: US NIH awards to organisations in Ireland",
@@ -369,7 +378,8 @@
         "project_title": "Project title",
         "project_start": "Project start date",
         "project_end": "Project end date"
-      }
+      },
+      "browse_url": "https://priyalifescience.com/ireland-research-funding"
     },
     "nice_ta": {
       "name": "NICE technology appraisals",

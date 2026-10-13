@@ -149,6 +149,7 @@ class TestRelease(unittest.TestCase):
             for ds in cat["datasets"]:
                 self.assertTrue(ds["licence_url"].startswith("https://"))
                 self.assertTrue(all(f["description"] for f in ds["fields"]), ds["key"])
+                self.assertTrue(ds["browse_url"].startswith("https://priyalifescience.com/"), ds["key"])
 
     def test_missing_dataset_refused(self):
         from airmed.release import ReleaseRefused, build

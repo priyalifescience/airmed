@@ -58,7 +58,8 @@ def _index_html(datasets: list, now: str) -> str:
         f'<td>{d["records"]:,}</td>'
         f'<td><a href="{d["key"]}/{d["key"]}.csv">CSV</a> · <a href="{d["key"]}/{d["key"]}.json">JSON</a> · '
         f'<a href="{d["key"]}/datapackage.json">datapackage</a></td>'
-        f'<td><a href="{html.escape(d["licence_url"])}">{html.escape(d["licence"])}</a></td></tr>'
+        f'<td><a href="{html.escape(d["licence_url"])}">{html.escape(d["licence"])}</a></td>'
+        f'<td><a href="{html.escape(d.get("browse_url", ""))}">Browse</a></td></tr>'
         for d in datasets)
     return (
         '<!doctype html><html lang="en-IE"><head><meta charset="utf-8">'
@@ -73,7 +74,7 @@ def _index_html(datasets: list, now: str) -> str:
         'cite: <a href="citation.bib">BibTeX</a> · <a href="citation.ris">RIS</a></p>'
         '<p>Each dataset keeps the licence of its source. Credit the source and “Airmid Éireann, Priya Life Science”. '
         'Not medical advice.</p>'
-        f'<table><tr><th>Dataset</th><th>Records</th><th>Files</th><th>Licence</th></tr>{rows}</table></body></html>')
+        f'<table><tr><th>Dataset</th><th>Records</th><th>Files</th><th>Licence</th><th>On the website</th></tr>{rows}</table></body></html>')
 
 
 def _sha(p: Path) -> str:
@@ -127,6 +128,7 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
             "licence_url": source["licence_url"],
             "attribution": source["attribution"],
             "source_endpoint": source["endpoint"],
+            "browse_url": source.get("browse_url", "https://priyalifescience.com/airmed"),
             "records": n,
             "retrieved": payload.get("retrieved", ""),
             "fields": [{"name": f, "description": source.get("field_docs", {}).get(f, "")} for f in mod.FIELDS],
