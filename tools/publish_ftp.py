@@ -61,6 +61,9 @@ def main():
     ap.add_argument("dist")
     ap.add_argument("--remote", default="/public_html/opendata/airmid/v1")
     ap.add_argument("--login-file", default="~/.airmid_ftp")
+    # Shared hosting presents the hosting provider's certificate, not one for our own domain. We still verify the
+    # whole chain against trusted CAs, and then require the certificate to be issued for the provider's domain.
+    ap.add_argument("--cert-name", default="*.hstgr.io", help="DNS name the server certificate must carry")
     a = ap.parse_args()
     dist = Path(a.dist)
     if not (dist / "catalog.json").exists():
@@ -68,10 +71,14 @@ def main():
     files = [p for p in dist.rglob("*") if p.is_file()]
     host, user, password = read_login(a.login_file)
     new, old = a.remote + ".new", a.remote + ".old"
-    ctx = ssl.create_default_context()          # verifies the certificate and the host name
+    ctx = ssl.create_default_context()          # trusted CAs, expiry and chain are verified
     ctx.minimum_version = ssl.TLSVersion.TLSv1_2
+    ctx.check_hostname = False                  # replaced by the explicit provider-name check below
     with ftplib.FTP_TLS(host, timeout=120, context=ctx) as ftp:
         ftp.auth()                                # encrypt before the password is sent
+        names = [v for k, v in ftp.sock.getpeercert().get("subjectAltName", ()) if k == "DNS"]
+        if a.cert_name not in names:
+            sys.exit(f"server certificate is for {names}, expected {a.cert_name!r}: not sending the password")
         ftp.login(user, password)
         ftp.prot_p()                              # encrypt the file transfers too
         mkdirs(ftp, posixpath.dirname(a.remote))
