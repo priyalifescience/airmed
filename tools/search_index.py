@@ -153,6 +153,9 @@ def main(argv=None):
                 "records": len(items), "related": related_written,
                 "built": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "embed_seconds": round(time.time() - t0)}
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+    page = Path(__file__).with_name("search.html")  # the browser search page ships with the index
+    if page.exists():
+        (out / "index.html").write_text(page.read_text(encoding="utf-8"), encoding="utf-8")
     print(json.dumps(manifest))
 
 

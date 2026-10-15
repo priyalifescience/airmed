@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search Airmid open data</title>
+<meta name="description" content="Search every Airmid Éireann dataset by meaning: trials, medicines, shortages, approvals, research and safety records. The search runs in your browser.">
+<style>
+:root{--bg:#f7f8f6;--ink:#17231d;--muted:#5b6b62;--line:#d9e0db;--card:#fff;--accent:#1f6b4a;--chip:#e7f0ea}
+@media (prefers-color-scheme:dark){:root{--bg:#101613;--ink:#e6ede8;--muted:#9fb0a6;--line:#2a352f;--card:#17201b;--accent:#6fcf9f;--chip:#203029}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:920px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:1.6rem;margin:0 0 4px}p.lead{color:var(--muted);margin:0 0 18px}
+form{display:flex;gap:8px;flex-wrap:wrap}input[type=search]{flex:1 1 320px;padding:12px 14px;font-size:1rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+button{padding:12px 18px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+#filters{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+#filters label{background:var(--chip);border-radius:999px;padding:4px 10px;font-size:.85rem;cursor:pointer;user-select:none}
+#status{color:var(--muted);font-size:.9rem;min-height:1.4em;margin:8px 0}
+ol{list-style:none;padding:0;margin:0}li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0}
+li a{color:var(--ink);font-weight:600;text-decoration:none}li a:hover{text-decoration:underline}
+.meta{display:flex;gap:10px;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin-top:4px}.ds{background:var(--chip);border-radius:4px;padding:1px 6px}
+footer{margin-top:28px;font-size:.85rem;color:var(--muted)}footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+<h1>Search Airmid open data</h1>
+<p class="lead">Search every record by meaning, not just exact words: try “shortage of antibiotics”, “obesity trials in Cork” or “pancreatic cancer orphan medicine”. The search model runs in your browser, so your search never leaves your device. The first search downloads the model once (about 23 MB).</p>
+<form id="f"><input type="search" id="q" placeholder="What are you looking for?" autocomplete="off" required><button id="go">Search</button></form>
+<div id="filters"></div>
+<div id="status">Loading the index…</div>
+<ol id="res"></ol>
+<footer>Results come from the <a href="./../">Airmid Éireann open data release</a> (<a href="https://priyalifescience.com/airmed">project page</a>). Ranking is approximate; always open the source record. Not medical advice.</footer>
+</main>
+<script type="module">
+const $ = s => document.querySelector(s);
+const status = t => { $('#status').textContent = t; };
+let manifest, items, signs, extractor, dims, bpr;
+const enabled = new Set();
+
+async function loadIndex() {
+  [manifest, items] = await Promise.all([fetch('manifest.json').then(r => r.json()), fetch('items.json').then(r => r.json())]);
+  signs = new Uint8Array(await (await fetch('signs.bin')).arrayBuffer());
+  dims = manifest.dims; bpr = manifest.bytes_per_record;
+  const counts = manifest.datasets.map(() => 0); items.forEach(it => counts[it[0]]++);
+  manifest.datasets.forEach((d, i) => {
+    enabled.add(i);
+    const l = document.createElement('label');
+    l.innerHTML = `<input type="checkbox" checked data-i="${i}"> ${d.replace(/_/g, ' ')} <small>(${counts[i].toLocaleString()})</small>`;
+    l.querySelector('input').onchange = e => { e.target.checked ? enabled.add(i) : enabled.delete(i); };
+    $('#filters').append(l);
+  });
+  status(`${items.length.toLocaleString()} records from ${manifest.datasets.length} datasets ready. Index built ${manifest.built.slice(0, 10)}.`);
+}
+
+async function embed(text) {
+  if (!extractor) {
+    status('Downloading the search model (first search only)…');
+    const { pipeline } = await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.1');
+    extractor = await pipeline('feature-extraction', manifest.model_browser, { dtype: 'q8' });
+  }
+  const out = await extractor([text], { pooling: 'mean', normalize: true });
+  return out.tolist()[0];
+}
+
+function search(q, query, k = 40) {
+  // score = q . sign(doc): per byte position, a 256-entry table of the summed query weights of the set bits
+  const tables = [];
+  for (let b = 0; b < bpr; b++) {
+    const t = new Float32Array(256);
+    for (let v = 0; v < 256; v++) { let s = 0; for (let j = 0; j < 8; j++) if (v & (128 >> j)) s += q[b * 8 + j]; t[v] = s; }
+    tables.push(t);
+  }
+  const total = q.reduce((a, x) => a + x, 0);
+  const words = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+  const best = [];
+  for (let i = 0; i < items.length; i++) {
+    if (!enabled.has(items[i][0])) continue;
+    let s = 0; const off = i * bpr;
+    for (let b = 0; b < bpr; b++) s += tables[b][signs[off + b]];
+    s = 2 * s - total;
+    const label = items[i][1].toLowerCase();
+    for (const w of words) if (label.includes(w)) s += 0.6;  // small boost for literal word matches
+    if (best.length < k || s > best[best.length - 1][0]) {
+      best.push([s, i]); best.sort((a, b) => b[0] - a[0]); if (best.length > k) best.pop();
+    }
+  }
+  return best;
+}
+
+function render(best) {
+  const ol = $('#res'); ol.innerHTML = '';
+  for (const [, i] of best) {
+    const [di, label, url] = items[i];
+    const li = document.createElement('li');
+    const a = document.createElement(url ? 'a' : 'span');
+    a.textContent = label; if (url) { a.href = url; a.rel = 'noopener'; a.target = '_blank'; }
+    const ds = manifest.datasets[di];
+    li.append(a);
+    const m = document.createElement('div'); m.className = 'meta';
+    m.innerHTML = `<span class="ds">${ds.replace(/_/g, ' ')}</span><a href="../${ds}/${ds}.csv">dataset CSV</a>`;
+    li.append(m); ol.append(li);
+  }
+}
+
+$('#f').onsubmit = async e => {
+  e.preventDefault();
+  const query = $('#q').value.trim(); if (!query) return;
+  $('#go').disabled = true;
+  try {
+    const t0 = performance.now();
+    const q = await embed(query);
+    const best = search(q, query);
+    render(best);
+    status(`${best.length} closest records (${Math.round(performance.now() - t0)} ms).`);
+  } catch (err) { status('Search failed: ' + err.message); }
+  finally { $('#go').disabled = false; }
+};
+
+loadIndex().catch(err => status('Could not load the index: ' + err.message));
+</script>
+</body>
+</html>
