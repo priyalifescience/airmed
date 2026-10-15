@@ -42,7 +42,8 @@ class TestCtgovEurope(unittest.TestCase):
             ctgov_europe.parse(json.dumps(data).encode())
 
     def test_registry_entry_matches(self):
-        entry = json.loads((Path(__file__).parent.parent / "sources" / "pending" / "ctgov_europe.json").read_text(encoding="utf-8"))
+        registry = json.loads((Path(__file__).parent.parent / "sources" / "registry.json").read_text(encoding="utf-8"))
+        entry = registry["sources"]["ctgov_europe"]
         self.assertEqual(entry["fields_kept"], ctgov_europe.FIELDS)
         self.assertEqual(set(entry["field_docs"]), set(ctgov_europe.FIELDS))
 
