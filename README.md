@@ -204,6 +204,18 @@ registers and guides on the pharma, biotech and medtech industry in Ireland.
 - **Credit:** please credit the original source and "Airmid Éireann, [Priya Life Science](https://priyalifescience.com/airmed)". GitHub's **Cite this repository** button and the [BibTeX](https://priyalifescience.com/opendata/airmid/v1/citation.bib) / [RIS](https://priyalifescience.com/opendata/airmid/v1/citation.ris) files give a ready citation.
 - Nothing here is medical advice.
 
+## 🤖 Use of AI
+
+- **In building the code:** much of this code was written with an AI assistant (Claude, by Anthropic). Those
+  commits say so with a `Co-Authored-By` line, so the history shows which changes had AI help. See
+  [`CONTRIBUTING.md`](CONTRIBUTING.md#use-of-ai) for how contributors should disclose AI use.
+- **In the data pipeline:** the optional search index (`tools/search_index.py`) and research assistant
+  (`tools/assistant.py`) use open models run locally with [Ollama](https://ollama.com) (all-MiniLM-L6-v2 for search,
+  gpt-oss 20B for questions). No data or questions are sent to an AI service. The website search runs the same small
+  model in the visitor's browser, so search queries never leave their device.
+- **No AI-written data:** every published value comes from a listed source. Models only rank, link or summarise
+  records, and the original record is always shown.
+
 ## 🤝 Contribute
 
 Found an error or know a source we should add? Use the [issue forms](../../issues/new/choose), start a
