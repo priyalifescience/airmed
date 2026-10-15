@@ -1,0 +1,822 @@
+{
+"counts": {
+"field30": 3,
+"medchem": 2
+},
+"filters": {
+"field30": "institutions.country_code:IE,from_publication_date:2015-01-01,topics.field.id:30",
+"medchem": "institutions.country_code:IE,from_publication_date:2015-01-01,topics.id:T10211|T10274,topics.field.id:!30"
+},
+"works": [
+{
+"id": "https://openalex.org/W3210474759",
+"doi": "https://doi.org/10.1200/jco.21.01440",
+"title": "Management of Immune-Related Adverse Events in Patients Treated With Immune Checkpoint Inhibitor Therapy: ASCO Guideline Update",
+"publication_year": 2021,
+"publication_date": "2021-11-01",
+"type": "article",
+"open_access": {
+"is_oa": true,
+"oa_status": "bronze",
+"oa_url": "https://ascopubs.org/doi/pdfdirect/10.1200/JCO.21.01440?role=tab",
+"any_repository_has_fulltext": false
+},
+"cited_by_count": 2251,
+"primary_topic": {
+"id": "https://openalex.org/T10158",
+"display_name": "Cancer Immunotherapy and Biomarkers",
+"score": 1.0,
+"subfield": {
+"id": "https://openalex.org/subfields/2730",
+"display_name": "Oncology"
+},
+"field": {
+"id": "https://openalex.org/fields/27",
+"display_name": "Medicine"
+},
+"domain": {
+"id": "https://openalex.org/domains/4",
+"display_name": "Health Sciences"
+}
+},
+"topics": [
+{
+"id": "https://openalex.org/T10158",
+"display_name": "Cancer Immunotherapy and Biomarkers",
+"score": 1.0,
+"subfield": {
+"id": "https://openalex.org/subfields/2730",
+"display_name": "Oncology"
+},
+"field": {
+"id": "https://openalex.org/fields/27",
+"display_name": "Medicine"
+},
+"domain": {
+"id": "https://openalex.org/domains/4",
+"display_name": "Health Sciences"
+}
+},
+{
+"id": "https://openalex.org/T11943",
+"display_name": "Pharmacovigilance and Adverse Drug Reactions",
+"score": 0.0,
+"subfield": {
+"id": "https://openalex.org/subfields/3005",
+"display_name": "Toxicology"
+},
+"field": {
+"id": "https://openalex.org/fields/30",
+"display_name": "Pharmacology, Toxicology and Pharmaceutics"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+},
+{
+"id": "https://openalex.org/T10580",
+"display_name": "Immunotherapy and Immune Responses",
+"score": 0.0,
+"subfield": {
+"id": "https://openalex.org/subfields/2403",
+"display_name": "Immunology"
+},
+"field": {
+"id": "https://openalex.org/fields/24",
+"display_name": "Immunology and Microbiology"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+}
+],
+"is_retracted": false,
+"venue": "Journal of Clinical Oncology",
+"institutions": [
+{
+"display_name": "Michigan Medicine",
+"country_code": "US"
+},
+{
+"display_name": "Beaumont Hospital",
+"country_code": "IE"
+},
+{
+"display_name": "Sidney Kimmel Comprehensive Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "Memorial Sloan Kettering Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "American Society of Clinical Oncology",
+"country_code": "US"
+},
+{
+"display_name": "The University of Texas MD Anderson Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "Washington University in St. Louis",
+"country_code": "US"
+},
+{
+"display_name": "Georgetown University Medical Center",
+"country_code": "US"
+},
+{
+"display_name": "Georgetown Lombardi Comprehensive Cancer Center",
+"country_code": ""
+},
+{
+"display_name": "The University of Texas MD Anderson Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "The Ohio State University Wexner Medical Center",
+"country_code": "US"
+},
+{
+"display_name": "Institute of Cancer Research",
+"country_code": "GB"
+},
+{
+"display_name": "Royal Marsden Hospital",
+"country_code": "GB"
+},
+{
+"display_name": "Yale University",
+"country_code": "US"
+},
+{
+"display_name": "Smilow Cancer Hospital",
+"country_code": "US"
+},
+{
+"display_name": "National Institutes of Health",
+"country_code": "US"
+},
+{
+"display_name": "National Cancer Institute",
+"country_code": "US"
+},
+{
+"display_name": "Michigan Medicine",
+"country_code": "US"
+},
+{
+"display_name": "University of Michigan",
+"country_code": "US"
+},
+{
+"display_name": "Johns Hopkins University",
+"country_code": "US"
+},
+{
+"display_name": "The University of Texas MD Anderson Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "The University of Texas MD Anderson Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "City Of Hope National Medical Center",
+"country_code": "US"
+},
+{
+"display_name": "City of Hope",
+"country_code": "US"
+},
+{
+"display_name": "Colorectal Cancer Alliance",
+"country_code": "US"
+},
+{
+"display_name": "Georgetown University",
+"country_code": "US"
+},
+{
+"display_name": "Massachusetts General Hospital",
+"country_code": "US"
+},
+{
+"display_name": "Cleveland Clinic",
+"country_code": "US"
+},
+{
+"display_name": "Virginia Cancer Specialists",
+"country_code": "US"
+},
+{
+"display_name": "The University of Texas MD Anderson Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "Huntsman Cancer Institute",
+"country_code": "US"
+},
+{
+"display_name": "Seattle Cancer Care Alliance",
+"country_code": "US"
+},
+{
+"display_name": "University of Washington",
+"country_code": "US"
+},
+{
+"display_name": "University of Iowa",
+"country_code": "US"
+},
+{
+"display_name": "The University of Texas MD Anderson Cancer Center",
+"country_code": "US"
+},
+{
+"display_name": "NYU Langone Health",
+"country_code": "US"
+},
+{
+"display_name": "Cleveland Clinic",
+"country_code": "US"
+},
+{
+"display_name": "Scripps MD Anderson Cancer Center",
+"country_code": "US"
+}
+],
+"filter_basis": "field30"
+},
+{
+"id": "https://openalex.org/W2982296199",
+"doi": "https://doi.org/10.1016/s0140-6736(19)32597-8",
+"title": "Efficacy and safety of the elexacaftor plus tezacaftor plus ivacaftor combination regimen in people with cystic fibrosis homozygous for the F508del mutation: a double-blind, randomised, phase 3 trial",
+"publication_year": 2019,
+"publication_date": "2019-11-01",
+"type": "article",
+"open_access": {
+"is_oa": true,
+"oa_status": "bronze",
+"oa_url": "http://www.thelancet.com/article/S0140673619325978/pdf",
+"any_repository_has_fulltext": true
+},
+"cited_by_count": 1401,
+"primary_topic": {
+"id": "https://openalex.org/T10665",
+"display_name": "Cystic Fibrosis Research Advances",
+"score": 0.9945999979972839,
+"subfield": {
+"id": "https://openalex.org/subfields/2740",
+"display_name": "Pulmonary and Respiratory Medicine"
+},
+"field": {
+"id": "https://openalex.org/fields/27",
+"display_name": "Medicine"
+},
+"domain": {
+"id": "https://openalex.org/domains/4",
+"display_name": "Health Sciences"
+}
+},
+"topics": [
+{
+"id": "https://openalex.org/T10665",
+"display_name": "Cystic Fibrosis Research Advances",
+"score": 0.9945999979972839,
+"subfield": {
+"id": "https://openalex.org/subfields/2740",
+"display_name": "Pulmonary and Respiratory Medicine"
+},
+"field": {
+"id": "https://openalex.org/fields/27",
+"display_name": "Medicine"
+},
+"domain": {
+"id": "https://openalex.org/domains/4",
+"display_name": "Health Sciences"
+}
+},
+{
+"id": "https://openalex.org/T10375",
+"display_name": "Pharmacogenetics and Drug Metabolism",
+"score": 0.00039999998989515007,
+"subfield": {
+"id": "https://openalex.org/subfields/3004",
+"display_name": "Pharmacology"
+},
+"field": {
+"id": "https://openalex.org/fields/30",
+"display_name": "Pharmacology, Toxicology and Pharmaceutics"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+},
+{
+"id": "https://openalex.org/T11036",
+"display_name": "Antibiotics Pharmacokinetics and Efficacy",
+"score": 0.00019999999494757503,
+"subfield": {
+"id": "https://openalex.org/subfields/2736",
+"display_name": "Pharmacology"
+},
+"field": {
+"id": "https://openalex.org/fields/27",
+"display_name": "Medicine"
+},
+"domain": {
+"id": "https://openalex.org/domains/4",
+"display_name": "Health Sciences"
+}
+}
+],
+"is_retracted": false,
+"venue": "The Lancet",
+"institutions": [
+{
+"display_name": "University Medical Center Utrecht",
+"country_code": "NL"
+},
+{
+"display_name": "University College Dublin",
+"country_code": "IE"
+},
+{
+"display_name": "St. Vincent's University Hospital",
+"country_code": "IE"
+},
+{
+"display_name": "Queen's University Belfast",
+"country_code": "GB"
+},
+{
+"display_name": "Ghent University Hospital",
+"country_code": "BE"
+},
+{
+"display_name": "University of Alabama at Birmingham",
+"country_code": "US"
+},
+{
+"display_name": "St. Michael's Hospital",
+"country_code": "CA"
+},
+{
+"display_name": "University of Toronto",
+"country_code": "CA"
+},
+{
+"display_name": "German Center for Lung Research",
+"country_code": "DE"
+},
+{
+"display_name": "Berlin Institute of Health at Charité - Universitätsmedizin Berlin",
+"country_code": "DE"
+},
+{
+"display_name": "Charité - Universitätsmedizin Berlin",
+"country_code": "DE"
+},
+{
+"display_name": "New York Medical College",
+"country_code": "US"
+},
+{
+"display_name": "Seattle Children's Hospital",
+"country_code": "US"
+},
+{
+"display_name": "University of Washington",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "National Jewish Health",
+"country_code": "US"
+},
+{
+"display_name": "Nationwide Children's Hospital",
+"country_code": "US"
+},
+{
+"display_name": "The Ohio State University",
+"country_code": "US"
+},
+{
+"display_name": "Nationwide Children's Hospital",
+"country_code": "US"
+},
+{
+"display_name": "The Ohio State University",
+"country_code": "US"
+},
+{
+"display_name": "National Jewish Health",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "Vertex Pharmaceuticals (United States)",
+"country_code": "US"
+},
+{
+"display_name": "New York Medical College",
+"country_code": "US"
+},
+{
+"display_name": "Queen's University Belfast",
+"country_code": "GB"
+},
+{
+"display_name": "University College Dublin",
+"country_code": "IE"
+},
+{
+"display_name": "St. Vincent's University Hospital",
+"country_code": "IE"
+},
+{
+"display_name": "University Medical Center Utrecht",
+"country_code": "NL"
+},
+{
+"display_name": "Ghent University Hospital",
+"country_code": "BE"
+}
+],
+"filter_basis": "field30"
+},
+{
+"id": "https://openalex.org/W2253675932",
+"doi": "https://doi.org/10.1016/j.xphs.2015.10.008",
+"title": "Polymeric Amorphous Solid Dispersions: A Review of Amorphization, Crystallization, Stabilization, Solid-State Characterization, and Aqueous Solubilization of Biopharmaceutical Classification System Class II Drugs",
+"publication_year": 2016,
+"publication_date": "2016-01-23",
+"type": "article",
+"open_access": {
+"is_oa": false,
+"oa_status": "closed",
+"oa_url": null,
+"any_repository_has_fulltext": false
+},
+"cited_by_count": 970,
+"primary_topic": {
+"id": "https://openalex.org/T10256",
+"display_name": "Drug Solubulity and Delivery Systems",
+"score": 0.9984999895095825,
+"subfield": {
+"id": "https://openalex.org/subfields/3003",
+"display_name": "Pharmaceutical Science"
+},
+"field": {
+"id": "https://openalex.org/fields/30",
+"display_name": "Pharmacology, Toxicology and Pharmaceutics"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+},
+"topics": [
+{
+"id": "https://openalex.org/T10256",
+"display_name": "Drug Solubulity and Delivery Systems",
+"score": 0.9984999895095825,
+"subfield": {
+"id": "https://openalex.org/subfields/3003",
+"display_name": "Pharmaceutical Science"
+},
+"field": {
+"id": "https://openalex.org/fields/30",
+"display_name": "Pharmacology, Toxicology and Pharmaceutics"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+},
+{
+"id": "https://openalex.org/T11881",
+"display_name": "Crystallization and Solubility Studies",
+"score": 0.0005000000237487257,
+"subfield": {
+"id": "https://openalex.org/subfields/2505",
+"display_name": "Materials Chemistry"
+},
+"field": {
+"id": "https://openalex.org/fields/25",
+"display_name": "Materials Science"
+},
+"domain": {
+"id": "https://openalex.org/domains/3",
+"display_name": "Physical Sciences"
+}
+},
+{
+"id": "https://openalex.org/T10920",
+"display_name": "Advanced Drug Delivery Systems",
+"score": 9.999999747378752e-05,
+"subfield": {
+"id": "https://openalex.org/subfields/3003",
+"display_name": "Pharmaceutical Science"
+},
+"field": {
+"id": "https://openalex.org/fields/30",
+"display_name": "Pharmacology, Toxicology and Pharmaceutics"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+}
+],
+"is_retracted": false,
+"venue": "Journal of Pharmaceutical Sciences",
+"institutions": [
+{
+"display_name": "Waterford Institute of Technology",
+"country_code": "IE"
+},
+{
+"display_name": "Waterford Institute of Technology",
+"country_code": "IE"
+},
+{
+"display_name": "Waterford Institute of Technology",
+"country_code": "IE"
+}
+],
+"filter_basis": "field30"
+},
+{
+"id": "https://openalex.org/W2088226047",
+"doi": "https://doi.org/10.1038/nrd4510",
+"title": "The re-emergence of natural products for drug discovery in the genomics era",
+"publication_year": 2015,
+"publication_date": "2015-01-23",
+"type": "review",
+"open_access": {
+"is_oa": true,
+"oa_status": "green",
+"oa_url": "https://strathprints.strath.ac.uk/51792/1/Harvey_etal_NRDD_2015_The_re_emergence_of_natural_products_for_drug_discovery.pdf",
+"any_repository_has_fulltext": true
+},
+"cited_by_count": 2572,
+"primary_topic": {
+"id": "https://openalex.org/T10252",
+"display_name": "Microbial Natural Products and Biosynthesis",
+"score": 0.9653000235557556,
+"subfield": {
+"id": "https://openalex.org/subfields/2736",
+"display_name": "Pharmacology"
+},
+"field": {
+"id": "https://openalex.org/fields/27",
+"display_name": "Medicine"
+},
+"domain": {
+"id": "https://openalex.org/domains/4",
+"display_name": "Health Sciences"
+}
+},
+"topics": [
+{
+"id": "https://openalex.org/T10252",
+"display_name": "Microbial Natural Products and Biosynthesis",
+"score": 0.9653000235557556,
+"subfield": {
+"id": "https://openalex.org/subfields/2736",
+"display_name": "Pharmacology"
+},
+"field": {
+"id": "https://openalex.org/fields/27",
+"display_name": "Medicine"
+},
+"domain": {
+"id": "https://openalex.org/domains/4",
+"display_name": "Health Sciences"
+}
+},
+{
+"id": "https://openalex.org/T11340",
+"display_name": "Marine Sponges and Natural Products",
+"score": 0.016499999910593033,
+"subfield": {
+"id": "https://openalex.org/subfields/1305",
+"display_name": "Biotechnology"
+},
+"field": {
+"id": "https://openalex.org/fields/13",
+"display_name": "Biochemistry, Genetics and Molecular Biology"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+},
+{
+"id": "https://openalex.org/T10211",
+"display_name": "Computational Drug Discovery Methods",
+"score": 0.008100000210106373,
+"subfield": {
+"id": "https://openalex.org/subfields/1703",
+"display_name": "Computational Theory and Mathematics"
+},
+"field": {
+"id": "https://openalex.org/fields/17",
+"display_name": "Computer Science"
+},
+"domain": {
+"id": "https://openalex.org/domains/3",
+"display_name": "Physical Sciences"
+}
+}
+],
+"is_retracted": false,
+"venue": "Nature Reviews Drug Discovery",
+"institutions": [
+{
+"display_name": "University of Strathclyde",
+"country_code": "GB"
+},
+{
+"display_name": "Dublin City University",
+"country_code": "IE"
+},
+{
+"display_name": "University of Strathclyde",
+"country_code": "GB"
+},
+{
+"display_name": "Griffith University",
+"country_code": "AU"
+}
+],
+"filter_basis": "medchem"
+},
+{
+"id": "https://openalex.org/W4200045218",
+"doi": "https://doi.org/10.1016/j.tips.2021.11.004",
+"title": "Network pharmacology: curing causal mechanisms instead of treating symptoms",
+"publication_year": 2021,
+"publication_date": "2021-12-09",
+"type": "review",
+"open_access": {
+"is_oa": true,
+"oa_status": "hybrid",
+"oa_url": "http://www.cell.com/article/S0165614721002212/pdf",
+"any_repository_has_fulltext": true
+},
+"cited_by_count": 1201,
+"primary_topic": {
+"id": "https://openalex.org/T10211",
+"display_name": "Computational Drug Discovery Methods",
+"score": 0.8960000276565552,
+"subfield": {
+"id": "https://openalex.org/subfields/1703",
+"display_name": "Computational Theory and Mathematics"
+},
+"field": {
+"id": "https://openalex.org/fields/17",
+"display_name": "Computer Science"
+},
+"domain": {
+"id": "https://openalex.org/domains/3",
+"display_name": "Physical Sciences"
+}
+},
+"topics": [
+{
+"id": "https://openalex.org/T10211",
+"display_name": "Computational Drug Discovery Methods",
+"score": 0.8960000276565552,
+"subfield": {
+"id": "https://openalex.org/subfields/1703",
+"display_name": "Computational Theory and Mathematics"
+},
+"field": {
+"id": "https://openalex.org/fields/17",
+"display_name": "Computer Science"
+},
+"domain": {
+"id": "https://openalex.org/domains/3",
+"display_name": "Physical Sciences"
+}
+},
+{
+"id": "https://openalex.org/T10887",
+"display_name": "Bioinformatics and Genomic Networks",
+"score": 0.09629999846220016,
+"subfield": {
+"id": "https://openalex.org/subfields/1312",
+"display_name": "Molecular Biology"
+},
+"field": {
+"id": "https://openalex.org/fields/13",
+"display_name": "Biochemistry, Genetics and Molecular Biology"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+},
+{
+"id": "https://openalex.org/T11710",
+"display_name": "Biomedical Text Mining and Ontologies",
+"score": 0.000699999975040555,
+"subfield": {
+"id": "https://openalex.org/subfields/1312",
+"display_name": "Molecular Biology"
+},
+"field": {
+"id": "https://openalex.org/fields/13",
+"display_name": "Biochemistry, Genetics and Molecular Biology"
+},
+"domain": {
+"id": "https://openalex.org/domains/1",
+"display_name": "Life Sciences"
+}
+}
+],
+"is_retracted": false,
+"venue": "Trends in Pharmacological Sciences",
+"institutions": [
+{
+"display_name": "Maastricht University",
+"country_code": "NL"
+},
+{
+"display_name": "Zagazig University",
+"country_code": "EG"
+},
+{
+"display_name": "Maastricht University",
+"country_code": "NL"
+},
+{
+"display_name": "Technical University of Munich",
+"country_code": "DE"
+},
+{
+"display_name": "University College Dublin",
+"country_code": "IE"
+},
+{
+"display_name": "Maastricht University",
+"country_code": "NL"
+},
+{
+"display_name": "Essen University Hospital",
+"country_code": "DE"
+},
+{
+"display_name": "Maastricht University",
+"country_code": "NL"
+}
+],
+"filter_basis": "medchem"
+}
+]
+}

@@ -1,0 +1,151 @@
+{
+ "totalCount": 3,
+ "studies": [
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT07090681",
+     "briefTitle": "Novel Individualized Brain Stimulation, Network-based Approaches to Improve Cognition in Healthy Seniors and MCI Patients"
+    },
+    "statusModule": {
+     "overallStatus": "COMPLETED",
+     "startDateStruct": {
+      "date": "2023-10-01"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2025-08-07"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "Ecole Polytechnique Fédérale de Lausanne"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Mild Cognitive Impairment (MCI)",
+      "Healthy Aging"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "NA"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "Switzerland"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT06816862",
+     "briefTitle": "SYMPHONY™ OCT System for Instabilities of the Upper Thoracic and Cervical Spine"
+    },
+    "statusModule": {
+     "overallStatus": "RECRUITING",
+     "startDateStruct": {
+      "date": "2024-12-01"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2025-02-10"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "University College Dublin"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Cervical Instabilities Spine",
+      "Spine; Instability"
+     ]
+    },
+    "designModule": {},
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "Ireland"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT03231878",
+     "briefTitle": "A Clinical Study to Evaluate the Efficacy and Safety of MIN-102 (IMP) in Male AMN Patients."
+    },
+    "statusModule": {
+     "overallStatus": "COMPLETED",
+     "startDateStruct": {
+      "date": "2017-12-08"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2025-03-18"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "Minoryx Therapeutics, S.L."
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Adrenoleukodystrophy"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "PHASE2",
+      "PHASE3"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Hungary"
+      },
+      {
+       "country": "Italy"
+      },
+      {
+       "country": "Netherlands"
+      },
+      {
+       "country": "Spain"
+      },
+      {
+       "country": "United Kingdom"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

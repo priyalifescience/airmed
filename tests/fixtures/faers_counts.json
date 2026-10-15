@@ -1,0 +1,81 @@
+{
+ "last_updated": "2026-07-30",
+ "years": {
+  "2015": {
+   "total": 1187780,
+   "serious": {
+    "2": 609392,
+    "1": 578385
+   },
+   "flags": {
+    "death_reports": 99691,
+    "hospitalisation_reports": 233906,
+    "life_threatening_reports": 23086,
+    "disabling_reports": 19048,
+    "congenital_anomaly_reports": 3988,
+    "other_serious_reports": 345266
+   },
+   "drugs": [
+    {
+     "term": "ETANERCEPT",
+     "count": 57541
+    },
+    {
+     "term": "ADALIMUMAB",
+     "count": 53593
+    },
+    {
+     "term": "TERIPARATIDE",
+     "count": 44975
+    }
+   ],
+   "drugs_serious": {
+    "ADALIMUMAB": 18018,
+    "ETANERCEPT": 16552,
+    "TERIPARATIDE": 1151
+   },
+   "drugs_death": {
+    "ADALIMUMAB": 1247,
+    "ETANERCEPT": 834
+   }
+  },
+  "2026": {
+   "total": 673772,
+   "serious": {
+    "1": 362887,
+    "2": 309843
+   },
+   "flags": {
+    "death_reports": 49295,
+    "hospitalisation_reports": 127953,
+    "life_threatening_reports": 20874,
+    "disabling_reports": 9288,
+    "congenital_anomaly_reports": 1996,
+    "other_serious_reports": 258137
+   },
+   "drugs": [
+    {
+     "term": "DUPILUMAB",
+     "count": 66184
+    },
+    {
+     "term": "TIRZEPATIDE",
+     "count": 39348
+    },
+    {
+     "term": "ACETAMINOPHEN",
+     "count": 19903
+    }
+   ],
+   "drugs_serious": {
+    "ACETAMINOPHEN": 14603,
+    "TIRZEPATIDE": 8086,
+    "DUPILUMAB": 7062
+   },
+   "drugs_death": {
+    "DUPILUMAB": 363,
+    "TIRZEPATIDE": 231
+   }
+  }
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "enforcement": [
+  {
+   "recall_number": "Z-2372-2023",
+   "event_id": "92660",
+   "classification": "Class I",
+   "status": "Ongoing",
+   "recalling_firm": "Covidien LP",
+   "country": "United States",
+   "product_description": "MAHURKAR 12 Fr High Pressure Triple Lumen Acute Dialysis Catheter, 24 cm, Straight Extensions, IC Tray    REF: 8888102004HP",
+   "reason_for_recall": "Catheter center lumen was found to have an occlusion in the tip of the catheter; the source of the occlusion an excessive MDX, a silicone-based lubricant which coats the catheter tip. An occluded, partially or fully, and/or uncured or excessive MDX may dislodge from the catheter lead to  full catheter obstruction resulting in delay to treatment and partial obstruction resulting in reduced flow, or particulate dislodgement that may result in delay to treatment, hemolysis, embolism/embolus or thrombosis/thrombus",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "recall_initiation_date": "20230628",
+   "center_classification_date": "20230811",
+   "report_date": "20230823",
+   "termination_date": null
+  },
+  {
+   "recall_number": "Z-1618-2023",
+   "event_id": "92132",
+   "classification": "Class I",
+   "status": "Terminated",
+   "recalling_firm": "BERLIN HEART GMBH",
+   "country": "Germany",
+   "product_description": "EXCOR Pediatric Ventricular Assist Device Blood Pumps, Models:  P10P-001 (10 ml blood pump);  P15P-001 (10 ml blood pump); P25P-001x01 (25 ml blood pump); P30P-001x01 (30 ml blood pump), P50P-001 (50 ml blood pump); P60P-001 (60 ml blood pump).  Recall occurred in 2018, and was retrospectively reported.",
+   "reason_for_recall": "There is a potential for a disruption in one or more of the triple layer membranes of the ventricular assist device. Recall occurred in 2018, and was retrospectively reported.",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "recall_initiation_date": "20180518",
+   "center_classification_date": "20230524",
+   "report_date": "20230531",
+   "termination_date": "20240606"
+  },
+  {
+   "recall_number": "",
+   "event_id": "94520",
+   "classification": "Not Yet Classified",
+   "status": "Ongoing",
+   "recalling_firm": "Jiangsu Shenli Medical Production Co., Ltd.",
+   "country": "China",
+   "product_description": "Brand Name: MEDLINE Product Name: SYR 30ML L/L Model/Catalog Number: 83078 Product Description: NON-Sterile syringes without needles for single use Component: No",
+   "reason_for_recall": "Piston syringes sizes and configurations are out of the range of devices cleared under the firm's 510(k).",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "recall_initiation_date": "20240405",
+   "center_classification_date": null,
+   "report_date": "20240529",
+   "termination_date": null
+  },
+  {
+   "recall_number": "Z-0189-2019",
+   "event_id": "80774",
+   "classification": "Class II",
+   "status": "Terminated",
+   "recalling_firm": "Siemens Healthcare Diagnostics, Inc.",
+   "country": "United States",
+   "product_description": "Atellica Sample Handler Prime (SMN 11069001).    The Atellica\" Solution is a multi-component system for in vitro diagnostic testing of clinical specimens.",
+   "reason_for_recall": "Atellica Solution system software (SW) version 1.13 and lower, five (5) behavioral issues were identified:  1.\tReagent Lock may not work as intended with Primary Reagent ReadyPacks¿ and Ancillary Packs when more than one (1) lot of specific Reagent kits are loaded on the analyzer at the same time.  2.\tSample barcodes may be incorrectly read  3.\tThe Atellica IM 1300 Analyzer and Atellica IM 1600 Analyzer may not run CEA dilutions at 50x and 100x. The Analyzer may post a \u001cSample Integrity Error\u001d when 50x or 100x dilutions are ordered for Carcinoembryonic Antigen (CEA). Dilution factors lower than 50x and neat samples are not affected by this behavior.      4.\tThe Atellica CH 930 Analyzer may continue to display the default reporting units after the reporting units have been changed.  5.\tThe Atellica CH 930 Analyzer may not display results for sample if certain assays are configured to auto-dilute results above or below the assay measuring interval.",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "recall_initiation_date": "20180629",
+   "center_classification_date": "20181018",
+   "report_date": "20181024",
+   "termination_date": "20210812"
+  }
+ ],
+ "recalls": [
+  {
+   "product_res_number": "Z-2372-2023",
+   "product_code": "NIE",
+   "root_cause_description": "Process control"
+  },
+  {
+   "product_res_number": "Z-1618-2023",
+   "product_code": "DSQ",
+   "root_cause_description": "Component design/selection"
+  },
+  {
+   "product_res_number": "Z-0189-2019",
+   "product_code": "JJE",
+   "root_cause_description": "Software design"
+  }
+ ]
+}

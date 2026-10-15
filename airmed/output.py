@@ -26,7 +26,7 @@ def write_dataset(key: str, source: dict, fields: list, records: list, out_dir: 
     json_path = out / f"{key}.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump({"source": source["name"], "attribution": source["attribution"], "licence": source["licence"],
-                   "retrieved": retrieved, "count": len(records), "records": records}, f, ensure_ascii=False, indent=1)
+                   "retrieved": retrieved, "count": len(records), "records": records}, f, ensure_ascii=False, separators=(",", ":"))  # compact: large datasets
 
     def sha(p):
         return hashlib.sha256(p.read_bytes()).hexdigest()

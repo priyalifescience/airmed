@@ -1,0 +1,111 @@
+{
+ "totals": {
+  "medical_safety_alert": 3,
+  "drug_safety_update": 2
+ },
+ "results": [
+  {
+   "title": "Continuous renal replacement therapy (CRRT): Consider delayed administration of concurrent echinocandins, such as caspofungin, to reduce the risk of adsorption onto new polyacrylonitrile (PAN)-based filter membranes DSI/2026/014",
+   "link": "/drug-device-alerts/continuous-renal-replacement-therapy-crrt-consider-delayed-administration-of-concurrent-echinocandins-such-as-caspofungin-to-reduce-the-risk-of-adsorption-onto-new-polyacrylonitrile-pan-based-filter-membranes-dsi-slash-2026-slash-",
+   "description": "Continuous renal replacement therapy (CRRT) is used for managing severe acute kidney injury and fluid overload. Published evidence has shown that caspofungin can bind to polyacrylonitrile (PAN)-based membranes used in CRRT which may result in ineffective antifungal treatment. ",
+   "public_timestamp": "2026-10-13T11:38:03Z",
+   "issued_date": "2026-10-13",
+   "alert_type": [
+    "device-safety-information"
+   ],
+   "medical_specialism": [
+    "anaesthetics",
+    "cancer",
+    "critical-care",
+    "infection-prevention",
+    "infectious-disease",
+    "paediatrics",
+    "renal-medicine",
+    "urology"
+   ],
+   "content_store_document_type": "medical_safety_alert",
+   "index": "govuk",
+   "es_score": null,
+   "_id": "/drug-device-alerts/continuous-renal-replacement-therapy-crrt-consider-delayed-administration-of-concurrent-echinocandins-such-as-caspofungin-to-reduce-the-risk-of-adsorption-onto-new-polyacrylonitrile-pan-based-filter-membranes-dsi-slash-2026-slash-",
+   "elasticsearch_type": "medical_safety_alert",
+   "document_type": "medical_safety_alert",
+   "_doc_type": "medical_safety_alert"
+  },
+  {
+   "title": "Class 2 Medicines Recall: Norgine Pharmaceuticals Limited, Pedmarqsi 80 mg/mL solution for infusion, EL(26)A/42",
+   "link": "/drug-device-alerts/class-2-medicines-recall-norgine-pharmaceuticals-limited-pedmarqsi-80-mg-slash-ml-solution-for-infusion-el-26-a-slash-42",
+   "description": "Norgine Pharmaceuticals Limited is recalling the batches listed in the table due to risk of particulate matter being present in the product identified during routine stability investigations.",
+   "public_timestamp": "2026-10-12T10:00:23Z",
+   "issued_date": "2026-10-12",
+   "alert_type": [
+    "medicines-recall-notification"
+   ],
+   "medical_specialism": [
+    "dispensing-gp-practices",
+    "pharmacy"
+   ],
+   "content_store_document_type": "medical_safety_alert",
+   "index": "govuk",
+   "es_score": null,
+   "_id": "/drug-device-alerts/class-2-medicines-recall-norgine-pharmaceuticals-limited-pedmarqsi-80-mg-slash-ml-solution-for-infusion-el-26-a-slash-42",
+   "elasticsearch_type": "medical_safety_alert",
+   "document_type": "medical_safety_alert",
+   "_doc_type": "medical_safety_alert"
+  },
+  {
+   "title": "Intra-oral dental X-ray units: IRIX 70, IRIX 708, Oramatic 558 or Novelix 6510 – wall mount bracket may fail",
+   "link": "/drug-device-alerts/intra-oral-dental-x-ray-units-irix-70-irix-708-oramatic-558-or-novelix-6510-wall-mount-bracket-may-fail",
+   "description": "(Trophy (now owned by Carestream Health)) Risk of injury from falling unit after failure of the wall mount bracket. (MDA/2013/053)",
+   "public_timestamp": "2013-07-18T14:00:00Z",
+   "issued_date": "2013-07-18",
+   "alert_type": [
+    "device-safety-information"
+   ],
+   "content_store_document_type": "medical_safety_alert",
+   "index": "govuk",
+   "es_score": null,
+   "_id": "/drug-device-alerts/intra-oral-dental-x-ray-units-irix-70-irix-708-oramatic-558-or-novelix-6510-wall-mount-bracket-may-fail",
+   "elasticsearch_type": "medical_safety_alert",
+   "document_type": "medical_safety_alert",
+   "_doc_type": "medical_safety_alert"
+  },
+  {
+   "title": "Antidepressants: new safety measures for all patients to improve communication of the risk of suicidal thoughts and behaviours and persistent sexual dysfunction",
+   "link": "/drug-safety-update/antidepressants-new-safety-measures-for-all-patients-to-improve-communication-of-the-risk-of-suicidal-thoughts-and-behaviours-and-persistent-sexual-dysfunction",
+   "description": "New safety measures are now being implemented to improve how the risks of suicidal thoughts and behaviours and persistent sexual dysfunction are communicated to patients taking antidepressant medications.",
+   "public_timestamp": "2026-10-15T08:30:08Z",
+   "first_published_at": "2026-10-15",
+   "therapeutic_area": [
+    "dispensing-gp-practices",
+    "general-practice",
+    "pain-management-palliation",
+    "pharmacy",
+    "psychiatry"
+   ],
+   "content_store_document_type": "drug_safety_update",
+   "index": "govuk",
+   "es_score": null,
+   "_id": "/drug-safety-update/antidepressants-new-safety-measures-for-all-patients-to-improve-communication-of-the-risk-of-suicidal-thoughts-and-behaviours-and-persistent-sexual-dysfunction",
+   "elasticsearch_type": "drug_safety_update",
+   "document_type": "drug_safety_update",
+   "_doc_type": "drug_safety_update"
+  },
+  {
+   "title": "Aspirin: not licensed for primary prevention of thrombotic vascular disease",
+   "link": "/drug-safety-update/aspirin-not-licensed-for-primary-prevention-of-thrombotic-vascular-disease",
+   "description": "In the UK, low-dose aspirin is licensed for prevention of thrombotic cerebrovascular or cardiovascular disease only in those who already have vascular disease—ie, secondary prevention.",
+   "public_timestamp": "2009-10-03T09:00:00Z",
+   "first_published_at": "2009-10-03T09:00:00Z",
+   "therapeutic_area": [
+    "cardiovascular-disease-lipidology"
+   ],
+   "content_store_document_type": "drug_safety_update",
+   "index": "govuk",
+   "es_score": null,
+   "_id": "/drug-safety-update/aspirin-not-licensed-for-primary-prevention-of-thrombotic-vascular-disease",
+   "elasticsearch_type": "drug_safety_update",
+   "document_type": "drug_safety_update",
+   "_doc_type": "drug_safety_update"
+  }
+ ]
+}

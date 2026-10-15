@@ -1,0 +1,610 @@
+{
+"columns": {
+"project.csv": [
+"id",
+"acronym",
+"status",
+"title",
+"startDate",
+"endDate",
+"totalCost",
+"ecMaxContribution",
+"topics",
+"frameworkProgramme",
+"masterCall",
+"subCall",
+"fundingScheme"
+],
+"organization.csv": [
+"projectID",
+"name",
+"country",
+"role",
+"order"
+],
+"legalBasis.csv": [
+"projectID",
+"legalBasis",
+"title"
+],
+"euroSciVoc.csv": [
+"projectID",
+"euroSciVocPath",
+"euroSciVocTitle"
+],
+"topics.csv": [
+"projectID",
+"topic",
+"title"
+]
+},
+"programmes": {
+"H2020": {
+"project.csv": [
+[
+"633888",
+"SPENmr",
+"CLOSED",
+"Ultrafast Spatiotemporally-Encoding: A Superior Approach to Cancer Diagnosis by Non-Invasive Diffusion-Weighted MRI",
+"2015-02-01",
+"2016-07-31",
+"150000",
+"150000",
+"ERC-PoC-2014",
+"H2020",
+"ERC-2014-PoC",
+"ERC-2014-PoC",
+"ERC-POC"
+],
+[
+"115842",
+"VSV-EBOVAC",
+"CLOSED",
+"Vaccine safety and immunogenicity signatures of human responses to VSV-ZEBOV – Sofia ref.: 115842",
+"2015-03-01",
+"2019-02-28",
+"4786010",
+"3887260",
+"IMI2-2014-02-01",
+"H2020",
+"H2020-JTI-IMI2-2014-02-single-stage",
+"H2020-JTI-IMI2-2014-02-single-stage",
+"IMI2-RIA"
+],
+[
+"825179",
+"ETIP-B-SABS 2",
+"CLOSED",
+"European Technology and Innovation Platform Bioenergy - Support of Renewable Fuels and Advanced Bioenergy Stakeholders 2",
+"2018-09-01",
+"2021-12-31",
+"997720",
+"997720",
+"LC-SC3-CC-4-2018",
+"H2020",
+"H2020-LC-SC3-2018-2019-2020",
+"H2020-LC-SC3-2018-Joint-Actions-3",
+"CSA"
+]
+],
+"organization.csv": [
+[
+"633888",
+"WEIZMANN INSTITUTE OF SCIENCE",
+"IL",
+"coordinator",
+"1"
+],
+[
+"115842",
+"ACADEMISCH ZIEKENHUIS LEIDEN",
+"NL",
+"participant",
+"4"
+],
+[
+"115842",
+"SCLAVO VACCINES ASSOCIATION",
+"IT",
+"coordinator",
+"1"
+],
+[
+"115842",
+"UNIVERSITA DEGLI STUDI DI SIENA",
+"IT",
+"participant",
+"6"
+],
+[
+"115842",
+"MICROBIOTEC SRL",
+"IT",
+"participant",
+"10"
+],
+[
+"115842",
+"UNIVERSITE DE GENEVE",
+"CH",
+"participant",
+"2"
+],
+[
+"115842",
+"Department of Health",
+"UK",
+"participant",
+"12"
+],
+[
+"115842",
+"EMORY UNIVERSITY NON PROFIT CORP",
+"US",
+"participant",
+"7"
+],
+[
+"115842",
+"EIDGENOSSISCHES DEPARTEMENT FUR VERTEIDIGUNG, BEVOLKERUNGSSCHUTZ UND SPORT",
+"CH",
+"participant",
+"11"
+],
+[
+"115842",
+"THE CHANCELLOR, MASTERS AND SCHOLARS OF THE UNIVERSITY OF OXFORD",
+"UK",
+"participant",
+"8"
+],
+[
+"115842",
+"EBERHARD KARLS UNIVERSITAET TUEBINGEN",
+"DE",
+"participant",
+"9"
+],
+[
+"115842",
+"Centre de Recherches Medicales de Lambaréné",
+"GA",
+"participant",
+"13"
+],
+[
+"115842",
+"GOETEBORGS UNIVERSITET",
+"SE",
+"participant",
+"5"
+],
+[
+"115842",
+"BIOPROTECTION SYSTEMS CORPORATION",
+"US",
+"participant",
+"3"
+],
+[
+"825179",
+"BEST - BIOENERGY AND SUSTAINABLE TECHNOLOGIES GMBH",
+"AT",
+"participant",
+"2"
+],
+[
+"825179",
+"INCE INIZIATIVA CENTRO EUROPEA - SEGRETARIATO ESECUTIVO",
+"IT",
+"participant",
+"4"
+],
+[
+"825179",
+"RISE RESEARCH INSTITUTES OF SWEDEN AB",
+"SE",
+"thirdParty",
+"5"
+],
+[
+"825179",
+"ETA - ENERGIA, TRASPORTI, AGRICOLTURA SRL",
+"IT",
+"participant",
+"3"
+],
+[
+"825179",
+"FACHAGENTUR NACHWACHSENDE ROHSTOFFE EV",
+"DE",
+"coordinator",
+"1"
+],
+[
+"825179",
+"RISE INNVENTIA AB",
+"SE",
+"participant",
+"5"
+]
+],
+"legalBasis.csv": [
+[
+"633888",
+"H2020-EU.1.1.",
+"EXCELLENT SCIENCE - European Research Council (ERC)"
+],
+[
+"115842",
+"H2020-EU.3.1.",
+"SOCIETAL CHALLENGES - Health, demographic change and well-being"
+],
+[
+"115842",
+"H2020-EU.3.1.7.",
+"Innovative Medicines Initiative 2 (IMI2)"
+],
+[
+"825179",
+"H2020-EU.3.3.",
+"SOCIETAL CHALLENGES - Secure, clean and efficient energy"
+]
+],
+"euroSciVoc.csv": [
+[
+"633888",
+"natural sciences/computer and information sciences/software",
+"software"
+],
+[
+"633888",
+"medical and health sciences/clinical medicine/surgery",
+"surgery"
+],
+[
+"633888",
+"medical and health sciences/clinical medicine/oncology/breast cancer",
+"breast cancer"
+],
+[
+"633888",
+"medical and health sciences/basic medicine/neurology/stroke",
+"stroke"
+],
+[
+"633888",
+"natural sciences/physical sciences/acoustics/ultrasound",
+"ultrasound"
+],
+[
+"115842",
+"medical and health sciences/basic medicine/immunology/immunisation",
+"immunisation"
+],
+[
+"115842",
+"medical and health sciences/health sciences/infectious diseases/RNA viruses/ebola",
+"ebola"
+],
+[
+"115842",
+"medical and health sciences/basic medicine/pharmacology and pharmacy/pharmaceutical drugs/vaccines",
+"vaccines"
+],
+[
+"825179",
+"social sciences/political sciences/political policies/public policies",
+"public policies"
+],
+[
+"825179",
+"engineering and technology/environmental engineering/energy and fuels",
+"energy and fuels"
+],
+[
+"825179",
+"engineering and technology/industrial biotechnology/biomaterials/biofuels",
+"biofuels"
+],
+[
+"825179",
+"agricultural sciences/agricultural biotechnology/biomass",
+"biomass"
+]
+],
+"topics.csv": [
+[
+"633888",
+"ERC-PoC-2014",
+"ERC Proof of Concept Grant"
+],
+[
+"115842",
+"IMI2-2014-02-01",
+"Vaccine development Phase I, II, and III"
+],
+[
+"825179",
+"LC-SC3-CC-4-2018",
+"Support to sectorial fora"
+]
+]
+},
+"HORIZON": {
+"project.csv": [
+[
+"101069359",
+"SolDAC",
+"SIGNED",
+"Full spectrum SOLar Direct Air Capture & conversion",
+"2022-09-01",
+"2025-08-31",
+"2073781,25",
+"2073781,25",
+"HORIZON-CL5-2021-D2-01-11",
+"HORIZON",
+"HORIZON-CL5-2021-D2-01",
+"HORIZON-CL5-2021-D2-01",
+"HORIZON-RIA"
+],
+[
+"101046041",
+"CoVICIS",
+"SIGNED",
+"EU-Africa Concerted Action on SAR-CoV-2 Virus Variant and Immunological Surveillance",
+"2021-11-01",
+"2025-04-30",
+"10048971,68",
+"10048971",
+"HORIZON-HLTH-2021-CORONA-01-02",
+"HORIZON",
+"HORIZON-HLTH-2021-CORONA-01",
+"HORIZON-HLTH-2021-CORONA-01",
+"HORIZON-RIA"
+]
+],
+"organization.csv": [
+[
+"101069359",
+"LOMARTOV SL",
+"ES",
+"participant",
+"2"
+],
+[
+"101069359",
+"EUROPEAN INNOVATION MARKETPLACE ASBL",
+"BE",
+"participant",
+"6"
+],
+[
+"101069359",
+"COMET GLOBAL INNOVATION, SL",
+"ES",
+"coordinator",
+"1"
+],
+[
+"101069359",
+"THE UNIVERSITY COURT OF THE UNIVERSITY OF ST ANDREWS",
+"UK",
+"associatedPartner",
+"8"
+],
+[
+"101069359",
+"FUNDACIO INSTITUT DE RECERCA EN ENERGIA DE CATALUNYA",
+"ES",
+"participant",
+"3"
+],
+[
+"101069359",
+"UNIVERSIDAD DE LLEIDA",
+"ES",
+"participant",
+"5"
+],
+[
+"101069359",
+"CONSIGLIO NAZIONALE DELLE RICERCHE",
+"IT",
+"participant",
+"4"
+],
+[
+"101069359",
+"THE UNIVERSITY OF EDINBURGH",
+"UK",
+"associatedPartner",
+"7"
+],
+[
+"101046041",
+"LUDWIG-MAXIMILIANS-UNIVERSITAET MUENCHEN",
+"DE",
+"participant",
+"6"
+],
+[
+"101046041",
+"INSTITUT NATIONAL DE LA SANTE ET DE LA RECHERCHE MEDICALE",
+"FR",
+"participant",
+"3"
+],
+[
+"101046041",
+"UNIVERSITE DE GENEVE",
+"CH",
+"participant",
+"14"
+],
+[
+"101046041",
+"SOUTH AFRICAN MEDICAL RESEARCH COUNCIL",
+"ZA",
+"participant",
+"2"
+],
+[
+"101046041",
+"JIMMA UNIVERSITY",
+"ET",
+"participant",
+"12"
+],
+[
+"101046041",
+"STICHTING INTERNATIONAL AIDS VACCINE INITIATIVE THE NETHERLANDS",
+"NL",
+"participant",
+"11"
+],
+[
+"101046041",
+"WITS HEALTH CONSORTIUM (PTY) LTD",
+"ZA",
+"participant",
+"4"
+],
+[
+"101046041",
+"KLINIKUM DER LUDWIG-MAXIMILIANS-UNIVERSITAT MUNCHEN",
+"DE",
+"thirdParty",
+"6"
+],
+[
+"101046041",
+"UNIVERSITY OF CAPE TOWN",
+"ZA",
+"participant",
+"5"
+],
+[
+"101046041",
+"ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE",
+"CH",
+"participant",
+"7"
+],
+[
+"101046041",
+"CENTRE HOSPITALIER UNIVERSITAIRE VAUDOIS",
+"CH",
+"coordinator",
+"1"
+],
+[
+"101046041",
+"UNIVERSITAT ZURICH",
+"CH",
+"participant",
+"15"
+],
+[
+"101046041",
+"UNIVERSITA DEGLI STUDI DI MILANO",
+"IT",
+"participant",
+"9"
+],
+[
+"101046041",
+"STIFTUNG SWISS SCHOOL OF PUBLIC HEALTH PLUS (SSPH)",
+"CH",
+"participant",
+"8"
+],
+[
+"101046041",
+"STELLENBOSCH UNIVERSITY",
+"ZA",
+"participant",
+"13"
+],
+[
+"101046041",
+"EUROVACC FOUNDATION",
+"CH",
+"participant",
+"10"
+]
+],
+"legalBasis.csv": [
+[
+"101069359",
+"HORIZON.2.5",
+"Climate, Energy and Mobility"
+],
+[
+"101046041",
+"HORIZON.2.1",
+"Health"
+],
+[
+"101046041",
+"HORIZON.2.1.4",
+"Infectious Diseases, including poverty-related and neglected diseases"
+]
+],
+"euroSciVoc.csv": [
+[
+"101069359",
+"natural sciences/chemical sciences/electrochemistry",
+"electrochemistry"
+],
+[
+"101069359",
+"engineering and technology/environmental engineering/energy and fuels/renewable energy/solar energy/solar thermal",
+"solar thermal"
+],
+[
+"101069359",
+"natural sciences/chemical sciences/organic chemistry/aliphatic compounds",
+"aliphatic compounds"
+],
+[
+"101069359",
+"social sciences/economics and business/economics/sustainable economy",
+"sustainable economy"
+],
+[
+"101046041",
+"natural sciences/biological sciences/genetics/mutation/virus mutation",
+"virus mutation"
+],
+[
+"101046041",
+"medical and health sciences/basic medicine/immunology",
+"immunology"
+],
+[
+"101046041",
+"medical and health sciences/health sciences/infectious diseases/RNA viruses/coronaviruses",
+"coronaviruses"
+],
+[
+"101046041",
+"medical and health sciences/basic medicine/pharmacology and pharmacy/pharmaceutical drugs/vaccines",
+"vaccines"
+]
+],
+"topics.csv": [
+[
+"101069359",
+"HORIZON-CL5-2021-D2-01-11",
+"Direct atmospheric carbon capture and conversion"
+],
+[
+"101046041",
+"HORIZON-HLTH-2021-CORONA-01-02",
+"Cohorts united against COVID-19 variants of concern"
+]
+]
+}
+}
+}
