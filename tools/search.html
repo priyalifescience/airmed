@@ -36,14 +36,16 @@ footer{margin-top:28px;font-size:.85rem;color:var(--muted)}footer a{color:var(--
 <script type="module">
 const $ = s => document.querySelector(s);
 const status = t => { $('#status').textContent = t; };
-let manifest, items, signs, extractor, dims, bpr;
+let manifest, dsOf, signs, extractor, dims, bpr, nRec;
 const enabled = new Set();
+const shards = new Map();  // labels are fetched only for the shards that hold results
 
 async function loadIndex() {
-  [manifest, items] = await Promise.all([fetch('manifest.json').then(r => r.json()), fetch('items.json').then(r => r.json())]);
-  signs = new Uint8Array(await (await fetch('signs.bin')).arrayBuffer());
-  dims = manifest.dims; bpr = manifest.bytes_per_record;
-  const counts = manifest.datasets.map(() => 0); items.forEach(it => counts[it[0]]++);
+  manifest = await fetch('manifest.json').then(r => r.json());
+  const [s, d] = await Promise.all([fetch('signs.bin').then(r => r.arrayBuffer()), fetch('datasets.bin').then(r => r.arrayBuffer())]);
+  signs = new Uint8Array(s); dsOf = new Uint8Array(d);
+  dims = manifest.dims; bpr = manifest.bytes_per_record; nRec = dsOf.length;
+  const counts = manifest.datasets.map(() => 0); dsOf.forEach(x => counts[x]++);
   manifest.datasets.forEach((d, i) => {
     enabled.add(i);
     const l = document.createElement('label');
@@ -51,7 +53,7 @@ async function loadIndex() {
     l.querySelector('input').onchange = e => { e.target.checked ? enabled.add(i) : enabled.delete(i); };
     $('#filters').append(l);
   });
-  status(`${items.length.toLocaleString()} records from ${manifest.datasets.length} datasets ready. Index built ${manifest.built.slice(0, 10)}.`);
+  status(`${nRec.toLocaleString()} records from ${manifest.datasets.length} datasets ready. Index built ${manifest.built.slice(0, 10)}.`);
 }
 
 async function embed(text) {
@@ -64,7 +66,7 @@ async function embed(text) {
   return out.tolist()[0];
 }
 
-function search(q, query, k = 40) {
+function search(q, k = 40) {
   // score = q . sign(doc): per byte position, a 256-entry table of the summed query weights of the set bits
   const tables = [];
   for (let b = 0; b < bpr; b++) {
@@ -73,26 +75,41 @@ function search(q, query, k = 40) {
     tables.push(t);
   }
   const total = q.reduce((a, x) => a + x, 0);
-  const words = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
-  const best = [];
-  for (let i = 0; i < items.length; i++) {
-    if (!enabled.has(items[i][0])) continue;
+  // first pass: vector score for every record; keep a wider pool, then re-rank with literal word matches
+  const pool = [], P = k * 4;
+  for (let i = 0; i < nRec; i++) {
+    if (!enabled.has(dsOf[i])) continue;
     let s = 0; const off = i * bpr;
     for (let b = 0; b < bpr; b++) s += tables[b][signs[off + b]];
     s = 2 * s - total;
-    const label = items[i][1].toLowerCase();
-    for (const w of words) if (label.includes(w)) s += 0.6;  // small boost for literal word matches
-    if (best.length < k || s > best[best.length - 1][0]) {
-      best.push([s, i]); best.sort((a, b) => b[0] - a[0]); if (best.length > k) best.pop();
+    if (pool.length < P || s > pool[pool.length - 1][0]) {
+      pool.push([s, i]); pool.sort((a, b) => b[0] - a[0]); if (pool.length > P) pool.pop();
     }
   }
-  return best;
+  return pool;
+}
+
+async function label(i) {
+  const n = Math.floor(i / manifest.shard_size);
+  if (!shards.has(n)) shards.set(n, fetch(`items/${String(n).padStart(4, '0')}.json`).then(r => r.json()));
+  return (await shards.get(n))[i % manifest.shard_size];
+}
+
+async function rerank(pool, query, k = 40) {
+  const words = query.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+  const rows = await Promise.all(pool.map(async ([s, i]) => {
+    const [lab, url] = await label(i);
+    const low = lab.toLowerCase();
+    for (const w of words) if (low.includes(w)) s += 0.6;  // small boost for literal word matches
+    return [s, i, lab, url];
+  }));
+  return rows.sort((a, b) => b[0] - a[0]).slice(0, k);
 }
 
 function render(best) {
   const ol = $('#res'); ol.innerHTML = '';
-  for (const [, i] of best) {
-    const [di, label, url] = items[i];
+  for (const [, i, label, url] of best) {
+    const di = dsOf[i];
     const li = document.createElement('li');
     const a = document.createElement(url ? 'a' : 'span');
     a.textContent = label; if (url) { a.href = url; a.rel = 'noopener'; a.target = '_blank'; }
@@ -111,7 +128,7 @@ $('#f').onsubmit = async e => {
   try {
     const t0 = performance.now();
     const q = await embed(query);
-    const best = search(q, query);
+    const best = await rerank(search(q), query);
     render(best);
     status(`${best.length} closest records (${Math.round(performance.now() - t0)} ms).`);
   } catch (err) { status('Search failed: ' + err.message); }

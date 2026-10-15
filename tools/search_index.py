@@ -37,7 +37,16 @@ DATASETS = {
     "fda_approvals": dict(label="brand_names", extra=["active_ingredients", "sponsor_name", "dosage_forms"]),
     "hc_approvals": dict(label="brand_names", extra=["ingredients", "therapeutic_class", "company"]),
     "nih_ireland": dict(label="project_title", extra=["organisation", "institute"]),
+    "fda_device_recalls": dict(label="product_description", extra=["reason_for_recall", "recalling_firm", "classification"],
+                               url=lambda r: "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id="
+                               + str(r.get("event_id", "")) if r.get("event_id") else ""),
+    "mhra_safety_alerts": dict(label="title", extra=["alert_type", "document_type", "description"], url="url"),
+    "cordis_health": dict(label="title", extra=["acronym", "coordinator_country", "programme_part"], url="cordis_url"),
+    "openalex_ireland_pharma": dict(label="title", extra=["venue", "primary_topic", "irish_institutions"],
+                                    url=lambda r: (r.get("doi") or "") if str(r.get("doi") or "").startswith("https://")
+                                    else ("https://doi.org/" + r["doi"] if r.get("doi") else "")),
 }
+SHARD = 2000  # records per label shard: the browser fetches only the shards that hold its top results
 GENERIC_LABELS = ["title", "name", "medicine_name", "medicine", "product_name", "project_title", "acronym"]
 SKIP_NUMERIC = True  # datasets whose records have no text label are statistics: not indexed
 
@@ -81,6 +90,34 @@ def embed(texts, host, model, batch=128):
     return out
 
 
+def embed_cached(texts, host, model, cache_path):
+    """Embed only texts not seen before; vectors are kept in a small SQLite file keyed by sha1(model + text)."""
+    import hashlib
+    import sqlite3
+    from array import array
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    db = sqlite3.connect(cache_path)
+    db.execute("CREATE TABLE IF NOT EXISTS v (h TEXT PRIMARY KEY, vec BLOB)")
+    keys = [hashlib.sha1((model + "\n" + t).encode("utf-8")).hexdigest() for t in texts]
+    have = {}
+    for i in range(0, len(keys), 900):
+        chunk = keys[i:i + 900]
+        q = f"SELECT h, vec FROM v WHERE h IN ({','.join('?' * len(chunk))})"
+        for h, blob in db.execute(q, chunk):
+            have[h] = array("f", blob).tolist()
+    todo = [i for i, k in enumerate(keys) if k not in have]
+    print(f"  cache: {len(texts) - len(todo)} reused, {len(todo)} to embed", flush=True)
+    if todo:
+        new = embed([texts[i] for i in todo], host, model)
+        db.executemany("INSERT OR REPLACE INTO v VALUES (?, ?)",
+                       [(keys[i], array("f", vec).tobytes()) for i, vec in zip(todo, new)])
+        db.commit()
+        for i, vec in zip(todo, new):
+            have[keys[i]] = vec
+    db.close()
+    return [have[k] for k in keys]
+
+
 def pack_signs(vec):
     b = bytearray(len(vec) // 8)
     for j, x in enumerate(vec):
@@ -94,6 +131,8 @@ def main(argv=None):
     ap.add_argument("--dist", default="dist/v1")
     ap.add_argument("--ollama", default="http://127.0.0.1:11434")
     ap.add_argument("--model", default="all-minilm")
+    ap.add_argument("--cache", default=str(Path.home() / ".cache" / "airmid" / "embeddings.sqlite"),
+                    help="vector cache (outside the release); weekly rebuilds only embed changed text")
     a = ap.parse_args(argv)
     dist = Path(a.dist)
     catalog = json.loads((dist / "catalog.json").read_text(encoding="utf-8"))
@@ -120,12 +159,21 @@ def main(argv=None):
         print(f"index {key}: {len(rows)} of {len(recs)} records")
 
     t0 = time.time()
-    vecs = embed(texts, a.ollama, a.model)
+    vecs = embed_cached(texts, a.ollama, a.model, Path(a.cache))
     dims = len(vecs[0])
     if dims % 8:
         sys.exit("embedding size must be a multiple of 8")
     (out / "signs.bin").write_bytes(b"".join(pack_signs(v) for v in vecs))
-    (out / "items.json").write_text(json.dumps(items, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (out / "datasets.bin").write_bytes(bytes(it[0] for it in items))  # 1 byte per record: dataset index
+    shard_dir = out / "items"
+    shard_dir.mkdir(exist_ok=True)
+    for old in shard_dir.glob("*.json"):
+        old.unlink()
+    for s in range(0, len(items), SHARD):
+        rows = [[lab, url] for _, lab, url in items[s:s + SHARD]]
+        (shard_dir / f"{s // SHARD:04d}.json").write_text(json.dumps(rows, ensure_ascii=False, separators=(",", ":")),
+                                                          encoding="utf-8")
+    (out / "items.json").unlink(missing_ok=True)
 
     related_written = False
     try:
@@ -149,6 +197,7 @@ def main(argv=None):
         print("numpy not available: related/ not written")
 
     manifest = {"model_server": a.model, "model_browser": MODEL_BROWSER, "dims": dims, "bytes_per_record": dims // 8,
+                "shard_size": SHARD, "files": {"signs": "signs.bin", "datasets": "datasets.bin", "labels": "items/NNNN.json"},
                 "scoring": "dot(query_normalised, sign(doc)); higher is better", "datasets": keys,
                 "records": len(items), "related": related_written,
                 "built": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "embed_seconds": round(time.time() - t0)}
