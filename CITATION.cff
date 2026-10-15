@@ -10,7 +10,7 @@ authors:
   - name: "Priya Life Science"
     website: "https://priyalifescience.com"
     email: "info@priyalifescience.com"
-version: "1.0.0"
+version: "1.1.0"
 doi: "10.5281/zenodo.23336432"
 identifiers:
   - type: doi
@@ -22,7 +22,7 @@ identifiers:
   - type: url
     value: "https://priyalifescience.com/opendata/airmid/v1/catalog.json"
     description: "Live open data release (catalog)"
-date-released: "2026-10-13"
+date-released: "2026-10-15"
 url: "https://priyalifescience.com/airmed"
 repository-artifact: "https://priyalifescience.com/opendata/airmid/v1/catalog.json"
 license: EUPL-1.2

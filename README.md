@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://priyalifescience.com/opendata/airmid/v1/"><img alt="Data: live" src="https://img.shields.io/badge/data-live-2FA35A?style=for-the-badge"></a>
-  <a href="https://priyalifescience.com/opendata/airmid/v1/catalog.json"><img alt="Datasets: 10" src="https://img.shields.io/badge/datasets-10-0B3D1E?style=for-the-badge"></a>
+  <a href="https://priyalifescience.com/opendata/airmid/v1/catalog.json"><img alt="Datasets: 19" src="https://img.shields.io/badge/datasets-19-0B3D1E?style=for-the-badge"></a>
   <a href="https://priyalifescience.com/opendata/airmid/v1/CHANGELOG.md"><img alt="Refresh: weekly" src="https://img.shields.io/badge/refresh-weekly-0B3D1E?style=for-the-badge"></a>
   <a href="https://priyalifescience.com/airmed"><img alt="Website: priyalifescience.com" src="https://img.shields.io/badge/website-priyalifescience.com-6BE38F?style=for-the-badge&labelColor=0B3D1E"></a>
   <a href="https://doi.org/10.5281/zenodo.23336432"><img alt="DOI 10.5281/zenodo.23336432" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23336432.svg"></a>
@@ -39,9 +39,9 @@
 
 <table align="center">
 <tr>
-<td align="center" width="25%"><h2>32,975</h2><sub>records in the first release</sub></td>
-<td align="center" width="25%"><h2>10</h2><sub>open datasets</sub></td>
-<td align="center" width="25%"><h2>7</h2><sub>official publishers</sub></td>
+<td align="center" width="25%"><h2>502,489</h2><sub>records in release 1.1</sub></td>
+<td align="center" width="25%"><h2>19</h2><sub>open datasets</sub></td>
+<td align="center" width="25%"><h2>12</h2><sub>official publishers</sub></td>
 <td align="center" width="25%"><h2>0</h2><sub>personal details, ever</sub></td>
 </tr>
 </table>
@@ -61,7 +61,7 @@ It is the open-data project of [**Priya Life Science**](https://priyalifescience
 publisher. You can explore the same data as interactive registers on
 [priyalifescience.com](https://priyalifescience.com/trackers), or download it here.
 
-**→ [Read the project page](https://priyalifescience.com/airmed)** &nbsp; **→ [Browse the files](https://priyalifescience.com/opendata/airmid/v1/)**
+**→ [Read the project page](https://priyalifescience.com/airmed)** &nbsp; **→ [Search the data](https://priyalifescience.com/opendata/airmid/v1/search/)** &nbsp; **→ [Browse the files](https://priyalifescience.com/opendata/airmid/v1/)**
 
 </td>
 </tr>
@@ -71,7 +71,7 @@ publisher. You can explore the same data as interactive registers on
 
 ## 🌿 The Well
 
-> First release **13 October 2026**. The data refreshes **weekly**; live counts are always in
+> First release **13 October 2026**; release 1.1 (Europe, research and safety data) **15 October 2026**. The data refreshes **weekly**; live counts are always in
 > [`catalog.json`](https://priyalifescience.com/opendata/airmid/v1/catalog.json).
 
 | | Dataset | Records\* | Source · licence | Download | Explore on the website |
@@ -86,11 +86,22 @@ publisher. You can explore the same data as interactive registers on
 | 🍁 | **Health Canada approvals since 2016** | 1,057 | Health Canada · OGL Canada | [CSV](https://priyalifescience.com/opendata/airmid/v1/hc_approvals/hc_approvals.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/hc_approvals/hc_approvals.json) | [Health Canada approvals](https://priyalifescience.com/health-canada-approvals) |
 | 🚢 | **Irish pharma exports by country** | 6,811 | CSO · CC BY 4.0 | [CSV](https://priyalifescience.com/opendata/airmid/v1/cso_pharma_exports/cso_pharma_exports.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/cso_pharma_exports/cso_pharma_exports.json) | [Ireland pharma exports](https://priyalifescience.com/ireland-pharma-exports) |
 | 🔬 | **NIH awards to Irish organisations** | 21 | U.S. NIH · public domain | [CSV](https://priyalifescience.com/opendata/airmid/v1/nih_ireland/nih_ireland.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/nih_ireland/nih_ireland.json) | [Ireland research funding](https://priyalifescience.com/ireland-research-funding) |
+| 🗺️ | **Clinical trials with a European site (since 2015)** | 113,339 | ClinicalTrials.gov · public data | [CSV](https://priyalifescience.com/opendata/airmid/v1/ctgov_europe/ctgov_europe.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/ctgov_europe/ctgov_europe.json) |  |
+| 🏛️ | **EU-funded health research projects** | 14,111 | CORDIS, European Commission · CC BY 4.0 | [CSV](https://priyalifescience.com/opendata/airmid/v1/cordis_health/cordis_health.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/cordis_health/cordis_health.json) | [Irish research funding](https://priyalifescience.com/ireland-research-funding) |
+| 📚 | **Irish pharma research papers (no author names)** | 4,300 | OpenAlex · CC0 | [CSV](https://priyalifescience.com/opendata/airmid/v1/openalex_ireland_pharma/openalex_ireland_pharma.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/openalex_ireland_pharma/openalex_ireland_pharma.json) |  |
+| 💶 | **EU pharma trade by country** | 207,110 | Eurostat · re-use with credit | [CSV](https://priyalifescience.com/opendata/airmid/v1/eurostat_pharma_trade/eurostat_pharma_trade.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/eurostat_pharma_trade/eurostat_pharma_trade.json) |  |
+| 🏭 | **EU pharma manufacturing by country (NACE C21)** | 32,436 | Eurostat · re-use with credit | [CSV](https://priyalifescience.com/opendata/airmid/v1/eurostat_pharma_industry/eurostat_pharma_industry.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/eurostat_pharma_industry/eurostat_pharma_industry.json) |  |
+| 📊 | **Pharmaceutical spending by country** | 70,802 | OECD · re-use with credit | [CSV](https://priyalifescience.com/opendata/airmid/v1/oecd_pharma_spending/oecd_pharma_spending.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/oecd_pharma_spending/oecd_pharma_spending.json) |  |
+| ⚠️ | **UK medicine and device safety alerts** | 2,323 | MHRA · OGL v3 | [CSV](https://priyalifescience.com/opendata/airmid/v1/mhra_safety_alerts/mhra_safety_alerts.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/mhra_safety_alerts/mhra_safety_alerts.json) |  |
+| 🔧 | **US medical device recalls since 2018** | 23,868 | U.S. FDA · public domain | [CSV](https://priyalifescience.com/opendata/airmid/v1/fda_device_recalls/fda_device_recalls.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/fda_device_recalls/fda_device_recalls.json) |  |
+| 📈 | **US adverse event report counts (aggregate)** | 1,212 | U.S. FDA FAERS · public domain | [CSV](https://priyalifescience.com/opendata/airmid/v1/faers_counts/faers_counts.csv) · [JSON](https://priyalifescience.com/opendata/airmid/v1/faers_counts/faers_counts.json) |  |
 
-<sub>\* First release, 13 Oct 2026.</sub>
+<sub>\* First release 13 Oct 2026 for the first ten rows; the rest from release 1.1, 15 Oct 2026.</sub>
+
+**Also in the release:** a [search page](https://priyalifescience.com/opendata/airmid/v1/search/) that finds records by meaning (the model runs in your browser), and a [medicine cross-reference](https://priyalifescience.com/opendata/airmid/v1/links/medicine_links.csv) of active substances that appear in two or more datasets.
 
 **Coming later:** patent and exclusivity dates · pharma manufacturing sites in Ireland · company identifiers ·
-medicine spending (UK, US) · EU research funding (CORDIS).
+medicine spending (UK, US) · EU trials from CTIS (waiting for the EMA's written permission).
 
 ## ⚡ Get the data
 

@@ -4,4 +4,4 @@ Collectors read public, keyless APIs only, keep the fields listed in sources/reg
 pass every record through the privacy guard, and write CSV + JSON with a datapackage.json.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
