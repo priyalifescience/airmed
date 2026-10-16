@@ -23,6 +23,12 @@ LOG="logs/$(date -u +%Y-%m-%d).log"
   else
     echo "NOT PUBLISHED: ~/.airmid_ftp missing (create it with host, user, password on three lines; chmod 600)"
   fi
+  if [ -x "$HOME/airmid/assistant.sh" ]; then  # the private assistant loads the release at start: reload it
+    pkill -f "tools/assistant.py" || true
+    sleep 2
+    nohup "$HOME/airmid/assistant.sh" >/dev/null 2>&1 &
+    echo "assistant restarted with the new release"
+  fi
   echo "== $(date -u +%FT%TZ) done"
 } >>"$LOG" 2>&1
 find logs -name "*.log" -mtime +90 -delete
