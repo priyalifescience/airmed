@@ -13,6 +13,7 @@ LOG="logs/$(date -u +%Y-%m-%d).log"
   nice -n 10 python3 -m airmed run all --out out
   nice -n 10 python3 -m airmed release --src out --dist dist/v1
   nice -n 10 python3 tools/link_medicines.py --dist dist/v1 || echo "WARN: medicine cross-reference failed; publishing without it"
+  nice -n 10 python3 tools/dcat.py --dist dist/v1 || echo "WARN: DCAT metadata failed; publishing without it"
   if curl -sf -m 5 http://127.0.0.1:11434/api/tags >/dev/null; then
     nice -n 10 python3 tools/search_index.py --dist dist/v1 || { echo "WARN: search index failed; publishing without it"; rm -rf dist/v1/search; }
   else
