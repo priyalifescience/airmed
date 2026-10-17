@@ -4,8 +4,9 @@ type: software
 title: "Airmid Éireann: Ireland's Open Pharma Data Project"
 abstract: >-
   Open datasets on medicines, clinical trials, approvals, shortages and the pharmaceutical industry,
-  collected from official public sources (HPRA, EMA, U.S. FDA, CSO, ClinicalTrials.gov, Health Canada, NIH)
-  and published with their source licences, a data dictionary and checksums.
+  collected from official public sources (HPRA, EMA, CSO, ClinicalTrials.gov, Eurostat, OECD, CORDIS, OpenAlex,
+  U.S. FDA, Health Canada, MHRA, NIH) for Ireland and Europe, and published with their source licences,
+  a data dictionary and checksums.
 authors:
   - name: "Priya Life Science"
     website: "https://priyalifescience.com"
@@ -16,6 +17,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23336432"
     description: "Concept DOI: all versions, archived on Zenodo"
+  - type: doi
+    value: "10.5281/zenodo.23410910"
+    description: "Version 1.1.0 (19 datasets: Europe, research and safety data)"
   - type: doi
     value: "10.5281/zenodo.23336433"
     description: "Version 1.0.0"

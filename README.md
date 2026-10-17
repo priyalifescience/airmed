@@ -211,7 +211,7 @@ registers and guides on the pharma, biotech and medtech industry in Ireland.
 
 - **Code:** [EUPL-1.2](LICENSE)
 - **Data:** each dataset keeps the licence of its source, listed in [`LICENSE-DATA.md`](LICENSE-DATA.md) and in every `datapackage.json`.
-- **DOI:** cite the project as [10.5281/zenodo.23336432](https://doi.org/10.5281/zenodo.23336432) (all versions, archived on Zenodo).
+- **DOI:** cite the project as [10.5281/zenodo.23336432](https://doi.org/10.5281/zenodo.23336432) (all versions, archived on Zenodo; always points to the latest). To cite one exact version: 1.1.0 = [10.5281/zenodo.23410910](https://doi.org/10.5281/zenodo.23410910), 1.0.0 = [10.5281/zenodo.23336433](https://doi.org/10.5281/zenodo.23336433).
 - **Credit:** please credit the original source and "Airmid Éireann, [Priya Life Science](https://priyalifescience.com/airmed)". GitHub's **Cite this repository** button and the [BibTeX](https://priyalifescience.com/opendata/airmid/v1/citation.bib) / [RIS](https://priyalifescience.com/opendata/airmid/v1/citation.ris) files give a ready citation.
 - Nothing here is medical advice.
 
