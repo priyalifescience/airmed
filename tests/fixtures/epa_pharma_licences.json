@@ -1,0 +1,362 @@
+{
+ "profiles": {
+  "Industrial Emissions Licence": {
+   "count": 5,
+   "list": [
+    {
+     "licence_profile_id": "977ef377-1a33-4a13-8c64-0bc46f9944c8",
+     "name": "Smartply Europe Designated Activity Company - P0001",
+     "profile_number": "P0001",
+     "active_licence_id": "daa3e986-b4e0-4e2c-b180-cc6cd243fef2",
+     "active_licence_type": "Industrial Emissions Licence",
+     "active_licence_regno": "P0001-05",
+     "active_licence_startdate": "2024-03-13T00:00:00",
+     "active_licence_status": "Licensed",
+     "active_licence_substatus": "Licensable Activity Commenced",
+     "active_licence_sector": "Wood, Paper, Textiles and Leather",
+     "first_issue_date": null,
+     "county": "Kilkenny",
+     "town": null,
+     "organisation_id": "087effb3-458d-e111-ab87-0050568a69e2",
+     "organisation_name": "Smartply Europe Designated Activity Company",
+     "uww_priority_site": "n/a",
+     "major_class_of_activity": "8.7. The production of one or more of the following wood-based panels: oriented strand board, partic",
+     "ied_activity": "6.1 (c). Production in industrial installations of: one or more of the following wood-based panels: ",
+     "site_id": "506de59e-4b8d-e111-ab87-0050568a69e2",
+     "active_application": "No",
+     "active_applicatio_number": null,
+     "active_application_id": null,
+     "active_application_status": null,
+     "active_application_date": null,
+     "active_application_licence_id": null,
+     "active_application_licence_regno": null,
+     "fp_priority": null,
+     "cramp": null,
+     "elra": null
+    },
+    {
+     "licence_profile_id": "1a507022-d459-4a98-afb9-cc0587998ac1",
+     "name": "Thermo Fisher Scientific Cork Limited - P0004",
+     "profile_number": "P0004",
+     "active_licence_id": "77036c17-572a-4b35-a68c-7e8d9d2bfc03",
+     "active_licence_type": "Industrial Emissions Licence",
+     "active_licence_regno": "P0004-06",
+     "active_licence_startdate": "2020-11-19T00:00:00",
+     "active_licence_status": "Licensed",
+     "active_licence_substatus": "Licensable Activity Commenced",
+     "active_licence_sector": "Chemicals",
+     "first_issue_date": null,
+     "county": "Cork",
+     "town": null,
+     "organisation_id": "4da983a8-b7ba-4297-8a70-0da2e914505b",
+     "organisation_name": "Thermo Fisher Scientific Cork Limited",
+     "uww_priority_site": "n/a",
+     "major_class_of_activity": "5.16. The production of pharmaceutical products including intermediates.",
+     "ied_activity": "4.5. Production of pharmaceutical products including intermediates",
+     "site_id": "e6d38ec9-d060-e211-9eb5-0050568a69e2",
+     "active_application": "No",
+     "active_applicatio_number": null,
+     "active_application_id": null,
+     "active_application_status": null,
+     "active_application_date": null,
+     "active_application_licence_id": null,
+     "active_application_licence_regno": null,
+     "fp_priority": null,
+     "cramp": null,
+     "elra": null
+    },
+    {
+     "licence_profile_id": "1b3d43b2-2b13-4bab-a61a-ea698de8889a",
+     "name": "Oled Material Manufacturing Limited - P0020",
+     "profile_number": "P0020",
+     "active_licence_id": "283e79cc-de0f-476e-857f-8f1a4fc7dc75",
+     "active_licence_type": "Industrial Emissions Licence",
+     "active_licence_regno": "P0020-03",
+     "active_licence_startdate": "2023-01-11T00:00:00",
+     "active_licence_status": "Licensed",
+     "active_licence_substatus": "Licensable Activity Commenced",
+     "active_licence_sector": "Chemicals",
+     "first_issue_date": null,
+     "county": "Clare",
+     "town": null,
+     "organisation_id": "17359bc3-5d3a-4464-810a-458bc7fc20c1",
+     "organisation_name": "PPG SCM Ireland Limited",
+     "uww_priority_site": "n/a",
+     "major_class_of_activity": "5.12 (g). The production of organic chemicals, such as organometallic compounds (production means th",
+     "ied_activity": "4.1 (g). Production of organic chemicals, such as: organometallic compounds",
+     "site_id": "5f3bed98-4b8d-e111-ab87-0050568a69e2",
+     "active_application": "No",
+     "active_applicatio_number": null,
+     "active_application_id": null,
+     "active_application_status": null,
+     "active_application_date": null,
+     "active_application_licence_id": null,
+     "active_application_licence_regno": null,
+     "fp_priority": null,
+     "cramp": null,
+     "elra": null
+    },
+    {
+     "licence_profile_id": "e2e78931-f2c4-4177-9704-11c75caac699",
+     "name": "Norbrook Manufacturing (Ireland) Limited - P1102",
+     "profile_number": "P1102",
+     "active_licence_id": "33f6087d-55fa-41b1-8efc-a1ec7417ac0f",
+     "active_licence_type": "Industrial Emissions Licence",
+     "active_licence_regno": "P1102-01",
+     "active_licence_startdate": null,
+     "active_licence_status": "Withdrawn",
+     "active_licence_substatus": null,
+     "active_licence_sector": "Chemicals",
+     "first_issue_date": null,
+     "county": "Monaghan",
+     "town": "Monaghan",
+     "organisation_id": "9e7dffb3-458d-e111-ab87-0050568a69e2",
+     "organisation_name": "Norbrook Manufacturing Limited",
+     "uww_priority_site": "n/a",
+     "major_class_of_activity": "5.16. The production of pharmaceutical products including intermediates.",
+     "ied_activity": "4.5. Production of pharmaceutical products including intermediates",
+     "site_id": "6e14d4b2-ea32-4c1c-ad6a-fea85cafd390",
+     "active_application": "No",
+     "active_applicatio_number": null,
+     "active_application_id": null,
+     "active_application_status": null,
+     "active_application_date": null,
+     "active_application_licence_id": null,
+     "active_application_licence_regno": null,
+     "fp_priority": null,
+     "cramp": null,
+     "elra": null
+    },
+    {
+     "licence_profile_id": "24698a50-4c1e-42ac-8e5c-ea83ce4429e7",
+     "name": "WuXi Biologics Ireland Limited - P1122",
+     "profile_number": "P1122",
+     "active_licence_id": "a2c2bda8-cdf5-4b54-ad71-59dc51d368e5",
+     "active_licence_type": "Industrial Emissions Licence",
+     "active_licence_regno": "P1122-01",
+     "active_licence_startdate": "2021-03-26T00:00:00",
+     "active_licence_status": "Licensed",
+     "active_licence_substatus": "Licensable Activity Commenced",
+     "active_licence_sector": "Chemicals",
+     "first_issue_date": null,
+     "county": "Louth",
+     "town": "Dundalk",
+     "organisation_id": "57f38f4f-4caf-4e58-8709-51302c55e41c",
+     "organisation_name": "WuXi Biologics Ireland Limited",
+     "uww_priority_site": "n/a",
+     "major_class_of_activity": "5.16. The production of pharmaceutical products including intermediates.",
+     "ied_activity": "4.5. Production of pharmaceutical products including intermediates",
+     "site_id": "79113c7f-f5ff-442e-8b34-06f62b692ca6",
+     "active_application": "No",
+     "active_applicatio_number": null,
+     "active_application_id": null,
+     "active_application_status": null,
+     "active_application_date": null,
+     "active_application_licence_id": null,
+     "active_application_licence_regno": null,
+     "fp_priority": null,
+     "cramp": null,
+     "elra": null
+    }
+   ]
+  },
+  "Integrated Pollution Prevention Control Licence": {
+   "count": 1,
+   "list": [
+    {
+     "licence_profile_id": "dd86f67b-529a-e411-b3b4-0050568a69e2",
+     "name": "LEO Pharma - P0008",
+     "profile_number": "P0008",
+     "active_licence_id": "fda0b2ae-0c4e-e811-a2d4-0050568a66b2",
+     "active_licence_type": "Integrated Pollution Prevention Control Licence",
+     "active_licence_regno": "P0008-02",
+     "active_licence_startdate": null,
+     "active_licence_status": "Abandoned",
+     "active_licence_substatus": null,
+     "active_licence_sector": "Chemicals",
+     "first_issue_date": null,
+     "county": "Dublin",
+     "town": null,
+     "organisation_id": "a94307ae-458d-e111-ab87-0050568a69e2",
+     "organisation_name": "LEO Pharma",
+     "uww_priority_site": "n/a",
+     "major_class_of_activity": "5.6. The manufacture of pesticides, pharmaceuticals or veterinary products and their intermediates.",
+     "ied_activity": "n/a",
+     "site_id": "1f36ed98-4b8d-e111-ab87-0050568a69e2",
+     "active_application": "No",
+     "active_applicatio_number": null,
+     "active_application_id": null,
+     "active_application_status": null,
+     "active_application_date": null,
+     "active_application_licence_id": null,
+     "active_application_licence_regno": null,
+     "fp_priority": null,
+     "cramp": null,
+     "elra": null
+    }
+   ]
+  },
+  "Integrated Pollution Control Licence": {
+   "count": 1,
+   "list": [
+    {
+     "licence_profile_id": "7a379cdb-c146-4a91-b5e4-98618154ad10",
+     "name": "Astellas Ireland Company Limited (Killorglin) - P0018",
+     "profile_number": "P0018",
+     "active_licence_id": "70fe2474-5d04-45e1-b1fa-f205fa1c3bfa",
+     "active_licence_type": "Integrated Pollution Control Licence",
+     "active_licence_regno": "P0018-02",
+     "active_licence_startdate": "2013-04-30T00:00:00",
+     "active_licence_status": "Licensed",
+     "active_licence_substatus": "Licensable Activity Commenced",
+     "active_licence_sector": "Chemicals",
+     "first_issue_date": null,
+     "county": "Kerry",
+     "town": null,
+     "organisation_id": "7316fbcd-c007-e211-9eb5-0050568a69e2",
+     "organisation_name": "Astellas Ireland Company Limited",
+     "uww_priority_site": "n/a",
+     "major_class_of_activity": "5.6. The manufacture of pesticides, pharmaceuticals or veterinary products and their intermediates.",
+     "ied_activity": "n/a",
+     "site_id": "00d28ec9-d060-e211-9eb5-0050568a69e2",
+     "active_application": "No",
+     "active_applicatio_number": null,
+     "active_application_id": null,
+     "active_application_status": null,
+     "active_application_date": null,
+     "active_application_licence_id": null,
+     "active_application_licence_regno": null,
+     "fp_priority": null,
+     "cramp": null,
+     "elra": null
+    }
+   ]
+  }
+ },
+ "sites": {
+  "P0004": {
+   "nacecode": "2120",
+   "city": null,
+   "eircode_routing_key": ""
+  },
+  "P1102": {
+   "nacecode": "2120",
+   "city": "Monaghan",
+   "eircode_routing_key": "H18"
+  },
+  "P1122": {
+   "nacecode": "2120",
+   "city": "Dundalk",
+   "eircode_routing_key": "A91"
+  },
+  "P0008": {
+   "nacecode": "2120",
+   "city": null,
+   "eircode_routing_key": ""
+  },
+  "P0018": {
+   "nacecode": "2110",
+   "city": null,
+   "eircode_routing_key": ""
+  }
+ },
+ "licences": {
+  "P0004": {
+   "count": 6,
+   "list": [
+    {
+     "reg_no": "P0004-01",
+     "licence_type": "Integrated Pollution Control Licence",
+     "date_of_licence": "1994-12-06T00:00:00",
+     "licence_status": "Replaced"
+    },
+    {
+     "reg_no": "P0004-02",
+     "licence_type": "Integrated Pollution Control Licence",
+     "date_of_licence": "1999-08-20T00:00:00",
+     "licence_status": "Replaced"
+    },
+    {
+     "reg_no": "P0004-03",
+     "licence_type": "Integrated Pollution Control Licence",
+     "date_of_licence": "2007-07-10T00:00:00",
+     "licence_status": "Replaced"
+    },
+    {
+     "reg_no": "P0004-04",
+     "licence_type": "Industrial Emissions Licence",
+     "date_of_licence": "2013-01-09T00:00:00",
+     "licence_status": "Replaced"
+    },
+    {
+     "reg_no": "P0004-05",
+     "licence_type": "Industrial Emissions Licence",
+     "date_of_licence": "2015-11-19T00:00:00",
+     "licence_status": "Replaced"
+    },
+    {
+     "reg_no": "P0004-06",
+     "licence_type": "Industrial Emissions Licence",
+     "date_of_licence": "2020-11-19T00:00:00",
+     "licence_status": "Licensed"
+    }
+   ]
+  },
+  "P1102": {
+   "count": 1,
+   "list": [
+    {
+     "reg_no": "P1102-01",
+     "licence_type": "Industrial Emissions Licence",
+     "date_of_licence": null,
+     "licence_status": "Withdrawn"
+    }
+   ]
+  },
+  "P1122": {
+   "count": 1,
+   "list": [
+    {
+     "reg_no": "P1122-01",
+     "licence_type": "Industrial Emissions Licence",
+     "date_of_licence": "2021-03-26T00:00:00",
+     "licence_status": "Licensed"
+    }
+   ]
+  },
+  "P0008": {
+   "count": 2,
+   "list": [
+    {
+     "reg_no": "P0008-01",
+     "licence_type": "Integrated Pollution Prevention Control Licence",
+     "date_of_licence": "1995-03-31T00:00:00",
+     "licence_status": "Surrendered"
+    },
+    {
+     "reg_no": "P0008-02",
+     "licence_type": "Integrated Pollution Prevention Control Licence",
+     "date_of_licence": null,
+     "licence_status": "Abandoned"
+    }
+   ]
+  },
+  "P0018": {
+   "count": 2,
+   "list": [
+    {
+     "reg_no": "P0018-01",
+     "licence_type": "Integrated Pollution Prevention Control Licence",
+     "date_of_licence": "1995-06-26T00:00:00",
+     "licence_status": "Replaced"
+    },
+    {
+     "reg_no": "P0018-02",
+     "licence_type": "Integrated Pollution Control Licence",
+     "date_of_licence": "2013-04-30T00:00:00",
+     "licence_status": "Licensed"
+    }
+   ]
+  }
+ }
+}

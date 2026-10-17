@@ -46,6 +46,19 @@ DATASETS = {
                                     url=lambda r: (r.get("doi") or "") if str(r.get("doi") or "").startswith("https://")
                                     else ("https://doi.org/" + r["doi"] if r.get("doi") else "")),
 }
+DATASETS.update({
+    "fda_purple_book": dict(label="proprietary_name", extra=["proper_name", "applicant", "license_type"]),
+    "eu_orphan_exclusivity": dict(label="product_name", extra=["active_substance", "orphan_indication", "exclusivity_expiry"],
+                                  url="product_url"),
+    "pharma_company_ids": dict(label=["label", "gleif_legal_name", "cro_company_name"],
+                               extra=["irish_link", "hq_country", "gleif_legal_city"], url="website"),
+    "epa_pharma_licences": dict(label="licensee", extra=["site_name", "town", "county", "licence_status"], url="url"),
+    "fda_warning_letters": dict(label=["company", "subject"], extra=["subject", "product_area", "issuing_office"], url="url"),
+    "dailymed_spl_index": dict(label="title", extra=["labeler"], url="url"),
+})
+# Tables with one row per patent, price or month repeat the same medicine name thousands of times: they would crowd
+# the results, so they are not indexed (they stay downloadable and linkable through the medicine cross-reference).
+NOT_INDEXED = {"fda_orange_book", "nhs_prescription_costs", "medicaid_drug_spending", "nadac_prices"}
 SHARD = 2000  # records per label shard: the browser fetches only the shards that hold its top results
 GENERIC_LABELS = ["title", "name", "medicine_name", "medicine", "product_name", "project_title", "acronym"]
 SKIP_NUMERIC = True  # datasets whose records have no text label are statistics: not indexed
@@ -142,6 +155,9 @@ def main(argv=None):
     keys, items, texts, per_ds = [], [], [], {}
     for ds in catalog["datasets"]:
         key = ds["key"]
+        if key in NOT_INDEXED:
+            print(f"skip  {key} (repeating rows: not indexed)")
+            continue
         data = json.loads((dist / key / f"{key}.json").read_text(encoding="utf-8"))
         recs = data["records"]
         rows = [(i, describe(key, r)) for i, r in enumerate(recs)]

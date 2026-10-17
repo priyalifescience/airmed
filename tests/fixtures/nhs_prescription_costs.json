@@ -1,0 +1,127 @@
+{
+ "first_year": 2026,
+ "months": {
+  "202606": {
+   "table": "PCA_202606",
+   "totals": {
+    "n": 0,
+    "items": 7492870,
+    "q": 224831624,
+    "nic": 44476338.4
+   },
+   "records": [
+    {
+     "c": "0601011A0",
+     "n": "Insulin aspart",
+     "chc": "06",
+     "ch": "Endocrine System",
+     "u": "vial",
+     "items": 49751,
+     "q": 199121,
+     "nic": 2795280.74
+    },
+    {
+     "c": "040201060",
+     "n": "Olanzapine",
+     "chc": "04",
+     "ch": "Central Nervous System",
+     "u": "tablet",
+     "items": 226754,
+     "q": 5048340,
+     "nic": 455791.98
+    },
+    {
+     "c": "0101010Q0",
+     "n": "Magnesium hydroxide",
+     "chc": "01",
+     "ch": "Gastro-Intestinal System",
+     "u": "ml",
+     "items": 327,
+     "q": 191150,
+     "nic": 4319.99
+    },
+    {
+     "c": "0212000B0",
+     "n": "Atorvastatin",
+     "chc": "02",
+     "ch": "Cardiovascular System",
+     "u": "tablet",
+     "items": 6789645,
+     "q": 218424090,
+     "nic": 6004578.83
+    },
+    {
+     "c": "2148",
+     "n": "Detection Sensor Interstitial Fluid/Gluc",
+     "chc": "21",
+     "ch": "Appliances",
+     "u": "kit",
+     "items": 426393,
+     "q": 968923,
+     "nic": 35216366.86
+    }
+   ]
+  },
+  "202607": {
+   "table": "PCA_202607",
+   "totals": {
+    "n": 0,
+    "items": 7829540,
+    "q": 235127313,
+    "nic": 47889405.07
+   },
+   "records": [
+    {
+     "c": "0601011A0",
+     "n": "Insulin aspart",
+     "chc": "06",
+     "ch": "Endocrine System",
+     "u": "vial",
+     "items": 53179,
+     "q": 213640,
+     "nic": 2998507.67
+    },
+    {
+     "c": "040201060",
+     "n": "Olanzapine",
+     "chc": "04",
+     "ch": "Central Nervous System",
+     "u": "tablet",
+     "items": 236281,
+     "q": 5255749,
+     "nic": 364952.75
+    },
+    {
+     "c": "0101010Q0",
+     "n": "Magnesium hydroxide",
+     "chc": "01",
+     "ch": "Gastro-Intestinal System",
+     "u": "ml",
+     "items": 344,
+     "q": 203200,
+     "nic": 4592.32
+    },
+    {
+     "c": "0212000B0",
+     "n": "Atorvastatin",
+     "chc": "02",
+     "ch": "Cardiovascular System",
+     "u": "tablet",
+     "items": 7090204,
+     "q": 228431653,
+     "nic": 7378867.16
+    },
+    {
+     "c": "2148",
+     "n": "Detection Sensor Interstitial Fluid/Gluc",
+     "chc": "21",
+     "ch": "Appliances",
+     "u": "kit",
+     "items": 449532,
+     "q": 1023071,
+     "nic": 37142485.17
+    }
+   ]
+  }
+ }
+}

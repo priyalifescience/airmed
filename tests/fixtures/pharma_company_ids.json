@@ -1,0 +1,687 @@
+{
+ "counts": {
+  "gleif_records": 4,
+  "leis": 4,
+  "wikidata_items": 6
+ },
+ "cro": {
+  "by_number": {
+   "272391": {
+    "company_name": "STRYKER IRELAND LIMITED",
+    "company_num": 272391,
+    "company_reg_date": "1997-09-22T00:00:00",
+    "company_status": "Normal ",
+    "company_type": "LTD - Private Company Limited by Shares"
+   },
+   "392565": {
+    "company_name": "PERRIGO FINANCE UNLIMITED COMPANY",
+    "company_num": 392565,
+    "company_reg_date": "2004-10-19T00:00:00",
+    "company_status": "Normal ",
+    "company_type": "PUC - Public Unlimited Company"
+   },
+   "485322": {
+    "company_name": "PFIZER TRANSACTIONS IRELAND UNLIMITED COMPANY",
+    "company_num": 485322,
+    "company_reg_date": "2010-06-09T00:00:00",
+    "company_status": "Dissolved",
+    "company_type": "ULC - Private Unlimited Company"
+   },
+   "490938": {
+    "company_name": "PFIZER IRELAND PHARMACEUTICALS UNLIMITED COMPANY",
+    "company_num": 490938,
+    "company_reg_date": "2010-11-03T00:00:00",
+    "company_status": "Normal ",
+    "company_type": "ULC - Private Unlimited Company"
+   },
+   "491248": {
+    "company_name": "STRYKER NV OPERATIONS LIMITED",
+    "company_num": 491248,
+    "company_reg_date": "2010-11-10T00:00:00",
+    "company_status": "Normal ",
+    "company_type": "LTD - Private Company Limited by Shares"
+   },
+   "529592": {
+    "company_name": "PERRIGO COMPANY PUBLIC LIMITED COMPANY",
+    "company_num": 529592,
+    "company_reg_date": "2013-06-28T00:00:00",
+    "company_status": "Normal ",
+    "company_type": "PLC - Public Limited Company"
+   },
+   "901582": {
+    "company_name": "HOWMEDICA INTERNATIONAL S. DE R.L.",
+    "company_num": 901582,
+    "company_reg_date": "1971-11-08T00:00:00",
+    "company_status": "Normal ",
+    "company_type": "External company"
+   }
+  },
+  "name_search": {
+   "Jazz Pharmaceuticals Public Limited Company": [
+    {
+     "company_name": "JAZZ PHARMACEUTICALS PUBLIC LIMITED COMPANY",
+     "company_num": 399192,
+     "company_reg_date": "2005-03-15T00:00:00",
+     "company_status": "Normal ",
+     "company_type": "PLC - Public Limited Company"
+    }
+   ]
+  }
+ },
+ "gleif": {
+  "by_cro_number": {
+   "399192": [
+    {
+     "category": "GENERAL",
+     "city": "Dublin",
+     "country": "IE",
+     "entity_status": "ACTIVE",
+     "has_direct_parent": false,
+     "has_ultimate_parent": false,
+     "jurisdiction": "IE",
+     "legal_name": "Jazz Pharmaceuticals Public Limited Company",
+     "lei": "635400GAUMJCLEZRRV50",
+     "registered_as": "399192",
+     "registered_at": "RA000402",
+     "registration_status": "ISSUED"
+    }
+   ]
+  },
+  "children": {
+   "5493002F0SC4JTBU5137": [
+    {
+     "category": "GENERAL",
+     "city": "DUBLIN",
+     "country": "IE",
+     "entity_status": "ACTIVE",
+     "has_direct_parent": true,
+     "has_ultimate_parent": true,
+     "jurisdiction": "IE",
+     "legal_name": "STRYKER IRELAND LIMITED",
+     "lei": "5493005YQVR5TQ41KN58",
+     "registered_as": "272391",
+     "registered_at": "RA000402",
+     "registration_status": "LAPSED"
+    },
+    {
+     "category": "GENERAL",
+     "city": "LIMERICK",
+     "country": "IE",
+     "entity_status": "ACTIVE",
+     "has_direct_parent": true,
+     "has_ultimate_parent": true,
+     "jurisdiction": "IE",
+     "legal_name": "HOWMEDICA INTERNATIONAL S. DE R.L.",
+     "lei": "549300YWWIKX3228SV54",
+     "registered_as": "901582",
+     "registered_at": "RA000402",
+     "registration_status": "LAPSED"
+    },
+    {
+     "category": "GENERAL",
+     "city": "DUBLIN",
+     "country": "IE",
+     "entity_status": "ACTIVE",
+     "has_direct_parent": true,
+     "has_ultimate_parent": true,
+     "jurisdiction": "IE",
+     "legal_name": "STRYKER NV OPERATIONS LIMITED",
+     "lei": "549300K7RRLJP1IKQS02",
+     "registered_as": "491248",
+     "registered_at": "RA000402",
+     "registration_status": "LAPSED"
+    }
+   ],
+   "549300IFOQS6R1QLY196": [
+    {
+     "category": "GENERAL",
+     "city": "DUBLIN",
+     "country": "IE",
+     "entity_status": "ACTIVE",
+     "has_direct_parent": true,
+     "has_ultimate_parent": true,
+     "jurisdiction": "IE",
+     "legal_name": "PERRIGO FINANCE UNLIMITED COMPANY",
+     "lei": "549300E86RB6YCTMRM83",
+     "registered_as": "392565",
+     "registered_at": "RA000402",
+     "registration_status": "ISSUED"
+    }
+   ],
+   "765LHXWGK1KXCLTFYQ30": [
+    {
+     "category": "GENERAL",
+     "city": "Cork",
+     "country": "IE",
+     "entity_status": "ACTIVE",
+     "has_direct_parent": true,
+     "has_ultimate_parent": true,
+     "jurisdiction": "IE",
+     "legal_name": "PFIZER IRELAND PHARMACEUTICALS UNLIMITED COMPANY",
+     "lei": "254900916EI8NU0SVV60",
+     "registered_as": "490938",
+     "registered_at": "RA000402",
+     "registration_status": "ISSUED"
+    },
+    {
+     "category": "GENERAL",
+     "city": "DUBLIN",
+     "country": "IE",
+     "entity_status": "ACTIVE",
+     "has_direct_parent": false,
+     "has_ultimate_parent": true,
+     "jurisdiction": "IE",
+     "legal_name": "PFIZER TRANSACTIONS IRELAND UNLIMITED COMPANY",
+     "lei": "54930017XQ3IZWXX5166",
+     "registered_as": "485322",
+     "registered_at": "RA000402",
+     "registration_status": "LAPSED"
+    }
+   ]
+  },
+  "parents": {
+   "254900916EI8NU0SVV60": {
+    "direct-parent": "765LHXWGK1KXCLTFYQ30",
+    "ultimate-parent": "765LHXWGK1KXCLTFYQ30"
+   },
+   "54930017XQ3IZWXX5166": {
+    "ultimate-parent": "765LHXWGK1KXCLTFYQ30"
+   },
+   "5493005YQVR5TQ41KN58": {
+    "direct-parent": "5493002F0SC4JTBU5137",
+    "ultimate-parent": "5493002F0SC4JTBU5137"
+   },
+   "549300E86RB6YCTMRM83": {
+    "direct-parent": "549300IFOQS6R1QLY196",
+    "ultimate-parent": "549300IFOQS6R1QLY196"
+   },
+   "549300K7RRLJP1IKQS02": {
+    "direct-parent": "5493002F0SC4JTBU5137",
+    "ultimate-parent": "5493002F0SC4JTBU5137"
+   },
+   "549300YWWIKX3228SV54": {
+    "direct-parent": "5493002F0SC4JTBU5137",
+    "ultimate-parent": "5493002F0SC4JTBU5137"
+   }
+  },
+  "records": {
+   "529900AKIOSC15Y63R18": {
+    "category": "GENERAL",
+    "city": "Modi'in",
+    "country": "IL",
+    "entity_status": "ACTIVE",
+    "has_direct_parent": false,
+    "has_ultimate_parent": false,
+    "jurisdiction": "IL",
+    "legal_name": "BioLineRx Ltd",
+    "lei": "529900AKIOSC15Y63R18",
+    "registered_as": "513398750",
+    "registered_at": "RA000406",
+    "registration_status": "LAPSED"
+   },
+   "5493002F0SC4JTBU5137": {
+    "category": "GENERAL",
+    "city": "PLYMOUTH",
+    "country": "US",
+    "entity_status": "ACTIVE",
+    "has_direct_parent": false,
+    "has_ultimate_parent": false,
+    "jurisdiction": "US-MI",
+    "legal_name": "STRYKER CORPORATION",
+    "lei": "5493002F0SC4JTBU5137",
+    "registered_as": "800151233",
+    "registered_at": "RA000616",
+    "registration_status": "ISSUED"
+   },
+   "549300IFOQS6R1QLY196": {
+    "category": "GENERAL",
+    "city": "DUBLIN",
+    "country": "IE",
+    "entity_status": "ACTIVE",
+    "has_direct_parent": false,
+    "has_ultimate_parent": false,
+    "jurisdiction": "IE",
+    "legal_name": "PERRIGO COMPANY PUBLIC LIMITED COMPANY",
+    "lei": "549300IFOQS6R1QLY196",
+    "registered_as": "529592",
+    "registered_at": "RA000402",
+    "registration_status": "ISSUED"
+   },
+   "765LHXWGK1KXCLTFYQ30": {
+    "category": "GENERAL",
+    "city": "WILMINGTON",
+    "country": "US",
+    "entity_status": "ACTIVE",
+    "has_direct_parent": false,
+    "has_ultimate_parent": false,
+    "jurisdiction": "US-DE",
+    "legal_name": "PFIZER INC.",
+    "lei": "765LHXWGK1KXCLTFYQ30",
+    "registered_as": "383418",
+    "registered_at": "RA000602",
+    "registration_status": "ISSUED"
+   }
+  }
+ },
+ "wikidata": {
+  "candidates": [
+   {
+    "b": "Q507443",
+    "c": "Q16255113",
+    "why": "country_ireland"
+   },
+   {
+    "b": "Q19644607",
+    "c": "Q16255113",
+    "why": "country_ireland"
+   },
+   {
+    "b": "Q90298876",
+    "c": "Q16255113",
+    "why": "country_ireland"
+   },
+   {
+    "b": "Q131784011",
+    "c": "Q16255113",
+    "why": "country_ireland"
+   },
+   {
+    "b": "Q507443",
+    "c": "Q2916497",
+    "why": "country_ireland"
+   },
+   {
+    "b": "Q19644607",
+    "c": "Q2916497",
+    "why": "country_ireland"
+   },
+   {
+    "b": "Q507443",
+    "c": "Q2916497",
+    "why": "hq_in_ireland"
+   },
+   {
+    "b": "Q19644607",
+    "c": "Q2916497",
+    "why": "hq_in_ireland"
+   },
+   {
+    "b": "Q507443",
+    "c": "Q16255113",
+    "why": "hq_in_ireland"
+   },
+   {
+    "b": "Q19644607",
+    "c": "Q16255113",
+    "why": "hq_in_ireland"
+   },
+   {
+    "b": "Q90298876",
+    "c": "Q16255113",
+    "why": "hq_in_ireland"
+   },
+   {
+    "b": "Q131784011",
+    "c": "Q16255113",
+    "why": "hq_in_ireland"
+   },
+   {
+    "b": "Q507443",
+    "c": "Q206921",
+    "why": "irish_subsidiary_or_facility"
+   },
+   {
+    "b": "Q19644607",
+    "c": "Q206921",
+    "why": "irish_subsidiary_or_facility"
+   },
+   {
+    "b": "Q90298876",
+    "c": "Q206921",
+    "why": "irish_subsidiary_or_facility"
+   },
+   {
+    "b": "Q131784011",
+    "c": "Q206921",
+    "why": "irish_subsidiary_or_facility"
+   },
+   {
+    "b": "Q1519843",
+    "c": "Q2357515",
+    "why": "irish_subsidiary_or_facility"
+   },
+   {
+    "b": "Q63383584",
+    "c": "Q2357515",
+    "why": "irish_subsidiary_or_facility"
+   },
+   {
+    "b": "Q7108",
+    "c": "Q4914627",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q507443",
+    "c": "Q206921",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q19644607",
+    "c": "Q206921",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q90298876",
+    "c": "Q206921",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q131784011",
+    "c": "Q206921",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q1519843",
+    "c": "Q2357515",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q63383584",
+    "c": "Q2357515",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q507443",
+    "c": "Q2916497",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q19644607",
+    "c": "Q2916497",
+    "why": "lei_candidate"
+   },
+   {
+    "b": "Q2357515",
+    "c": "Q29123215",
+    "why": "organisation_in_ireland_of_sector_company"
+   }
+  ],
+  "props": {
+   "country": [
+    {
+     "c": "Q206921",
+     "v": "United States"
+    },
+    {
+     "c": "Q2357515",
+     "v": "United States"
+    },
+    {
+     "c": "Q2916497",
+     "v": "Ireland"
+    },
+    {
+     "c": "Q16255113",
+     "v": "Ireland"
+    },
+    {
+     "c": "Q29123215",
+     "v": "Ireland"
+    },
+    {
+     "c": "Q4914627",
+     "v": "Israel"
+    }
+   ],
+   "cro": [
+    {
+     "c": "Q29123215",
+     "v": "272391"
+    }
+   ],
+   "hq_country": [
+    {
+     "c": "Q206921",
+     "v": "United States"
+    },
+    {
+     "c": "Q16255113",
+     "v": "Ireland"
+    },
+    {
+     "c": "Q29123215",
+     "v": "Ireland"
+    },
+    {
+     "c": "Q2357515",
+     "v": "United States"
+    },
+    {
+     "c": "Q2916497",
+     "v": "Ireland"
+    },
+    {
+     "c": "Q4914627",
+     "v": "Israel"
+    },
+    {
+     "c": "Q4914627",
+     "v": "Israel"
+    },
+    {
+     "c": "Q4914627",
+     "v": "Palestine"
+    }
+   ],
+   "inception": [
+    {
+     "c": "Q206921",
+     "v": "1849-01-01T00:00:00Z"
+    },
+    {
+     "c": "Q2357515",
+     "v": "1946-02-20T00:00:00Z"
+    },
+    {
+     "c": "Q2916497",
+     "v": "1887-01-01T00:00:00Z"
+    },
+    {
+     "c": "Q4914627",
+     "v": "2003-01-01T00:00:00Z"
+    },
+    {
+     "c": "Q16255113",
+     "v": "2003-01-01T00:00:00Z"
+    },
+    {
+     "c": "Q29123215",
+     "v": "1997-09-22T00:00:00Z"
+    }
+   ],
+   "label": [
+    {
+     "c": "Q206921",
+     "v": "Pfizer"
+    },
+    {
+     "c": "Q4914627",
+     "v": "Bioline Rx Ltd."
+    },
+    {
+     "c": "Q2916497",
+     "v": "Perrigo Company Plc"
+    },
+    {
+     "c": "Q2357515",
+     "v": "Stryker Corporation"
+    },
+    {
+     "c": "Q16255113",
+     "v": "Jazz Pharmaceuticals"
+    },
+    {
+     "c": "Q29123215",
+     "v": "Stryker (Ireland)"
+    }
+   ],
+   "legal_name": [
+    {
+     "c": "Q206921",
+     "v": "Pfizer Inc."
+    },
+    {
+     "c": "Q2916497",
+     "v": "Perrigo Company plc"
+    },
+    {
+     "c": "Q4914627",
+     "v": "ביוליין אר אקס בע''מ"
+    },
+    {
+     "c": "Q16255113",
+     "v": "Jazz Pharmaceuticals Public Limited Company"
+    }
+   ],
+   "lei": [
+    {
+     "c": "Q206921",
+     "v": "765LHXWGK1KXCLTFYQ30"
+    },
+    {
+     "c": "Q2357515",
+     "v": "5493002F0SC4JTBU5137"
+    },
+    {
+     "c": "Q2916497",
+     "v": "549300IFOQS6R1QLY196"
+    },
+    {
+     "c": "Q4914627",
+     "v": "529900AKIOSC15Y63R18"
+    }
+   ],
+   "listing": [
+    {
+     "c": "Q2357515",
+     "l": "New York Stock Exchange",
+     "v": "SYK"
+    },
+    {
+     "c": "Q206921",
+     "l": "New York Stock Exchange",
+     "v": "PFE"
+    },
+    {
+     "c": "Q2916497",
+     "l": "New York Stock Exchange",
+     "v": "PRGO"
+    },
+    {
+     "c": "Q16255113",
+     "l": "Nasdaq",
+     "v": "JAZZ"
+    },
+    {
+     "c": "Q4914627",
+     "l": "Nasdaq",
+     "v": "BLRX"
+    },
+    {
+     "c": "Q4914627",
+     "l": "Tel Aviv Stock Exchange"
+    },
+    {
+     "c": "Q4914627",
+     "l": "Tel Aviv Stock Exchange",
+     "v": "BLRX"
+    }
+   ],
+   "opencorporates": [
+    {
+     "c": "Q206921",
+     "v": "us_de/383418"
+    },
+    {
+     "c": "Q2916497",
+     "v": "ie/529592"
+    },
+    {
+     "c": "Q4914627",
+     "v": "il/513398750"
+    }
+   ],
+   "parent": [
+    {
+     "c": "Q29123215",
+     "l": "Stryker Corporation",
+     "v": "Q2357515"
+    }
+   ],
+   "sector_label": [
+    {
+     "c": "Q7108",
+     "v": "biotechnology"
+    },
+    {
+     "c": "Q507443",
+     "v": "pharmaceutical industry"
+    },
+    {
+     "c": "Q131784011",
+     "v": "biopharmaceutical company"
+    },
+    {
+     "c": "Q1519843",
+     "v": "medical technology"
+    },
+    {
+     "c": "Q2357515",
+     "v": "Stryker Corporation"
+    },
+    {
+     "c": "Q19644607",
+     "v": "pharmaceutical company"
+    },
+    {
+     "c": "Q63383584",
+     "v": "medical device company"
+    },
+    {
+     "c": "Q90298876",
+     "v": "biotechnology company"
+    }
+   ],
+   "website": [
+    {
+     "c": "Q206921",
+     "v": "https://www.pfizer.com/"
+    },
+    {
+     "c": "Q2357515",
+     "v": "https://stryker.com"
+    },
+    {
+     "c": "Q2916497",
+     "v": "http://www.perrigo.com/"
+    },
+    {
+     "c": "Q4914627",
+     "v": "http://www.biolinerx.com"
+    },
+    {
+     "c": "Q4914627",
+     "v": "https://www.biolinerx.com"
+    },
+    {
+     "c": "Q16255113",
+     "v": "https://www.jazzpharma.com/"
+    },
+    {
+     "c": "Q29123215",
+     "v": "https://www.stryker.com/ie/en/"
+    }
+   ]
+  }
+ }
+}

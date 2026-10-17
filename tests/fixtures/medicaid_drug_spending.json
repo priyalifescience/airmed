@@ -1,0 +1,146 @@
+{
+ "years": {
+  "2024": {
+   "dataset_id": "61729e5a-7aa8-448c-8903-ba3e0cd0ea3c",
+   "totals": {
+    "rx": "774505",
+    "units": "25465805.843",
+    "tot": "3235916636.70",
+    "mcd": "3164316882.68"
+   },
+   "products": [
+    {
+     "labeler_code": "00002",
+     "product_code": "0101",
+     "rx": "42",
+     "units": "50.000",
+     "tot": "0.00",
+     "mcd": "0.00",
+     "nm": "AMMONIUM C"
+    },
+    {
+     "labeler_code": "00002",
+     "product_code": "0152",
+     "rx": null,
+     "units": null,
+     "tot": null,
+     "mcd": null,
+     "nm": "ZEPBOUND  "
+    },
+    {
+     "labeler_code": "00002",
+     "product_code": "0213",
+     "rx": "7295",
+     "units": "32081.823",
+     "tot": "516756.96",
+     "mcd": "375962.38",
+     "nm": "HUMULIN R "
+    },
+    {
+     "labeler_code": "00002",
+     "product_code": "3235",
+     "rx": "356",
+     "units": "16627.080",
+     "tot": "147778.27",
+     "mcd": "121767.60",
+     "nm": "CYMBALTA  "
+    },
+    {
+     "labeler_code": "61958",
+     "product_code": "2501",
+     "rx": "766812",
+     "units": "25417046.940",
+     "tot": "3235252101.47",
+     "mcd": "3163819152.70",
+     "nm": "Biktarvy B"
+    }
+   ]
+  },
+  "2025": {
+   "dataset_id": "158a1baa-5506-400a-8ec3-97756f0b0536",
+   "totals": {
+    "rx": "779418",
+    "units": "26156551.568",
+    "tot": "3543191008.99",
+    "mcd": "3479645596.97"
+   },
+   "products": [
+    {
+     "labeler_code": "00002",
+     "product_code": "0000",
+     "rx": null,
+     "units": null,
+     "tot": null,
+     "mcd": null,
+     "nm": "          "
+    },
+    {
+     "labeler_code": "00002",
+     "product_code": "0101",
+     "rx": "34",
+     "units": "71.000",
+     "tot": "0.00",
+     "mcd": "0.00",
+     "nm": "AMMONIUM C"
+    },
+    {
+     "labeler_code": "00002",
+     "product_code": "0213",
+     "rx": "1862",
+     "units": "5100.528",
+     "tot": "66847.06",
+     "mcd": "19103.73",
+     "nm": "HUMULIN R "
+    },
+    {
+     "labeler_code": "00002",
+     "product_code": "3235",
+     "rx": "206",
+     "units": "10907.040",
+     "tot": "80419.44",
+     "mcd": "77654.95",
+     "nm": "CYMBALTA  "
+    },
+    {
+     "labeler_code": "61958",
+     "product_code": "2501",
+     "rx": "777316",
+     "units": "26140473.000",
+     "tot": "3543043742.49",
+     "mcd": "3479548838.29",
+     "nm": "Biktarvy B"
+    }
+   ]
+  }
+ },
+ "fda": {
+  "000020152": [
+   "Zepbound",
+   "tirzepatide",
+   "TIRZEPATIDE",
+   "Eli Lilly and Company",
+   "current"
+  ],
+  "000020213": [
+   "Humulin",
+   "Insulin human",
+   "INSULIN HUMAN",
+   "Eli Lilly and Company",
+   "current"
+  ],
+  "000023235": [
+   "Cymbalta",
+   "",
+   "",
+   "Eli Lilly and Company",
+   "excluded"
+  ],
+  "619582501": [
+   "Biktarvy",
+   "bictegravir sodium, emtricitabine, and tenofovir alafenamide fumarate",
+   "BICTEGRAVIR SODIUM; EMTRICITABINE; TENOFOVIR ALAFENAMIDE FUMARATE",
+   "Gilead Sciences, Inc.",
+   "current"
+  ]
+ }
+}

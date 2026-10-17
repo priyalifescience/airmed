@@ -30,6 +30,11 @@ SUBSTANCE_FIELDS = {
     "hc_approvals": ["ingredients"],
     "faers_counts": ["drug_generic_name"],
     "hpra_medicines": ["active_substances"],
+    "fda_orange_book": ["ingredient"],
+    "fda_purple_book": ["proper_name"],
+    "eu_orphan_exclusivity": ["active_substance"],
+    "nhs_prescription_costs": ["bnf_chemical_substance"],
+    "medicaid_drug_spending": ["fda_substance_name"],
 }
 ATC_FIELDS = {"ema_medicines": "atc_code", "hpra_medicines": "atc_codes"}
 ATC_RE = re.compile(r"^[A-Z][0-9]{2}[A-Z]{2}[0-9]{2}$")  # full 7-character ATC substance codes only

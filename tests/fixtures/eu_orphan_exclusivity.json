@@ -1,0 +1,764 @@
+{
+"data": [
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/h393.htm",
+"Type": "Human",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "Soliris"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o166.htm",
+"LinkDate": "2007-06-22",
+"ExtensionLength": "24",
+"ExtensionDate": "2015-07-23",
+"EndDate": "2019-06-22"
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o653.htm",
+"LinkDate": "2011-11-29",
+"ExtensionLength": "24",
+"ExtensionDate": "2015-07-23",
+"EndDate": "2023-11-29"
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1185.htm",
+"LinkDate": "2019-08-28",
+"ExtensionLength": null,
+"ExtensionDate": null,
+"EndDate": null
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1304.htm",
+"LinkDate": "2017-08-17",
+"ExtensionLength": "24",
+"ExtensionDate": "2023-07-26",
+"EndDate": null
+}
+],
+"Status": "Active",
+"EUNumber": "EU/1/07/393",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Eculizumab"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Soliris is indicated in adults and children for the treatment of:\r\n- Paroxysmal nocturnal haemoglobinuria (PNH).\r\nEvidence of clinical benefit is demonstrated in patients with haemolysis with clinical symptom(s) indicative of high disease activity, regardless of transfusion history (see section 5.1 of the SmPC).\r\n- Atypical haemolytic uremic syndrome (aHUS) (see section 5.1 of the SmPC).\r\n- Refractory generalized myasthenia gravis (gMG) in patients aged 6 years and above who are anti-acetylcholine receptor (AChR) antibody-positive (see section 5.1 of the SmPC).\r\n\r\nSoliris is indicated in adults for the treatment of:\r\n- Neuromyelitis optica spectrum disorder (NMOSD) in patients who are anti-aquaporin-4 (AQP4) antibody-positive with a relapsing course of the disease (see section 5.1 of the SmPC)."
+}
+],
+"MAH": {
+"URI": "http://ec.europa.eu/health/documents/community-register/html/mh25985.htm",
+"Name": "Alexion Europe SAS"
+},
+"ATC": [
+{
+"Level": "5",
+"Code": "L04AJ01",
+"Description": "eculizumab"
+}
+],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/EPAR/soliris",
+"AuthorisationDate": "2007-06-20",
+"LastDecisionDate": "2025-12-05",
+"TotalProcedures": "76",
+"TotalDecisions": "29",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/h794.htm",
+"Type": "Human",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "ADCETRIS"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o595.htm",
+"LinkDate": "2012-10-30",
+"ExtensionLength": "24",
+"ExtensionDate": "2021-12-14",
+"EndDate": "2024-06-20"
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o596.htm",
+"LinkDate": "2012-10-30",
+"ExtensionLength": "24",
+"ExtensionDate": "2021-12-14",
+"EndDate": "2024-06-20"
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o939.htm",
+"LinkDate": "2017-12-19",
+"ExtensionLength": null,
+"ExtensionDate": null,
+"EndDate": "2024-06-20"
+}
+],
+"Status": "Active",
+"EUNumber": "EU/1/12/794",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Brentuximab vedotin"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Hodgkin lymphoma\r\nADCETRIS is indicated for adult patients with previously untreated CD30+ Stage III or IV Hodgkin lymphoma (HL) in combination with doxorubicin, vinblastine and dacarbazine (AVD).\r\nADCETRIS is indicated for adult patients with previously untreated CD30+ Stage IIB with risk factors, Stage III or Stage IV HL in combination with etoposide, cyclophosphamide, doxorubicin, dacarbazine, dexamethasone (BrECADD). \r\nADCETRIS is indicated for the treatment of adult patients with CD30+ HL at increased risk of relapse or progression following autologous stem cell transplant (ASCT).\r\nADCETRIS is indicated for the treatment of adult patients with relapsed or refractory CD30+ Hodgkin lymphoma (HL): \r\n1. following ASCT, or\r\n2. following at least two prior therapies when ASCT or multi agent chemotherapy is not a treatment option.\r\n\r\nSystemic anaplastic large cell lymphoma\r\nADCETRIS in combination with cyclophosphamide, doxorubicin and prednisone (CHP) is indicated for adult patients with previously untreated systemic anaplastic large cell lymphoma (sALCL).\r\nADCETRIS is indicated for the treatment of adult patients with relapsed or refractory sALCL.\r\n\r\nCutaneous T cell lymphoma \r\nADCETRIS is indicated for the treatment of adult patients with CD30+ cutaneous T cell lymphoma (CTCL) after at least 1 prior systemic therapy."
+}
+],
+"MAH": {
+"URI": "http://ec.europa.eu/health/documents/community-register/html/mh26317.htm",
+"Name": "Takeda Pharma A/S"
+},
+"ATC": [
+{
+"Level": "5",
+"Code": "L01FX05",
+"Description": "brentuximab vedotin"
+}
+],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/EPAR/adcetris",
+"AuthorisationDate": "2012-10-25",
+"LastDecisionDate": "2025-06-02",
+"TotalProcedures": "60",
+"TotalDecisions": "25",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/h1668.htm",
+"Type": "Human",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "Roctavian"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1622.htm",
+"LinkDate": "2022-08-25",
+"ExtensionLength": null,
+"ExtensionDate": null,
+"EndDate": null
+}
+],
+"Status": "Withdrawn",
+"EUNumber": "EU/1/22/1668",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "valoctocogene roxaparvovec"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "ROCTAVIAN is indicated for the treatment of severe haemophilia A (congenital factor VIII deficiency) in adult patients without a history of factor VIII inhibitors and without detectable antibodies to adeno associated virus serotype 5 (AAV5)."
+}
+],
+"MAH": {
+"URI": "http://ec.europa.eu/health/documents/community-register/html/mh24349.htm",
+"Name": "BioMarin International Limited"
+},
+"ATC": [
+{
+"Level": "5",
+"Code": "B02BD15",
+"Description": "valoctocogene roxaparvovec"
+}
+],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/EPAR/roctavian",
+"AuthorisationDate": "2022-08-24",
+"LastDecisionDate": "2026-04-30",
+"TotalProcedures": "12",
+"TotalDecisions": "6",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/h1569.htm",
+"Type": "Human",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "QINLOCK"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1936.htm",
+"LinkDate": "2021-11-24",
+"ExtensionLength": null,
+"ExtensionDate": null,
+"EndDate": null
+}
+],
+"Status": "Active",
+"EUNumber": "EU/1/21/1569",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "ripretinib"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "QINLOCK is indicated for the treatment of adult patients with advanced gastrointestinal stromal tumour (GIST) who have received prior treatment with three or more kinase inhibitors, including imatinib."
+}
+],
+"MAH": {
+"URI": "http://ec.europa.eu/health/documents/community-register/html/mh28314.htm",
+"Name": "Strawinskylaan 3051, 1077ZX Amsterdam, Nederland"
+},
+"ATC": [
+{
+"Level": "5",
+"Code": "L01EX19",
+"Description": "ripretinib"
+}
+],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/EPAR/qinlock",
+"AuthorisationDate": "2021-11-18",
+"LastDecisionDate": "2026-07-29",
+"TotalProcedures": "12",
+"TotalDecisions": "6",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/h1605.htm",
+"Type": "Human",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "Tavneos"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1372.htm",
+"LinkDate": null,
+"ExtensionLength": null,
+"ExtensionDate": null,
+"EndDate": "2022-01-19"
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1373.htm",
+"LinkDate": null,
+"ExtensionLength": null,
+"ExtensionDate": null,
+"EndDate": "2022-01-19"
+}
+],
+"Status": "Revoked",
+"EUNumber": "EU/1/21/1605",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "avacopan"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Tavneos, in combination with a rituximab or cyclophosphamide regimen, is indicated for the treatment of adult patients with severe, active granulomatosis with polyangiitis (GPA) or microscopic polyangiitis (MPA)"
+}
+],
+"MAH": {
+"URI": "http://ec.europa.eu/health/documents/community-register/html/mh24795.htm",
+"Name": "Vifor Fresenius Medical Care Renal Pharma France"
+},
+"ATC": [
+{
+"Level": "5",
+"Code": "L04AJ05",
+"Description": "avacopan"
+}
+],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/EPAR/tavneos",
+"AuthorisationDate": "2022-01-11",
+"LastDecisionDate": "2026-08-04",
+"TotalProcedures": "11",
+"TotalDecisions": "5",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o166.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/03/166"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Expired / Sunset clause",
+"EUNumber": "EU/3/03/166",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Eculizumab"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of paroxysmal nocturnal haemoglobinuria"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-03-166",
+"AuthorisationDate": "2003-10-17",
+"LastDecisionDate": "2006-03-23",
+"TotalProcedures": "5",
+"TotalDecisions": "2",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o595.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/08/595"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Withdrawn",
+"EUNumber": "EU/3/08/595",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Monoclonal antibody against human CD30 covalently linked to the cytotoxin monomethylauristatin E"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of peripheral T-cell lymphoma"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-08-595",
+"AuthorisationDate": "2009-01-15",
+"LastDecisionDate": "2019-08-21",
+"TotalProcedures": "8",
+"TotalDecisions": "4",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o596.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/08/596"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Withdrawn",
+"EUNumber": "EU/3/08/596",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Monoclonal antibody against human CD30 covalently linked to the cytotoxin monomethylauristatin E"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of Hodgkin lymphoma"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-08-596",
+"AuthorisationDate": "2009-01-15",
+"LastDecisionDate": "2013-10-21",
+"TotalProcedures": "8",
+"TotalDecisions": "3",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o653.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/09/653"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Expired / Sunset clause",
+"EUNumber": "EU/3/09/653",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Eculizumab"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of atypical haemolytic uremic syndrome"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-09-653",
+"AuthorisationDate": "2009-07-24",
+"LastDecisionDate": "2009-07-24",
+"TotalProcedures": "6",
+"TotalDecisions": "1",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o939.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/11/939"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Withdrawn",
+"EUNumber": "EU/3/11/939",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Brentuximab vedotin"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of cutaneous T-cell lymphoma"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-11-939",
+"AuthorisationDate": "2012-01-11",
+"LastDecisionDate": "2013-10-21",
+"TotalProcedures": "6",
+"TotalDecisions": "2",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1185.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/13/1185"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": "EU/3/13/1185",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Eculizumab"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of neuromyelitis optica spectrum disorders"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-13-1185",
+"AuthorisationDate": "2013-08-05",
+"LastDecisionDate": "2019-04-24",
+"TotalProcedures": "5",
+"TotalDecisions": "2",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1304.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/14/1304"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": "EU/3/14/1304",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Eculizumab"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of myasthenia gravis"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-14-1304",
+"AuthorisationDate": "2014-07-29",
+"LastDecisionDate": "2014-07-29",
+"TotalProcedures": "3",
+"TotalDecisions": "1",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1372.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/14/1372"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": "EU/3/14/1372",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "(2R,3S)-2-(4-cyclopentylaminophenyl)-1-(2-fluoro-6-methylbenzoyl)piperidine-3-carboxylic acid(4-methyl-3-trifluoromethylphenyl)amide"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of microscopic polyangiitis"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-14-1372",
+"AuthorisationDate": "2014-11-19",
+"LastDecisionDate": "2020-10-09",
+"TotalProcedures": "4",
+"TotalDecisions": "3",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1373.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/14/1373"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": "EU/3/14/1373",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "(2R,3S)-2-(4-cyclopentylaminophenyl)-1-(2-fluoro-6-methylbenzoyl)piperidine-3-carboxylic acid(4-methyl-3-trifluoromethylphenyl)amide"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of granulomatosis with polyangiitis"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-14-1373",
+"AuthorisationDate": "2014-11-19",
+"LastDecisionDate": "2020-10-09",
+"TotalProcedures": "5",
+"TotalDecisions": "3",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1622.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/16/1622"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": "EU/3/16/1622",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "Adeno-associated viral vector serotype 5 containing a B-domain deleted variant of human coagulation factor VIII gene"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of haemophilia A"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-16-1622",
+"AuthorisationDate": "2016-03-21",
+"LastDecisionDate": "2018-09-27",
+"TotalProcedures": "4",
+"TotalDecisions": "2",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/o1936.htm",
+"Type": "Orphan designation",
+"Category": "Centrally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "EU/3/17/1936"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": "EU/3/17/1936",
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "1-[4-bromo-5-[1-ethyl-7-(methylamino)-2-oxo-1,2-dihydro-1,6-naphthyridin-3-yl]-2-fluorophenyl]-3-phenylurea"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of gastrointestinal stromal tumours"
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/human/orphan-designations/eu-3-17-1936",
+"AuthorisationDate": "2017-11-08",
+"LastDecisionDate": "2020-07-03",
+"TotalProcedures": "6",
+"TotalDecisions": "3",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/vo15001.htm",
+"Type": "Veterinary",
+"Category": "Nationally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "APPM Respipharm"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": null,
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": null
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "For active immunisation of sows and piglets from the age of 6 weeks against pleuropneumonia caused by Actinobacillus pleuropneumoniae and against secondary infection of Pasteurella multocida."
+}
+],
+"MAH": null,
+"ATC": [],
+"EMALink": "https://www.ema.europa.eu/en/medicines/veterinary/referrals/appm-respipharm",
+"AuthorisationDate": null,
+"LastDecisionDate": "2010-01-27",
+"TotalProcedures": "1",
+"TotalDecisions": "1",
+"CurrentAnnexLink": []
+},
+{
+"URI": "http://ec.europa.eu/health/documents/community-register/html/ho25167.htm",
+"Type": "Human",
+"Category": "Nationally authorised",
+"Name": [
+{
+"LanguageCode": "EN",
+"Text": "5-aminolevulinic acid"
+}
+],
+"AssociatedNames": [],
+"AssociatedOrphanDesignations": [],
+"Status": "Active",
+"EUNumber": null,
+"ActiveSubstance": [
+{
+"LanguageCode": "EN",
+"Text": "5-aminolevulinic acid"
+}
+],
+"Indication": [
+{
+"LanguageCode": "EN",
+"Text": "Treatment of actinic keratosis of mild to moderate intensity on the face and scalp (Olsen grade 1 to 2) in adults including the elderly."
+}
+],
+"MAH": {
+"URI": "http://ec.europa.eu/health/documents/community-register/html/mh20818.htm",
+"Name": "Biofrontera Bioscience GmbH"
+},
+"ATC": [],
+"EMALink": null,
+"AuthorisationDate": null,
+"LastDecisionDate": "2014-04-03",
+"TotalProcedures": "1",
+"TotalDecisions": "1",
+"CurrentAnnexLink": []
+}
+]
+}

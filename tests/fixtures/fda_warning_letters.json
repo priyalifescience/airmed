@@ -1,0 +1,105 @@
+{
+ "recordsTotal": 10,
+ "data": [
+  [
+   "<time datetime=\"2026-10-13T04:00:00Z\">10/13/2026</time>\n",
+   "<time datetime=\"2026-10-06T04:00:00Z\">10/06/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/eurofins-sf-analytical-laboratories-inc-736056-10062026\">Eurofins SF Analytical Laboratories, Inc.</a>",
+   "Center for Drug Evaluation and Research (CDER)",
+   "CGMP/Finished Pharmaceuticals/Adulterated",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-04-21T04:00:00Z\">04/21/2026</time>\n",
+   "<time datetime=\"2026-02-09T05:00:00Z\">02/09/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/thrive-health-and-wellness-llc-dba-thrive-health-solutions-714891-02092026\">Thrive Health and Wellness, LLC dba Thrive Health Solutions </a>",
+   "Center for Drug Evaluation and Research (CDER)",
+   "Compounding Pharmacy/Adulterated Drug Products ",
+   "",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/thrive-health-and-wellness-llc-dba-thrive-health-solutions-714891-07272026\"><time datetime=\"2026-08-06T04:00:00Z\">08/06/2026</time>\n</a>",
+   ""
+  ],
+  [
+   "<time datetime=\"2025-01-21T14:20:00Z\">01/21/2025</time>\n",
+   "<time datetime=\"2025-01-15T05:00:00Z\">01/15/2025</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/sanofi-690604-01152025\">Sanofi</a>",
+   "Center for Drug Evaluation and Research (CDER)",
+   "CGMP/Active Pharmaceutical Ingredient (API)/Adulterated",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-08-04T04:00:00Z\">08/04/2026</time>\n",
+   "<time datetime=\"2026-07-21T04:00:00Z\">07/21/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/koven-technologies-inc-734643-07212026\">Koven Technologies, Inc.</a>",
+   "Center for Devices and Radiological Health",
+   "CGMP/QSR/Medical Devices/Adulterated",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-06-02T04:00:00Z\">06/02/2026</time>\n",
+   "<time datetime=\"2026-05-26T04:00:00Z\">05/26/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/blue-horizon-international-llc-728085-05262026\">Blue Horizon International, LLC </a>",
+   "Center for Biologics Evaluation and Research (CBER)",
+   "Unapproved New Drugs/Unlicensed Biological Product Violations",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2021-12-07T14:20:00Z\">12/07/2021</time>\n",
+   "<time datetime=\"2021-11-09T05:00:00Z\">11/09/2021</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/synaptent-llc-610683-11092021\">Synaptent, LLC</a>",
+   "Office of Human and Animal Food Operations-East 6",
+   "New Drug/Misbranded",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/synaptent-llc-610683-02012022-0\"><time datetime=\"2022-02-01T14:00:00Z\">02/01/2022</time>\n</a>",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-04-14T04:00:00Z\">04/14/2026</time>\n",
+   "<time datetime=\"2026-04-07T04:00:00Z\">04/07/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/smart-vending-services-llc-724469-04072026\">Smart Vending Services, LLC</a>",
+   "Center for Tobacco Products",
+   "Family Smoking Prevention and Tobacco Control Act/Adulterated/Misbranded",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-10-13T04:00:00Z\">10/13/2026</time>\n",
+   "<time datetime=\"2026-09-29T04:00:00Z\">09/29/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/dreyers-grand-ice-cream-inc-727644-09292026\">Dreyer’s Grand Ice Cream, Inc. </a>",
+   "Human Foods Program",
+   "CGMP/Food/Prepared, Packed or Held Under Insanitary Conditions/Adulterated",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-10-13T04:00:00Z\">10/13/2026</time>\n",
+   "<time datetime=\"2026-08-05T04:00:00Z\">08/05/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/lewis-sausage-company-inc-717432-08052026\">Lewis Sausage Company Inc. </a>",
+   "Center for Veterinary Medicine",
+   "CGMP/Food for Animals/Prepared, Packed or Held Under Insanitary Conditions/Adulterated",
+   "",
+   "",
+   ""
+  ],
+  [
+   "<time datetime=\"2026-08-04T04:00:00Z\">08/04/2026</time>\n",
+   "<time datetime=\"2026-07-27T04:00:00Z\">07/27/2026</time>\n",
+   "<a href=\"/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/a-placeholder-md-735690-07272026\">A. Placeholder, M.D.</a>",
+   "Center for Drug Evaluation and Research (CDER)",
+   "Clinical Investigator",
+   "",
+   "",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "total": 5,
+ "db_published": "Oct 16, 2026 08:54:03PM EST",
+ "spls": [
+  {
+   "spl_version": 3,
+   "published_date": "Aug 08, 2016",
+   "title": "ABILIFY (ARIPIPRAZOLE) TABLET [CARILION MATERIALS MANAGEMENT]",
+   "setid": "f9648990-0627-4c66-aae1-d3eef398b5b4"
+  },
+  {
+   "spl_version": 8,
+   "published_date": "Oct 16, 2026",
+   "title": "POTASSIUM CHLORIDE CAPSULE, EXTENDED RELEASE [PD-RX PHARMACEUTICALS, INC.]",
+   "setid": "018fc687-1fba-202e-e063-6294a90a5c9a"
+  },
+  {
+   "spl_version": 9,
+   "published_date": "Aug 07, 2026",
+   "title": "LAMOTRIGINE TABLET, ORALLY DISINTEGRATING [DR. REDDY&RSQUO;S LABORATORIES INC.]",
+   "setid": "54ea1ec3-876b-4d3a-a92b-1a6d70951de0"
+  },
+  {
+   "spl_version": 3,
+   "published_date": "Oct 13, 2026",
+   "title": "LIDOCAINE HYDROCHLORIDE INJECTION, SOLUTION [SANDOZ INC.]",
+   "setid": "dc476ebd-fd57-41c3-a649-7185a784a39f"
+  },
+  {
+   "spl_version": 9,
+   "published_date": "Dec 22, 2025",
+   "title": "OXYGEN GAS [JANE Q. EXAMPLE]",
+   "setid": "00000000-0000-4000-8000-000000000001"
+  },
+  {
+   "spl_version": 3,
+   "published_date": "Aug 08, 2016",
+   "title": "ABILIFY (ARIPIPRAZOLE) TABLET [CARILION MATERIALS MANAGEMENT]",
+   "setid": "f9648990-0627-4c66-aae1-d3eef398b5b4"
+  }
+ ],
+ "rxnorm": {
+  "f9648990-0627-4c66-aae1-d3eef398b5b4": [
+   [
+    "349490",
+    "aripiprazole 15 MG Oral Tablet",
+    "SCD"
+   ],
+   [
+    "352308",
+    "aripiprazole 15 MG Oral Tablet [Abilify]",
+    "SBD"
+   ]
+  ],
+  "54ea1ec3-876b-4d3a-a92b-1a6d70951de0": [
+   [
+    "103968",
+    "lamotrigine 100 MG Disintegrating Oral Tablet",
+    "SCD"
+   ],
+   [
+    "198430",
+    "lamotrigine 25 MG Disintegrating Oral Tablet",
+    "SCD"
+   ],
+   [
+    "252478",
+    "lamotrigine 50 MG Disintegrating Oral Tablet",
+    "SCD"
+   ],
+   [
+    "252479",
+    "lamotrigine 200 MG Disintegrating Oral Tablet",
+    "SCD"
+   ]
+  ],
+  "dc476ebd-fd57-41c3-a649-7185a784a39f": [
+   [
+    "1737562",
+    "30 ML lidocaine hydrochloride 10 MG/ML Injection",
+    "SCD"
+   ],
+   [
+    "1737566",
+    "5 ML lidocaine hydrochloride 10 MG/ML Injection",
+    "SCD"
+   ],
+   [
+    "1737568",
+    "2 ML lidocaine hydrochloride 10 MG/ML Injection",
+    "SCD"
+   ],
+   [
+    "1737757",
+    "2 ML lidocaine hydrochloride 20 MG/ML Injection",
+    "SCD"
+   ],
+   [
+    "1737761",
+    "5 ML lidocaine hydrochloride 20 MG/ML Injection",
+    "SCD"
+   ]
+  ],
+  "00000000-0000-4000-8000-000000000001": [
+   [
+    "312172",
+    "oxygen 99 % Gas for Inhalation",
+    "SCD"
+   ]
+  ]
+ }
+}
