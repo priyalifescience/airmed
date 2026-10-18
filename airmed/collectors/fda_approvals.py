@@ -1,9 +1,16 @@
-"""US FDA original approvals (Drugs@FDA via openFDA): every application whose ORIGINAL submission was approved
-on or after FROM_DATE. One row per application. NDA, BLA and ANDA (generic) applications are all included,
-with the application type in its own column.
+"""US FDA original approvals (Drugs@FDA via openFDA): every application whose ORIGINAL submission was approved,
+for all years Drugs@FDA holds. One row per application. NDA, BLA and ANDA (generic) applications are all
+included, with the application type in its own column.
+
+The openFDA search API cannot page past skip=25,000 and more than 25,000 applications have an approved original
+submission, so the collector reads openFDA's official bulk file for the drugsfda endpoint (one zipped JSON,
+about 9 MB) instead, checks that it holds the number of records its own metadata and the download index state,
+and keeps the applications with an approved ORIG submission.
 """
 
+import io
 import json
+import zipfile
 
 from ..http import fetch
 from ..util import iso_date
@@ -11,23 +18,47 @@ from ..util import iso_date
 KEY = "fda_approvals"
 FIELDS = ["application_number", "application_type", "sponsor_name", "brand_names", "active_ingredients",
           "dosage_forms", "routes", "approval_date", "review_priority", "submission_class"]
-FROM_DATE = "20210101"
-API = ("https://api.fda.gov/drug/drugsfda.json?search=submissions.submission_type:ORIG+AND+submissions.submission_status:AP"
-       "+AND+submissions.submission_status_date:[{frm}+TO+20991231]&limit=1000&skip={skip}")
+DOWNLOAD_INDEX = "https://api.fda.gov/download.json"
+BULK_PREFIX = "https://download.open.fda.gov/drug/drugsfda/"
 
 
-def fetch_raw(max_pages: int = 25) -> bytes:
-    results, total = [], None
-    for page in range(max_pages):
-        j = json.loads(fetch(API.format(frm=FROM_DATE, skip=page * 1000), timeout=180))
-        if total is None:
-            total = j["meta"]["results"]["total"]
-        results.extend(j.get("results", []))
-        if len(results) >= total:
-            break
-    if len(results) != total:
-        raise RuntimeError(f"openFDA returned {len(results)} of {total} applications")
-    return json.dumps({"total": total, "results": results}).encode("utf-8")
+def _is_orig_ap(s: dict) -> bool:
+    return s.get("submission_type") == "ORIG" and s.get("submission_status") == "AP"
+
+
+def _slim(r: dict) -> dict:
+    """Keep only what parse() reads; the bulk file carries much more (every supplement, document links...)."""
+    return {
+        "application_number": r.get("application_number", ""),
+        "sponsor_name": r.get("sponsor_name", ""),
+        "products": [{"brand_name": p.get("brand_name", ""), "dosage_form": p.get("dosage_form", ""),
+                      "route": p.get("route", ""),
+                      "active_ingredients": [{"name": a.get("name", "")} for a in p.get("active_ingredients", [])]}
+                     for p in r.get("products", [])],
+        "submissions": [{k: s.get(k, "") for k in ("submission_type", "submission_status", "submission_status_date",
+                                                   "review_priority", "submission_class_code_description")}
+                        for s in r.get("submissions", []) if _is_orig_ap(s)],
+    }
+
+
+def fetch_raw() -> bytes:
+    index = json.loads(fetch(DOWNLOAD_INDEX, timeout=120))["results"]["drug"]["drugsfda"]
+    parts = index["partitions"]
+    if len(parts) != 1 or not parts[0]["file"].startswith(BULK_PREFIX):
+        raise RuntimeError(f"unexpected openFDA drugsfda download layout: {[p.get('file') for p in parts]}")
+    z = zipfile.ZipFile(io.BytesIO(fetch(parts[0]["file"], timeout=300)))
+    names = [n for n in z.namelist() if n.endswith(".json")]
+    if len(names) != 1:
+        raise RuntimeError(f"expected one JSON file in the drugsfda zip, found {names}")
+    data = json.loads(z.read(names[0]))
+    results = data.get("results", [])
+    total = data["meta"]["results"]["total"]
+    if len(results) != total or total != int(index["total_records"]):
+        raise RuntimeError(f"drugsfda bulk file holds {len(results)} records; its metadata says {total}, "
+                           f"the download index says {index['total_records']}")
+    kept = [_slim(r) for r in results if any(_is_orig_ap(s) for s in r.get("submissions", []))]
+    return json.dumps({"total_in_file": total, "last_updated": data["meta"].get("last_updated", ""),
+                       "results": kept}).encode("utf-8")
 
 
 def _uniq(items):
@@ -42,13 +73,11 @@ def _uniq(items):
 def parse(raw: bytes) -> list:
     out = []
     for r in json.loads(raw).get("results", []):
-        # The search matches an application if ANY submission fits, so check the ORIG one ourselves.
-        orig = [s for s in r.get("submissions", []) if s.get("submission_type") == "ORIG" and s.get("submission_status") == "AP"]
+        orig = [s for s in r.get("submissions", []) if _is_orig_ap(s)]
         if not orig:
             continue
-        o = min(orig, key=lambda s: s.get("submission_status_date", "99999999"))
-        if o.get("submission_status_date", "") < FROM_DATE:
-            continue
+        # earliest dated ORIG approval (an undated one only if none is dated)
+        o = min(orig, key=lambda s: s.get("submission_status_date") or "99999999")
         num = r.get("application_number", "")
         prods = r.get("products", [])
         out.append({

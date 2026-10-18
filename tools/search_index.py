@@ -56,6 +56,17 @@ DATASETS.update({
     "fda_warning_letters": dict(label=["company", "subject"], extra=["subject", "product_area", "issuing_office"], url="url"),
     "dailymed_spl_index": dict(label="title", extra=["labeler"], url="url"),
 })
+DATASETS.update({
+    "hc_drug_product_database": dict(label="brand_name", extra=["ingredients", "company", "atc_names", "status"]),
+    "ema_prime": dict(label="name", extra=["therapeutic_area", "therapeutic_indication", "prime_list"]),
+    "ema_paediatric_plans": dict(label=["active_substance", "invented_name"], extra=["condition_indication", "decision_type"],
+                                 url="url"),
+    "ema_referrals": dict(label="referral_name", extra=["inn", "referral_type", "prac_recommendation"], url="url"),
+    "ema_psusa": dict(label="active_substance", extra=["related_medicines", "regulatory_outcome"], url="url"),
+    "openalex_europe_pharma": dict(label="title", extra=["venue", "primary_topic", "countries"],
+                                   url=lambda r: (r.get("doi") or "") if str(r.get("doi") or "").startswith("https://")
+                                   else ("https://doi.org/" + r["doi"] if r.get("doi") else "")),
+})
 # Tables with one row per patent, price or month repeat the same medicine name thousands of times: they would crowd
 # the results, so they are not indexed (they stay downloadable and linkable through the medicine cross-reference).
 NOT_INDEXED = {"fda_orange_book", "nhs_prescription_costs", "medicaid_drug_spending", "nadac_prices"}

@@ -1,0 +1,74 @@
+{
+ "data": [
+  {
+   "category": "Human",
+   "active_substances_in_scope_of_procedure": "hydroxyethyl starch, hydroxyethyl starch combinations",
+   "active_substance": "hydroxyethyl starch;hydroxyethyl starch combinations",
+   "related_medicines": "",
+   "procedure_number": "PSUSA/00001694/202603",
+   "regulatory_outcome": "Maintenance",
+   "first_published_date": "15/10/2026",
+   "last_updated_date": "",
+   "psusa_url": "https://www.ema.europa.eu/en/medicines/psusa/psusa-00001694-202603"
+  },
+  {
+   "category": "Human",
+   "active_substances_in_scope_of_procedure": "telmisartan / indapamide",
+   "active_substance": "telmisartan;Indapamide",
+   "related_medicines": "",
+   "procedure_number": "PSUSA/00010947/202602",
+   "regulatory_outcome": "Maintenance",
+   "first_published_date": "08/10/2026",
+   "last_updated_date": "",
+   "psusa_url": "https://www.ema.europa.eu/en/medicines/psusa/psusa-00010947-202602"
+  },
+  {
+   "category": "Human",
+   "active_substances_in_scope_of_procedure": "acetylsalicylic acid / atorvastatin / ramipril",
+   "active_substance": "acetylsalicylic acid;atorvastatin;ramipril",
+   "related_medicines": "",
+   "procedure_number": "PSUSA/00010280/202602",
+   "regulatory_outcome": "Maintenance",
+   "first_published_date": "08/10/2026",
+   "last_updated_date": "",
+   "psusa_url": "https://www.ema.europa.eu/en/medicines/psusa/psusa-00010280-202602"
+  },
+  {
+   "category": "",
+   "active_substances_in_scope_of_procedure": "itopride",
+   "active_substance": "itopride",
+   "related_medicines": "",
+   "procedure_number": "PSUSA/00010606/202506",
+   "regulatory_outcome": "Maintenance",
+   "first_published_date": "16/02/2026",
+   "last_updated_date": "",
+   "psusa_url": "https://www.ema.europa.eu/en/medicines/psusa/psusa-00010606-202506"
+  },
+  {
+   "category": "",
+   "active_substances_in_scope_of_procedure": "propylthiouracil",
+   "active_substance": "propylthiouracil",
+   "related_medicines": "",
+   "procedure_number": "PSUSA/00002558/202501",
+   "regulatory_outcome": "Variation",
+   "first_published_date": "02/12/2025",
+   "last_updated_date": "",
+   "psusa_url": "https://www.ema.europa.eu/en/medicines/psusa/psusa-00002558-202501"
+  },
+  {
+   "category": "",
+   "active_substances_in_scope_of_procedure": "Hydroxyethyl starch",
+   "active_substance": "hydroxyethyl starch",
+   "related_medicines": "",
+   "procedure_number": "EMEA/H/N/PSR/J/0031",
+   "regulatory_outcome": "Suspension",
+   "first_published_date": "05/12/2023",
+   "last_updated_date": "",
+   "psusa_url": "https://www.ema.europa.eu/en/medicines/psusa/emea-h-n-psr-j-0031"
+  }
+ ],
+ "meta": {
+  "total_records": 6,
+  "timestamp": "2026-10-18T18:15:44Z"
+ }
+}

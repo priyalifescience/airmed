@@ -1,0 +1,338 @@
+{
+ "total_in_file": 29390,
+ "last_updated": "2026-10-16",
+ "results": [
+  {
+   "application_number": "NDA000552",
+   "sponsor_name": "ASPEN GLOBAL INC",
+   "products": [
+    {
+     "brand_name": "HEPARIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM PRESERVATIVE FREE",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "HEPARIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "HEPARIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN LOCK FLUSH",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM PRESERVATIVE FREE",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM PRESERVATIVE FREE",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "LIQUAEMIN SODIUM",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "HEPARIN SODIUM"
+      }
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "submission_type": "ORIG",
+     "submission_status": "AP",
+     "submission_status_date": "19390209",
+     "review_priority": "UNKNOWN",
+     "submission_class_code_description": ""
+    }
+   ]
+  },
+  {
+   "application_number": "BLA761261",
+   "sponsor_name": "GENZYME CORP",
+   "products": [
+    {
+     "brand_name": "XENPOZYME",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "OLIPUDASE ALFA-RPCP"
+      }
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "submission_type": "ORIG",
+     "submission_status": "AP",
+     "submission_status_date": "20220831",
+     "review_priority": "PRIORITY",
+     "submission_class_code_description": "Type 1 - New Molecular Entity"
+    }
+   ]
+  },
+  {
+   "application_number": "NDA210136",
+   "sponsor_name": "BRAEBURN",
+   "products": [
+    {
+     "brand_name": "BRIXADI",
+     "dosage_form": "SOLUTION, EXTENDED RELEASE",
+     "route": "SUBCUTANEOUS",
+     "active_ingredients": [
+      {
+       "name": "BUPRENORPHINE"
+      }
+     ]
+    },
+    {
+     "brand_name": "BRIXADI",
+     "dosage_form": "SOLUTION, EXTENDED RELEASE",
+     "route": "SUBCUTANEOUS",
+     "active_ingredients": [
+      {
+       "name": "BUPRENORPHINE"
+      }
+     ]
+    },
+    {
+     "brand_name": "BRIXADI",
+     "dosage_form": "SOLUTION, EXTENDED RELEASE",
+     "route": "SUBCUTANEOUS",
+     "active_ingredients": [
+      {
+       "name": "BUPRENORPHINE"
+      }
+     ]
+    },
+    {
+     "brand_name": "BRIXADI",
+     "dosage_form": "SOLUTION, EXTENDED RELEASE",
+     "route": "SUBCUTANEOUS",
+     "active_ingredients": [
+      {
+       "name": "BUPRENORPHINE"
+      }
+     ]
+    },
+    {
+     "brand_name": "BRIXADI",
+     "dosage_form": "SOLUTION, EXTENDED RELEASE",
+     "route": "SUBCUTANEOUS",
+     "active_ingredients": [
+      {
+       "name": "BUPRENORPHINE"
+      }
+     ]
+    },
+    {
+     "brand_name": "BRIXADI",
+     "dosage_form": "SOLUTION, EXTENDED RELEASE",
+     "route": "SUBCUTANEOUS",
+     "active_ingredients": [
+      {
+       "name": "BUPRENORPHINE"
+      }
+     ]
+    },
+    {
+     "brand_name": "BRIXADI",
+     "dosage_form": "SOLUTION, EXTENDED RELEASE",
+     "route": "SUBCUTANEOUS",
+     "active_ingredients": [
+      {
+       "name": "BUPRENORPHINE"
+      }
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "submission_type": "ORIG",
+     "submission_status": "AP",
+     "submission_status_date": "20230523",
+     "review_priority": "PRIORITY",
+     "submission_class_code_description": "Type 3 - New Dosage Form"
+    }
+   ]
+  },
+  {
+   "application_number": "ANDA081066",
+   "sponsor_name": "BEN VENUE",
+   "products": [
+    {
+     "brand_name": "FOLIC ACID",
+     "dosage_form": "INJECTABLE",
+     "route": "INJECTION",
+     "active_ingredients": [
+      {
+       "name": "FOLIC ACID"
+      }
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "submission_type": "ORIG",
+     "submission_status": "AP",
+     "submission_status_date": "19931229",
+     "review_priority": "",
+     "submission_class_code_description": ""
+    }
+   ]
+  },
+  {
+   "application_number": "ANDA077904",
+   "sponsor_name": "CIPLA",
+   "products": [
+    {
+     "brand_name": "PRAVASTATIN SODIUM",
+     "dosage_form": "TABLET",
+     "route": "ORAL",
+     "active_ingredients": [
+      {
+       "name": "PRAVASTATIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "PRAVASTATIN SODIUM",
+     "dosage_form": "TABLET",
+     "route": "ORAL",
+     "active_ingredients": [
+      {
+       "name": "PRAVASTATIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "PRAVASTATIN SODIUM",
+     "dosage_form": "TABLET",
+     "route": "ORAL",
+     "active_ingredients": [
+      {
+       "name": "PRAVASTATIN SODIUM"
+      }
+     ]
+    },
+    {
+     "brand_name": "PRAVASTATIN SODIUM",
+     "dosage_form": "TABLET",
+     "route": "ORAL",
+     "active_ingredients": [
+      {
+       "name": "PRAVASTATIN SODIUM"
+      }
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "submission_type": "ORIG",
+     "submission_status": "AP",
+     "submission_status_date": "20160322",
+     "review_priority": "",
+     "submission_class_code_description": ""
+    },
+    {
+     "submission_type": "ORIG",
+     "submission_status": "AP",
+     "submission_status_date": "20061023",
+     "review_priority": "",
+     "submission_class_code_description": ""
+    }
+   ]
+  }
+ ]
+}

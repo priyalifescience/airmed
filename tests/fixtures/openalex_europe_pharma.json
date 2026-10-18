@@ -1,0 +1,265 @@
+{
+ "counts": {
+  "fixture_field30": 3,
+  "fixture_medchem": 2
+ },
+ "filters": {
+  "note": "trimmed from a live run on 18 Oct 2026; 3 field30 and 2 medchem works from several windows"
+ },
+ "works": [
+  {
+   "id": "https://openalex.org/W4321372972",
+   "doi": "https://doi.org/10.3390/cells12040659",
+   "title": "Doxorubicin—An Agent with Multiple Mechanisms of Anticancer Activity",
+   "publication_year": 2023,
+   "publication_date": "2023-02-19",
+   "type": "article",
+   "open_access": {
+    "oa_status": "gold",
+    "is_oa": true
+   },
+   "cited_by_count": 813,
+   "primary_topic": {
+    "display_name": "Bioactive Compounds and Antitumor Agents",
+    "subfield": {
+     "display_name": "Toxicology"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T12356",
+     "display_name": "Bioactive Compounds and Antitumor Agents",
+     "field": {
+      "id": "https://openalex.org/fields/30"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11845",
+     "display_name": "Cancer therapeutics and mechanisms",
+     "field": {
+      "id": "https://openalex.org/fields/13"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11535",
+     "display_name": "Chemotherapy-induced cardiotoxicity and mitigation",
+     "field": {
+      "id": "https://openalex.org/fields/27"
+     }
+    }
+   ],
+   "is_retracted": false,
+   "venue": "Cells",
+   "countries": [
+    "IN",
+    "PL",
+    "TR"
+   ],
+   "filter_basis": "field30"
+  },
+  {
+   "id": "https://openalex.org/W4322012354",
+   "doi": "https://doi.org/10.1016/j.glohj.2023.02.008",
+   "title": "Applications of nanotechnology in medical field: a brief review",
+   "publication_year": 2023,
+   "publication_date": "2023-02-25",
+   "type": "article",
+   "open_access": {
+    "oa_status": "diamond",
+    "is_oa": true
+   },
+   "cited_by_count": 715,
+   "primary_topic": {
+    "display_name": "Nanotechnology research and applications",
+    "subfield": {
+     "display_name": "Biomedical Engineering"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T14089",
+     "display_name": "Nanotechnology research and applications",
+     "field": {
+      "id": "https://openalex.org/fields/22"
+     }
+    },
+    {
+     "id": "https://openalex.org/T13202",
+     "display_name": "Pharmacology and Nanomedicine Research",
+     "field": {
+      "id": "https://openalex.org/fields/30"
+     }
+    },
+    {
+     "id": "https://openalex.org/T10063",
+     "display_name": "Nanoparticle-Based Drug Delivery",
+     "field": {
+      "id": "https://openalex.org/fields/25"
+     }
+    }
+   ],
+   "is_retracted": false,
+   "venue": "Global Health Journal",
+   "countries": [
+    "GB",
+    "IN"
+   ],
+   "filter_basis": "field30"
+  },
+  {
+   "id": "https://openalex.org/W4378783027",
+   "doi": "https://doi.org/10.1007/s41999-023-00777-y",
+   "title": "STOPP/START criteria for potentially inappropriate prescribing in older people: version 3",
+   "publication_year": 2023,
+   "publication_date": "2023-05-31",
+   "type": "article",
+   "open_access": {
+    "oa_status": "hybrid",
+    "is_oa": true
+   },
+   "cited_by_count": 704,
+   "primary_topic": {
+    "display_name": "Pharmaceutical Practices and Patient Outcomes",
+    "subfield": {
+     "display_name": "Geriatrics and Gerontology"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T10496",
+     "display_name": "Pharmaceutical Practices and Patient Outcomes",
+     "field": {
+      "id": "https://openalex.org/fields/27"
+     }
+    },
+    {
+     "id": "https://openalex.org/T12547",
+     "display_name": "Pharmaceutical studies and practices",
+     "field": {
+      "id": "https://openalex.org/fields/27"
+     }
+    },
+    {
+     "id": "https://openalex.org/T13970",
+     "display_name": "Pharmacy and Medical Practices",
+     "field": {
+      "id": "https://openalex.org/fields/30"
+     }
+    }
+   ],
+   "is_retracted": false,
+   "venue": "European Geriatric Medicine",
+   "countries": [
+    "BE",
+    "DE",
+    "ES",
+    "FR",
+    "IE",
+    "IS",
+    "IT",
+    "NL",
+    "TR"
+   ],
+   "filter_basis": "field30"
+  },
+  {
+   "id": "https://openalex.org/W4388455891",
+   "doi": "https://doi.org/10.1093/nar/gkad1004",
+   "title": "The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods",
+   "publication_year": 2023,
+   "publication_date": "2023-10-23",
+   "type": "article",
+   "open_access": {
+    "oa_status": "gold",
+    "is_oa": true
+   },
+   "cited_by_count": 1424,
+   "primary_topic": {
+    "display_name": "Computational Drug Discovery Methods",
+    "subfield": {
+     "display_name": "Computational Theory and Mathematics"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T10211",
+     "display_name": "Computational Drug Discovery Methods",
+     "field": {
+      "id": "https://openalex.org/fields/17"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11710",
+     "display_name": "Biomedical Text Mining and Ontologies",
+     "field": {
+      "id": "https://openalex.org/fields/13"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11937",
+     "display_name": "Research Data Management Practices",
+     "field": {
+      "id": "https://openalex.org/fields/17"
+     }
+    }
+   ],
+   "is_retracted": false,
+   "venue": "Nucleic Acids Research",
+   "countries": [
+    "CH",
+    "DE",
+    "GB"
+   ],
+   "filter_basis": "medchem"
+  },
+  {
+   "id": "https://openalex.org/W4383912288",
+   "doi": "https://doi.org/10.3390/pharmaceutics15071916",
+   "title": "Artificial Intelligence in Pharmaceutical Technology and Drug Delivery Design",
+   "publication_year": 2023,
+   "publication_date": "2023-07-10",
+   "type": "article",
+   "open_access": {
+    "oa_status": "gold",
+    "is_oa": true
+   },
+   "cited_by_count": 1064,
+   "primary_topic": {
+    "display_name": "Computational Drug Discovery Methods",
+    "subfield": {
+     "display_name": "Computational Theory and Mathematics"
+    }
+   },
+   "topics": [
+    {
+     "id": "https://openalex.org/T10211",
+     "display_name": "Computational Drug Discovery Methods",
+     "field": {
+      "id": "https://openalex.org/fields/17"
+     }
+    },
+    {
+     "id": "https://openalex.org/T11636",
+     "display_name": "Artificial Intelligence in Healthcare and Education",
+     "field": {
+      "id": "https://openalex.org/fields/27"
+     }
+    },
+    {
+     "id": "https://openalex.org/T13904",
+     "display_name": "Artificial Intelligence Applications",
+     "field": {
+      "id": "https://openalex.org/fields/17"
+     }
+    }
+   ],
+   "is_retracted": false,
+   "venue": "Pharmaceutics",
+   "countries": [
+    "GB",
+    "IN"
+   ],
+   "filter_basis": "medchem"
+  }
+ ]
+}

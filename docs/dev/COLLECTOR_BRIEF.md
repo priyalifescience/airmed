@@ -42,3 +42,9 @@ result (`python -m pytest -q tests/test_<key>.py` or `python -m unittest`).
 - Use `airmed.collectors.ctgov_ireland.sponsor_or_blank`-style care: company/organisation names are fine, person names never.
 - No API keys are available. If a source needs one, report it instead of building.
 - Several Airmid datasets already exist (see registry.json); do not duplicate them.
+
+## Addendum, 18 Oct 2026 (stage 3)
+- Same rules as above. Pending registry entries again go to `sources/pending/<key>.json`.
+- Current release has 29 datasets (see sources/registry.json). Do not duplicate any of them.
+- If you change an EXISTING collector (only when your task says so), keep its KEY and output field order stable unless
+  told otherwise, put the updated registry entry in sources/pending/<key>.json, and keep its tests passing.

@@ -1,0 +1,6 @@
+{
+"files": {
+"https://www.ntpf.ie/app/uploads/2026/01/OpenData_IPDCNational03_2025.csv": "﻿ArchiveDate,Hospital_Name,Case_Type,Adult_Child,0-6 Months,6-12 Months,12-18 Months,18 Months +,Total\r\n18/12/2025,Bantry General Hospital,Day Case,Adult,172,0,0,0,172\r\n18/12/2025,Beaumont Hospital,Day Case,Adult,\"4,569\",\"1,905\",793,485,\"7,752\"\r\n18/12/2025,Beaumont Hospital,Inpatient,Adult,\"1,182\",867,715,541,\"3,305\"\r\n\r\n",
+"https://www.ntpf.ie/app/uploads/2026/10/OpenData_OPNational02_2026.csv": "﻿ArchiveDate,Adult_Child,Speciality,0-6 Months,6-12 Months,12-18 Months,18 Months +,Total\r\n29/01/2026,Adult,Breast Surgery,979,13,0,2,994\r\n29/01/2026,Adult,Breast Surgery,\"4,402\",107,2,0,\"4,511\"\r\n29/01/2026,Adult,Cardiology,\"23,228\",\"11,434\",\"2,978\",\"1,557\",\"39,197\"\r\n29/01/2026,Adult,Cardiology,\"1,603\",604,188,35,\"2,430\"\r\n26/02/2026,Adult,Breast Surgery,\"6,064\",136,4,0,\"6,204\"\r\n26/02/2026,Adult,Cardiology,\"25,183\",\"11,665\",\"3,392\",\"1,491\",\"41,730\"\r\n\r\n"
+}
+}
