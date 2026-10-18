@@ -10,7 +10,9 @@ exec 9>"$HOME/airmid/.lock"; flock -n 9 || { echo "already running"; exit 0; }
 LOG="logs/$(date -u +%Y-%m-%d).log"
 {
   echo "== $(date -u +%FT%TZ) start"
-  nice -n 10 python3 -m airmed run all --out out
+  # One source failing (a timeout) must not stop the whole refresh: its last good copy stays in out/ and the
+  # catalogue shows its older collection date. The release step still refuses broken or shrunken data.
+  nice -n 10 python3 -m airmed run all --out out || echo "WARN: some sources failed this week; previous copies kept (see FAIL lines)"
   nice -n 10 python3 -m airmed release --src out --dist dist/v1
   nice -n 10 python3 tools/link_medicines.py --dist dist/v1 || echo "WARN: medicine cross-reference failed; publishing without it"
   nice -n 10 python3 tools/dcat.py --dist dist/v1 || echo "WARN: DCAT metadata failed; publishing without it"
