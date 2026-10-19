@@ -39,7 +39,7 @@
 
 <table align="center">
 <tr>
-<td align="center" width="25%"><h2>988,830</h2><sub>records, release of 2026-10-18</sub></td>
+<td align="center" width="25%"><h2>989,145</h2><sub>records, release of 2026-10-19</sub></td>
 <td align="center" width="25%"><h2>38</h2><sub>open datasets</sub></td>
 <td align="center" width="25%"><h2>20</h2><sub>official publishers</sub></td>
 <td align="center" width="25%"><h2>0</h2><sub>personal details, ever</sub></td>

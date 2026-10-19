@@ -54,7 +54,7 @@ def main(argv=None):
     end = s.index("</sub>", end) + len("</sub>\n")
     s = s[:start] + table + s[end:]
     s = re.sub(r'alt="Datasets: \d+" src="https://img.shields.io/badge/datasets-\d+-', f'alt="Datasets: {len(ds)}" src="https://img.shields.io/badge/datasets-{len(ds)}-', s)
-    s = re.sub(r"<h2>[\d,]+</h2><sub>records in release[^<]*</sub>", f"<h2>{total:,}</h2><sub>records, release of {day}</sub>", s)
+    s = re.sub(r"<h2>[\d,]+</h2><sub>records(?: in release|, release of)[^<]*</sub>", f"<h2>{total:,}</h2><sub>records, release of {day}</sub>", s)
     s = re.sub(r"<h2>\d+</h2><sub>open datasets</sub>", f"<h2>{len(ds)}</h2><sub>open datasets</sub>", s)
     s = re.sub(r"<h2>\d+</h2><sub>official publishers</sub>", "<h2>20</h2><sub>official publishers</sub>", s)
     p.write_text(s, encoding="utf-8", newline="\n")
