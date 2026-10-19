@@ -18,6 +18,9 @@ identifiers:
     value: "10.5281/zenodo.23336432"
     description: "Concept DOI: all versions, archived on Zenodo"
   - type: doi
+    value: "10.5281/zenodo.23467119"
+    description: "Version 1.2.1 (38 datasets; full dataset list)"
+  - type: doi
     value: "10.5281/zenodo.23462582"
     description: "Version 1.2.0 (38 datasets)"
   - type: doi
