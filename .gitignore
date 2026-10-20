@@ -37,3 +37,5 @@ build/
 .idea/
 .DS_Store
 Thumbs.db
+# 2026-10-20: test fixture whose name contains "key" (Key Trends); still caught by *key*.json without this line
+!tests/fixtures/doh_health_key_trends.json
