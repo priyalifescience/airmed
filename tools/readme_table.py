@@ -9,12 +9,15 @@ import urllib.request
 from pathlib import Path
 
 BASE = "https://priyalifescience.com/opendata/airmid/v1/"
-# short display: (topic icon, short licence)
-LIC = [("CC0", "CC0"), ("CC BY 4.0", "CC BY 4.0"), ("Open Government Licence v3", "OGL v3"),
-       ("Open Government Licence - Canada", "OGL Canada"), ("Public domain", "public domain"),
-       ("public domain", "public domain"), ("EMA website", "reuse with credit"), ("Eurostat", "reuse with credit"),
-       ("OECD", "reuse with credit"), ("ECDC", "reuse with credit"), ("NTPF", "reuse with credit"),
-       ("Public data", "public data")]
+# short display licence, first match wins. Publisher-specific terms come before the generic "CC BY 4.0", because
+# their long licence texts also mention CC BY (e.g. "not CC BY 4.0"). Licences differ per dataset: never one label.
+LIC = [("ODbL", "ODbL 1.0 (share-alike)"), ("ClinicalTrials.gov Terms", "ClinicalTrials.gov terms"),
+       ("OECD Terms", "OECD terms"), ("NTPF", "NTPF re-use terms"), ("EMA legal notice", "EMA legal notice"),
+       ("EMA website", "EMA legal notice"), ("Eurostat", "reuse with credit"), ("Oireachtas", "Oireachtas PSI licence"),
+       ("Mixed, all open", "CC0 / CC BY 4.0"), ("CC0", "CC0"), ("CC BY 4.0", "CC BY 4.0"),
+       ("Open Government Licence v3", "OGL v3"), ("Open Government Licence - Canada", "OGL Canada"),
+       ("Public domain", "public domain"), ("public domain", "public domain"), ("OECD", "OECD terms"),
+       ("ECDC", "reuse with credit"), ("Public data", "public data")]
 ORGS = {"ClinicalTrials.gov": "U.S. National Library of Medicine", "DailyMed": "U.S. National Library of Medicine"}
 
 

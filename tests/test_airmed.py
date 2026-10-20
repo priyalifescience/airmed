@@ -8,14 +8,51 @@ from pathlib import Path
 from airmed.collectors import ALL, ctgov_ireland, ema_shortages, hpra_medicines
 from airmed.output import write_dataset
 from airmed.privacy import ForbiddenField, check_fields, clean_record
-from airmed.registry import SourceNotApproved, approved_source, load_registry
+from airmed.registry import SourceNotApproved, approved_source, held_sources, load_registry
+
+HELD = {"dete_annual_employment_survey", "dete_employment_permits"}
 
 
 class TestRegistry(unittest.TestCase):
     def test_every_collector_is_approved_with_matching_fields(self):
         for key, mod in ALL.items():
+            if key in HELD:
+                continue
             src = approved_source(key)
             self.assertEqual(list(mod.FIELDS), src["fields_kept"], key)
+
+    def test_held_sources_are_pending_and_refused(self):
+        held = held_sources()
+        self.assertEqual(set(held), HELD)
+        for key in HELD:
+            self.assertTrue(held[key].startswith("Held 2026-10-20"), key)
+            self.assertEqual(list(ALL[key].FIELDS), load_registry()[key]["fields_kept"], key)
+            with self.assertRaises(SourceNotApproved):
+                approved_source(key)
+
+    def test_run_all_skips_held_sources_without_failing(self):
+        from unittest import mock
+        from airmed import cli
+        ran = []
+        fake = lambda key, out: ran.append(key) or {"dir": "x", "records": 1, "blanked": 0, "by_field": {}}
+        with mock.patch.object(cli, "run_one", fake):
+            self.assertEqual(cli.main(["run", "all", "--out", "unused"]), 0)
+        self.assertEqual(set(ran), set(ALL) - HELD)
+        self.assertEqual(cli.check(), 0)
+
+    def test_licence_metadata_per_dataset(self):
+        reg = load_registry()
+        self.assertIn("ODbL", reg["nih_ireland"]["licence"])
+        self.assertEqual(reg["nih_ireland"]["licence_url"], "https://opendatacommons.org/licenses/odbl/1.0/")
+        for key in ("ctgov_ireland", "ctgov_europe"):
+            self.assertIn("{retrieved_date}", reg[key]["attribution"])
+            self.assertNotIn("Public data", reg[key]["licence"])
+        for key in ("eurostat_pharma_industry", "eurostat_pharma_trade"):
+            self.assertIn("Eurostat has no responsibility", reg[key]["attribution"])
+        self.assertNotIn("equivalent in effect", reg["oecd_pharma_spending"]["licence"])
+        for key, s in reg.items():
+            if key.startswith("ema_") and s.get("status") == "approved":
+                self.assertEqual(s["licence_url"], "https://www.ema.europa.eu/en/about-us/about-website/legal-notice", key)
 
     def test_blocked_sources_refuse(self):
         for key in ("nice_ta", "bfarm_shortages", "jrct", "umin_ctr", "eudragmdp", "yahoo_finance"):
@@ -133,11 +170,13 @@ if __name__ == "__main__":
 class TestRelease(unittest.TestCase):
     """The release builder must refuse anything unsafe or broken. Offline: small hand-made datasets."""
 
-    def _collect(self, root, override=None):
+    def _collect(self, root, override=None, sources=None):
         from airmed.collectors import ALL
         for key, mod in ALL.items():
             recs = (override or {}).get(key, [{f: "x" for f in mod.FIELDS} for _ in range(10)])
-            write_dataset(key, approved_source(key), mod.FIELDS, recs, Path(root), {})
+            # held sources are written too (as an older copy left in out/ would be): the release must skip them
+            src = (sources or {}).get(key) or (load_registry()[key] if key in HELD else approved_source(key))
+            write_dataset(key, src, mod.FIELDS, recs, Path(root), {})
 
     def test_full_release_builds_catalog(self):
         from airmed.release import build
@@ -150,6 +189,40 @@ class TestRelease(unittest.TestCase):
                 self.assertTrue(ds["licence_url"].startswith("https://"))
                 self.assertTrue(all(f["description"] for f in ds["fields"]), ds["key"])
                 self.assertTrue(ds["browse_url"].startswith("https://priyalifescience.com/"), ds["key"])
+            self.assertEqual({ds["key"] for ds in cat["datasets"]}, set(ALL) - HELD)
+            self.assertEqual(set(res["held"]), HELD)
+            for key in HELD:
+                self.assertFalse((Path(d) / "dist" / "v1" / key).exists())
+            self.assertIn("multiple licences", cat["licence"])
+            ct = next(ds for ds in cat["datasets"] if ds["key"] == "ctgov_ireland")
+            self.assertNotIn("{retrieved_date}", ct["attribution"])
+            self.assertRegex(ct["attribution"], r"retrieved on \d{4}-\d{2}-\d{2}\.")
+            readme = (Path(d) / "dist" / "v1" / "README.md").read_text(encoding="utf-8")
+            for text in ("Eurostat has no responsibility", "Houses of the Oireachtas is not liable", "ODbL",
+                         "Reproduce the information accurately", "Clearly display the date the data were processed",
+                         "back-calculate"):
+                self.assertIn(text, readme)
+            self.assertIn("Licence note:", (Path(d) / "dist" / "v1" / "DATA_DICTIONARY.md").read_text(encoding="utf-8"))
+
+    def test_release_restamps_licence_from_registry(self):
+        """A dataset collected under an older licence text is released with the registry's current licence."""
+        import hashlib
+        from airmed.release import build
+        stale = dict(approved_source("nih_ireland"), licence="Public domain (U.S. government work)",
+                     licence_url="https://reporter.nih.gov/faqs", attribution="old")
+        with tempfile.TemporaryDirectory() as d:
+            self._collect(Path(d) / "out", sources={"nih_ireland": stale})
+            build(Path(d) / "out", Path(d) / "dist" / "v1")
+            folder = Path(d) / "dist" / "v1" / "nih_ireland"
+            pkg = json.loads((folder / "datapackage.json").read_text(encoding="utf-8"))
+            self.assertIn("ODbL", pkg["licenses"][0]["title"])
+            self.assertEqual(pkg["licenses"][0]["path"], "https://opendatacommons.org/licenses/odbl/1.0/")
+            self.assertIn("ODbL", pkg["description"])
+            payload = json.loads((folder / "nih_ireland.json").read_text(encoding="utf-8"))
+            self.assertIn("ODbL", payload["licence"])
+            self.assertEqual(len(payload["records"]), 10)
+            res = next(r for r in pkg["resources"] if r["format"] == "json")
+            self.assertEqual(res["hash"], "sha256:" + hashlib.sha256((folder / "nih_ireland.json").read_bytes()).hexdigest())
 
     def test_missing_dataset_refused(self):
         from airmed.release import ReleaseRefused, build

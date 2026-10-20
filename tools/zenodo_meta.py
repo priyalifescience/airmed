@@ -52,8 +52,9 @@ def main(argv=None):
                  f"({html.escape(ds[k]['publisher'].split(',')[0].split(' (')[0])})</li>" for k in keys if k in ds]
         if items:
             parts.append(f"<p><strong>{title}</strong></p><ul>{''.join(items)}</ul>")
-    parts.append("<p>No personal names or contact details are published. Each dataset keeps the licence of its source "
-                 "(listed in catalog.json and each datapackage.json). Not medical advice. Project page: "
+    parts.append("<p>No personal names or contact details are published. The data have multiple licences: each dataset keeps "
+                 "the licence of its source (listed in catalog.json and each datapackage.json); they are not all CC BY 4.0. "
+                 "This software is EUPL-1.2. Not medical advice. Project page: "
                  '<a href="https://priyalifescience.com/airmed">priyalifescience.com/airmed</a>.</p>')
     p = Path(__file__).resolve().parent.parent / ".zenodo.json"
     z = json.loads(p.read_text(encoding="utf-8"))

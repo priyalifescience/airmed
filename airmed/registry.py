@@ -27,3 +27,19 @@ def approved_source(key: str, path: Path = REGISTRY_PATH) -> dict:
         if not src.get(field):
             raise SourceNotApproved(f"{key}: registry entry is missing {field!r}")
     return src
+
+
+# "pending": a source with a working collector whose licence is awaiting the publisher's confirmation. It is never
+# collected or released (approved_source refuses it), but `run all`, `check` and the release skip it quietly
+# instead of failing, so a hold never breaks the weekly refresh. The entry's "reason" says why it is held.
+HELD = "pending"
+
+
+def held_sources(path: Path = REGISTRY_PATH) -> dict:
+    """{key: reason} for every source on hold (status 'pending')."""
+    return {k: s.get("reason", "") for k, s in load_registry(path).items() if s.get("status") == HELD}
+
+
+def render(text: str, retrieved: str) -> str:
+    """Fill the collection date into registry text ({retrieved_date}), e.g. ClinicalTrials.gov's processing date."""
+    return text.replace("{retrieved_date}", (retrieved or "")[:10] or "the collection date in this file's metadata")

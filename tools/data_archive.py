@@ -52,14 +52,17 @@ def main(argv=None):
             f"<p>{len(catalog['datasets'])} open datasets ({total:,} records) on medicines, clinical trials, approvals, "
             "shortages, safety, trade, spending and research for Ireland and Europe, collected from official publishers "
             "and released with their source licences, a data dictionary, checksums and DCAT-AP metadata.</p>"
-            "<p>Each dataset keeps the licence of its source (listed in catalog.json and each datapackage.json); "
-            "Priya Life Science's own compilation and cross-reference are CC BY 4.0. No personal names or contact "
-            "details are included.</p><p>Sources: " + "; ".join(sources) + ".</p>"
+            "<p>Multiple licences, per file: each dataset keeps the licence of its source (see each datapackage.json "
+            "and catalog.json); there is no single licence for the deposit. Not all are CC BY 4.0: for example NIH "
+            "RePORTER is ODbL 1.0 (share-alike), and ClinicalTrials.gov, OECD and NTPF data are under their publishers' "
+            "own terms. Conditions and disclaimers that publishers require to be passed on are listed in README.md and "
+            "DATA_DICTIONARY.md. Priya Life Science's own medicine cross-reference is CC BY 4.0. No personal names or "
+            "contact details are included.</p><p>Sources: " + "; ".join(sources) + ".</p>"
             "<p>Live, weekly-updated copy: https://priyalifescience.com/opendata/airmid/v1/ . "
             "Code (software DOI 10.5281/zenodo.23336432): https://github.com/priyalifescience/airmed</p>"),
-        "license": "cc-by-4.0",
-        "notes": "Mixed licences: CC BY 4.0 applies to the compilation; each dataset's own source licence applies to "
-                 "its records (see catalog.json). Not medical advice.",
+        "license": "other-open",
+        "notes": "Multiple licences, per file; see each datapackage.json. Each dataset's own source licence applies to "
+                 "its records (listed in catalog.json); the medicine cross-reference (links/) is CC BY 4.0. Not medical advice.",
         "keywords": ["open data", "pharmaceuticals", "medicines", "clinical trials", "Ireland", "Europe",
                      "drug shortages", "regulatory approvals"],
         "related_identifiers": [

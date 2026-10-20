@@ -1,13 +1,18 @@
 {
- "_about": "Every source Airmed may collect from. A collector refuses to run unless its source is listed here with status 'approved'. Changing a status needs a reviewed pull request that cites the licence page.",
+ "_about": "Every source Airmed may collect from. A collector refuses to run unless its source is listed here with status 'approved'. Changing a status needs a reviewed pull request that cites the licence page. Status 'pending' means a collector exists but the source is held until the publisher confirms the licence: it is never collected or released, and 'run all' and the release skip it. Field 'licence_notes' lists conditions or disclaimers that must travel with the data; '{retrieved_date}' in attribution or notes is filled with the collection date.",
  "sources": {
   "ctgov_ireland": {
    "name": "ClinicalTrials.gov: studies with a site in Ireland",
    "publisher": "U.S. National Library of Medicine",
    "endpoint": "https://clinicaltrials.gov/api/v2/studies",
-   "licence": "Public data; see ClinicalTrials.gov Terms and Conditions",
+   "licence": "ClinicalTrials.gov Terms and Conditions (NLM). Data carry an international copyright outside the United States; reuse is allowed on the terms at https://clinicaltrials.gov/about-site/terms-conditions",
    "licence_url": "https://clinicaltrials.gov/about-site/terms-conditions",
-   "attribution": "Source: ClinicalTrials.gov, U.S. National Library of Medicine.",
+   "attribution": "Source: ClinicalTrials.gov, a U.S. Government database of the U.S. National Library of Medicine. Data processed by ClinicalTrials.gov as retrieved on {retrieved_date}. Modifications by Airmid Éireann: only studies with at least one site in Ireland (all statuses); only the fields nct_id, title, phases, overall_status, lead_sponsor, conditions, start_date and last_update kept; contacts, investigators, officials and site details not downloaded; lead sponsors that ClinicalTrials.gov does not class as industry, government or network and whose name does not read as an organisation blanked (possible personal names). This is a dated snapshot and may not be current; check ClinicalTrials.gov.",
+   "licence_notes": [
+    "ClinicalTrials.gov Terms and Conditions (https://clinicaltrials.gov/about-site/terms-conditions): \"In any publication or distribution of these data, you should: Attribute the source of the data as ClinicalTrials.gov; Update the data such that they are current at all times; Clearly display the date the data were processed by ClinicalTrials.gov; State any modifications made to the content of the data, along with a complete description of the modifications\". The processing date and the modifications are stated in the attribution of this file.",
+    "\"You shall not assert any proprietary rights to any portion of the database, or represent the database or any part thereof to anyone as other than a United States Government database.\" Airmid Éireann claims no proprietary rights in these data.",
+    "\"The ClinicalTrials.gov data carry an international copyright outside the United States and its Territories or Possessions. Some ClinicalTrials.gov data may be subject to the copyright of third parties; you should consult these entities for any additional terms of use.\" This file is a dated snapshot and may not be current; check ClinicalTrials.gov."
+   ],
    "fields_kept": [
     "nct_id",
     "title",
@@ -41,9 +46,12 @@
    "name": "EMA: medicine shortages (human)",
    "publisher": "European Medicines Agency",
    "endpoint": "https://www.ema.europa.eu/en/documents/report/shortages-output-json-report_en.json",
-   "licence": "EMA website content may be reused with acknowledgement of the source",
-   "licence_url": "https://www.ema.europa.eu/en/about-us/legal-notice",
+   "licence": "EMA legal notice: information and documents on EMA's webpages \"may be reproduced and/or distributed, totally or in part, irrespective of the means and/or the formats used, for non-commercial and commercial purposes, provided that EMA is always acknowledged as the source of the material. Such acknowledgement must be included in each copy of the material.\"",
+   "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA).",
+   "licence_notes": [
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+   ],
    "fields_kept": [
     "medicine",
     "inn",
@@ -80,8 +88,8 @@
    "name": "HPRA: human medicines authorised in Ireland",
    "publisher": "Health Products Regulatory Authority",
    "endpoint": "https://assets.hpra.ie/products/xml/latestHumanlist.xml",
-   "licence": "CC BY 4.0 (published on data.gov.ie)",
-   "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), as listed on data.gov.ie: dataset \"Human Medicines - Authorised Products\" (medicines-authorised-or-transfer-pending-products), license_id \"CC-BY-4.0\". Its resource URL redirects to the HPRA file collected here.",
+   "licence_url": "https://data.gov.ie/dataset/medicines-authorised-or-transfer-pending-products",
    "attribution": "Source: Health Products Regulatory Authority (HPRA), CC BY 4.0.",
    "fields_kept": [
     "licence_number",
@@ -123,9 +131,12 @@
    "name": "EMA: human medicines evaluated by the European Medicines Agency",
    "publisher": "European Medicines Agency",
    "endpoint": "https://www.ema.europa.eu/en/documents/report/medicines-output-medicines_json-report_en.json",
-   "licence": "EMA website content may be reused with acknowledgement of the source",
-   "licence_url": "https://www.ema.europa.eu/en/about-us/legal-notice",
+   "licence": "EMA legal notice: information and documents on EMA's webpages \"may be reproduced and/or distributed, totally or in part, irrespective of the means and/or the formats used, for non-commercial and commercial purposes, provided that EMA is always acknowledged as the source of the material. Such acknowledgement must be included in each copy of the material.\"",
+   "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA).",
+   "licence_notes": [
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+   ],
    "fields_kept": [
     "ema_product_number",
     "medicine_name",
@@ -180,9 +191,12 @@
    "name": "EMA: EU orphan designations",
    "publisher": "European Medicines Agency",
    "endpoint": "https://www.ema.europa.eu/en/documents/report/medicines-output-orphan_designations-json-report_en.json",
-   "licence": "EMA website content may be reused with acknowledgement of the source",
-   "licence_url": "https://www.ema.europa.eu/en/about-us/legal-notice",
+   "licence": "EMA legal notice: information and documents on EMA's webpages \"may be reproduced and/or distributed, totally or in part, irrespective of the means and/or the formats used, for non-commercial and commercial purposes, provided that EMA is always acknowledged as the source of the material. Such acknowledgement must be included in each copy of the material.\"",
+   "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA).",
+   "licence_notes": [
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+   ],
    "fields_kept": [
     "eu_designation_number",
     "medicine_name",
@@ -324,8 +338,8 @@
    "name": "CSO: Irish exports of medicinal and pharmaceutical products by country (TSM10)",
    "publisher": "Central Statistics Office, Ireland",
    "endpoint": "https://ws.cso.ie/public/api.jsonrpc",
-   "licence": "CC BY 4.0",
-   "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+   "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). CSO copyright policy: \"Statistical information on this website is accessible free of charge and licensed under Creative Commons Attribution (CC BY 4.0).\" (The CSO logo may not be used commercially; it is not used.)",
+   "licence_url": "https://www.cso.ie/en/aboutus/whoweare/copyrightpolicy/",
    "attribution": "Source: Central Statistics Office, Ireland (table TSM10), CC BY 4.0.",
    "fields_kept": [
     "month",
@@ -347,9 +361,12 @@
    "name": "NIH RePORTER: US NIH awards to organisations in Ireland",
    "publisher": "U.S. National Institutes of Health",
    "endpoint": "https://api.reporter.nih.gov/v2/projects/search",
-   "licence": "Public domain (U.S. government work); see NIH RePORTER terms",
-   "licence_url": "https://reporter.nih.gov/faqs",
-   "attribution": "Source: NIH RePORTER, U.S. National Institutes of Health.",
+   "licence": "Open Data Commons Open Database License (ODbL) 1.0, as declared by NIH for RePORTER (catalog.data.gov record \"NIH Research Portfolio Online Reporting Tools: Expenditures and Results (RePORTER)\")",
+   "licence_url": "https://opendatacommons.org/licenses/odbl/1.0/",
+   "attribution": "Source: NIH RePORTER, U.S. National Institutes of Health. Licensed under ODbL 1.0. Extracted and filtered to Irish organisations by Airmid Éireann; this derived database is also made available under ODbL 1.0.",
+   "licence_notes": [
+    "This file is under the Open Data Commons Open Database License (ODbL) 1.0 (https://opendatacommons.org/licenses/odbl/1.0/), not CC BY 4.0. Keep the ODbL notice; ODbL is share-alike: a derived database that you use publicly must also be offered under ODbL 1.0. NIH's licence declaration: https://catalog.data.gov/dataset/nih-research-portfolio-online-reporting-tools-expenditures-and-results-reporter"
+   ],
    "fields_kept": [
     "project_number",
     "fiscal_year",
@@ -415,8 +432,14 @@
    "name": "CORDIS: EU-funded health, medicine, pharma and biotech research projects (Horizon 2020 and Horizon Europe)",
    "publisher": "European Commission / Publications Office of the European Union (CORDIS)",
    "endpoint": "https://cordis.europa.eu/data/cordis-h2020projects-csv.zip ; https://cordis.europa.eu/data/cordis-HORIZONprojects-csv.zip",
-   "licence": "CC BY 4.0 under the Commission reuse policy (Commission Decision 2011/833/EU)",
+   "licence": "European Commission reuse notice (Decision 2011/833/EU); CC BY 4.0 per CORDIS legal notice (\"the reuse of the editorial content on this website owned by the EU is authorized ... under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence ... provided appropriate credit is given and any changes are indicated\"). data.europa.eu records: https://data.europa.eu/data/datasets/cordish2020projects and https://data.europa.eu/data/datasets/cordis-eu-research-projects-under-horizon-europe-2021-2027 (licence \"European Commission reuse notice\"). Materials provided by beneficiaries follow the terms of the respective grant.",
    "licence_url": "https://cordis.europa.eu/about/legal",
+   "licence_urls": {
+    "cordis_legal_notice": "https://cordis.europa.eu/about/legal",
+    "commission_decision_2011_833": "https://eur-lex.europa.eu/eli/dec/2011/833/oj",
+    "data_europa_h2020": "https://data.europa.eu/data/datasets/cordish2020projects",
+    "data_europa_horizon_europe": "https://data.europa.eu/data/datasets/cordis-eu-research-projects-under-horizon-europe-2021-2027"
+   },
    "attribution": "Source: CORDIS, European Commission / Publications Office of the European Union, CC BY 4.0. Filtered to health projects and reduced to project-level fields by Airmid Éireann.",
    "fields_kept": [
     "project_id",
@@ -486,9 +509,14 @@
    "name": "ClinicalTrials.gov: studies with a site in Europe, started 2015 or later",
    "publisher": "U.S. National Library of Medicine",
    "endpoint": "https://clinicaltrials.gov/api/v2/studies",
-   "licence": "Public data; see ClinicalTrials.gov Terms and Conditions",
+   "licence": "ClinicalTrials.gov Terms and Conditions (NLM). Data carry an international copyright outside the United States; reuse is allowed on the terms at https://clinicaltrials.gov/about-site/terms-conditions",
    "licence_url": "https://clinicaltrials.gov/about-site/terms-conditions",
-   "attribution": "Source: ClinicalTrials.gov, U.S. National Library of Medicine.",
+   "attribution": "Source: ClinicalTrials.gov, a U.S. Government database of the U.S. National Library of Medicine. Data processed by ClinicalTrials.gov as retrieved on {retrieved_date}. Modifications by Airmid Éireann: only studies with at least one site in the EU-27, UK, Norway, Iceland, Switzerland or Liechtenstein that started on or after 2015-01-01; only the fields nct_id, title, phases, overall_status, lead_sponsor, conditions, start_date, last_update and countries (European countries only) kept; contacts, investigators, officials, facility names, cities and coordinates not downloaded; lead sponsors that ClinicalTrials.gov does not class as industry, government or network and whose name does not read as an organisation blanked (possible personal names). This is a dated snapshot and may not be current; check ClinicalTrials.gov.",
+   "licence_notes": [
+    "ClinicalTrials.gov Terms and Conditions (https://clinicaltrials.gov/about-site/terms-conditions): \"In any publication or distribution of these data, you should: Attribute the source of the data as ClinicalTrials.gov; Update the data such that they are current at all times; Clearly display the date the data were processed by ClinicalTrials.gov; State any modifications made to the content of the data, along with a complete description of the modifications\". The processing date and the modifications are stated in the attribution of this file.",
+    "\"You shall not assert any proprietary rights to any portion of the database, or represent the database or any part thereof to anyone as other than a United States Government database.\" Airmid Éireann claims no proprietary rights in these data.",
+    "\"The ClinicalTrials.gov data carry an international copyright outside the United States and its Territories or Possessions. Some ClinicalTrials.gov data may be subject to the copyright of third parties; you should consult these entities for any additional terms of use.\" This file is a dated snapshot and may not be current; check ClinicalTrials.gov."
+   ],
    "fields_kept": [
     "nct_id",
     "title",
@@ -528,7 +556,10 @@
    "endpoint": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ (sbs_na_ind_r2, sbs_sc_ovw, sts_inpr_a; nace_r2=C21)",
    "licence": "Eurostat free re-use policy (Commission Decision 2011/833/EU; editorial content CC BY 4.0): \"Reuse of statistical data, metadata, publications, and other dissemination tools published on this website for commercial or non-commercial purposes is authorised provided the source is acknowledged.\" Data for countries outside the EU/EFTA/candidate countries is excluded per the notice's exceptions.",
    "licence_url": "https://ec.europa.eu/eurostat/help/copyright-notice",
-   "attribution": "Source: Eurostat, tables sbs_na_ind_r2, sbs_sc_ovw and sts_inpr_a (NACE Rev. 2 C21). Compiled into long format by Airmid Éireann.",
+   "attribution": "Source: Eurostat, tables sbs_na_ind_r2, sbs_sc_ovw and sts_inpr_a (NACE Rev. 2 C21). Compiled into long format by Airmid Éireann. Data modified by Airmid Éireann (filtered and reshaped). Eurostat has no responsibility for this reuse or for any errors in it.",
+   "licence_notes": [
+    "Eurostat copyright notice (https://ec.europa.eu/eurostat/help/copyright-notice): \"When reuse involves translations of publications or modifications to the data or text, this must be stated clearly to the end user of the information. A disclaimer regarding the non-responsibility of Eurostat shall be included.\" These data were modified by Airmid Éireann (filtered and reshaped). Eurostat has no responsibility for this reuse or for any errors in it."
+   ],
    "fields_kept": [
     "dataset",
     "country_code",
@@ -563,7 +594,10 @@
    "endpoint": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-059331",
    "licence": "Eurostat free re-use policy (Commission Decision 2011/833/EU; editorial content CC BY 4.0): \"Reuse of statistical data, metadata, publications, and other dissemination tools published on this website for commercial or non-commercial purposes is authorised provided the source is acknowledged.\" Exceptions in the same notice (data for countries outside the EU/EFTA/candidate countries; SITC trade data declared by Switzerland and Liechtenstein) are excluded: only EU member states are kept as reporters.",
    "licence_url": "https://ec.europa.eu/eurostat/help/copyright-notice",
-   "attribution": "Source: Eurostat, International trade of EU and non-EU countries since 2002 by SITC (DS-059331), product SITC 54. Compiled into long format by Airmid Éireann (filtered to SITC 54, value in euro, EU27 reporters).",
+   "attribution": "Source: Eurostat, International trade of EU and non-EU countries since 2002 by SITC (DS-059331), product SITC 54. Compiled into long format by Airmid Éireann (filtered to SITC 54, value in euro, EU27 reporters). Data modified by Airmid Éireann (filtered and reshaped). Eurostat has no responsibility for this reuse or for any errors in it.",
+   "licence_notes": [
+    "Eurostat copyright notice (https://ec.europa.eu/eurostat/help/copyright-notice): \"When reuse involves translations of publications or modifications to the data or text, this must be stated clearly to the end user of the information. A disclaimer regarding the non-responsibility of Eurostat shall be included.\" These data were modified by Airmid Éireann (filtered and reshaped). Eurostat has no responsibility for this reuse or for any errors in it."
+   ],
    "fields_kept": [
     "freq",
     "period",
@@ -734,9 +768,12 @@
    "name": "OECD Health Statistics: pharmaceutical spending by country (System of Health Accounts)",
    "publisher": "OECD (Organisation for Economic Co-operation and Development), dataflow OECD.ELS.HD:DSD_SHA@DF_SHA",
    "endpoint": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.HD,DSD_SHA@DF_SHA,/",
-   "licence": "OECD Terms and Conditions, Data, Permitted Use: \"Except where additional restrictions apply as stated above, you can extract from, download, copy, adapt, print, distribute, share and embed Data for any purpose, even for commercial use.\" Credit to the OECD is required and the same acknowledgment requirement must be passed on in any sub-licence. (OECD's own terms rather than a literal CC BY 4.0 grant, but equivalent in effect.) No third-party restriction is stated in the dataflow metadata.",
+   "licence": "OECD Terms and Conditions (section on Data; last updated 1 July 2024), not CC BY 4.0 (the OECD applies CC BY 4.0 only to written content published from 1 July 2024). Permitted use: \"Except where additional restrictions apply as stated above, you can extract from, download, copy, adapt, print, distribute, share and embed Data for any purpose, even for commercial use.\" Credit to the OECD in its citation format, including \"accessed on (date)\", is required, and the same acknowledgment requirement must be included in any sub-licences. No third-party restriction is stated in the dataflow metadata.",
    "licence_url": "https://www.oecd.org/en/about/terms-conditions.html",
-   "attribution": "Source: OECD (2026), Health expenditure and financing (OECD Health Statistics, System of Health Accounts), https://data-explorer.oecd.org (dataflow DSD_SHA@DF_SHA). Compiled into long format by Airmid Éireann. Any reuse must keep this credit to the OECD.",
+   "attribution": "Source: OECD (2026), Health expenditure and financing (OECD Health Statistics, System of Health Accounts), https://data-explorer.oecd.org (dataflow DSD_SHA@DF_SHA) (accessed on {retrieved_date}). Compiled into long format by Airmid Éireann. Any reuse must keep this credit to the OECD.",
+   "licence_notes": [
+    "OECD Terms and Conditions (https://www.oecd.org/en/about/terms-conditions.html), not CC BY: \"You must give appropriate credit to the OECD by using the citation associated with the relevant Data, or, if no specific citation is available, you must cite the source information using the following format: OECD (year), (dataset name),(data source) DOI or URL (accessed on (date)). When sharing or licensing work created using the Data, you agree to include the same acknowledgment requirement in any sub-licenses that you grant, along with the requirement that any further sub-licensees do the same.\""
+   ],
    "fields_kept": [
     "country_code",
     "country",
@@ -1302,7 +1339,7 @@
     "https://api.gleif.org/api/v1/lei-records",
     "https://opendata.cro.ie/api/3/action/datastore_search"
    ],
-   "licence": "Mixed, all open: Wikidata structured data CC0 1.0; GLEIF LEI data CC0 1.0; CRO Company Records CC BY 4.0",
+   "licence": "Mixed, all open: Wikidata structured data CC0 1.0 (https://www.wikidata.org/wiki/Wikidata:Licensing); GLEIF LEI data CC0 1.0 (https://www.gleif.org/en/meta/lei-data-terms-of-use); CRO Company Records CC BY 4.0 (https://opendata.cro.ie/dataset/companies)",
    "licence_url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
    "licence_urls": {
     "wikidata": "https://www.wikidata.org/wiki/Wikidata:Licensing",
@@ -1314,7 +1351,7 @@
     "gleif": "The data available through the Access Service are provided under the CC0 licence, see CC0 1.0 Universal (CC0 1.0).",
     "cro": "available for bulk download and API access under the Creative Commons Attribution 4.0 (CC BY 4.0) licence ... allowing unrestricted reuse with appropriate attribution."
    },
-   "attribution": "Sources: Wikidata (CC0); GLEIF LEI data (CC0; Airmid's use is not endorsed by GLEIF); Companies Registration Office open data: Contains Irish Public Sector Data licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Selection and identifier matching by Airmid Éireann.",
+   "attribution": "Sources: Wikidata (CC0); GLEIF LEI data (CC0; Airmid's use is not endorsed by GLEIF, and Airmid Éireann claims no intellectual property in the LEIs); Companies Registration Office open data: Contains Irish Public Sector Data licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Selection and identifier matching by Airmid Éireann.",
    "fields_kept": [
     "record_basis",
     "wikidata_qid",
@@ -1482,9 +1519,12 @@
    "name": "EMA: decisions on paediatric investigation plans (PIPs) and waivers",
    "publisher": "European Medicines Agency",
    "endpoint": "https://www.ema.europa.eu/en/documents/report/medicines-output-paediatric_investigation_plans-output-json-report_en.json",
-   "licence": "EMA website content may be reproduced and distributed, for non-commercial and commercial purposes, provided EMA is acknowledged as the source",
+   "licence": "EMA legal notice: information and documents on EMA's webpages \"may be reproduced and/or distributed, totally or in part, irrespective of the means and/or the formats used, for non-commercial and commercial purposes, provided that EMA is always acknowledged as the source of the material. Such acknowledgement must be included in each copy of the material.\"",
    "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA), paediatric investigation plan decisions.",
+   "licence_notes": [
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+   ],
    "fields_kept": [
     "decision_number",
     "pip_number",
@@ -1534,9 +1574,12 @@
    "name": "EMA: medicines granted PRIME eligibility (current and previous)",
    "publisher": "European Medicines Agency",
    "endpoint": "https://www.ema.europa.eu/en/documents/other/list-medicines-currently-prime-scheme_en.xlsx",
-   "licence": "EMA website content may be reproduced and distributed, for non-commercial and commercial purposes, provided EMA is acknowledged as the source",
+   "licence": "EMA legal notice: information and documents on EMA's webpages \"may be reproduced and/or distributed, totally or in part, irrespective of the means and/or the formats used, for non-commercial and commercial purposes, provided that EMA is always acknowledged as the source of the material. Such acknowledgement must be included in each copy of the material.\"",
    "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA), list of medicines in the PRIME scheme.",
+   "licence_notes": [
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+   ],
    "fields_kept": [
     "name",
     "substance_type",
@@ -1573,9 +1616,12 @@
    "name": "EMA: periodic safety update single assessment (PSUSA) outcomes",
    "publisher": "European Medicines Agency",
    "endpoint": "https://www.ema.europa.eu/en/documents/report/medicines-output-periodic_safety_update_report_single_assessments-output-json-report_en.json",
-   "licence": "EMA website content may be reproduced and distributed, for non-commercial and commercial purposes, provided EMA is acknowledged as the source",
+   "licence": "EMA legal notice: information and documents on EMA's webpages \"may be reproduced and/or distributed, totally or in part, irrespective of the means and/or the formats used, for non-commercial and commercial purposes, provided that EMA is always acknowledged as the source of the material. Such acknowledgement must be included in each copy of the material.\"",
    "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA), PSUSA outcomes.",
+   "licence_notes": [
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+   ],
    "fields_kept": [
     "procedure_number",
     "active_substances_in_scope",
@@ -1603,9 +1649,12 @@
    "name": "EMA: referral procedures for human medicines",
    "publisher": "European Medicines Agency",
    "endpoint": "https://www.ema.europa.eu/en/documents/report/referrals-output-json-report_en.json",
-   "licence": "EMA website content may be reproduced and distributed, for non-commercial and commercial purposes, provided EMA is acknowledged as the source",
+   "licence": "EMA legal notice: information and documents on EMA's webpages \"may be reproduced and/or distributed, totally or in part, irrespective of the means and/or the formats used, for non-commercial and commercial purposes, provided that EMA is always acknowledged as the source of the material. Such acknowledgement must be included in each copy of the material.\"",
    "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA), referral procedures.",
+   "licence_notes": [
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+   ],
    "fields_kept": [
     "reference_number",
     "referral_name",
@@ -1724,6 +1773,9 @@
    "licence": "NTPF Re-use of Public Sector Information terms (S.I. 279 of 2005): \"You may re-use the information on this website, free of charge, in any format. Re-use includes copying, issuing copies to the public, publishing, broadcasting and translating into other languages.\" Conditions: \"Acknowledge the source and our copyright in cases where you supply the information to others; Reproduce the information accurately; Not use the information in a misleading way; Not use the information for the principal purpose of advertising or promoting a particular product or service; Not use the information for or in support of illegal, immoral, fraudulent, or dishonest purposes.\" The former data.gov.ie (CC BY 4.0) listings of these datasets no longer exist; the NTPF publishes the files on its own site under these terms.",
    "licence_url": "https://www.ntpf.ie/information-re-use/",
    "attribution": "Source: National Treatment Purchase Fund (NTPF), Open Data waiting list reports, https://www.ntpf.ie/waiting-list-data/open-data/. © National Treatment Purchase Fund. Repeated rows in the source files were summed; nothing else was changed.",
+   "licence_notes": [
+    "NTPF re-use terms (https://www.ntpf.ie/information-re-use/), which apply to anyone who re-uses this file: \"You may re-use the information on this website, free of charge, in any format. Re-use includes copying, issuing copies to the public, publishing, broadcasting and translating into other languages.\" You must: \"Acknowledge the source and our copyright in cases where you supply the information to others; Reproduce the information accurately; Not use the information in a misleading way; Not use the information for the principal purpose of advertising or promoting a particular product or service; Not use the information for or in support of illegal, immoral, fraudulent, or dishonest purposes.\""
+   ],
    "fields_kept": [
     "snapshot_date",
     "list_type",
@@ -1819,7 +1871,7 @@
    "endpoint": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/{table}/JSON-stat/2.0/en",
    "licence": "CC BY 4.0. CSO copyright policy: statistical information on the CSO website is \"accessible free of charge\" and \"licensed under Creative Commons Attribution (CC BY 4.0)\"; \"Reproduction of CSO graphics and infographics is authorised subject to acknowledgement of the source\". (The CSO logo may not be used commercially; it is not used.)",
    "licence_url": "https://www.cso.ie/en/aboutus/whoweare/copyrightpolicy/",
-   "attribution": "Source: Central Statistics Office, Ireland, System of Health Accounts (tables SHA01-SHA15), CC BY 4.0. Reshaped to long format by Airmid Éireann; cells CSO publishes as empty are left out.",
+   "attribution": "Source: Central Statistics Office, Ireland, System of Health Accounts (tables SHA01-SHA15), CC BY 4.0. © Government of Ireland (Central Statistics Office). Reshaped to long format by Airmid Éireann; cells CSO publishes as empty are left out.",
    "fields_kept": [
     "table",
     "table_title",
@@ -1873,7 +1925,10 @@
    "endpoint": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/{table}/JSON-stat/2.0/en",
    "licence": "CC BY 4.0. data.gov.ie lists every one of these tables with license_id \"CC-BY-4.0\" (\"Creative Commons Attribution 4.0\"), publisher Department of Health (e.g. dataset dha77-total-hospital-discharges-by-principal-diagnosis-and-age-group) or Health Service Executive (e.g. hipe02-hospital-discharges), with the PxStat API as the download. The hosting CSO's copyright policy also licenses statistical information on its site \"under Creative Commons Attribution (CC BY 4.0)\".",
    "licence_url": "https://data.gov.ie/dataset/hipe02-hospital-discharges",
-   "attribution": "Source: Department of Health and Health Service Executive (Healthcare Pricing Office), Hospital In-Patient Enquiry summary tables, via CSO PxStat and data.gov.ie, CC BY 4.0. Selected tables and statistics, one-way breakdowns only, reshaped to long format by Airmid Éireann.",
+   "attribution": "Source: Department of Health and Health Service Executive (Healthcare Pricing Office), Hospital In-Patient Enquiry summary tables, via CSO PxStat and data.gov.ie, CC BY 4.0. © Department of Health; © Health Service Executive (HIPE tables). Selected tables and statistics, one-way breakdowns only, reshaped to long format by Airmid Éireann.",
+   "licence_notes": [
+    "Empty cells are suppressed by the publisher (small counts: the smallest discharge count published is 5) and are left out of this file. They are not zero. Do not fill or back-calculate suppressed cells (for example total minus male)."
+   ],
    "fields_kept": [
     "table",
     "table_title",
@@ -1901,7 +1956,7 @@
     "rows crossing two of sex, age group and area (e.g. women aged 65-74 in Co. Cork): only one-way breakdowns are kept, to keep the dataset small",
     "the inpatient-and-daycase duplicates (DHA75, DHA79, DHA80, DHA90, DHA96, DHA100, DHA101, DHA111, DHA118, DHA119), the 'with a procedure recorded' tables (DHA95-DHA97), the all-listed procedure tables (DHA116-DHA127), the age-standardised morbidity ratio tables (DHA87, DHA88, DHA94, DHA108, DHA109, DHA115) the other county tables for high-level diagnoses and selected procedures (DHA92, DHA93, DHA112-DHA114) and the area tables for detailed diagnoses/procedures (DHA78, DHA82, DHA84, DHA86, DHA99, DHA103, DHA105, DHA107; their national figures equal the 'All ages' rows of the age-group tables kept)",
     "crude rates per 1,000 population, median lengths of stay and confidence limits of standardised rates in the diagnosis/procedure tables (DHA74/DHA76 keep all their statistics)",
-    "cells published as empty",
+    "cells published as empty (suppressed by the publisher, e.g. fewer than 5 discharges; not zero)",
     "the staff contact named in the PxStat metadata"
    ],
    "status": "approved",
@@ -1932,9 +1987,9 @@
    "name": "DETE: Annual Employment Survey: jobs in IDA, Enterprise Ireland and Údarás client companies by sector (incl. Chemicals and Medical Devices), region and county, Irish- and foreign-owned",
    "publisher": "Department of Enterprise, Tourism and Employment, Ireland (Annual Employment Survey appendix tables A1-A9, B1-B9 and the all-firms-by-county table)",
    "endpoint": "https://enterprise.gov.ie/en/publications/annual-employment-survey-{year}.html (appendix CSVs aes-YYYY-YYYY-appendix-tables-{all-firms,all-firms-by-county,irish-firms,foreign-firms}.csv linked from it)",
-   "licence": "Irish PSI licence (CC BY). DETE's PSI page: \"This Department complies with the regulations on the Re-use of Public Sector Information. We encourage the re-use of the information that is published on this website ... Information and documents obtained from this website may be reproduced and/or re-used subject to the latest PSI licence available at www.psi.gov.ie\". data.gov.ie (page 'Re-use of Public Sector Information'): Circular 12/2016 \"adopts CC-BY as the standard PSI licence\", superseding PSI General Licence No: 2005/08/01. data.gov.ie lists the 2014-2023 edition (dataset annual-employment-survey) with license_id \"psi\" (\"Irish Public Sector Information Licence\", https://data.gov.ie/psi); the 2024 and 2025 editions there show \"Licence Not Specified\". No CC version number is stated anywhere.",
+   "licence": "Irish PSI licence, CC BY 4.0. DETE's PSI page: \"This Department complies with the regulations on the Re-use of Public Sector Information. We encourage the re-use of the information that is published on this website ... Information and documents obtained from this website may be reproduced and/or re-used subject to the latest PSI licence available at www.psi.gov.ie\". Circular 20/2021 (Open Data Directive, DPER), which replaced Circular 12/2016: \"The standard licence for the re-use of open government data in Ireland is the Creative Commons BY 4.0 Attribution\". data.gov.ie lists the 2014-2023 edition (dataset annual-employment-survey) with license_id \"psi\" (\"Irish Public Sector Information Licence\", https://data.gov.ie/psi); the 2024 and 2025 editions there show \"Licence Not Specified\".",
    "licence_url": "https://enterprise.gov.ie/en/who-we-are/corporate-information/psi/",
-   "attribution": "Source: Department of Enterprise, Tourism and Employment, Annual Employment Survey (appendix tables), re-used under the Irish PSI licence (CC BY). Reshaped to long format by Airmid Éireann; % change columns left out.",
+   "attribution": "Source: Department of Enterprise, Tourism and Employment, Annual Employment Survey (appendix tables), re-used under the Irish PSI licence (CC BY 4.0, Circular 20/2021). Reshaped to long format by Airmid Éireann; % change columns left out.",
    "fields_kept": [
     "table",
     "table_title",
@@ -1952,7 +2007,8 @@
     "the PDF report and chart workbook (only the appendix CSVs are used)",
     "any firm-level data (the survey publishes none)"
    ],
-   "status": "approved",
+   "status": "pending",
+   "reason": "Held 2026-10-20: DETE copyright page says 'personal use only' while its PSI page points to the offline psi.gov.ie; confirmation requested",
    "field_docs": {
     "table": "Appendix table code as published (A1-A9 by sector, B1-B9 by region; A1-A3/B1-B3 all firms, A4-A6/B4-B6 Irish-owned, A7-A9/B7-B9 foreign-owned) or 'county' for the all-firms-by-county file, which has no table codes",
     "table_title": "Table title as published (for the county file, built from its pivot labels 'Sum of Total Jobs', 'Sum of PFT', 'Sum of OTH'). Some published titles state a shorter period than the table covers (A4 says 2024-2025 but holds 2016-2025)",
@@ -1969,7 +2025,7 @@
    "name": "DETE (Ireland): employment permits issued by employer, economic sector and county, 2010 to the current month",
    "publisher": "Department of Enterprise, Tourism and Employment (DETE), Ireland",
    "endpoint": "https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/statistics/ (yearly 'Employment Permit Statistics <year>' pages; the employer, sector and county .xlsx workbooks linked from them)",
-   "licence": "DETE Re-use of Public Sector Information statement: \"This Department complies with the regulations on the Re-use of Public Sector Information. We encourage the re-use of the information that is published on this website ... Information and documents obtained from this website may be reproduced and/or re-used subject to the latest PSI licence available at www.psi.gov.ie.\" (read 2026-10-20). The current Irish PSI licence is the Creative Commons Attribution 4.0 licence used for Irish open data; www.psi.gov.ie itself did not respond on 2026-10-20, and these workbooks are not listed on data.gov.ie with an explicit licence tag.",
+   "licence": "Re-used under DETE's PSI statement: \"This Department complies with the regulations on the Re-use of Public Sector Information. We encourage the re-use of the information that is published on this website ... Information and documents obtained from this website may be reproduced and/or re-used subject to the latest PSI licence available at www.psi.gov.ie.\" (read 2026-10-20). National standard PSI licence CC BY 4.0 (Circular 20/2021: \"The standard licence for the re-use of open government data in Ireland is the Creative Commons BY 4.0 Attribution\"). These workbooks are not listed on data.gov.ie with an explicit licence tag.",
    "licence_url": "https://enterprise.gov.ie/en/who-we-are/corporate-information/psi/",
    "attribution": "Source: Department of Enterprise, Tourism and Employment, Employment Permit Statistics (permits issued to companies, by sector, by county), https://enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/statistics/. Changed by Airmid Éireann: workbooks of different years read into one table; employer names that may be natural persons withheld and their rows merged; totals of 2010-2019 monthly workbooks summed from the month blocks.",
    "fields_kept": [
@@ -2004,9 +2060,10 @@
     "employer names without a company or public-body marker (possible sole traders, i.e. natural persons): withheld, their rows merged into one row per workbook (employers_withheld = number merged)",
     "'Total' / 'Grand Total' rows (sums of the rows kept)",
     "the 2009 workbooks and the 2010 sector and county workbooks (binary .xls, not readable with the standard library)",
-    "permits by nationality (not collected)"
+    "permits by nationality (published by DETE in a separate workbook; not used)"
    ],
-   "status": "approved",
+   "status": "pending",
+   "reason": "Held 2026-10-20: DETE copyright page says 'personal use only' while its PSI page points to the offline psi.gov.ie; confirmation requested",
    "field_docs": {
     "year": "Calendar year of the workbook (the current year is year to date, see latest_month)",
     "table": "employer = permits issued to each employer; sector = permits by economic sector; county = permits by county of employment",
@@ -2038,11 +2095,11 @@
   },
   "doh_health_key_trends": {
    "name": "Department of Health: Health in Ireland Key Trends tables on medicines, prescribing, health spending, eligibility schemes and the hospital workforce",
-   "publisher": "Department of Health, Ireland, via the CSO PxStat database (tables KTA08, KTA09, KTA13, KTA14, KTA15, KTA16, KTA30, KTA36, KTA37, KTA38)",
+   "publisher": "Department of Health, Ireland (KTA09, KTA13-KTA16, KTA30, KTA36-KTA38) and Central Statistics Office, Ireland (KTA08, data from the Health Insurance Authority), via the CSO PxStat database",
    "endpoint": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/{table}/JSON-stat/2.0/en",
-   "licence": "CC BY 4.0. data.gov.ie lists the Key Trends tables with license_id \"CC-BY-4.0\" (\"Creative Commons Attribution 4.0\"), publisher Department of Health (e.g. dataset kta38-prescription-items-dispensed-under-the-general-medical-services-gms-scheme), with the PxStat API as the download. The hosting CSO's copyright policy also licenses statistical information on its site \"under Creative Commons Attribution (CC BY 4.0)\".",
+   "licence": "CC BY 4.0. data.gov.ie lists the Key Trends tables with license_id \"CC-BY-4.0\" (\"Creative Commons Attribution 4.0\"): KTA09-KTA38 with publisher Department of Health (e.g. dataset kta38-prescription-items-dispensed-under-the-general-medical-services-gms-scheme), KTA08 with publisher Central Statistics Office (PxStat copyright holder \"Central Statistics Office, Ireland\"; data sourced from the Health Insurance Authority), with the PxStat API as the download. The hosting CSO's copyright policy also licenses statistical information on its site \"under Creative Commons Attribution (CC BY 4.0)\".",
    "licence_url": "https://data.gov.ie/dataset/kta38-prescription-items-dispensed-under-the-general-medical-services-gms-scheme",
-   "attribution": "Source: Department of Health, Health in Ireland: Key Trends (tables KTA08, KTA09, KTA13-KTA16, KTA30, KTA36-KTA38), via CSO PxStat and data.gov.ie, CC BY 4.0. Reshaped to long format by Airmid Éireann.",
+   "attribution": "Source: Department of Health (KTA09-KTA38) and Central Statistics Office (KTA08, data from the Health Insurance Authority), Health in Ireland: Key Trends (tables KTA08, KTA09, KTA13-KTA16, KTA30, KTA36-KTA38), via CSO PxStat and data.gov.ie, CC BY 4.0. Reshaped to long format by Airmid Éireann.",
    "fields_kept": [
     "table",
     "table_title",
@@ -2082,6 +2139,9 @@
    "licence": "Creative Commons Attribution 4.0 International (EEA SDI catalogue record for the dataset, ver. 16.0 Feb. 2026: \"License CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Copyright holder: European Environment Agency (EEA).\" CC BY 4.0 allows anyone to copy and redistribute the material in any medium or format and to adapt it, for any purpose, even commercially, provided appropriate credit is given)",
    "licence_url": "https://sdi.eea.europa.eu/catalogue/srv/api/records/657ac3cb-affa-4295-a4a9-27b4f539adab?language=eng",
    "attribution": "Source: European Environment Agency, Industrial Reporting under the Industrial Emissions Directive 2010/75/EU and European Pollutant Release and Transfer Register Regulation (EC) No 166/2006 (https://www.eea.europa.eu/en/datahub/datahubitem-view/9405f714-8015-4b5b-a63c-280b82861b3d), licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Copyright holder: European Environment Agency (EEA). Filtered to Irish facilities in E-PRTR Annex I section 4 (chemical industry) and reshaped by Airmid Éireann. Not endorsed by the EEA or the EPA.",
+   "licence_notes": [
+    "EEA legal notice (https://www.eea.europa.eu/en/legal-notice): re-use is allowed \"provided that the EEA is always acknowledged as the original source of the material and that the original meaning or message of the content is not distorted\". The permissions do not apply to content supplied by third parties; the EEA logo is not used."
+   ],
    "fields_kept": [
     "reporting_year",
     "record_type",
@@ -2150,9 +2210,9 @@
    "name": "eTenders (Ireland): public procurement notices and contract awards in health, medicines and medical technology, 2013 onwards",
    "publisher": "Office of Government Procurement (OGP), Ireland",
    "endpoint": "https://data.gov.ie/dataset/contract-notices-published-on-etenders (CSV resource found through https://data.gov.ie/api/3/action/package_show; currently https://assets.gov.ie/static/documents/edf2df28/Public_Procurement_Opendata_Dataset.csv)",
-   "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0). data.gov.ie lists \"Contract Notices Published on eTenders\" with license_id \"CC-BY-4.0\" (checked 2026-10-20 via the CKAN API).",
-   "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-   "attribution": "Source: Office of Government Procurement, Contract Notices Published on eTenders, via data.gov.ie, CC BY 4.0. Changed by Airmid Éireann: filtered to health (CPV 33 / 85 / 851 and health contracting authorities), supplier names without a company or public-body marker withheld, dates converted to ISO, amounts to numbers.",
+   "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/). data.gov.ie lists \"Contract Notices Published on eTenders\" (Office of Government Procurement) with license_id \"CC-BY-4.0\" (checked 2026-10-20 via the CKAN API).",
+   "licence_url": "https://data.gov.ie/dataset/contract-notices-published-on-etenders",
+   "attribution": "Source: Office of Government Procurement, Contract Notices Published on eTenders, via data.gov.ie. Contains Irish Public Sector Data licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Changed by Airmid Éireann: filtered to health (CPV 33 / 85 / 851 and health contracting authorities), supplier names without a company or public-body marker withheld, dates converted to ISO, amounts to numbers.",
    "fields_kept": [
     "tender_id",
     "parent_agreement_id",
@@ -2285,6 +2345,9 @@
    "licence": "Oireachtas (Open Data) PSI Licence, \"Licence incorporating the Creative Commons Attribution 4.0 International License for the re-use of Public Sector Information\". Clause 3.1: \"The terms on which the Licensee may re-use documents covered by this Licence are those set out in the Creative Commons Attribution 4.0 International License\". Clause 3.2 requires the re-user to identify the Houses of the Oireachtas as creator, retain the copyright notice, refer to the Licence and retain any disclaimer notice.",
    "licence_url": "https://www.oireachtas.ie/en/open-data/license/",
    "attribution": "Source: Houses of the Oireachtas, Oireachtas Open Data API (https://api.oireachtas.ie/). © Houses of the Oireachtas. Re-used under the Oireachtas (Public Sector Information – Open Data) Licence (https://www.oireachtas.ie/en/open-data/license/), which incorporates CC BY 4.0. Filtered by topic and with the asking member's name removed by Airmid Éireann; the official record at data.oireachtas.ie is authoritative.",
+   "licence_notes": [
+    "Disclaimer of the Houses of the Oireachtas, retained as clause 3.2(4) of the Oireachtas (Public Sector Information – Open Data) Licence requires: \"The Houses of the Oireachtas is not liable for any loss or liability associated with the re-use of information and does not certify that the information is up-to-date or error free.\""
+   ],
    "fields_kept": [
     "date",
     "year",
@@ -2324,12 +2387,15 @@
    "browse_url": "https://priyalifescience.com/medicines"
   },
   "research_ireland_grants": {
-   "name": "Research Ireland (formerly Science Foundation Ireland): research grant commitments, 2000 to the latest published file",
-   "publisher": "Taighde Éireann – Research Ireland (formerly Science Foundation Ireland and the Irish Research Council)",
+   "name": "Research Ireland (formerly Science Foundation Ireland): research grant commitments, 2000 to the latest published file (Irish Research Council grants not included)",
+   "publisher": "Taighde Éireann – Research Ireland (formerly Science Foundation Ireland and the Irish Research Council; Irish Research Council grants not included)",
    "endpoint": "https://data.gov.ie/dataset/research-ireland-grant-commitments and https://data.gov.ie/dataset/science-foundation-ireland-grants-commitments (CSV resources found through https://data.gov.ie/api/3/action/package_show)",
-   "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0). data.gov.ie lists both datasets with license_id \"CC-BY-4.0\", license_title \"Creative Commons Attribution 4.0\" (checked 2026-10-20 via the CKAN API); the SFI metadata describes it as the \"Standard Irish PSI Licence (CC-BY 4.0)\".",
+   "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/). data.gov.ie lists both datasets with license_id \"CC-BY-4.0\", license_title \"Creative Commons Attribution 4.0\" (checked 2026-10-20 via the CKAN API); both metadata PDFs state \"Licence CC-BY 4.0\"; the SFI open-data web page (https://www.sfi.ie/about-us/governance/open-data/) says the data are \"licensed under a Standard Irish PSI Licence (CC-BY 4.0)\".",
    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
    "attribution": "Source: Taighde Éireann – Research Ireland, Grant Commitments open data (and the Science Foundation Ireland Grant Commitments file, 2000–July 2024), via data.gov.ie, CC BY 4.0. Changed by Airmid Éireann: lead applicant names and ORCID iDs removed, personal names in titles replaced by \"[name withheld]\", dates converted to ISO and amounts to numbers.",
+   "licence_notes": [
+    "Irish Research Council grants are not included: Research Ireland's metadata says \"The data for its predecessor organisation's (Science Foundation Ireland and the Irish Research Council) are found on the respective websites.\" The Research Ireland file covers August 2024 onwards and the SFI file 2000 to July 2024."
+   ],
    "fields_kept": [
     "source_file",
     "grant_id",

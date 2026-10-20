@@ -32,7 +32,8 @@ NOTEBOOK_CELLS = [
     ("code", "short = load('ema_shortages')\nshort[~short['status'].str.contains('resolved', case=False, na=False)][['medicine', 'inn', 'status']]"),
     ("markdown", "## One medicine across all datasets\nThe cross-reference matches active substances by normalised name, with WHO ATC codes."),
     ("code", "links = pd.read_csv(os.path.join(ROOT, 'links', 'medicine_links.csv'))\nlinks.sort_values('dataset_count', ascending=False).head(15)"),
-    ("markdown", "Each dataset keeps the licence of its source (see `catalog.json` and each `datapackage.json`). "
+    ("markdown", "Multiple licences: each dataset keeps the licence of its source (see `catalog.json` and each "
+                 "`datapackage.json`); they are not all CC BY 4.0, and some carry conditions listed in `README.md`. "
                  "Please credit the original publisher and \"Airmid Éireann, Priya Life Science\". Not medical advice."),
 ]
 

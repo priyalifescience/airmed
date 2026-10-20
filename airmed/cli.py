@@ -7,7 +7,7 @@ from pathlib import Path
 from .collectors import ALL
 from .output import write_dataset
 from .privacy import check_fields, clean_record
-from .registry import SourceNotApproved, approved_source, load_registry
+from .registry import SourceNotApproved, approved_source, held_sources, load_registry
 
 
 def run_one(key: str, out_dir: Path) -> dict:
@@ -22,10 +22,21 @@ def run_one(key: str, out_dir: Path) -> dict:
 
 
 def check() -> int:
-    """Offline consistency check: every collector has an approved registry entry with matching fields."""
+    """Offline consistency check: every collector has an approved registry entry with matching fields.
+
+    A collector whose source is on hold (status "pending") is reported as held, not as a failure, as long as its
+    registry entry still matches its fields."""
     bad = 0
+    held = held_sources()
     for key, mod in ALL.items():
         try:
+            if key in held:
+                src = load_registry()[key]
+                check_fields(mod.FIELDS)
+                if list(mod.FIELDS) != list(src.get("fields_kept", [])):
+                    raise SourceNotApproved("fields differ from registry")
+                print(f"held  {key}: {held[key]}")
+                continue
             src = approved_source(key)
             check_fields(mod.FIELDS)
             if list(mod.FIELDS) != list(src["fields_kept"]):
@@ -62,11 +73,16 @@ def main(argv=None) -> int:
         except ReleaseRefused as e:
             print(f"REFUSED  {e}")
             return 1
-        print(f"ok    release: {res['datasets']} datasets, {res['records']:,} records -> {res['dist']}")
+        print(f"ok    release: {res['datasets']} datasets, {res['records']:,} records -> {res['dist']}"
+              + (f" (held, not released: {', '.join(res['held'])})" if res.get("held") else ""))
         return 0
+    held = held_sources()
     keys = list(ALL) if a.source == "all" else [a.source]
     rc = 0
     for key in keys:
+        if a.source == "all" and key in held:  # on hold: skipped, not a failure (naming it alone still refuses)
+            print(f"skip  {key}: held ({held[key]})")
+            continue
         if key not in ALL:
             print(f"FAIL  {key}: no collector")
             rc = 1

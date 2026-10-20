@@ -71,7 +71,9 @@ class TestDeteAnnualEmploymentSurvey(unittest.TestCase):
     def test_registry_entry_matches(self):
         src = registry_entry(m.KEY)
         self.assertEqual(src["fields_kept"], m.FIELDS)
-        self.assertEqual(src["status"], "approved")
+        # Held until DETE confirms the licence: never collected or released, but the parser stays tested.
+        self.assertEqual(src["status"], "pending")
+        self.assertTrue(src["reason"].startswith("Held 2026-10-20"))
         self.assertEqual(list(src["field_docs"]), m.FIELDS)
 
 

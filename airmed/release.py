@@ -11,6 +11,11 @@ The release folder holds, per dataset, the CSV, the JSON and its datapackage.jso
 
 Safety: the release is refused if any approved source is missing, if a dataset fails its privacy re-check, or if a
 dataset shrank by more than MAX_SHRINK compared with the previous catalog (usually a broken download, not news).
+Sources on hold (registry status "pending") are left out, even if an older copy is still in the source folder.
+
+Licences: there is no single licence for the release. Each dataset carries its own source's licence, attribution and
+licence notes, refreshed from the current registry at release time (so a licence correction reaches every copy
+without waiting for the next collection).
 """
 
 import datetime as dt
@@ -21,8 +26,12 @@ from pathlib import Path
 
 from . import __version__
 from .collectors import ALL
+from .output import licence_metadata
 from .privacy import EMAIL_RE, PHONE_RE
-from .registry import approved_source
+from .registry import approved_source, held_sources
+
+LICENCE_SUMMARY = ("Multiple licences: each dataset keeps the licence of its source (see its datapackage.json and "
+                   "catalog.json); they are not all CC BY 4.0.")
 
 BASE_URL = "https://priyalifescience.com/opendata/airmid/v1/"
 MAX_SHRINK = 0.20
@@ -72,8 +81,8 @@ def _index_html(datasets: list, now: str) -> str:
         '<a href="catalog.json">catalog.json</a> · <a href="DATA_DICTIONARY.md">data dictionary</a> · '
         '<a href="CHANGELOG.md">changelog</a> · <a href="https://priyalifescience.com/airmed">about the project</a> · '
         'cite: <a href="citation.bib">BibTeX</a> · <a href="citation.ris">RIS</a></p>'
-        '<p>Each dataset keeps the licence of its source. Credit the source and “Airmid Éireann, Priya Life Science”. '
-        'Not medical advice.</p>'
+        f'<p>{html.escape(LICENCE_SUMMARY)} Some carry extra conditions or disclaimers (see the README and each '
+        'datapackage.json). Credit the source and “Airmid Éireann, Priya Life Science”. Not medical advice.</p>'
         f'<table><tr><th>Dataset</th><th>Records</th><th>Files</th><th>Licence</th><th>On the website</th></tr>{rows}</table></body></html>')
 
 
@@ -90,6 +99,26 @@ def _recheck(records: list, key: str) -> None:
                     raise ReleaseRefused(f"{key}.{k}: contact-like value found at release time")
 
 
+def _refresh_licence(out: Path, key: str, source: dict, payload: dict, lic: dict) -> None:
+    """Re-stamp a copied dataset with the registry's current name, publisher, licence and attribution.
+
+    Only the metadata changes: the records are written back unchanged and the JSON hash in datapackage.json is
+    recomputed."""
+    if (payload.get("source"), payload.get("attribution"), payload.get("licence")) != (source["name"], lic["attribution"], lic["licence"]):
+        payload.update(source=source["name"], attribution=lic["attribution"], licence=lic["licence"])
+        with open(out / f"{key}.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
+    pkg_path = out / "datapackage.json"
+    pkg = json.loads(pkg_path.read_text(encoding="utf-8"))
+    pkg.update(title=source["name"], description=lic["description"], licenses=lic["licenses"],
+               licence_notes=lic["licence_notes"], sources=[{"title": source["publisher"], "path": source["endpoint"]}])
+    for res in pkg.get("resources", []):
+        if res.get("format") == "json" and (out / res.get("path", "")).is_file():
+            res["hash"] = "sha256:" + _sha(out / res["path"])
+    with open(pkg_path, "w", encoding="utf-8") as f:
+        json.dump(pkg, f, ensure_ascii=False, indent=1)
+
+
 def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
     src, dist = Path(src), Path(dist)
     previous = {}
@@ -103,8 +132,11 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
     staged.mkdir(parents=True)
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
     datasets, changes = [], []
+    held = held_sources()
 
     for key, mod in ALL.items():
+        if key in held:  # licence awaiting confirmation: never released, even from an older copy in src
+            continue
         source = approved_source(key)
         folder = src / key
         files = [folder / f"{key}.csv", folder / f"{key}.json", folder / "datapackage.json"]
@@ -120,13 +152,16 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
         out.mkdir()
         for f in files:
             shutil.copy2(f, out / f.name)
+        lic = licence_metadata(source, payload.get("retrieved", ""))
+        _refresh_licence(out, key, source, payload, lic)
         datasets.append({
             "key": key,
             "title": source["name"],
             "publisher": source["publisher"],
             "licence": source["licence"],
             "licence_url": source["licence_url"],
-            "attribution": source["attribution"],
+            "attribution": lic["attribution"],
+            "licence_notes": lic["licence_notes"],
             "source_endpoint": source["endpoint"],
             "browse_url": source.get("browse_url", "https://priyalifescience.com/airmed"),
             "records": n,
@@ -145,7 +180,8 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
         "release": now,
         "generator": f"airmed {__version__}",
         "api_version": "v1",
-        "note": "Each dataset keeps the licence of its source. Credit the source and Airmid Éireann. Not medical advice.",
+        "note": LICENCE_SUMMARY + " Credit the source and Airmid Éireann. Not medical advice.",
+        "licence": "multiple licences, see each dataset",
         "datasets": datasets,
     }
     (staged / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -153,7 +189,8 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
     dd = ["# Airmid Éireann: data dictionary", "", f"Release {now}. Every field of every dataset.", ""]
     for d in datasets:
         dd += [f"## `{d['key']}`: {d['title']}", "", f"Publisher: {d['publisher']}. Licence: [{d['licence']}]({d['licence_url']}).",
-               f"Attribution: {d['attribution']}", f"Records: {d['records']:,}", "", "| Field | Description |", "|---|---|"]
+               f"Attribution: {d['attribution']}", *(f"Licence note: {n}" for n in d["licence_notes"]),
+               f"Records: {d['records']:,}", "", "| Field | Description |", "|---|---|"]
         dd += [f"| `{f['name']}` | {f['description']} |" for f in d["fields"]]
         dd.append("")
     (staged / "DATA_DICTIONARY.md").write_text("\n".join(dd), encoding="utf-8")
@@ -166,8 +203,15 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
         "- `catalog.json`: every dataset with its source, licence, record count, fields and file links (the simple API)",
         "- `<dataset>/<dataset>.csv` and `.json`: the data", "- `<dataset>/datapackage.json`: Frictionless Data descriptor",
         "- `DATA_DICTIONARY.md`: every field described", "", "## Licence and credit", "",
-        "Each dataset keeps the licence of its source, listed in `catalog.json`. Please credit the original source and",
-        '"Airmid Éireann, Priya Life Science". Nothing here is medical advice.', "", "## Cite", "",
+        LICENCE_SUMMARY + " The licence, its link and the attribution to use are listed for every dataset in",
+        "`catalog.json`, `DATA_DICTIONARY.md` and the dataset's `datapackage.json`. Please credit the original source and",
+        '"Airmid Éireann, Priya Life Science". Nothing here is medical advice.', "",
+        *(["## Licence conditions and disclaimers", "",
+           "These datasets carry conditions or notices that their publishers require to be passed on with the data:", ""]
+          + [line for d in datasets if d["licence_notes"]
+             for line in (f"### `{d['key']}`: {d['title']}", "", *(f"- {n}" for n in d["licence_notes"]), "")]
+          if any(d["licence_notes"] for d in datasets) else []),
+        "## Cite", "",
         f"Priya Life Science ({now[:4]}). Airmid Éireann: Ireland's Open Pharma Data Project. {base_url}catalog.json", "",
     ]
     (staged / "README.md").write_text("\n".join(readme), encoding="utf-8")
@@ -200,4 +244,5 @@ def build(src: Path, dist: Path, base_url: str = BASE_URL) -> dict:
     if dist.exists():
         shutil.rmtree(dist)
     staged.rename(dist)
-    return {"dist": str(dist), "datasets": len(datasets), "records": sum(d["records"] for d in datasets)}
+    return {"dist": str(dist), "datasets": len(datasets), "records": sum(d["records"] for d in datasets),
+            "held": sorted(k for k in held if k in ALL)}
