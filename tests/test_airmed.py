@@ -31,14 +31,20 @@ class TestRegistry(unittest.TestCase):
                 approved_source(key)
 
     def test_run_all_skips_held_sources_without_failing(self):
+        import contextlib
+        import io
         from unittest import mock
         from airmed import cli
         ran = []
         fake = lambda key, out: ran.append(key) or {"dir": "x", "records": 1, "blanked": 0, "by_field": {}}
-        with mock.patch.object(cli, "run_one", fake):
+        printed = io.StringIO()
+        with mock.patch.object(cli, "run_one", fake), contextlib.redirect_stdout(printed):
             self.assertEqual(cli.main(["run", "all", "--out", "unused"]), 0)
+            self.assertEqual(cli.check(), 0)
         self.assertEqual(set(ran), set(ALL) - HELD)
-        self.assertEqual(cli.check(), 0)
+        for key in HELD:
+            self.assertIn(f"skip  {key}: held", printed.getvalue())
+            self.assertIn(f"held  {key}: Held 2026-10-20", printed.getvalue())
 
     def test_licence_metadata_per_dataset(self):
         reg = load_registry()
