@@ -33,6 +33,13 @@ def short_pub(p):
     return p.replace("U.S. Food and Drug Administration", "U.S. FDA")
 
 
+def publishers(ds):
+    """Distinct publishers; a dataset can name several, separated by ";" (e.g. Wikidata; GLEIF; CRO)."""
+    return {short_pub(part).replace("U.S. Centers for", "Centers for") for d in ds
+            for part in re.split(r";|\s+and\s+(?=Health Service Executive)", re.sub(r"\([^)]*\)", "", d["publisher"]))
+            if part.strip()[:1].isupper()}
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--catalog", default=BASE + "catalog.json")
@@ -59,7 +66,7 @@ def main(argv=None):
     s = re.sub(r'alt="Datasets: \d+" src="https://img.shields.io/badge/datasets-\d+-', f'alt="Datasets: {len(ds)}" src="https://img.shields.io/badge/datasets-{len(ds)}-', s)
     s = re.sub(r"<h2>[\d,]+</h2><sub>records(?: in release|, release of)[^<]*</sub>", f"<h2>{total:,}</h2><sub>records, release of {day}</sub>", s)
     s = re.sub(r"<h2>\d+</h2><sub>open datasets</sub>", f"<h2>{len(ds)}</h2><sub>open datasets</sub>", s)
-    s = re.sub(r"<h2>\d+</h2><sub>official publishers</sub>", "<h2>20</h2><sub>official publishers</sub>", s)
+    s = re.sub(r"<h2>\d+</h2><sub>official publishers</sub>", f"<h2>{len(publishers(ds))}</h2><sub>official publishers</sub>", s)
     p.write_text(s, encoding="utf-8", newline="\n")
     print(f"README: {len(ds)} datasets, {total:,} records, release {day}")
 

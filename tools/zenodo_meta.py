@@ -20,9 +20,14 @@ GROUPS = [
                               "fda_device_recalls", "fda_warning_letters", "faers_counts", "ecdc_antimicrobial_consumption"]),
     ("Industry, trade and spending", ["cso_pharma_exports", "cso_pharma_industry_stats", "eurostat_pharma_trade",
                                       "eurostat_pharma_industry", "oecd_pharma_spending", "nhs_prescription_costs",
-                                      "medicaid_drug_spending", "nadac_prices", "pharma_company_ids", "epa_pharma_licences"]),
+                                      "medicaid_drug_spending", "nadac_prices", "pharma_company_ids", "epa_pharma_licences",
+                                      "eea_industrial_emissions_ireland", "dete_annual_employment_survey",
+                                      "dete_employment_permits"]),
     ("Health services and research", ["ntpf_waiting_lists", "cordis_health", "openalex_ireland_pharma",
-                                      "openalex_europe_pharma", "nih_ireland"]),
+                                      "openalex_europe_pharma", "nih_ireland", "research_ireland_grants"]),
+    ("Irish health system, public spending and parliament", ["cso_health_accounts", "cso_hospital_discharges",
+                                                             "doh_health_key_trends", "ni_bso_gp_prescribing",
+                                                             "etenders_health_awards", "oireachtas_medicine_questions"]),
 ]
 
 
