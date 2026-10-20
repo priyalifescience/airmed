@@ -1,0 +1,14 @@
+{
+"files": {
+"sfi_2000_2024": {
+"url": "https://www.sfi.ie/about-us/governance/open-data/Open-Data-2024-07-31.csv",
+"licence": "CC-BY-4.0",
+"csv": "Proposal ID,Programme Name,Sub-Programme,Supplement,Research Body,Research Body ROR ID,Funder Name,Crossref Funder Registry ID,Proposal Title,Start Date,End Date, Current Total Commitment ,Airmid Title Redacted\n00/PI.1/B038,Principal Investigator Programme,,,Trinity College Dublin (TCD),https://ror.org/02tyrky19,Science Foundation Ireland,10.13039/501100001602,Establishing functional proteomic maps of proteins involved in apoptosis,2001-10-01,2007-03-31,5471668.03,no\n13/IA/1977(N),Investigator Programme,Themed and Non-ERC,,Teagasc,https://ror.org/03sx84n71,Science Foundation Ireland,10.13039/501100001602,\"Using precision technologies, technology platforms and computational biology to increase the economic and environmental sustainability of pasture based production systems\",2014-09-01,2019-08-31,-667861.65,no\n12/RC/2275_P2,Research Centres Programme,Phase 2,,University of Limerick (UL),https://ror.org/00a0n9e72,Science Foundation Ireland,10.13039/501100001602,SSPC_Phase 2,2019-06-01,2025-12-31,\" 29,941,827.00 \",no\n16/IA/4528 MI (N),Investigator Programme,,,Marine Institute,https://ror.org/05581wm82,Science Foundation Ireland,10.13039/501100001602,\"Mapping, Modelling and Monitoring Key Processes and Controls on Cold-water Coral Habitats in Submarine Canyons (MMMonKey_Pro)\",2017-11-01,2022-09-30,\" (348,960.00)\",no\n12/ERC/B2499,ERC Support Programme,,,Trinity College Dublin (TCD),https://ror.org/02tyrky19,Science Foundation Ireland,10.13039/501100001602,SFI ERC Support - [name withheld] - Dosage Sensitive Genes in Evolution and Disease,2013-01-01,2017-12-31,259995,yes\n"
+},
+"research_ireland": {
+"url": "https://media.researchireland.ie/wp-content/uploads/2026/04/Research-Ireland-Grant-Commitments-to-January-2026-09.04.26.csv",
+"licence": "CC-BY-4.0",
+"csv": "Project ID,Programme Name,Research Body,Funder Name,Funder ROR ID,Project title,Actual Start Date,Final End Date,Award Amount,Airmid Title Redacted\n25/ESS/4045,European Social Survey (ESS),University College Dublin,Research Ireland,https://ror.org/010t7sr36,Call for appointment of National Coordinator for Round 12 Ireland,1/1/2025,12/31/2026,\"€ 645,734.00\",no\n25/HERA/4046,Humanities in the European Research Area (HERA),University College Cork,Research Ireland,https://ror.org/010t7sr36,CHRYSES: Mapping Environmental Health Crises – Public Understanding through Myths and Science,1/1/2025,12/31/2026,\"€ 137,599.90\",no\n"
+}
+}
+}

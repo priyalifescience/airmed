@@ -1,0 +1,594 @@
+{
+ "facilities": [
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ",",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2011
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ",",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2012
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2007
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2008
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2009
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2010
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2013
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2014
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Smithkline Beecham (Cork) Limited",
+   "parentCompanyName": "Smithkline Beecham (Cork) Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2016
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": ",",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2015
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2017
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2018
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2019
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2020
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2021
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2022
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2023
+  },
+  {
+   "localId": "P0004.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Thermo Fisher Scientific Cork Limited",
+   "parentCompanyName": "Thermo Fisher Scientific Cork Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2024
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ",",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2011
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ",",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2012
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ",",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2015
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2007
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2008
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2009
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2010
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2013
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2014
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": ".",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2016
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2017
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2018
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2019
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2020
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2021
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2022
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2023
+  },
+  {
+   "localId": "P0010.FACILITY",
+   "namespace": "IE.CAED",
+   "facilityName": "Hovione Limited",
+   "parentCompanyName": "Hovione Limited",
+   "city": "Cork",
+   "NUTS3": "IE053",
+   "EPRTRAnnexIMainActivity": "4(e)",
+   "status": "functional",
+   "reportingYear": 2024
+  }
+ ],
+ "reports": [
+  {
+   "Id": 5327097,
+   "localId": "P0004.FACILITY",
+   "reportingYear": 2018,
+   "numberOfEmployees": 400
+  },
+  {
+   "Id": 5327102,
+   "localId": "P0010.FACILITY",
+   "reportingYear": 2018,
+   "numberOfEmployees": 215
+  },
+  {
+   "Id": 6214651,
+   "localId": "P0004.FACILITY",
+   "reportingYear": 2007,
+   "numberOfEmployees": 550
+  },
+  {
+   "Id": 6214656,
+   "localId": "P0010.FACILITY",
+   "reportingYear": 2007,
+   "numberOfEmployees": 550
+  },
+  {
+   "Id": 6215001,
+   "localId": "P0004.FACILITY",
+   "reportingYear": 2008,
+   "numberOfEmployees": 436
+  },
+  {
+   "Id": 6215006,
+   "localId": "P0010.FACILITY",
+   "reportingYear": 2008,
+   "numberOfEmployees": 0
+  },
+  {
+   "Id": 7024697,
+   "localId": "P0004.FACILITY",
+   "reportingYear": 2024,
+   "numberOfEmployees": 480
+  },
+  {
+   "Id": 7024702,
+   "localId": "P0010.FACILITY",
+   "reportingYear": 2024,
+   "numberOfEmployees": 196
+  }
+ ],
+ "releases": [
+  {
+   "Id": 6706264,
+   "facilityReportId": 5327102,
+   "pollutant": "DCM",
+   "mediumCode": "AIR",
+   "totalPollutantQuantityKg": 1255.75,
+   "accidentalPollutantQuantityKg": 0.0,
+   "methodCode": "M",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 7751241,
+   "facilityReportId": 6214651,
+   "pollutant": "DCM",
+   "mediumCode": "AIR",
+   "totalPollutantQuantityKg": 2330.0,
+   "accidentalPollutantQuantityKg": 0.0,
+   "methodCode": "C",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 7751242,
+   "facilityReportId": 6214651,
+   "pollutant": "PCDD+PCDF(DIOXINS+FURANS)",
+   "mediumCode": "AIR",
+   "totalPollutantQuantityKg": 0.0004,
+   "accidentalPollutantQuantityKg": 0.0,
+   "methodCode": "M",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 7751243,
+   "facilityReportId": 6214651,
+   "pollutant": "DCM",
+   "mediumCode": "WATER",
+   "totalPollutantQuantityKg": 20.1,
+   "accidentalPollutantQuantityKg": 0.0,
+   "methodCode": "C",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 7751244,
+   "facilityReportId": 6214651,
+   "pollutant": "PCDD+PCDF(DIOXINS+FURANS)",
+   "mediumCode": "WATER",
+   "totalPollutantQuantityKg": 0.0008,
+   "accidentalPollutantQuantityKg": 0.0,
+   "methodCode": "M",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 7751609,
+   "facilityReportId": 6215001,
+   "pollutant": "DCM",
+   "mediumCode": "AIR",
+   "totalPollutantQuantityKg": 1670.0,
+   "accidentalPollutantQuantityKg": 0.0,
+   "methodCode": "C",
+   "confidentialityReason": null
+  }
+ ],
+ "pollutant_transfers": [
+  {
+   "Id": 537739,
+   "facilityReportId": 5327102,
+   "pollutant": "DCM",
+   "totalPollutantQuantityKg": 18.34,
+   "methodCode": "M",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 631500,
+   "facilityReportId": 6214656,
+   "pollutant": "DCM",
+   "totalPollutantQuantityKg": 336.0,
+   "methodCode": "M",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 631529,
+   "facilityReportId": 6215006,
+   "pollutant": "DCM",
+   "totalPollutantQuantityKg": 132.0,
+   "methodCode": "M",
+   "confidentialityReason": null
+  }
+ ],
+ "waste_transfers": [
+  {
+   "Id": 9038199,
+   "facilityReportId": 5327097,
+   "wasteClassification": "HW",
+   "wasteTreatment": "D",
+   "totalWasteQuantityTNE": 0.016,
+   "methodCode": "M",
+   "transboundaryIndicator": true,
+   "receiver_countryCode": "DK",
+   "receivingSite_countryCode": "DK",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 9038200,
+   "facilityReportId": 5327097,
+   "wasteClassification": "HW",
+   "wasteTreatment": "D",
+   "totalWasteQuantityTNE": 0.028,
+   "methodCode": "M",
+   "transboundaryIndicator": true,
+   "receiver_countryCode": "DE",
+   "receivingSite_countryCode": "DE",
+   "confidentialityReason": null
+  },
+  {
+   "Id": 9038202,
+   "facilityReportId": 5327097,
+   "wasteClassification": "HW",
+   "wasteTreatment": "R",
+   "totalWasteQuantityTNE": 0.04,
+   "methodCode": "M",
+   "transboundaryIndicator": false,
+   "receiver_countryCode": null,
+   "receivingSite_countryCode": null,
+   "confidentialityReason": null
+  },
+  {
+   "Id": 9038204,
+   "facilityReportId": 5327097,
+   "wasteClassification": "HW",
+   "wasteTreatment": "R",
+   "totalWasteQuantityTNE": 0.114,
+   "methodCode": "M",
+   "transboundaryIndicator": false,
+   "receiver_countryCode": null,
+   "receivingSite_countryCode": null,
+   "confidentialityReason": null
+  }
+ ],
+ "counts": {
+  "reports": 8,
+  "releases": 6,
+  "pollutant_transfers": 3,
+  "waste_transfers": 4
+ }
+}

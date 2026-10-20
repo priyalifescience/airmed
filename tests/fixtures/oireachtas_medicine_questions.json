@@ -1,0 +1,149 @@
+{
+ "first_date": "2020-05-01",
+ "last_date": "2026-10-20",
+ "parts": [
+  {
+   "start": "2020-05-01",
+   "end": "2020-05-31",
+   "count": 3883,
+   "fetched": 3883,
+   "departments": {
+    "Taoiseach": 17,
+    "Defence": 46,
+    "Foreign": 57,
+    "Finance": 216,
+    "Public": 65,
+    "Education": 633,
+    "Justice": 289,
+    "Business": 260,
+    "Health": 785,
+    "Agriculture": 203,
+    "Communications": 131,
+    "Transport": 316,
+    "Children": 166,
+    "Rural": 34,
+    "Employment": 319,
+    "Housing": 243,
+    "Culture": 103
+   },
+   "questions": [
+    {
+     "date": "2020-05-13",
+     "questionNumber": 634,
+     "questionType": "written",
+     "showAs": " 634. D'fhiafraigh Deputy Éamon Ó Cuív den Aire Sláinte cén fáth nach bhfuil ach conradh bliana á thairiscint maidir le post an dochtúra ar Inis Oírr; cé na socruithe atá i bhfeidhm chun locum a chur ar fáil don dochtúir atá ag obair ar an oileán; agus an ndéanfaidh sé ráiteas ina thaobh. [4650/20] ",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2020-05-13/pq_634",
+     "department": "Health",
+     "topic": "Foireann Seirbhíse Sláinte",
+     "house": "33rd Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2020-05-13/writtens/mul@/dbsect_624.xml"
+    },
+    {
+     "date": "2020-05-27",
+     "questionNumber": 470,
+     "questionType": "written",
+     "showAs": " 470. Deputy Robert Troy asked the Minister for Business, Enterprise and Innovation if there is a mechanism to screen foreign investment here being considered by her Department in view of the way the Covid-19 crisis has underlined the importance of protecting strategic assets, for example, life sciences, including medical research and pharmaceutical ingredients; and if proposals to introduce an investment screening mechanism to safeguard critical national assets and technology in the current crisis are being examined and if these would require primary legislation.  [8081/20] ",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2020-05-27/pq_470",
+     "department": "Business",
+     "topic": "EU Regulations",
+     "house": "33rd Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2020-05-27/writtens/mul@/dbsect_407.xml"
+    }
+   ]
+  },
+  {
+   "start": "2026-10-01",
+   "end": "2026-10-20",
+   "count": 3508,
+   "fetched": 3508,
+   "departments": {
+    "Rural": 137,
+    "Health": 872,
+    "Foreign": 148,
+    "Climate": 62,
+    "Defence": 44,
+    "Transport": 282,
+    "Finance": 154,
+    "Public Expenditure": 72,
+    "Enterprise": 91,
+    "Education": 389,
+    "Culture": 95,
+    "Housing": 268,
+    "Social": 129,
+    "Justice": 363,
+    "Agriculture": 167,
+    "Children": 180,
+    "Further and Higher Education": 51,
+    "Taoiseach": 4
+   },
+   "questions": [
+    {
+     "date": "2026-10-15",
+     "questionNumber": 121,
+     "questionType": "written",
+     "showAs": "121. Deputy Brian Brennan asked the Minister for Health to provide an update on when skyclarys will be available for patients with Friedreich’s ataxia. [72484/26]",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2026-10-15/pq_121",
+     "department": "Health",
+     "topic": "Medicinal Products",
+     "house": "34th Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2026-10-15/writtens/mul@/dbsect_135.xml"
+    },
+    {
+     "date": "2026-10-15",
+     "questionNumber": 145,
+     "questionType": "written",
+     "showAs": "145. Deputy David Cullinane asked the Minister for Health the measures she is taking in Budget 2027 to make health care more affordable for workers and families; if she will extend eligibility for medical cards or reduce the drug payment scheme threshold; and if she will make a statement on the matter. [72958/26]",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2026-10-15/pq_145",
+     "department": "Health",
+     "topic": "Budget 2027",
+     "house": "34th Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2026-10-15/writtens/mul@/dbsect_160.xml"
+    },
+    {
+     "date": "2026-10-15",
+     "questionNumber": 147,
+     "questionType": "written",
+     "showAs": "147. Deputy Aindrias Moynihan asked the Minister for Health when women who are medically unable to take hormone replacement therapy can expect a decision on the reimbursement of a medication (details supplied); the factors are contributing to the duration of the process to date; and if she will make a statement on the matter. [72203/26]",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2026-10-15/pq_147",
+     "department": "Health",
+     "topic": "Women's Health",
+     "house": "34th Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2026-10-15/writtens/mul@/dbsect_162.xml"
+    },
+    {
+     "date": "2026-10-15",
+     "questionNumber": 179,
+     "questionType": "written",
+     "showAs": "179. Deputy Peter 'Chap' Cleere asked the Minister for Health her plans on the rollout of a national shingles vaccination programme. [72430/26]",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2026-10-15/pq_179",
+     "department": "Health",
+     "topic": "Vaccination Programme",
+     "house": "34th Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2026-10-15/writtens/mul@/dbsect_196.xml"
+    },
+    {
+     "date": "2026-10-15",
+     "questionNumber": 86,
+     "questionType": "oral",
+     "showAs": "86. Deputy David Cullinane asked the Minister for Health the actions she is taking to address severe cultural issues as well as capacity deficits in the National Ambulance Service; the way in which she will ensure that the independent investigation delivers accountability and protect staff who come forward; the measures she is taking through budget 2027 to address significant workforce shortages, increase ambulance capacity and improve emergency response times; and if she will make a statement on the matter. [72942/26]",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2026-10-15/pq_86",
+     "department": "Health",
+     "topic": "Ambulance Service",
+     "house": "34th Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2026-10-15/debate/mul@/dbsect_17.xml"
+    },
+    {
+     "date": "2026-10-15",
+     "questionNumber": 87,
+     "questionType": "oral",
+     "showAs": "87. Deputy Pádraig Rice asked the Minister for Health her views on recent changes to the DOMINO scheme in Cork University Maternity Hospital; if she has engaged with the south-west region and local management regarding the changes to this midwife-led service; and the way in which the decision to materially alter the scheme's model is consistent with the aims of the national maternity strategy. [73318/26]",
+     "uri": "https://data.oireachtas.ie/ie/oireachtas/question/2026-10-15/pq_87",
+     "department": "Health",
+     "topic": "Hospital Services",
+     "house": "34th Dáil",
+     "section_xml": "https://data.oireachtas.ie/akn/ie/debateRecord/dail/2026-10-15/debate/mul@/dbsect_18.xml"
+    }
+   ]
+  }
+ ]
+}
