@@ -18,6 +18,9 @@ identifiers:
     value: "10.5281/zenodo.23336432"
     description: "Concept DOI: all versions, archived on Zenodo"
   - type: doi
+    value: "10.5281/zenodo.23499798"
+    description: "Version 1.3.0 (46 datasets: 8 new Irish datasets, per-dataset licences)"
+  - type: doi
     value: "10.5281/zenodo.23467119"
     description: "Version 1.2.1 (38 datasets; full dataset list)"
   - type: doi
