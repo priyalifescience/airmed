@@ -2660,7 +2660,7 @@
     "shortage_end": "Shortage rows: estimated end of the disruption (SaatavuushairioLoppupaiva)",
     "shortage_notified": "Shortage rows: date the company notified Fimea (Ilmoituspaiva)"
    },
-   "browse_url": "https://fimea.fi/tietoa_fimeasta/avoin-data"
+   "browse_url": "https://priyalifescience.com/airmed"
   },
   "fr_bdpm_availability": {
    "name": "France: ANSM medicine availability notices (stock-outs, supply tensions, withdrawals) from the BDPM",
@@ -2707,7 +2707,7 @@
     "ansm_url": "Link to the notice on ansm.sante.fr as published",
     "source_updated": "Update date (YYYY-MM-DD) of the BDPM file this row comes from, as shown on the download page (\"Date de mise à jour\"); kept because the BDPM licence requires the update date to be cited"
    },
-   "browse_url": "https://ansm.sante.fr/disponibilites-des-produits-de-sante/medicaments"
+   "browse_url": "https://priyalifescience.com/eu-medicine-shortages"
   },
   "fr_bdpm_compositions": {
    "name": "France: active substances and dosages of every medicine on the public medicines database (BDPM)",
@@ -2751,7 +2751,7 @@
     "substance_fraction_link": "Numéro de liaison SA/ST linking an active substance to its therapeutic fraction, as published",
     "source_updated": "Update date (YYYY-MM-DD) of the BDPM file this row comes from, as shown on the download page (\"Date de mise à jour\"); kept because the BDPM licence requires the update date to be cited"
    },
-   "browse_url": "https://base-donnees-publique.medicaments.gouv.fr/"
+   "browse_url": "https://priyalifescience.com/airmed"
   },
   "fr_bdpm_has_opinions": {
    "name": "France: HAS Transparency Committee SMR and ASMR ratings of medicines since 2002 (BDPM)",
@@ -2796,7 +2796,7 @@
     "has_opinion_url": "Link to the Commission de la transparence opinion page on has-sante.fr from HAS_LiensPageCT_bdpm.txt, joined by has_file_code; empty when the BDPM publishes no link (~14% of rows)",
     "source_updated": "Update date (YYYY-MM-DD) of the SMR or ASMR file as shown on the BDPM download page; cited as the BDPM licence requires"
    },
-   "browse_url": "https://base-donnees-publique.medicaments.gouv.fr/"
+   "browse_url": "https://priyalifescience.com/airmed"
   },
   "fr_bdpm_medicines": {
    "name": "France: medicines and presentations on the public medicines database (BDPM), with prices, reimbursement rates and MITM ATC codes",
@@ -2880,7 +2880,7 @@
     "specialities_file_updated": "Update date (YYYY-MM-DD) of CIS_bdpm.txt (medicine fields) as shown on the BDPM download page; cited as the BDPM licence requires",
     "presentations_file_updated": "Update date (YYYY-MM-DD) of CIS_CIP_bdpm.txt (presentation fields, prices) as shown on the BDPM download page"
    },
-   "browse_url": "https://base-donnees-publique.medicaments.gouv.fr/"
+   "browse_url": "https://priyalifescience.com/airmed"
   },
   "fr_open_medic": {
    "name": "France: reimbursed medicines dispensed in community pharmacies, national totals by year and ATC5 or CIP13 (Open Medic)",
@@ -2922,7 +2922,7 @@
     "reimbursement_base_eur": "BSE: reimbursement base (base de remboursement), euro (excludes per-pack dispensing fees since 2015)",
     "boxes": "BOITES: number of boxes dispensed. The ATC5 and CIP13 totals of each year are checked to agree within 0.5%"
    },
-   "browse_url": "https://www.data.gouv.fr/fr/datasets/open-medic-base-complete-sur-les-depenses-de-medicaments-interregimes/"
+   "browse_url": "https://priyalifescience.com/drug-spending"
   },
   "hc_notice_of_compliance": {
    "name": "Health Canada Notice of Compliance database: all human-medicine NOCs since 1994 (NDS, SNDS, ANDS, SANDS)",
@@ -3350,7 +3350,7 @@
     "atc_version_year": "Last year of the multi-year file the row comes from; the ATC codes follow that year's ATC version",
     "source_file": "Title of the Open Data GIP file the row comes from (e.g. GIP Farmacie Zvw meerjaren 2021-2025_11052026)"
    },
-   "browse_url": "https://www.zorgcijfersdatabank.nl/algemeen/open-data-gip"
+   "browse_url": "https://priyalifescience.com/drug-spending"
   },
   "no_fest_medicines": {
    "name": "Norway: FEST medicine packages with ATC, pharmacy prices, reimbursement and substitution groups",
@@ -3437,7 +3437,7 @@
     "substitution_group": "Generic substitution group code (Byttegruppe Kode V); packages in the same group are interchangeable at the pharmacy. Empty when none",
     "substitution_group_name": "Substitution group name as published in Norwegian capitals (Byttegruppe Kode DN), e.g. ATORVASTATIN TABLETTER 80MG"
    },
-   "browse_url": "https://www.dmp.no/om-oss/distribusjon-av-legemiddeldata/fest"
+   "browse_url": "https://priyalifescience.com/airmed"
   },
   "nz_pharmac_schedule": {
    "name": "PHARMAC Pharmaceutical Schedule (New Zealand): funded packs with subsidy, price and restrictions, latest monthly edition",
@@ -3558,7 +3558,7 @@
     "paid_quantity": "Sum of PaidQuantity (tablets, ml, grams, doses ... as paid); only comparable within one substance and formulation. From May 2023 some formulations (e.g. inhalers) are counted in doses rather than devices (PHS note)",
     "gross_ingredient_cost_gbp": "Sum of GrossIngredientCost in GBP, rounded to pence: the cost of the medicines before any discount, as published. PHS notes an anomalous drop for some BNF sections from May 2023"
    },
-   "browse_url": "https://www.opendata.nhs.scot/dataset/prescriptions-in-the-community"
+   "browse_url": "https://priyalifescience.com/drug-spending"
   },
   "sg_hsa_registered_products": {
    "name": "Singapore HSA: Listing of Registered Therapeutic Products, with manufacturer and country of manufacture",
