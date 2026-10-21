@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Schedule xmlns="http://schedule.pharmac.govt.nz/2006/07/Schedule#" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:nzmt="nzmt.org.nz" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schedule.pharmac.govt.nz/2006/07/Schedule# http://schedule.pharmac.govt.nz/2006/07/Schedule.xsd">
+  <Front>
+    <Title>Pharmaceutical Schedule</Title>
+    <Country>New Zealand</Country>
+    <Edition>October 2026</Edition>
+    <Volume>33</Volume>
+    <Number>2</Number>
+    <Published>2026-10-08</Published>
+  </Front>
+  <Section ID="B">
+    <Name>Community Pharmaceuticals</Name>
+    <ATC1 ID="A01">
+      <Name>Alimentary Tract and Metabolism</Name>
+      <ATC2 ID="A0101">
+        <Name>Antacids and Antiflatulents</Name>
+        <ATC3 ID="A010102">
+          <Name>Antacids and Reflux Barrier Agents</Name>
+          <Chemical ID="C0101021021">
+            <Name>Alginic acid</Name>
+            <Formulation ID="F010102102103" Rank="2" Units="sach" Weight="225">
+              <Name>Sodium alginate 225 mg and magnesium alginate 87.5 mg per sachet</Name>
+              <Brand ID="B01010210210301">
+                <Name>Gaviscon Infant</Name>
+                <Pack ID="P494275" Specified="true" nzmt:ctpp_id="50092391000117103">
+                  <Quantity>30</Quantity>
+                  <Subsidy>8.06</Subsidy>
+                  <Price>8.06</Price>
+                  <Alternate>8.06</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+            </Formulation>
+          </Chemical>
+          <Chemical ID="C0101022125" Statim="Must">
+            <Name>Sodium alginate</Name>
+            <Formulation ID="F010102212525" Rank="3" Units="ml">
+              <Name>Oral liq 500 mg with sodium bicarbonate 267 mg and calcium carbonate 160 mg per 10 ml</Name>
+              <Brand ID="B01010221252525">
+                <Name>Acidex</Name>
+                <Pack ID="P2196786" Specified="true" nzmt:ctpp_id="50031441000117100">
+                  <Quantity>500</Quantity>
+                  <Subsidy>1.50</Subsidy>
+                  <Price>7.50</Price>
+                  <Alternate>1.50</Alternate>
+                  <Surcharge>0.01200</Surcharge>
+                </Pack>
+              </Brand>
+            </Formulation>
+            <Formulation ID="F010102212526" Rank="1" Units="tab">
+              <Name>Tab 500 mg with sodium bicarbonate 267 mg and calcium carbonate 160 mg - peppermint flavour</Name>
+              <Brand ID="B01010221252625" ToBeDelisted="2027-07-01">
+                <Name>Gaviscon Extra Strength</Name>
+                <Pack ID="P2215241" Specified="true" nzmt:ctpp_id="50305121000117107">
+                  <Quantity>60</Quantity>
+                  <Subsidy>1.80</Subsidy>
+                  <Price>19.05</Price>
+                  <Alternate>1.80</Alternate>
+                  <Surcharge>0.28750</Surcharge>
+                </Pack>
+              </Brand>
+            </Formulation>
+          </Chemical>
+        </ATC3>
+        </ATC2>
+      <ATC2 ID="A0104">
+        <Name>Antidiarrhoeals</Name>
+        <ATC3 ID="A010404">
+          <Name>Rectal and Colonic Anti-inflammatories</Name>
+          <Chemical ID="C0104041168">
+            <Name>Budesonide</Name>
+            <Formulation ID="F010404116809" Rank="2" Units="cap" Weight="3">
+              <Name>Cap modified-release 3 mg</Name>
+              <Rule Attribute="Subsidy" Type="Special" xlink:href="SA2535" />
+              <Request To="HealthPAC" For="Subsidy" Form="SA2535">
+                <Title>
+                  <range>Budesonide - Cap 3 mg Controlled Release</range>
+                </Title>
+                <Case When="Initial application" Category="Crohn's disease">
+                  <math:math>
+                    <math:apply>
+                      <math:and />
+                      <math:ci type="logical" class="Indication">Mild to moderate ileal, ileocaecal or proximal Crohn's
+          disease</math:ci>
+                      <math:apply>
+                        <math:or />
+                        <math:ci type="logical" class="Indication">Diabetes</math:ci>
+                        <math:ci type="logical" class="Indication">Cushingoid habitus</math:ci>
+                        <math:ci type="logical" class="Indication">Osteoporosis where there is significant risk of
+            fracture</math:ci>
+                        <math:ci type="logical" class="Indication">Severe acne following treatment with conventional
+            corticosteroid therapy</math:ci>
+                        <math:ci type="logical" class="Indication">History of severe psychiatric problems associated
+            with corticosteroid treatment</math:ci>
+                        <math:ci type="logical" class="Indication">History of major mental illness (such as bipolar
+            affective disorder) where the risk of conventional corticosteroid treatment causing
+            relapse is considered to be high</math:ci>
+                        <math:ci type="logical" class="Indication">Relapse during pregnancy (where conventional
+            corticosteroids are considered to be contraindicated)</math:ci>
+                      </math:apply>
+                    </math:apply>
+                  </math:math>
+                  <Applicant>any relevant practitioner</Applicant>
+                  <Term Measure="patient's lifetime" />
+                </Case>
+                <Case When="Initial application" Category="collagenous and lymphocytic colitis (microscopic colitis)">
+                  <math:math>
+                    <math:ci type="logical" class="Indication">Patient has a diagnosis of microscopic colitis
+        (collagenous or lymphocytic colitis) by colonoscopy with biopsies</math:ci>
+                  </math:math>
+                  <Applicant>any relevant practitioner</Applicant>
+                  <Term Measure="patient's lifetime" />
+                </Case>
+                <Case When="Initial application" Category="gut Graft versus Host disease">
+                  <math:math>
+                    <math:ci type="logical" class="Indication">Patient has a gut Graft versus Host disease following
+        allogenic bone marrow transplantation*</math:ci>
+                  </math:math>
+                  <Applicant>any relevant practitioner</Applicant>
+                  <Term Measure="month">6</Term>
+                  <html:div class="Note">
+                    <html:p>Indication marked with * is an unapproved indication.</html:p>
+                  </html:div>
+                </Case>
+                <Case When="Initial application" Category="non-cirrhotic autoimmune hepatitis">
+                  <math:math>
+                    <math:apply>
+                      <math:and />
+                      <math:ci type="logical" class="Indication">Patient has autoimmune hepatitis*</math:ci>
+                      <math:ci type="logical" class="Indication">Patient does not have cirrhosis</math:ci>
+                      <math:apply>
+                        <math:or />
+                        <math:ci type="logical" class="Indication">Diabetes</math:ci>
+                        <math:ci type="logical" class="Indication">Cushingoid habitus</math:ci>
+                        <math:ci type="logical" class="Indication">Osteoporosis where there is significant risk of
+            fracture</math:ci>
+                        <math:ci type="logical" class="Indication">Severe acne following treatment with conventional
+            corticosteroid therapy</math:ci>
+                        <math:ci type="logical" class="Indication">History of severe psychiatric problems associated
+            with corticosteroid treatment</math:ci>
+                        <math:ci type="logical" class="Indication">History of major mental illness (such as bipolar
+            affective disorder) where the risk of conventional corticosteroid treatment causing
+            relapse is considered to be high</math:ci>
+                        <math:ci type="logical" class="Indication">Relapse during pregnancy (where conventional
+            corticosteroids are considered to be contraindicated)</math:ci>
+                        <math:ci type="logical" class="Indication">Adolescents with poor linear growth (where
+            conventional corticosteroid use may limit further growth) </math:ci>
+                      </math:apply>
+                    </math:apply>
+                  </math:math>
+                  <Applicant>any relevant practitioner</Applicant>
+                  <Term Measure="month">6</Term>
+                  <html:div class="Note">
+                    <html:p>Indication marked with * is an unapproved indication.</html:p>
+                  </html:div>
+                </Case>
+                <Case When="Renewal" Category="gut Graft versus Host disease" Form="SA0459 SA0488 SA0512 SA0698 SA0913 SA1155 SA1886 SA2535">
+                  <math:math>
+                    <math:ci type="logical" class="Indication">The treatment remains appropriate and the patient is
+        benefiting from treatment</math:ci>
+                  </math:math>
+                  <Applicant>any relevant practitioner</Applicant>
+                  <Term Measure="month">6</Term>
+                </Case>
+                <Case When="Renewal" Category="non-cirrhotic autoimmune hepatitis" Form="SA0459 SA0488 SA0512 SA0698 SA0913 SA1155 SA1886 SA2535">
+                  <math:math>
+                    <math:ci type="logical" class="Indication">The treatment remains appropriate and the patient is
+        benefiting from treatment</math:ci>
+                  </math:math>
+                  <Applicant>any relevant practitioner</Applicant>
+                  <Term Measure="month">6</Term>
+                </Case>
+              </Request>
+              <Brand ID="B01040411680902" PSS="2028-06-30">
+                <Name>Budesonide Te Arai</Name>
+                <Pack ID="P2661454" Specified="true" nzmt:ctpp_id="50319351000117101">
+                  <Quantity>90</Quantity>
+                  <Subsidy>33.38</Subsidy>
+                  <Price>33.38</Price>
+                  <Alternate>33.38</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+            </Formulation>
+          </Chemical>
+          <Chemical ID="C0104041606">
+            <Name>Hydrocortisone acetate</Name>
+            <Formulation ID="F010404160602" Rank="3" Units="g">
+              <Name>Rectal foam 10%, CFC-Free (14 applications)</Name>
+              <Brand ID="B01040416060201">
+                <Name>Colifoam</Name>
+                <Pack ID="P2611120" Specified="true" OP="true" nzmt:ctpp_id="50290921000117105">
+                  <Quantity>15</Quantity>
+                  <Subsidy>57.09</Subsidy>
+                  <Price>57.09</Price>
+                  <Alternate>57.09</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+              <Brand ID="B01040416060202" S29="true">
+                <Name>Cortifoam</Name>
+                <Pack ID="P2608707" Specified="true" OP="true" nzmt:ctpp_id="50287421000117100">
+                  <Quantity>15</Quantity>
+                  <Subsidy>57.09</Subsidy>
+                  <Price>57.09</Price>
+                  <Alternate>57.09</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+            </Formulation>
+          </Chemical>
+          <Chemical ID="C0104042144">
+            <Name>Sodium cromoglicate</Name>
+            <Formulation ID="F010404214406" Rank="2" Units="cap" Weight="100">
+              <Name>Cap 100 mg</Name>
+              <Brand ID="B01040421440601" S29="true">
+                <Name>Nalcrom</Name>
+                <Rule Type="Wastage" />
+                <Pack ID="P2721023" Specified="true" nzmt:ctpp_id="50361191000117108">
+                  <Quantity>20</Quantity>
+                  <Subsidy>44.50</Subsidy>
+                  <Price>44.50</Price>
+                  <Alternate>44.50</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+              <Brand ID="B01040421440602">
+                <Name>Ralicrom</Name>
+                <Pack ID="P2628295" Specified="true" nzmt:ctpp_id="50294291000117106">
+                  <Quantity>100</Quantity>
+                  <Subsidy>113.35</Subsidy>
+                  <Price>113.35</Price>
+                  <Alternate>113.35</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+              <Brand ID="B01040421440603" S29="true">
+                <Name>Somex</Name>
+                <Rule Type="Wastage" />
+                <Pack ID="P2719649" Specified="true" nzmt:ctpp_id="50360201000117103">
+                  <Quantity>100</Quantity>
+                  <Subsidy>365.00</Subsidy>
+                  <Price>365.00</Price>
+                  <Alternate>365.00</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+              <Brand ID="B01040421440604" S29="true">
+                <Name>Allergoval</Name>
+                <Rule Type="Wastage" />
+                <Pack ID="P2721015" Specified="true" nzmt:ctpp_id="50361181000117105">
+                  <Quantity>100</Quantity>
+                  <Subsidy>125.70</Subsidy>
+                  <Price>125.70</Price>
+                  <Alternate>125.70</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+            </Formulation>
+          </Chemical>
+          </ATC3>
+      </ATC2>
+      </ATC1>
+    </Section>
+  <Section ID="D">
+    <Name>Special Foods</Name>
+    <ATC1 ID="A42">
+      <Name>Special Foods</Name>
+      <ATC2 ID="A4202">
+        <Name>Nutrient Modules</Name>
+        <ATC3 ID="A420201">
+          <Name>Carbohydrate</Name>
+          <Rule Type="Dispensary" Attribute="HP3" NonPrinting="true" />
+          <Request To="HealthPAC" For="Subsidy" Form="SA1930">
+            </Request>
+          <Chemical ID="C4202012908">
+            <Name>Carbohydrate supplement</Name>
+            <Rule Attribute="Subsidy" Type="Special" xlink:href="SA1930" />
+            <Formulation ID="F420201290801" Rank="3" Units="g">
+              <Name>Powder</Name>
+              <Brand ID="B42020129080106">
+                <Name>Polycal</Name>
+                <Pack ID="P408050" Specified="true" OP="true" nzmt:ctpp_id="50082711000117108">
+                  <Quantity>400</Quantity>
+                  <Subsidy>6.72</Subsidy>
+                  <Price>6.72</Price>
+                  <Alternate>6.72</Alternate>
+                  <Surcharge>0.00000</Surcharge>
+                </Pack>
+              </Brand>
+            </Formulation>
+          </Chemical>
+        </ATC3>
+        </ATC2>
+      </ATC1>
+  </Section>
+  </Schedule>

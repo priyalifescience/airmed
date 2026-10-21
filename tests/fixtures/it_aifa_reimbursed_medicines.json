@@ -1,0 +1,24 @@
+{
+ "lists": {
+  "A": {
+   "name": "Classe_A_per_principio_attivo_31-05-2026.csv",
+   "text": "Principio attivo;Descrizione gruppo;Denominazione e Confezione;Prezzo al pubblico €;Titolare AIC;AIC;Codice Gruppo Equivalenza;X=in lista di trasparenza Aifa 15/5/2026 ;Solo in lista di Regione:;Metri cubi ossigeno \r\nAbaloparatide;ABALOPARATIDE 3MG/1,5ML 1 UNITA' USO PARENTERALE;ELADYNOS*1 penna 1,5 ml 2 mg/ml;330,55;THERAMEX IRELAND LIMITED;050465018;NQO;;;\r\nAcarbosio;ACARBOSIO 100MG 40 UNITA' USO ORALE;ACARBOSIO*40 cpr 100 mg;5,63;TECNIMEDE SOC.TECNICO-MED.S.A.;039716182;H1A;X;;\r\nAcido valproico/sodio valproato;ACIDO VALPROICO+SODIO VALPROATO 300MG 30 UNITA' USO ORALE RP;ACIDO VALPROICO E SODIO VALPROATO*30 cpr 300 mg rilascio prolungato;5,04;RATIOPHARM GMBH;037839026;S2D;;Toscana;\r\nEsomeprazolo;ESOMEPRAZOLO 10MG 28 UNITA' USO ORALE;LUCEN*orale granulato 28 bustine 10 mg;18,42;MALESCI SpA IST.FARMACOBIOL.;035367554;CVC;;Lazio,Campania,Sicilia;\r\nOssigeno;OSSIGENO GAS COMPRESSO 150 BAR 7 LT METRI CUBI SVOLTI 1,16;OSSIGENO*150 bar gas med compresso bomb 7 litri;8,42;CONSORZIO ITALIANO OSSIGENO;038907236;002;;;1,16\r\nInsulina glargine;INSULINA GLARGINE 100U/ML 3ML 5 UNITA' USO PARENTERALE;ABASAGLAR*5 cartucce SC 100 U/ml 3 ml;60,69;ELI LILLY NEDERLAND BV;043658032;N4B;;;\r\n"
+  },
+  "H": {
+   "name": "Classe_H_per_principio_attivo_31-05-2026.csv",
+   "text": "Principio attivo;Descrizione gruppo;Denominazione e Confezione;Prezzo al pubblico €;Prezzo Ex-factory €;Prezzo massimo di cessione €;Titolare AIC;\"Codice \nAIC\";Codice Gruppo Equivalenza;Metri cubi ossigeno \r\nAbacavir;ABACAVIR 300MG 60 UNITA' USO ORALE;ZIAGEN*60 cpr rivestite 300 mg;336,95;204,16;-;VIIV HEALTHCARE BV;034499018;AAC;\r\nOssigeno;OSSIGENO GAS CRIOGENICO 1.000 LT METRI CUBI SVOLTI 855,54;OSSIGENO*gas med criogenico contenitore fisso 1.000 litri;6,55/m³;4,20/m³;-;SAPIO PRODUZ.IDROGENO OSSIGENO;038901524;051;855,54\r\nAntitrombina III Umana;ANTITROMBINA III UMANA 1.000UI 20ML USO PARENTERALE;ANBINEX*1 flacone 1.000 UI + 1 siringa;-;-;330,00;INSTITUTO GRIFOLS S.A.;034330047;AEK;\r\nAbacavir/lamivudina;ABACAVIR+LAMIVUDINA 600+300MG 30 UNITA' USO ORALE;ABACAVIR E LAMIVUDINA*30 cpr rivestite 600 mg + 300 mg;170,27;103,16;-;AUROBINDO PHARMA ITALIA Srl;044669012;AAD;\r\n"
+  }
+ },
+ "atc": {
+  "034330047": "B01AB02",
+  "034499018": "J05AF06",
+  "035367554": "A02BC05",
+  "037839026": "N03AG01",
+  "038901524": "V03AN01",
+  "038907236": "V03AN01",
+  "039716182": "A10BF01",
+  "043658032": "A10AE04",
+  "044669012": "J05AR02",
+  "050465018": "H05AA04"
+ }
+}

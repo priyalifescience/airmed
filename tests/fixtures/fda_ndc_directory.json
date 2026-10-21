@@ -1,0 +1,219 @@
+{
+ "total_in_file": 7,
+ "last_updated": "2026-10-20",
+ "results": [
+  {
+   "product_id": "60715-3150_6bb9bd1b-9d44-4a28-a547-69e7d01cf8cb",
+   "product_ndc": "60715-3150",
+   "product_type": "BULK INGREDIENT",
+   "brand_name": "",
+   "generic_name": "Azithromycin",
+   "labeler_name": "Pfizer Ireland Pharmaceuticals Unlimited Company",
+   "dosage_form": "POWDER",
+   "route": [],
+   "marketing_category": "BULK INGREDIENT",
+   "application_number": "",
+   "active_ingredients": [
+    [
+     "AZITHROMYCIN, UNSPECIFIED FORM",
+     "1 kg/kg"
+    ]
+   ],
+   "pharm_class": [],
+   "dea_schedule": "",
+   "finished": false,
+   "package_count": 1,
+   "marketing_start_date": "20111229",
+   "marketing_end_date": "",
+   "listing_expiration_date": "20261231",
+   "spl_set_id": []
+  },
+  {
+   "product_id": "66332-0013_05af35e8-80ad-4d19-b113-93876d1de285",
+   "product_ndc": "66332-0013",
+   "product_type": "DRUG FOR FURTHER PROCESSING",
+   "brand_name": "",
+   "generic_name": "pioglitazone hydrochloride",
+   "labeler_name": "Takeda Ireland Ltd.",
+   "dosage_form": "TABLET",
+   "route": [],
+   "marketing_category": "DRUG FOR FURTHER PROCESSING",
+   "application_number": "",
+   "active_ingredients": [
+    [
+     "PIOGLITAZONE HYDROCHLORIDE",
+     "45 mg/1"
+    ]
+   ],
+   "pharm_class": [],
+   "dea_schedule": "",
+   "finished": false,
+   "package_count": 1,
+   "marketing_start_date": "19990715",
+   "marketing_end_date": "",
+   "listing_expiration_date": "20261231",
+   "spl_set_id": []
+  },
+  {
+   "product_id": "0002-0013_15810e26-b479-41b8-9d13-9dc503a71a2a",
+   "product_ndc": "0002-0013",
+   "product_type": "DRUG FOR FURTHER PROCESSING",
+   "brand_name": "",
+   "generic_name": "Insulin human",
+   "labeler_name": "Eli Lilly and Company",
+   "dosage_form": "INJECTION, SOLUTION",
+   "route": [],
+   "marketing_category": "DRUG FOR FURTHER PROCESSING",
+   "application_number": "",
+   "active_ingredients": [
+    [
+     "INSULIN HUMAN",
+     "100 [iU]/mL"
+    ]
+   ],
+   "pharm_class": [],
+   "dea_schedule": "",
+   "finished": false,
+   "package_count": 2,
+   "marketing_start_date": "19830627",
+   "marketing_end_date": "",
+   "listing_expiration_date": "20261231",
+   "spl_set_id": []
+  },
+  {
+   "product_id": "71335-0146_68226f26-8369-4b58-a0e9-e9b943a8df09",
+   "product_ndc": "71335-0146",
+   "product_type": "HUMAN PRESCRIPTION DRUG",
+   "brand_name": "Oxycodone and Acetaminophen",
+   "generic_name": "Oxycodone and Acetaminophen",
+   "labeler_name": "Bryant Ranch Prepack",
+   "dosage_form": "TABLET",
+   "route": [
+    "ORAL"
+   ],
+   "marketing_category": "ANDA",
+   "application_number": "ANDA202677",
+   "active_ingredients": [
+    [
+     "OXYCODONE HYDROCHLORIDE",
+     "10 mg/1"
+    ],
+    [
+     "ACETAMINOPHEN",
+     "325 mg/1"
+    ]
+   ],
+   "pharm_class": [
+    "Full Opioid Agonists [MoA]",
+    "Opioid Agonist [EPC]"
+   ],
+   "dea_schedule": "CII",
+   "finished": true,
+   "package_count": 10,
+   "marketing_start_date": "20120117",
+   "marketing_end_date": "",
+   "listing_expiration_date": "20261231",
+   "spl_set_id": [
+    "b4cf62af-b5d3-4825-9743-9ec3137164e8"
+   ]
+  },
+  {
+   "product_id": "71894-123_7039f121-a56c-49ba-bca9-28b7bc6afbcb",
+   "product_ndc": "71894-123",
+   "product_type": "HUMAN PRESCRIPTION DRUG",
+   "brand_name": "Zolgensma",
+   "generic_name": "onasemnogene abeparvovec-xioi",
+   "labeler_name": "Novartis Innovative Technologies Inc.",
+   "dosage_form": "KIT",
+   "route": [],
+   "marketing_category": "BLA",
+   "application_number": "BLA125694",
+   "active_ingredients": [],
+   "pharm_class": [],
+   "dea_schedule": "",
+   "finished": true,
+   "package_count": 1,
+   "marketing_start_date": "20190524",
+   "marketing_end_date": "",
+   "listing_expiration_date": "20271231",
+   "spl_set_id": [
+    "68cd4f06-70e1-40d8-bedb-609ec0afa471"
+   ]
+  },
+  {
+   "product_id": "71318-115_491bb313-88d4-3f92-e063-6394a90a06de",
+   "product_ndc": "71318-115",
+   "product_type": "HUMAN OTC DRUG",
+   "brand_name": "Example Barrier Cream",
+   "generic_name": "Lidocaine 4% and Menthol 1% Patch",
+   "labeler_name": "Example Consumer Health LLC",
+   "dosage_form": "PATCH",
+   "route": [
+    "TOPICAL"
+   ],
+   "marketing_category": "OTC MONOGRAPH DRUG",
+   "application_number": "M017",
+   "active_ingredients": [
+    [
+     "LIDOCAINE",
+     "224 mg/1"
+    ],
+    [
+     "MENTHOL",
+     "56 mg/1"
+    ]
+   ],
+   "pharm_class": [
+    "Amide Local Anesthetic [EPC]",
+    "Amides [CS]",
+    "Antiarrhythmic [EPC]",
+    "Local Anesthesia [PE]"
+   ],
+   "dea_schedule": "",
+   "finished": true,
+   "package_count": 1,
+   "marketing_start_date": "20240130",
+   "marketing_end_date": "",
+   "listing_expiration_date": "20271231",
+   "spl_set_id": [
+    "10249d0f-5ee1-6892-e063-6394a90a967e"
+   ]
+  },
+  {
+   "product_id": "83703-087_53ea9247-b6ce-ba85-e063-6294a90a915b",
+   "product_ndc": "83703-087",
+   "product_type": "VACCINE",
+   "brand_name": "FLUZONE TRIVALENT NORTHERN HEMISPHERE",
+   "generic_name": "INFLUENZA A VIRUS A/Victoria/4897/2022 IVR-238 (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A VIRUS A/Croatia/10136/RV/2023 (H3N2) ANTIGEN (FORMALDEHYDE INACTIVATED), and INFLUENZA B VIRUS B/MICHIGAN/01/2021 ANTIGEN (FORMALDEHYDE INACTIVATED)",
+   "labeler_name": "Bamboo US BidCo LLC",
+   "dosage_form": "INJECTION, SUSPENSION",
+   "route": [
+    "INTRAMUSCULAR"
+   ],
+   "marketing_category": "BLA",
+   "application_number": "BLA103914",
+   "active_ingredients": [
+    [
+     "INFLUENZA A VIRUS A/VICTORIA/4897/2022 IVR-238 (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED)",
+     "15 ug/.5mL"
+    ],
+    [
+     "INFLUENZA A VIRUS A/CROATIA/10136RV/2023 X-425A (H3N2) ANTIGEN (FORMALDEHYDE INACTIVATED)",
+     "15 ug/.5mL"
+    ],
+    [
+     "INFLUENZA B VIRUS B/MICHIGAN/01/2021 ANTIGEN (FORMALDEHYDE INACTIVATED)",
+     "15 ug/.5mL"
+    ]
+   ],
+   "pharm_class": [],
+   "dea_schedule": "",
+   "finished": true,
+   "package_count": 1,
+   "marketing_start_date": "20260701",
+   "marketing_end_date": "",
+   "listing_expiration_date": "20271231",
+   "spl_set_id": []
+  }
+ ]
+}

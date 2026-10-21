@@ -1,0 +1,1836 @@
+{
+ "countries": [
+  {
+   "page": 1,
+   "pages": 1,
+   "per_page": "4",
+   "total": 4
+  },
+  [
+   {
+    "id": "HIC",
+    "iso2Code": "XD",
+    "name": "High income",
+    "region": {
+     "id": "NA",
+     "iso2code": "NA",
+     "value": "Aggregates"
+    },
+    "adminregion": {
+     "id": "",
+     "iso2code": "",
+     "value": ""
+    },
+    "incomeLevel": {
+     "id": "NA",
+     "iso2code": "NA",
+     "value": "Aggregates"
+    },
+    "lendingType": {
+     "id": "",
+     "iso2code": "",
+     "value": "Aggregates"
+    },
+    "capitalCity": "",
+    "longitude": "",
+    "latitude": ""
+   },
+   {
+    "id": "INX",
+    "iso2Code": "XY",
+    "name": "Not classified",
+    "region": {
+     "id": "NA",
+     "iso2code": "NA",
+     "value": "Aggregates"
+    },
+    "adminregion": {
+     "id": "",
+     "iso2code": "",
+     "value": ""
+    },
+    "incomeLevel": {
+     "id": "NA",
+     "iso2code": "NA",
+     "value": "Aggregates"
+    },
+    "lendingType": {
+     "id": "",
+     "iso2code": "",
+     "value": "Aggregates"
+    },
+    "capitalCity": "",
+    "longitude": "",
+    "latitude": ""
+   },
+   {
+    "id": "IRL",
+    "iso2Code": "IE",
+    "name": "Ireland",
+    "region": {
+     "id": "ECS",
+     "iso2code": "Z7",
+     "value": "Europe & Central Asia"
+    },
+    "adminregion": {
+     "id": "",
+     "iso2code": "",
+     "value": ""
+    },
+    "incomeLevel": {
+     "id": "HIC",
+     "iso2code": "XD",
+     "value": "High income"
+    },
+    "lendingType": {
+     "id": "LNX",
+     "iso2code": "XX",
+     "value": "Not classified"
+    },
+    "capitalCity": "Dublin",
+    "longitude": "-6.26749",
+    "latitude": "53.3441"
+   },
+   {
+    "id": "NZL",
+    "iso2Code": "NZ",
+    "name": "New Zealand",
+    "region": {
+     "id": "EAS",
+     "iso2code": "Z4",
+     "value": "East Asia & Pacific"
+    },
+    "adminregion": {
+     "id": "",
+     "iso2code": "",
+     "value": ""
+    },
+    "incomeLevel": {
+     "id": "HIC",
+     "iso2code": "XD",
+     "value": "High income"
+    },
+    "lendingType": {
+     "id": "LNX",
+     "iso2code": "XX",
+     "value": "Not classified"
+    },
+    "capitalCity": "Wellington",
+    "longitude": "174.776",
+    "latitude": "-41.2865"
+   }
+  ]
+ ],
+ "data": {
+  "SH.XPD.CHEX.GD.ZS": [
+   {
+    "page": 1,
+    "pages": 1,
+    "per_page": 30000,
+    "total": 12,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+   },
+   [
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": 12.5509007800305,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": 13.0944002745069,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2022",
+     "value": 6.02078247,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2021",
+     "value": 6.44113493,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2022",
+     "value": 10.56814575,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.GD.ZS",
+      "value": "Current health expenditure (% of GDP)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2021",
+     "value": 9.55072403,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    }
+   ]
+  ],
+  "SH.XPD.CHEX.PC.CD": [
+   {
+    "page": 1,
+    "pages": 1,
+    "per_page": 30000,
+    "total": 12,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+   },
+   [
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": 5837.54913570711,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": 5898.07614125649,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2022",
+     "value": 6407.92333984,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2021",
+     "value": 6754.07519531,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2022",
+     "value": 5138.33789063,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    },
+    {
+     "indicator": {
+      "id": "SH.XPD.CHEX.PC.CD",
+      "value": "Current health expenditure per capita (current US$)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2021",
+     "value": 4749.04199219,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 2
+    }
+   ]
+  ],
+  "SP.POP.TOTL": [
+   {
+    "page": 1,
+    "pages": 1,
+    "per_page": 30000,
+    "total": 12,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+   },
+   [
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": 1423739902,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": 1398027812,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": 1391809845,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2025",
+     "value": 5484367,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2022",
+     "value": 5212836,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2021",
+     "value": 5110585,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2025",
+     "value": 5324700,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2022",
+     "value": 5081700,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.TOTL",
+      "value": "Population, total"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2021",
+     "value": 5084600,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    }
+   ]
+  ],
+  "SP.POP.65UP.TO.ZS": [
+   {
+    "page": 1,
+    "pages": 1,
+    "per_page": 30000,
+    "total": 12,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+   },
+   [
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": 19.9993877025009,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": 18.8344831618254,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": 18.5204496350934,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2025",
+     "value": 16.2081043488942,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2022",
+     "value": 15.16194031114,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2021",
+     "value": 14.8535759354494,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2025",
+     "value": 17.6093066526984,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2022",
+     "value": 16.4463886430602,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.POP.65UP.TO.ZS",
+      "value": "Population ages 65 and above (% of total population)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2021",
+     "value": 16.0465779436973,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    }
+   ]
+  ],
+  "SP.DYN.LE00.IN": [
+   {
+    "page": 1,
+    "pages": 1,
+    "per_page": 30000,
+    "total": 12,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+   },
+   [
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": 79.4268609745508,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": 78.7981548654152,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2022",
+     "value": 82.509756097561,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2021",
+     "value": 82.2536585365854,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2022",
+     "value": 81.9585365853658,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "SP.DYN.LE00.IN",
+      "value": "Life expectancy at birth, total (years)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2021",
+     "value": 82.2073170731707,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    }
+   ]
+  ],
+  "NY.GDP.PCAP.CD": [
+   {
+    "page": 1,
+    "pages": 1,
+    "per_page": 30000,
+    "total": 12,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+   },
+   [
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": 53997.2579539931,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": 47056.4874992384,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": 45545.9474677757,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2025",
+     "value": 131592.462547877,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2022",
+     "value": 105190.685952731,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2021",
+     "value": 103783.446284479,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2025",
+     "value": 49591.0405731713,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2022",
+     "value": 49141.6316294227,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    },
+    {
+     "indicator": {
+      "id": "NY.GDP.PCAP.CD",
+      "value": "GDP per capita (current US$)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2021",
+     "value": 49902.154346032,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 1
+    }
+   ]
+  ],
+  "TX.VAL.TECH.MF.ZS": [
+   {
+    "page": 1,
+    "pages": 1,
+    "per_page": 30000,
+    "total": 12,
+    "sourceid": "2",
+    "lastupdated": "2026-10-08"
+   },
+   [
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": 23.2829817978102,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "XD",
+      "value": "High income"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": 21.0606095398451,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2022",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "XY",
+      "value": "Not classified"
+     },
+     "countryiso3code": "",
+     "date": "2021",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2022",
+     "value": 46.7867801497714,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "IE",
+      "value": "Ireland"
+     },
+     "countryiso3code": "IRL",
+     "date": "2021",
+     "value": 28.4781475271992,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2025",
+     "value": null,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2022",
+     "value": 12.0543415422888,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    },
+    {
+     "indicator": {
+      "id": "TX.VAL.TECH.MF.ZS",
+      "value": "High-technology exports (% of manufactured exports)"
+     },
+     "country": {
+      "id": "NZ",
+      "value": "New Zealand"
+     },
+     "countryiso3code": "NZL",
+     "date": "2021",
+     "value": 9.76110781430146,
+     "unit": "",
+     "obs_status": "",
+     "decimal": 0
+    }
+   ]
+  ]
+ },
+ "meta": {
+  "SH.XPD.CHEX.GD.ZS": {
+   "page": 1,
+   "pages": 1,
+   "per_page": "5000",
+   "total": 14,
+   "source": [
+    {
+     "id": "2",
+     "name": "World Development Indicators",
+     "concept": [
+      {
+       "id": "Series",
+       "variable": [
+        {
+         "id": "SH.XPD.CHEX.GD.ZS",
+         "metatype": [
+          {
+           "id": "IndicatorName",
+           "value": "Current health expenditure (% of GDP)"
+          },
+          {
+           "id": "License_Type",
+           "value": "CC BY-4.0"
+          },
+          {
+           "id": "License_URL",
+           "value": "https://datacatalog.worldbank.org/public-licenses#cc-by"
+          },
+          {
+           "id": "Source",
+           "value": "Global Health Expenditure Database, updated December 12th, 2025, World Health Organization (WHO), uri: https://apps.who.int/nha/database"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "SH.XPD.CHEX.PC.CD": {
+   "page": 1,
+   "pages": 1,
+   "per_page": "5000",
+   "total": 14,
+   "source": [
+    {
+     "id": "2",
+     "name": "World Development Indicators",
+     "concept": [
+      {
+       "id": "Series",
+       "variable": [
+        {
+         "id": "SH.XPD.CHEX.PC.CD",
+         "metatype": [
+          {
+           "id": "IndicatorName",
+           "value": "Current health expenditure per capita (current US$)"
+          },
+          {
+           "id": "License_Type",
+           "value": "CC BY-4.0"
+          },
+          {
+           "id": "License_URL",
+           "value": "https://datacatalog.worldbank.org/public-licenses#cc-by"
+          },
+          {
+           "id": "Source",
+           "value": "Global Health Expenditure Database, updated December 12th, 2025, World Health Organization (WHO), uri: http://apps.who.int/nha/database"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "SP.POP.TOTL": {
+   "page": 1,
+   "pages": 1,
+   "per_page": "5000",
+   "total": 16,
+   "source": [
+    {
+     "id": "2",
+     "name": "World Development Indicators",
+     "concept": [
+      {
+       "id": "Series",
+       "variable": [
+        {
+         "id": "SP.POP.TOTL",
+         "metatype": [
+          {
+           "id": "IndicatorName",
+           "value": "Population, total"
+          },
+          {
+           "id": "License_Type",
+           "value": "CC BY-4.0"
+          },
+          {
+           "id": "License_URL",
+           "value": "https://datacatalog.worldbank.org/public-licenses#cc-by"
+          },
+          {
+           "id": "Source",
+           "value": "World Population Prospects, United Nations (UN), uri: https://population.un.org/wpp/, publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), uri: https://unstats.un.org/home/nso_sites/, publisher: National Statistical Offices;\nEurostat: Demographic Statistics, Eurostat (ESTAT), uri: https://ec.europa.eu/eurostat/data/database?node_code=earn_ses_monthly, publisher: Eurostat;\nPopulation and Vital Statistics Report (various years), United Nations (UN), uri: https://unstats.un.org, publisher: UN Statistics Division"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "SP.POP.65UP.TO.ZS": {
+   "page": 1,
+   "pages": 1,
+   "per_page": "5000",
+   "total": 15,
+   "source": [
+    {
+     "id": "2",
+     "name": "World Development Indicators",
+     "concept": [
+      {
+       "id": "Series",
+       "variable": [
+        {
+         "id": "SP.POP.65UP.TO.ZS",
+         "metatype": [
+          {
+           "id": "IndicatorName",
+           "value": "Population ages 65 and above (% of total population)"
+          },
+          {
+           "id": "License_Type",
+           "value": "CC BY-4.0"
+          },
+          {
+           "id": "License_URL",
+           "value": "https://datacatalog.worldbank.org/public-licenses#cc-by"
+          },
+          {
+           "id": "Source",
+           "value": "World Population Prospects, United Nations (UN), publisher: UN Population Division"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "SP.DYN.LE00.IN": {
+   "page": 1,
+   "pages": 1,
+   "per_page": "5000",
+   "total": 15,
+   "source": [
+    {
+     "id": "2",
+     "name": "World Development Indicators",
+     "concept": [
+      {
+       "id": "Series",
+       "variable": [
+        {
+         "id": "SP.DYN.LE00.IN",
+         "metatype": [
+          {
+           "id": "IndicatorName",
+           "value": "Life expectancy at birth, total (years)"
+          },
+          {
+           "id": "License_Type",
+           "value": "CC BY-4.0"
+          },
+          {
+           "id": "License_URL",
+           "value": "https://datacatalog.worldbank.org/public-licenses#cc-by"
+          },
+          {
+           "id": "Source",
+           "value": "World Population Prospects, United Nations (UN), uri: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), note: Derived from male and female life expectancy at birth from sources such as statistical databases and publications from national statistical offices.;\nDemographic Statistics, Eurostat (ESTAT), note: Derived from male and female life expectancy at birth from sources such as Eurostat: Demographic Statistics."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "NY.GDP.PCAP.CD": {
+   "page": 1,
+   "pages": 1,
+   "per_page": "5000",
+   "total": 14,
+   "source": [
+    {
+     "id": "2",
+     "name": "World Development Indicators",
+     "concept": [
+      {
+       "id": "Series",
+       "variable": [
+        {
+         "id": "NY.GDP.PCAP.CD",
+         "metatype": [
+          {
+           "id": "IndicatorName",
+           "value": "GDP per capita (current US$)"
+          },
+          {
+           "id": "License_Type",
+           "value": "CC BY-4.0"
+          },
+          {
+           "id": "License_URL",
+           "value": "https://datacatalog.worldbank.org/public-licenses#cc-by"
+          },
+          {
+           "id": "Source",
+           "value": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "TX.VAL.TECH.MF.ZS": {
+   "page": 1,
+   "pages": 1,
+   "per_page": "5000",
+   "total": 15,
+   "source": [
+    {
+     "id": "2",
+     "name": "World Development Indicators",
+     "concept": [
+      {
+       "id": "Series",
+       "variable": [
+        {
+         "id": "TX.VAL.TECH.MF.ZS",
+         "metatype": [
+          {
+           "id": "IndicatorName",
+           "value": "High-technology exports (% of manufactured exports)"
+          },
+          {
+           "id": "License_Type",
+           "value": "CC BY-4.0"
+          },
+          {
+           "id": "License_URL",
+           "value": "https://datacatalog.worldbank.org/public-licenses#cc-by"
+          },
+          {
+           "id": "Source",
+           "value": "Comtrade database, United Nations (UN), uri: comtrade.un.org, publisher: UN Statistics Division;\nWorld Integrated Trade Solution system (WITS), World Bank (WB), uri: https://wits.worldbank.org/"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

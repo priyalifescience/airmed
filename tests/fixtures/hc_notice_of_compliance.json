@@ -1,0 +1,400 @@
+{
+ "noticeofcompliancemain": [
+  {
+   "noc_number": 23106,
+   "noc_date": "2020-01-13",
+   "noc_manufacturer_name": "AVIR PHARMA INC",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "New Drug Submission (NDS)",
+   "noc_is_suppliment": "N",
+   "noc_submission_class": "Other",
+   "noc_is_admin": "N",
+   "noc_product_type": "Biologic",
+   "noc_crp_product_name": "",
+   "noc_crp_company_name": "",
+   "noc_crp_country_name": "",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "",
+   "noc_reason_submission": "",
+   "noc_therapeutic_class": "",
+   "noc_last_update_date": "1111-11-11"
+  },
+  {
+   "noc_number": 17732,
+   "noc_date": "2020-06-08",
+   "noc_manufacturer_name": "PHARMASCIENCE INC",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "Supplement to a New Drug Submission (SNDS)",
+   "noc_is_suppliment": "Y",
+   "noc_submission_class": "Other",
+   "noc_is_admin": "N",
+   "noc_product_type": "Prescription Pharmaceutical",
+   "noc_crp_product_name": "LIORESAL",
+   "noc_crp_company_name": "NOVARTIS PHARMACEUTICALS CANADA INC",
+   "noc_crp_country_name": "CANADA",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "UPDATES TO THE PRODUCT MONOGRAPH",
+   "noc_reason_submission": "",
+   "noc_therapeutic_class": "",
+   "noc_last_update_date": "1111-11-11"
+  },
+  {
+   "noc_number": 23097,
+   "noc_date": "2020-01-10",
+   "noc_manufacturer_name": "JAMP PHARMA CORPORATION",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "Abbreviated New Drug Submission (ANDS)",
+   "noc_is_suppliment": "N",
+   "noc_submission_class": "Other",
+   "noc_is_admin": "N",
+   "noc_product_type": "Prescription Pharmaceutical",
+   "noc_crp_product_name": "TEVA-NITROFURANTOIN",
+   "noc_crp_company_name": "TEVA CANADA LTD",
+   "noc_crp_country_name": "CANADA",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "",
+   "noc_reason_submission": "",
+   "noc_therapeutic_class": "",
+   "noc_last_update_date": "1111-11-11"
+  },
+  {
+   "noc_number": 19914,
+   "noc_date": "2020-06-19",
+   "noc_manufacturer_name": "PHARMASCIENCE INC",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "Supplement to an Abbreviated New Drug Submission (SANDS)",
+   "noc_is_suppliment": "Y",
+   "noc_submission_class": "Other",
+   "noc_is_admin": "N",
+   "noc_product_type": "Prescription Pharmaceutical",
+   "noc_crp_product_name": "EFFEXOR XR",
+   "noc_crp_company_name": "PFIZER CANADA INC",
+   "noc_crp_country_name": "CANADA",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "REVISIONS TO THE LABELS",
+   "noc_reason_submission": "",
+   "noc_therapeutic_class": "",
+   "noc_last_update_date": "1111-11-11"
+  },
+  {
+   "noc_number": 38500,
+   "noc_date": "2026-10-20",
+   "noc_manufacturer_name": "MYLAN PHARMACEUTICALS ULC",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "Supplement to an Abbreviated New Drug Submission (SANDS)",
+   "noc_is_suppliment": "Y",
+   "noc_submission_class": "Other",
+   "noc_is_admin": "N",
+   "noc_product_type": "Prescription Pharmaceutical",
+   "noc_crp_product_name": "EXELON PATCH 5, EXELON PATCH 10",
+   "noc_crp_company_name": "NOVARTIS PHARMACEUTICALS CANADA INC",
+   "noc_crp_country_name": "",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "Update to Product Monograph",
+   "noc_reason_submission": "",
+   "noc_therapeutic_class": "",
+   "noc_last_update_date": "1111-11-11"
+  },
+  {
+   "noc_number": 1860,
+   "noc_date": "2003-10-14",
+   "noc_manufacturer_name": "PFIZER CANADA INC.",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "New Drug Submission (NDS)",
+   "noc_is_suppliment": "N",
+   "noc_submission_class": "Admin",
+   "noc_is_admin": "Y",
+   "noc_product_type": "Prescription Pharmaceutical",
+   "noc_crp_product_name": "",
+   "noc_crp_company_name": "",
+   "noc_crp_country_name": "",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "",
+   "noc_reason_submission": "MANUFACTURER NAME CHANGE",
+   "noc_therapeutic_class": "GLUCOCORTICOID",
+   "noc_last_update_date": "1111-11-11"
+  },
+  {
+   "noc_number": 80,
+   "noc_date": "2004-01-14",
+   "noc_manufacturer_name": "NORBROOK LABORATORIES LTD.",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "Abbreviated New Drug Submission (ANDS)",
+   "noc_is_suppliment": "N",
+   "noc_submission_class": "Other",
+   "noc_is_admin": "N",
+   "noc_product_type": "Veterinary",
+   "noc_crp_product_name": "BANAMINE INJECTION",
+   "noc_crp_company_name": "SCHERING CANADA INC.",
+   "noc_crp_country_name": "CANADA",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "",
+   "noc_reason_submission": "",
+   "noc_therapeutic_class": "ANTI-INFLAMMATORY",
+   "noc_last_update_date": "1111-11-11"
+  },
+  {
+   "noc_number": 7396,
+   "noc_date": "1994-05-04",
+   "noc_manufacturer_name": "GP ASSOCIATES, INC.",
+   "noc_status_with_conditions": "N",
+   "noc_on_submission_type": "New Drug Submission (NDS)",
+   "noc_is_suppliment": "N",
+   "noc_submission_class": "Other",
+   "noc_is_admin": "N",
+   "noc_product_type": "Veterinary",
+   "noc_crp_product_name": "",
+   "noc_crp_company_name": "",
+   "noc_crp_country_name": "",
+   "noc_active_status": "1",
+   "noc_reason_supplement": "",
+   "noc_reason_submission": "",
+   "noc_therapeutic_class": "JOINT DYSFUNCTION ASSOCIATED WITH EQUINE OSTEO-ARTHRITIS",
+   "noc_last_update_date": "1111-11-11"
+  }
+ ],
+ "drugproduct": [
+  {
+   "noc_number": 80,
+   "noc_br_brand_id": 84,
+   "noc_br_brandname": "SUPPRESSOR (STERILE INJECTABLE SOLUTION)",
+   "noc_br_din": "02248807",
+   "noc_br_product_id": 161
+  },
+  {
+   "noc_number": 7396,
+   "noc_br_brand_id": 7760,
+   "noc_br_brandname": "HYLAN INJECTION",
+   "noc_br_din": "02091089",
+   "noc_br_product_id": 13663
+  },
+  {
+   "noc_number": 1860,
+   "noc_br_brand_id": 1982,
+   "noc_br_brandname": "DEPO-MEDROL",
+   "noc_br_din": "00030759",
+   "noc_br_product_id": 3525
+  },
+  {
+   "noc_number": 1860,
+   "noc_br_brand_id": 1982,
+   "noc_br_brandname": "DEPO-MEDROL",
+   "noc_br_din": "00030767",
+   "noc_br_product_id": 3526
+  },
+  {
+   "noc_number": 1860,
+   "noc_br_brand_id": 1983,
+   "noc_br_brandname": "DEPO-MEDROL (WITH PRESERVATIVE)",
+   "noc_br_din": "01934325",
+   "noc_br_product_id": 3527
+  },
+  {
+   "noc_number": 1860,
+   "noc_br_brand_id": 1983,
+   "noc_br_brandname": "DEPO-MEDROL (WITH PRESERVATIVE)",
+   "noc_br_din": "01934333",
+   "noc_br_product_id": 3528
+  },
+  {
+   "noc_number": 1860,
+   "noc_br_brand_id": 1983,
+   "noc_br_brandname": "DEPO-MEDROL (WITH PRESERVATIVE)",
+   "noc_br_din": "01934341",
+   "noc_br_product_id": 3529
+  },
+  {
+   "noc_number": 23097,
+   "noc_br_brand_id": 24796,
+   "noc_br_brandname": "JAMP NITROFURANTOIN",
+   "noc_br_din": "02495503",
+   "noc_br_product_id": 45548
+  },
+  {
+   "noc_number": 23097,
+   "noc_br_brand_id": 24796,
+   "noc_br_brandname": "JAMP NITROFURANTOIN",
+   "noc_br_din": "02495511",
+   "noc_br_product_id": 45549
+  },
+  {
+   "noc_number": 23106,
+   "noc_br_brand_id": 24805,
+   "noc_br_brandname": "OSNUVO",
+   "noc_br_din": "02495589",
+   "noc_br_product_id": 45569
+  },
+  {
+   "noc_number": 19914,
+   "noc_br_brand_id": 21379,
+   "noc_br_brandname": "VENLAFAXINE XR",
+   "noc_br_din": "N/A",
+   "noc_br_product_id": 39147
+  },
+  {
+   "noc_number": 19914,
+   "noc_br_brand_id": 21379,
+   "noc_br_brandname": "VENLAFAXINE XR",
+   "noc_br_din": "N/A",
+   "noc_br_product_id": 39148
+  },
+  {
+   "noc_number": 17732,
+   "noc_br_brand_id": 19030,
+   "noc_br_brandname": "PMS-BACLOFEN",
+   "noc_br_din": "N/A",
+   "noc_br_product_id": 34930
+  },
+  {
+   "noc_number": 17732,
+   "noc_br_brand_id": 19030,
+   "noc_br_brandname": "PMS-BACLOFEN",
+   "noc_br_din": "N/A",
+   "noc_br_product_id": 34931
+  },
+  {
+   "noc_number": 38500,
+   "noc_br_brand_id": 41326,
+   "noc_br_brandname": "MYLAN-RIVASTIGMINE PATCH 10",
+   "noc_br_din": "N/A",
+   "noc_br_product_id": 79206
+  },
+  {
+   "noc_number": 38500,
+   "noc_br_brand_id": 41327,
+   "noc_br_brandname": "MYLAN-RIVASTIGMINE PATCH 5",
+   "noc_br_din": "N/A",
+   "noc_br_product_id": 79207
+  }
+ ],
+ "medicinalingredient": [
+  {
+   "noc_number": 80,
+   "noc_pi_din_product_id": 161,
+   "noc_pi_medic_ingr_name": "FLUNIXIN MEGLUMINE",
+   "noc_pi_strength": 50.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 1860,
+   "noc_pi_din_product_id": 3525,
+   "noc_pi_medic_ingr_name": "METHYLPREDNISOLONE ACETATE",
+   "noc_pi_strength": 40.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 1860,
+   "noc_pi_din_product_id": 3526,
+   "noc_pi_medic_ingr_name": "METHYLPREDNISOLONE ACETATE",
+   "noc_pi_strength": 80.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 1860,
+   "noc_pi_din_product_id": 3527,
+   "noc_pi_medic_ingr_name": "METHYLPREDNISOLONE ACETATE",
+   "noc_pi_strength": 20.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 1860,
+   "noc_pi_din_product_id": 3528,
+   "noc_pi_medic_ingr_name": "METHYLPREDNISOLONE ACETATE",
+   "noc_pi_strength": 40.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 1860,
+   "noc_pi_din_product_id": 3529,
+   "noc_pi_medic_ingr_name": "METHYLPREDNISOLONE ACETATE",
+   "noc_pi_strength": 80.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 7396,
+   "noc_pi_din_product_id": 13663,
+   "noc_pi_medic_ingr_name": "HYALURONATE SODIUM",
+   "noc_pi_strength": 17.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 19914,
+   "noc_pi_din_product_id": 39147,
+   "noc_pi_medic_ingr_name": "VENLAFAXINE HYDROCHLORIDE",
+   "noc_pi_strength": 37.5,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "CAP"
+  },
+  {
+   "noc_number": 19914,
+   "noc_pi_din_product_id": 39148,
+   "noc_pi_medic_ingr_name": "VENLAFAXINE HYDROCHLORIDE",
+   "noc_pi_strength": 75.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "CAP"
+  },
+  {
+   "noc_number": 17732,
+   "noc_pi_din_product_id": 34930,
+   "noc_pi_medic_ingr_name": "BACLOFEN",
+   "noc_pi_strength": 10.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "TAB"
+  },
+  {
+   "noc_number": 17732,
+   "noc_pi_din_product_id": 34931,
+   "noc_pi_medic_ingr_name": "BACLOFEN",
+   "noc_pi_strength": 20.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "TAB"
+  },
+  {
+   "noc_number": 23097,
+   "noc_pi_din_product_id": 45548,
+   "noc_pi_medic_ingr_name": "NITROFURANTOIN",
+   "noc_pi_strength": 50.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "CAP"
+  },
+  {
+   "noc_number": 23097,
+   "noc_pi_din_product_id": 45549,
+   "noc_pi_medic_ingr_name": "NITROFURANTOIN",
+   "noc_pi_strength": 100.0,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "CAP"
+  },
+  {
+   "noc_number": 23106,
+   "noc_pi_din_product_id": 45569,
+   "noc_pi_medic_ingr_name": "TERIPARATIDE",
+   "noc_pi_strength": 250.0,
+   "noc_pi_unit": "MCG",
+   "noc_pi_basic_unit": "ML"
+  },
+  {
+   "noc_number": 38500,
+   "noc_pi_din_product_id": 79206,
+   "noc_pi_medic_ingr_name": "RIVASTIGMINE",
+   "noc_pi_strength": 9.5,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "DAY"
+  },
+  {
+   "noc_number": 38500,
+   "noc_pi_din_product_id": 79207,
+   "noc_pi_medic_ingr_name": "RIVASTIGMINE",
+   "noc_pi_strength": 4.6,
+   "noc_pi_unit": "MG",
+   "noc_pi_basic_unit": "DAY"
+  }
+ ]
+}

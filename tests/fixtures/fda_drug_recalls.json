@@ -1,0 +1,148 @@
+{
+ "total_in_file": 5,
+ "last_updated": "2026-10-19",
+ "results": [
+  {
+   "recall_number": "D-0033-2027",
+   "event_id": "99977",
+   "classification": "Class III",
+   "status": "Ongoing",
+   "recalling_firm": "SUN PHARMACEUTICAL INDUSTRIES INC",
+   "country": "United States",
+   "product_description": "Tretinoin Cream USP, 0.05%, 45g tube, Rx only, Mfd by: Taro Pharmaceuticals Inc., Brampton, Ontario, Canada L6T 1C1, Dist. by: Taro Pharmaceuticals USA Inc., Hawthorne, NY 10532, NDC 51672-1394-9.",
+   "reason_for_recall": "Failed Impurities/Degradation Specifications",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "initial_firm_notification": "Letter",
+   "recall_initiation_date": "20260925",
+   "center_classification_date": "20261008",
+   "report_date": "20261014",
+   "termination_date": null,
+   "openfda": {
+    "product_ndc": [
+     "51672-1394"
+    ],
+    "brand_name": [
+     "TRETINOIN"
+    ],
+    "generic_name": [
+     "TRETINOIN"
+    ]
+   }
+  },
+  {
+   "recall_number": "",
+   "event_id": "99934",
+   "classification": "Not Yet Classified",
+   "status": "Ongoing",
+   "recalling_firm": "Aurobindo Pharma USA Inc",
+   "country": "United States",
+   "product_description": "amazon, Acetaminophen, Extra Strength, 500mg Caplets, 1000-count bottle, Distributed by: Amazon.com Services LLC, 410 Terry Avenue N., Seattle, WA 98109, Made in India, NDC 72288-692-01. UPC 1 95515 04888 0",
+   "reason_for_recall": "Discoloration: consumer complaints received for discolored tablets",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "initial_firm_notification": "Letter",
+   "recall_initiation_date": "20260918",
+   "center_classification_date": null,
+   "report_date": "20261007",
+   "termination_date": null,
+   "openfda": {
+    "product_ndc": [
+     "72288-692"
+    ],
+    "brand_name": [
+     "AMAZON BASIC CARE ACETAMINOPHEN"
+    ],
+    "generic_name": [
+     "ACETAMINOPHEN"
+    ]
+   }
+  },
+  {
+   "recall_number": "D-0448-2026",
+   "event_id": "98656",
+   "classification": "Class II",
+   "status": "Ongoing",
+   "recalling_firm": "GE Healthcare Ireland Limited",
+   "country": "Ireland",
+   "product_description": "GE Healthcare Omnipaque (iohexol) Injection, 350 mg/mL (64.7%), Rx Only, Distributed by: GE Healthcare Inc., Marlborough, MA 01752 USA, NDC 0407-1414-91.",
+   "reason_for_recall": "Presence of particulate matter",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "initial_firm_notification": "",
+   "recall_initiation_date": "20260324",
+   "center_classification_date": "20260409",
+   "report_date": "20260415",
+   "termination_date": null,
+   "openfda": {
+    "product_ndc": [
+     "0407-1401",
+     "0407-1411",
+     "0407-1412",
+     "0407-1413",
+     "0407-1414",
+     "0407-1415",
+     "0407-1416"
+    ],
+    "brand_name": [
+     "OMNIPAQUE"
+    ],
+    "generic_name": [
+     "IOHEXOL"
+    ]
+   }
+  },
+  {
+   "recall_number": "D-0373-2019",
+   "event_id": "81891",
+   "classification": "Class I",
+   "status": "Terminated",
+   "recalling_firm": "Sun Pharmaceutical Industries, Inc.",
+   "country": "United States",
+   "product_description": "Vecuronium Bromide for Injection 20 mg* *1mg/mL when reconstituted to 20 mL Lyophilized, 10 x 20 mg vials, Rx Only, Manufactured by: Sun Pharmaceutical Industries Ltd. Halol-Baroda Highway Halol-389 350, Gujarat, India. Distributed by: Sun Pharmaceutical Industries, Inc. Cranbury, NJ 08512  NDC: 47335-932-40 [vial] 47335-932-44 [carton]",
+   "reason_for_recall": "Presence of Particulate Matter:  Foreign matter identified as glass detected in Vecuronium Bromide for Injection.",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "initial_firm_notification": "Letter",
+   "recall_initiation_date": "20190103",
+   "center_classification_date": "20190114",
+   "report_date": "20190116",
+   "termination_date": "20211103",
+   "openfda": {
+    "product_ndc": [
+     "47335-931",
+     "47335-932"
+    ],
+    "brand_name": [
+     "VECURONIUM BROMIDE"
+    ],
+    "generic_name": [
+     "VECURONIUM BROMIDE"
+    ]
+   }
+  },
+  {
+   "recall_number": "D-0874-2026",
+   "event_id": "99903",
+   "classification": "Class II",
+   "status": "Ongoing",
+   "recalling_firm": "Aurolab Trust",
+   "country": "India",
+   "product_description": "FOCUS PI Hypromellose 0.7% Formula, 0.3 FL O (10 mL) per vial, STERILE, Manufactured for: Covalent Management, Inc., Manassas, VA 20109.  NDC: 82724-007-19",
+   "reason_for_recall": "Lack of Assurance of Sterility",
+   "voluntary_mandated": "Voluntary: Firm initiated",
+   "initial_firm_notification": "Letter",
+   "recall_initiation_date": "20260917",
+   "center_classification_date": "20260928",
+   "report_date": "20261007",
+   "termination_date": null,
+   "openfda": {
+    "product_ndc": [
+     "82724-007"
+    ],
+    "brand_name": [
+     "FOCUS PI"
+    ],
+    "generic_name": [
+     "HYPROMELLOSE EYE DROPS 0.7%"
+    ]
+   }
+  }
+ ]
+}

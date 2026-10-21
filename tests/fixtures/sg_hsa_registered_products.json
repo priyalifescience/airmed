@@ -1,0 +1,139 @@
+{
+ "success": true,
+ "result": {
+  "resource_id": "d_767279312753558cbf19d48344577084",
+  "fields": [
+   {
+    "type": "text",
+    "id": "LicenceNo"
+   },
+   {
+    "type": "text",
+    "id": "Productname"
+   },
+   {
+    "type": "text",
+    "id": "Licenseholder"
+   },
+   {
+    "type": "text",
+    "id": "Approvaldate"
+   },
+   {
+    "type": "text",
+    "id": "Forensicclassification"
+   },
+   {
+    "type": "text",
+    "id": "ATCCode"
+   },
+   {
+    "type": "text",
+    "id": "Dosageform"
+   },
+   {
+    "type": "text",
+    "id": "RouteofAdministration"
+   },
+   {
+    "type": "text",
+    "id": "Manufacturer"
+   },
+   {
+    "type": "text",
+    "id": "Countryofmanufacturer"
+   },
+   {
+    "type": "text",
+    "id": "Activeingredients"
+   },
+   {
+    "type": "text",
+    "id": "Strength"
+   },
+   {
+    "type": "int4",
+    "id": "_id"
+   }
+  ],
+  "records": [
+   {
+    "_id": 1,
+    "LicenceNo": "SIN00230P",
+    "Productname": "CHLORAMPHENICOL EAR DROPS 5% w/v",
+    "Licenseholder": "APEX PHARMA MARKETING PTE. LTD.",
+    "Approvaldate": "5/4/1988",
+    "Forensicclassification": "Prescription Only",
+    "ATCCode": "S02AA01",
+    "Dosageform": "SOLUTION",
+    "RouteofAdministration": "AURICULAR (OTIC)",
+    "Manufacturer": "XEPA-SOUL PATTINSON (MALAYSIA) SDN BHD",
+    "Countryofmanufacturer": "MALAYSIA",
+    "Activeingredients": "CHLORAMPHENICOL",
+    "Strength": "5% w/v"
+   },
+   {
+    "_id": 15,
+    "LicenceNo": "SIN03440P",
+    "Productname": "INON GRANULES",
+    "Licenseholder": "SATO PHARMACEUTICAL (SINGAPORE) PTE LTD",
+    "Approvaldate": "8/6/1989",
+    "Forensicclassification": "General Sale List",
+    "ATCCode": "A02AH",
+    "Dosageform": "GRANULE",
+    "RouteofAdministration": "ORAL",
+    "Manufacturer": "SATO PHARMACEUTICAL CO LTD",
+    "Countryofmanufacturer": "JAPAN",
+    "Activeingredients": "ALUMINIUM HYDROXIDE (DRIED GEL)&&MAGNESIUM CARBONATE&&SODIUM BICARBONATE",
+    "Strength": "525 mg/1.8 g&&350 mg/1.8 g&&525 mg/1.8 g"
+   },
+   {
+    "_id": 235,
+    "LicenceNo": "SIN02823P",
+    "Productname": "GLYCEROL 2G SUPPOSITORIES FOR CHILDREN",
+    "Licenseholder": "MEDIPHARM PTE LTD",
+    "Approvaldate": "22/5/1989",
+    "Forensicclassification": "General Sale List",
+    "ATCCode": "A06AX01",
+    "Dosageform": "SUPPOSITORY",
+    "RouteofAdministration": "RECTAL",
+    "Manufacturer": "MARTINDALE PHARMACEUTICALS&&Ricesteele Manufacturing Limited",
+    "Countryofmanufacturer": "IRELAND&&UNITED KINGDOM",
+    "Activeingredients": "Glycerol",
+    "Strength": "1.4 g"
+   },
+   {
+    "_id": 308,
+    "LicenceNo": "SIN14376P",
+    "Productname": "Trilipix Modified Release Capsules 135mg",
+    "Licenseholder": "ABBOTT LABORATORIES (SINGAPORE ) PRIVATE LIMITED",
+    "Approvaldate": "3/7/2013",
+    "Forensicclassification": "Prescription Only",
+    "ATCCode": "C10AB11",
+    "Dosageform": "CAPSULE, DELAYED RELEASE PELLETS",
+    "RouteofAdministration": "ORAL",
+    "Manufacturer": "Fournier Laboratories Ireland Limited&&Mylan Laboratories SAS",
+    "Countryofmanufacturer": "FRANCE&&IRELAND",
+    "Activeingredients": "Choline Fenofibrate 178.8mg eqv Fenofibric Acid",
+    "Strength": "135mg"
+   },
+   {
+    "_id": 1628,
+    "LicenceNo": "SIN00022P",
+    "Productname": "ZENMOLIN SYRUP 2 mg/5 ml",
+    "Licenseholder": "TEVA PHARMACEUTICAL INVESTMENTS SINGAPORE PTE. LTD.",
+    "Approvaldate": "2/2/1988",
+    "Forensicclassification": "Pharmacy Only",
+    "ATCCode": "R03CC02",
+    "Dosageform": "SYRUP",
+    "RouteofAdministration": "ORAL",
+    "Manufacturer": "PT ACTAVIS INDONESIA",
+    "Countryofmanufacturer": "INDONESIA REP OF",
+    "Activeingredients": "SALBUTAMOL SULPHATE EQV SALBUTAMOL",
+    "Strength": "2 mg/5 ml"
+   }
+  ],
+  "total": 5,
+  "limit": 20000
+ }
+}

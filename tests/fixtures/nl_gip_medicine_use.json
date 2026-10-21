@@ -1,0 +1,27 @@
+{
+"plan": [
+[
+"addon",
+2024,
+"GIP Addon Zvw meerjaren 2021-2025_12062026",
+2025
+],
+[
+"farmacie",
+2012,
+"GIP Farmacie Zvw meerjaren 2012-2016_25012018",
+2016
+],
+[
+"farmacie",
+2025,
+"GIP Farmacie Zvw meerjaren 2021-2025_11052026",
+2025
+]
+],
+"files": {
+"GIP Addon Zvw meerjaren 2021-2025_12062026": "jaar#atclaatst#atclaatst_naam_tekst#vergoeding#gebruikers#vergoeding_per_gebruiker\r\n2024* #L04AB02 #Infliximab #49240775 #18721 #2630.24\r\n",
+"GIP Farmacie Zvw meerjaren 2012-2016_25012018": "jaar#atclaatst#atclaatst_naam#vergoeding#gebruikers#uitgiftes#DDD#vergoeding_per_gebruiker#vergoeding_per_uitgifte#uitgifte_per_gebruiker#DDD_per_uitgifte#vergoeding_per_DDD#DDD_per_gebruiker\r\n2012 #A01AA01 #Natriumfluoride #560 #54 #81 #110850 #10,34 #6,93 #1,49 #1372,00 #0,01 #2046,00\r\n2012 #L04AB02 #Infliximab #12277 #1 #5 #498 #9868,00 #2467,00 #4,00 #100,00 #24,67 #400,00\r\n",
+"GIP Farmacie Zvw meerjaren 2021-2025_11052026": "jaar#atclaatst#atclaatst_naam_tekst#vergoeding#gebruikers#uitgiftes#DDD#vergoeding_per_gebruiker#vergoeding_per_uitgifte#uitgifte_per_gebruiker#DDD_per_uitgifte#vergoeding_per_DDD#DDD_per_gebruiker\r\n2025 #A01AA01 #Natriumfluoride #562710 #43110 #77480 #. #13.05 #7.26 #1.8 #. #. #.\r\n2025 #A10BJ06 #Semaglutide #147009900 #157040 #837560 #50053500 #936.1 #175.5 #5.33 #59.76 #2.94 #318.7\r\n2025 #Z______ #Niet van toepassing #4550700 #40278 #153790 #. #113 #29.59 #3.82 #. #. #.\r\n"
+}
+}

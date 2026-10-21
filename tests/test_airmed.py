@@ -104,6 +104,12 @@ class TestPrivacyPrecision(unittest.TestCase):
         for v in ["+353 1 234 5678", "+1-866-850-2876", "866-850-2876", "(866) 850-2876", "Call 01 234 5678", "087 123 4567"]:
             self.assertTrue(PHONE_RE.search(v), v)
 
+    def test_large_doses_not_phones(self):
+        # gene therapy doses in the French register (BDPM), which must not be altered
+        from airmed.privacy import PHONE_RE
+        for v in ["ZOLGENSMA 2 x 10 000 000 000 000 du vecteur/mL", "1 000 000 000 000 cellules", "100 000 000 UI"]:
+            self.assertFalse(PHONE_RE.search(v), v)
+
     def test_identifiers_kept(self):
         stats = {}
         keep = {"package_ndc": "0641-6024-10", "presentation": "Fentanyl Citrate, Injection, 50 ug/1 mL (NDC 0641-6024-10)",
