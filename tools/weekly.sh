@@ -13,11 +13,13 @@ LOG="logs/$(date -u +%Y-%m-%d).log"
   # One source failing (a timeout) must not stop the whole refresh: its last good copy stays in out/ and the
   # catalogue shows its older collection date. The release step still refuses broken or shrunken data.
   nice -n 10 python3 -m airmed run all --out out || echo "WARN: some sources failed this week; previous copies kept (see FAIL lines)"
+  # keep last week's search index: if this week's build fails, publishing an older index beats deleting the page
+  rm -rf search.prev; if [ -d dist/v1/search ]; then cp -a dist/v1/search search.prev; fi
   nice -n 10 python3 -m airmed release --src out --dist dist/v1
   nice -n 10 python3 tools/link_medicines.py --dist dist/v1 || echo "WARN: medicine cross-reference failed; publishing without it"
   nice -n 10 python3 tools/dcat.py --dist dist/v1 || echo "WARN: DCAT metadata failed; publishing without it"
   if curl -sf -m 5 http://127.0.0.1:11434/api/tags >/dev/null; then
-    nice -n 10 python3 tools/search_index.py --dist dist/v1 || { echo "WARN: search index failed; publishing without it"; rm -rf dist/v1/search; }
+    nice -n 10 python3 tools/search_index.py --dist dist/v1 || { echo "WARN: search index failed; publishing last week's index"; rm -rf dist/v1/search; if [ -d search.prev ]; then cp -a search.prev dist/v1/search; fi; }
   else
     echo "WARN: Ollama not reachable; search index skipped"
   fi
