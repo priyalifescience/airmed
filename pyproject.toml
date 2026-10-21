@@ -1,6 +1,6 @@
 [project]
 name = "airmed"
-version = "1.3.0"
+version = "1.4.0"
 description = "Airmid Éireann: Ireland's open pharma data project. Collectors for public medicines, clinical-trial and regulatory data."
 readme = "README.md"
 license = { text = "EUPL-1.2" }

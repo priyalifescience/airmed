@@ -28,6 +28,14 @@ GROUPS = [
     ("Irish health system, public spending and parliament", ["cso_health_accounts", "cso_hospital_discharges",
                                                              "doh_health_key_trends", "ni_bso_gp_prescribing",
                                                              "etenders_health_awards", "oireachtas_medicine_questions"]),
+    ("European national registers, prices and use", ["fr_bdpm_medicines", "fr_bdpm_compositions", "fr_bdpm_has_opinions",
+                                                      "fr_bdpm_availability", "fr_open_medic", "nl_gip_medicine_use",
+                                                      "it_aifa_reimbursed_medicines", "it_aifa_shortages",
+                                                      "it_aifa_clinical_trials", "it_aifa_manufacturing_sites",
+                                                      "it_aifa_medicines_spending", "scot_phs_prescribing",
+                                                      "fi_fimea_medicines", "no_fest_medicines"]),
+    ("Ireland in the world", ["fda_drug_recalls", "fda_ndc_directory", "hc_recalls", "hc_notice_of_compliance",
+                              "sg_hsa_registered_products", "nz_pharmac_schedule", "worldbank_health_indicators"]),
 ]
 
 
@@ -44,7 +52,7 @@ def main(argv=None):
     groups = GROUPS + ([("Other", sorted(k for k in ds if k not in placed))] if set(ds) - placed else [])
     parts = [
         f"<p><strong>Airmid Éireann</strong> is the open-data project of Priya Life Science. It collects public records on "
-        f"medicines, clinical trials, approvals, shortages, safety, trade, spending and research for Ireland and Europe "
+        f"medicines, clinical trials, approvals, shortages, safety, trade, spending and research for Ireland, compared with Europe and the world "
         f"from official publishers, checks them, and releases them as CSV and JSON with each source's licence, a data "
         f"dictionary, checksums and DCAT-AP metadata.</p>",
         f"<p>This software release contains the collectors and release builder. The data release of {day} holds "
