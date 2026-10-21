@@ -16,6 +16,7 @@
   <a href="https://priyalifescience.com/opendata/airmid/v1/CHANGELOG.md"><img alt="Refresh: weekly" src="https://img.shields.io/badge/refresh-weekly-0B3D1E?style=for-the-badge"></a>
   <a href="https://priyalifescience.com/airmed"><img alt="Website: priyalifescience.com" src="https://img.shields.io/badge/website-priyalifescience.com-6BE38F?style=for-the-badge&labelColor=0B3D1E"></a>
   <a href="https://doi.org/10.5281/zenodo.23336432"><img alt="DOI 10.5281/zenodo.23336432" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23336432.svg"></a>
+  <a href="https://www.kaggle.com/datasets/sreepriyaprasannan/airmid-eireann-irelands-open-pharma-data"><img alt="Kaggle: dataset" src="https://img.shields.io/badge/kaggle-dataset-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"></a>
 </p>
 <p align="center">
   <a href="LICENSE"><img alt="Code licence: EUPL-1.2" src="https://img.shields.io/badge/code-EUPL--1.2-6BE38F?style=flat-square&labelColor=0B3D1E"></a>
@@ -239,6 +240,7 @@ registers and guides on the pharma, biotech and medtech industry in Ireland.
 - **Code:** [EUPL-1.2](LICENSE)
 - **Data:** multiple licences. Each dataset keeps the licence of its source (not all are CC BY 4.0: for example NIH RePORTER is ODbL 1.0, ClinicalTrials.gov, OECD and NTPF data have their own terms), listed in [`LICENSE-DATA.md`](LICENSE-DATA.md), in `catalog.json` and in every `datapackage.json`. Conditions and disclaimers that publishers require to be passed on are in each release's `README.md` and `DATA_DICTIONARY.md`.
 - **DOI:** cite the project as [10.5281/zenodo.23336432](https://doi.org/10.5281/zenodo.23336432) (all versions, archived on Zenodo; always points to the latest). To cite one exact version: 1.3.0 = [10.5281/zenodo.23499798](https://doi.org/10.5281/zenodo.23499798), 1.2.1 = [10.5281/zenodo.23467119](https://doi.org/10.5281/zenodo.23467119), 1.2.0 = [10.5281/zenodo.23462582](https://doi.org/10.5281/zenodo.23462582), 1.1.0 = [10.5281/zenodo.23410910](https://doi.org/10.5281/zenodo.23410910), 1.0.0 = [10.5281/zenodo.23336433](https://doi.org/10.5281/zenodo.23336433).
+- **Kaggle:** a copy of the release with file and column descriptions and a [starter notebook](https://www.kaggle.com/code/sreepriyaprasannan/airmid-eireann-getting-started) is on [Kaggle](https://www.kaggle.com/datasets/sreepriyaprasannan/airmid-eireann-irelands-open-pharma-data). The weekly release on priyalifescience.com stays the source of truth.
 - **Credit:** please credit the original source and "Airmid Éireann, [Priya Life Science](https://priyalifescience.com/airmed)". GitHub's **Cite this repository** button and the [BibTeX](https://priyalifescience.com/opendata/airmid/v1/citation.bib) / [RIS](https://priyalifescience.com/opendata/airmid/v1/citation.ris) files give a ready citation.
 - Nothing here is medical advice.
 
