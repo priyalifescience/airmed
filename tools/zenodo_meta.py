@@ -36,6 +36,8 @@ GROUPS = [
                                                       "fi_fimea_medicines", "no_fest_medicines"]),
     ("Ireland in the world", ["fda_drug_recalls", "fda_ndc_directory", "hc_recalls", "hc_notice_of_compliance",
                               "sg_hsa_registered_products", "nz_pharmac_schedule", "worldbank_health_indicators"]),
+    ("Prices, deals and mergers", ["pcrs_reimbursable_items", "sec_product_revenue", "sec_8k_deals",
+                                   "ec_merger_cases_pharma"]),
 ]
 
 

@@ -11,7 +11,8 @@ from pathlib import Path
 BASE = "https://priyalifescience.com/opendata/airmid/v1/"
 # short display licence, first match wins. Publisher-specific terms come before the generic "CC BY 4.0", because
 # their long licence texts also mention CC BY (e.g. "not CC BY 4.0"). Licences differ per dataset: never one label.
-LIC = [("ODbL", "ODbL 1.0 (share-alike)"), ("ClinicalTrials.gov Terms", "ClinicalTrials.gov terms"),
+LIC = [("written permission", "HSE-PCRS written permission"), ("Public information, no SEC permission", "SEC public information"),
+       ("ODbL", "ODbL 1.0 (share-alike)"), ("ClinicalTrials.gov Terms", "ClinicalTrials.gov terms"),
        ("OECD Terms", "OECD terms"), ("NTPF", "NTPF re-use terms"), ("EMA legal notice", "EMA legal notice"),
        ("EMA website", "EMA legal notice"), ("Eurostat", "reuse with credit"), ("Oireachtas", "Oireachtas PSI licence"),
        ("Mixed, all open", "CC0 / CC BY 4.0"), ("CC0", "CC0"), ("CC BY 4.0", "CC BY 4.0"),

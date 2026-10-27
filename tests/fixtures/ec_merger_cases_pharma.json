@@ -1,0 +1,526 @@
+{
+ "_note": "Trimmed from the real EC competition case search reply (2026-10-21).",
+ "cases": [
+  {
+   "reference": "M.10483.AP",
+   "metadata": {
+    "caseNumber": [
+     "M.10483.AP"
+    ],
+    "caseTitle": [
+     "ILLUMINA / GRAIL (Art. 14 procedure)"
+    ],
+    "caseSectors": [
+     "NaceSectorsC_21"
+    ],
+    "caseType": [
+     "MergerCaseType4"
+    ],
+    "caseRegulation": [
+     "MERegulation2"
+    ],
+    "caseSimplified": [
+     "MEnormal"
+    ],
+    "caseNotificationDate": [],
+    "caseInitiationDate": [
+     "2021-08-30T22:00:00.000+0000"
+    ],
+    "caseDeadlineDate": [],
+    "caseLastDecisionDate": [
+     "2024-09-05T22:00:00.000+0000"
+    ],
+    "caseOfficialJournalPublicationsPublishedDates": [],
+    "metadataType": [
+     "METADATA_CASE"
+    ]
+   }
+  },
+  {
+   "reference": "M.11383",
+   "metadata": {
+    "caseNumber": [
+     "M.11383"
+    ],
+    "caseTitle": [
+     "COOPER / VIATRIS (EUROPEAN OTC BUSINESS)"
+    ],
+    "caseSectors": [
+     "NaceSectorsC_21_2_0"
+    ],
+    "caseType": [
+     "MergerCaseType1"
+    ],
+    "caseRegulation": [
+     "MERegulation2"
+    ],
+    "caseSimplified": [
+     "MEnormal"
+    ],
+    "caseNotificationDate": [
+     "2024-05-02T22:00:00.000+0000"
+    ],
+    "caseInitiationDate": [
+     "2023-11-20T23:00:00.000+0000"
+    ],
+    "caseDeadlineDate": [],
+    "caseLastDecisionDate": [
+     "2025-01-09T23:00:00.000+0000"
+    ],
+    "caseOfficialJournalPublicationsPublishedDates": [
+     "2024-05-15T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_CASE"
+    ]
+   }
+  },
+  {
+   "reference": "M.12585",
+   "metadata": {
+    "caseNumber": [
+     "M.12585"
+    ],
+    "caseTitle": [
+     "BC PARTNERS / ACS DOBFAR / INFORLIFE"
+    ],
+    "caseSectors": [
+     "NaceV2Sector_C_21.20"
+    ],
+    "caseType": [
+     "MergerCaseType1"
+    ],
+    "caseRegulation": [
+     "MERegulation2"
+    ],
+    "caseSimplified": [
+     "MEsimplified"
+    ],
+    "caseNotificationDate": [
+     "2026-10-08T22:00:00.000+0000"
+    ],
+    "caseInitiationDate": [
+     "2026-08-02T22:00:00.000+0000"
+    ],
+    "caseDeadlineDate": [
+     "2026-11-15T23:00:00.000+0000"
+    ],
+    "caseLastDecisionDate": [],
+    "caseOfficialJournalPublicationsPublishedDates": [
+     "2026-10-18T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_CASE"
+    ]
+   }
+  },
+  {
+   "reference": "M.5393",
+   "metadata": {
+    "caseNumber": [
+     "M.5393"
+    ],
+    "caseTitle": [
+     "TEIJIN PHARMA / LABORATORIOS DEL DR. ESTEVE / OXIMEPLUS"
+    ],
+    "caseSectors": [
+     "NaceSectorsG_46_4_6",
+     "NaceSectorsC_21_1"
+    ],
+    "caseType": [
+     "MergerCaseType1"
+    ],
+    "caseRegulation": [
+     "MERegulation2"
+    ],
+    "caseSimplified": [
+     "MEsimplified"
+    ],
+    "caseNotificationDate": [
+     "2008-11-23T23:00:00.000+0000"
+    ],
+    "caseInitiationDate": [
+     "2008-10-20T22:00:00.000+0000"
+    ],
+    "caseDeadlineDate": [
+     "2009-01-07T23:00:00.000+0000"
+    ],
+    "caseLastDecisionDate": [
+     "2009-01-06T23:00:00.000+0000"
+    ],
+    "caseOfficialJournalPublicationsPublishedDates": [
+     "2008-12-01T23:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_CASE"
+    ]
+   }
+  },
+  {
+   "reference": "M.9554",
+   "metadata": {
+    "caseNumber": [
+     "M.9554"
+    ],
+    "caseTitle": [
+     "ELANCO ANIMAL HEALTH / BAYER ANIMAL HEALTH DIVISION"
+    ],
+    "caseSectors": [
+     "NaceSectorsC_21_1"
+    ],
+    "caseType": [
+     "MergerCaseType1"
+    ],
+    "caseRegulation": [
+     "MERegulation2"
+    ],
+    "caseSimplified": [
+     "MEnormal"
+    ],
+    "caseNotificationDate": [
+     "2020-04-13T22:00:00.000+0000"
+    ],
+    "caseInitiationDate": [
+     "2019-08-26T22:00:00.000+0000"
+    ],
+    "caseDeadlineDate": [],
+    "caseLastDecisionDate": [
+     "2021-02-04T23:00:00.000+0000"
+    ],
+    "caseOfficialJournalPublicationsPublishedDates": [
+     "2020-04-22T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_CASE"
+    ]
+   }
+  }
+ ],
+ "decisions": [
+  {
+   "reference": "M.10483.AP-DEC{1E808003-00A1-454C-91CC-3D5B9B36E45D}",
+   "metadata": {
+    "caseNumber": [
+     "M.10483.AP"
+    ],
+    "decisionNumber": [
+     "{1E808003-00A1-454C-91CC-3D5B9B36E45D}"
+    ],
+    "decisionTypes": [
+     "DecisionType1465"
+    ],
+    "decisionAdoptionDate": [
+     "2023-07-11T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.10483.AP-DEC{41BA4920-FF99-4066-8FE9-1E40F879B810}",
+   "metadata": {
+    "caseNumber": [
+     "M.10483.AP"
+    ],
+    "decisionNumber": [
+     "{41BA4920-FF99-4066-8FE9-1E40F879B810}"
+    ],
+    "decisionTypes": [
+     "DecisionType2024201365"
+    ],
+    "decisionAdoptionDate": [
+     "2024-09-05T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.10483.AP-DEC{B97F0183-A8BB-4D5C-94B6-B3C952D45B3D}",
+   "metadata": {
+    "caseNumber": [
+     "M.10483.AP"
+    ],
+    "decisionNumber": [
+     "{B97F0183-A8BB-4D5C-94B6-B3C952D45B3D}"
+    ],
+    "decisionTypes": [
+     "DecisionType1475"
+    ],
+    "decisionAdoptionDate": [
+     "2022-07-18T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.11383-DEC{197E2DAB-10F4-483C-9513-B34291764EE0}",
+   "metadata": {
+    "caseNumber": [
+     "M.11383"
+    ],
+    "decisionNumber": [
+     "{197E2DAB-10F4-483C-9513-B34291764EE0}"
+    ],
+    "decisionTypes": [
+     "DecisionType201250"
+    ],
+    "decisionAdoptionDate": [
+     "2024-12-08T23:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.11383-DEC{5A386EFE-D8BB-4A38-9C99-4BB58D8F1DF5}",
+   "metadata": {
+    "caseNumber": [
+     "M.11383"
+    ],
+    "decisionNumber": [
+     "{5A386EFE-D8BB-4A38-9C99-4BB58D8F1DF5}"
+    ],
+    "decisionTypes": [
+     "DecisionType20212"
+    ],
+    "decisionAdoptionDate": [
+     "2024-06-25T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.11383-DEC{817BB0AF-C242-44C7-A2FA-96261F8D2E68}",
+   "metadata": {
+    "caseNumber": [
+     "M.11383"
+    ],
+    "decisionNumber": [
+     "{817BB0AF-C242-44C7-A2FA-96261F8D2E68}"
+    ],
+    "decisionTypes": [
+     "DecisionType201250"
+    ],
+    "decisionAdoptionDate": [
+     "2025-01-09T23:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.5393-DEC{537C01C2-22A9-44D0-ACF3-527BE433872D}",
+   "metadata": {
+    "caseNumber": [
+     "M.5393"
+    ],
+    "decisionNumber": [
+     "{537C01C2-22A9-44D0-ACF3-527BE433872D}"
+    ],
+    "decisionTypes": [
+     "DecisionType20310"
+    ],
+    "decisionAdoptionDate": [
+     "2009-01-06T23:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.9554-DEC{08B7C752-E7A6-42BF-88F8-68E92C901FBB}",
+   "metadata": {
+    "caseNumber": [
+     "M.9554"
+    ],
+    "decisionNumber": [
+     "{08B7C752-E7A6-42BF-88F8-68E92C901FBB}"
+    ],
+    "decisionTypes": [
+     "DecisionType20212"
+    ],
+    "decisionAdoptionDate": [
+     "2020-06-07T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.9554-DEC{41E90103-64A7-4675-A08E-FFC28EEF261E}",
+   "metadata": {
+    "caseNumber": [
+     "M.9554"
+    ],
+    "decisionNumber": [
+     "{41E90103-64A7-4675-A08E-FFC28EEF261E}"
+    ],
+    "decisionTypes": [
+     "DecisionType201250"
+    ],
+    "decisionAdoptionDate": [
+     "2020-07-08T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.9554-DEC{9626AF73-1607-4979-8482-B4A188AA40EA}",
+   "metadata": {
+    "caseNumber": [
+     "M.9554"
+    ],
+    "decisionNumber": [
+     "{9626AF73-1607-4979-8482-B4A188AA40EA}"
+    ],
+    "decisionTypes": [
+     "DecisionType201250"
+    ],
+    "decisionAdoptionDate": [
+     "2021-02-04T23:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.9554-DEC{C2BB0E97-EF01-4BF2-A347-9530464AB241}",
+   "metadata": {
+    "caseNumber": [
+     "M.9554"
+    ],
+    "decisionNumber": [
+     "{C2BB0E97-EF01-4BF2-A347-9530464AB241}"
+    ],
+    "decisionTypes": [
+     "DecisionType201250"
+    ],
+    "decisionAdoptionDate": [
+     "2020-07-19T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  },
+  {
+   "reference": "M.9554-DEC{FA773BA6-4245-4A02-BA0B-3569969F491E}",
+   "metadata": {
+    "caseNumber": [
+     "M.9554"
+    ],
+    "decisionNumber": [
+     "{FA773BA6-4245-4A02-BA0B-3569969F491E}"
+    ],
+    "decisionTypes": [
+     "DecisionType201250"
+    ],
+    "decisionAdoptionDate": [
+     "2020-07-08T22:00:00.000+0000"
+    ],
+    "metadataType": [
+     "METADATA_DECISION"
+    ]
+   }
+  }
+ ],
+ "refdata": {
+  "decision": {
+   "DecisionType20212": {
+    "code": "20212",
+    "description": "139/2004 Art. 6(1)(b) with conditions&obligations",
+    "pub": "Art. 6(1)(b) with conditions & obligations"
+   },
+   "DecisionType20310": {
+    "code": "20310",
+    "description": "139/2004 Art. 6(1)(b)",
+    "pub": "Art. 6(1)(b)"
+   },
+   "DecisionType201250": {
+    "code": "201250",
+    "description": "139/2004 Purchaser approval (Art. 6(1)(b) and 6(2))",
+    "pub": "Purchaser approval"
+   },
+   "DecisionType1475": {
+    "code": "1475",
+    "description": "139/2004 Art. 18 (Statement of Objections) (AddProc)",
+    "pub": "Art. 18 (Statement of Objections)"
+   },
+   "DecisionType2024201365": {
+    "code": "201365",
+    "description": "139/2004 Withdrawal of Art. 14 decision",
+    "pub": "Withdrawal of Art. 14 decision"
+   },
+   "DecisionType1465": {
+    "code": "1465",
+    "description": "139/2004 Art. 14 (AddProc)",
+    "pub": "Art. 14"
+   }
+  },
+  "case_type": {
+   "MergerCaseType1": {
+    "code": "Merger Case",
+    "description": "Merger",
+    "pub": ""
+   },
+   "MergerCaseType4": {
+    "code": "Additional Procedure case",
+    "description": "Additional Procedure",
+    "pub": ""
+   }
+  },
+  "nace": {
+   "NaceV2Sector_C_21.20": {
+    "code": "C.21.20",
+    "description": "Manufacture of pharmaceutical preparations",
+    "pub": "C.21.20 - Manufacture of pharmaceutical preparations"
+   },
+   "NaceSectorsG_46_4_6": {
+    "code": "G.46.46",
+    "description": "Wholesale of pharmaceutical goods",
+    "pub": "G.46.46 - Wholesale of pharmaceutical goods"
+   },
+   "NaceSectorsC_21": {
+    "code": "C.21",
+    "description": "Manufacture of basic pharmaceutical products and pharmaceutical preparations",
+    "pub": "C.21 - Manufacture of basic pharmaceutical products and pharmaceutical preparations"
+   },
+   "NaceSectorsC_21_2_0": {
+    "code": "C.21.20",
+    "description": "Manufacture of pharmaceutical preparations",
+    "pub": "C.21.20 - Manufacture of pharmaceutical preparations"
+   },
+   "NaceSectorsC_21_1": {
+    "code": "C.21.1",
+    "description": "Manufacture of basic pharmaceutical products",
+    "pub": "C.21.1 - Manufacture of basic pharmaceutical products"
+   }
+  },
+  "procedure": {
+   "MEsimplified": {
+    "code": "MEsimplified",
+    "description": "SIMPLIFIED_PROCEDURE",
+    "pub": "Simplified"
+   },
+   "MEnormal": {
+    "code": "MEnormal",
+    "description": "NORMAL_PROCEDURE",
+    "pub": "Normal"
+   }
+  }
+ }
+}

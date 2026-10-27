@@ -1,0 +1,38 @@
+{
+ "cik": "0000353278",
+ "name": "NOVO NORDISK A S",
+ "filings": {
+  "recent": {
+   "form": [
+    "20-F",
+    "6-K"
+   ],
+   "items": [
+    "",
+    ""
+   ],
+   "filingDate": [
+    "2026-02-04",
+    "2026-08-06"
+   ],
+   "reportDate": [
+    "2025-12-31",
+    "2026-08-06"
+   ],
+   "accessionNumber": [
+    "9999999999-26-000010",
+    "9999999999-26-000011"
+   ],
+   "primaryDocument": [
+    "a.htm",
+    "b.htm"
+   ],
+   "primaryDocDescription": [
+    "20-F",
+    "6-K"
+   ]
+  },
+  "files": []
+ },
+ "_note": "synthetic"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test label linkbase in the shape of a real company *_lab.xml (trimmed). -->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:labelLink xlink:role="http://www.xbrl.org/2003/role/link" xlink:type="extended">
+    <link:loc xlink:href="xx-20260628.xsd#xx_IbranceMember" xlink:label="loc_ibrance" xlink:type="locator"/>
+    <link:label xlink:label="lab_ibrance" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Ibrance [Member]</link:label>
+    <link:label xlink:label="lab_ibrance_terse" xlink:role="http://www.xbrl.org/2003/role/terseLabel" xlink:type="resource" xml:lang="en-US">Ibrance</link:label>
+    <link:labelArc xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_ibrance" xlink:to="lab_ibrance" xlink:type="arc"/>
+    <link:labelArc xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_ibrance" xlink:to="lab_ibrance_terse" xlink:type="arc"/>
+    <link:loc xlink:href="https://xbrl.fasb.org/us-gaap/2026/elts/us-gaap-2026.xsd#us-gaap_ProductMember" xlink:label="loc_product" xlink:type="locator"/>
+    <link:label xlink:label="lab_product" xlink:role="http://www.xbrl.org/2003/role/label" xlink:type="resource" xml:lang="en-US">Product [Member]</link:label>
+    <link:labelArc xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_product" xlink:to="lab_product" xlink:type="arc"/>
+  </link:labelLink>
+</link:linkbase>

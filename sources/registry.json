@@ -3651,6 +3651,229 @@
     "obs_status": "Observation status, as published (usually empty)",
     "last_updated": "Date the World Bank last updated WDI, as given in the API reply"
    }
+  },
+  "sec_product_revenue": {
+   "name": "SEC EDGAR XBRL: revenue by product, large pharma, biotech and medtech companies (10-K, 10-Q, 20-F)",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "endpoint": "https://data.sec.gov/submissions/CIK##########.json (latest periodic reports) and the XBRL instance and label files of each report under https://www.sec.gov/Archives/edgar/data/{cik}/{accession}/ (index.json, *_htm.xml, *_lab.xml)",
+   "licence": "Public information, no SEC permission needed (SEC privacy and website policies, \"Dissemination\": \"Information presented on sec.gov is considered public information and may be copied or further distributed by users of the web site without the SEC's permission. Please consider appropriate citation to the SEC as the source.\"). Company filings are U.S. federal public records; XBRL financial data is facts, which carry no copyright. The SEC seal, logos and the EDGAR name are not used.",
+   "licence_url": "https://www.sec.gov/about/privacy-information",
+   "licence_notes": [
+    "SEC fair access: \"Current guidelines limit each user to a total of no more than 10 requests per second, regardless of the number of machines used to submit requests.\" Airmid sends at most 4 requests a second with a User-Agent naming Priya Life Science and a contact address (https://www.sec.gov/about/developer-resources).",
+    "Figures are as the company tagged them in its filing; Airmid does not check them against the filing text. Not endorsed by the SEC."
+   ],
+   "attribution": "Source: U.S. Securities and Exchange Commission, EDGAR (company XBRL filings), retrieved {retrieved_date}. Product revenue facts selected and de-duplicated by Airmid Éireann.",
+   "fields_kept": [
+    "company",
+    "company_slug",
+    "cik",
+    "concept",
+    "axis",
+    "member",
+    "member_label",
+    "geography",
+    "other_dimensions",
+    "period_start",
+    "period_end",
+    "period_months",
+    "value",
+    "unit",
+    "decimals",
+    "form",
+    "filing_fiscal_year",
+    "filing_fiscal_period",
+    "accession",
+    "filed",
+    "filing_url"
+   ],
+   "fields_never": [
+    "filing text, signatures and names of officers or directors (documents are not read beyond the XBRL facts)",
+    "revenue facts without a product dimension (company totals are in the companyfacts API, not here)",
+    "non-revenue facts (costs, assets, guidance)"
+   ],
+   "status": "approved",
+   "field_docs": {
+    "company": "SEC registrant name, from the submissions API",
+    "company_slug": "Priya Life Science company key (the company list is fixed in the collector)",
+    "cik": "SEC Central Index Key, 10 digits",
+    "concept": "XBRL revenue element the fact is tagged with (us-gaap or ifrs-full), e.g. us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+    "axis": "Product dimension of the fact: srt:ProductOrServiceAxis, ifrs-full:ProductsAndServicesAxis, or a company axis whose name contains 'Product'",
+    "member": "Product member exactly as tagged (QName). Company members (e.g. pfe:IbranceMember) are usually a medicine or product group; standard members (us-gaap:ProductMember, us-gaap:RoyaltyMember) are revenue types",
+    "member_label": "The company's own standard label for the member, from the filing's label linkbase (e.g. 'Ibrance [Member]'); empty when the filing gives none",
+    "geography": "Member of the geographical axis on the same fact (e.g. country:US, srt:NonUsMember); empty when the fact has no geography (usually the worldwide figure)",
+    "other_dimensions": "All other dimensions on the fact, as 'axis=member' (geography, segment, reporting unit, consolidation item)",
+    "period_start": "First day of the reporting period (YYYY-MM-DD)",
+    "period_end": "Last day of the reporting period (YYYY-MM-DD)",
+    "period_months": "Length of the period in months, rounded (3 = quarter, 6/9 = year to date, 12 = year)",
+    "value": "Amount as tagged, in the unit given (not scaled; 'decimals' gives the rounding)",
+    "unit": "Unit of the value, e.g. iso4217:USD, iso4217:DKK, iso4217:GBP",
+    "decimals": "XBRL decimals attribute: -6 means rounded to millions",
+    "form": "Form of the report the value was taken from (the most recently filed report for that period)",
+    "filing_fiscal_year": "dei:DocumentFiscalYearFocus of that report",
+    "filing_fiscal_period": "dei:DocumentFiscalPeriodFocus of that report (Q1, Q2, Q3, FY)",
+    "accession": "SEC accession number of that report",
+    "filed": "Filing date of that report (YYYY-MM-DD)",
+    "filing_url": "Folder of that report on sec.gov"
+   }
+  },
+  "sec_8k_deals": {
+   "name": "SEC EDGAR: Form 8-K filings with Item 1.01 (material definitive agreement) or Item 2.01 (completed acquisition or disposal), large pharma, biotech and medtech companies",
+   "publisher": "U.S. Securities and Exchange Commission",
+   "endpoint": "https://data.sec.gov/submissions/CIK##########.json (filing list with form, dates and 8-K item numbers)",
+   "licence": "Public information, no SEC permission needed (SEC privacy and website policies, \"Dissemination\": \"Information presented on sec.gov is considered public information and may be copied or further distributed by users of the web site without the SEC's permission. Please consider appropriate citation to the SEC as the source.\"). Company filings are U.S. federal public records; XBRL financial data is facts, which carry no copyright. The SEC seal, logos and the EDGAR name are not used.",
+   "licence_url": "https://www.sec.gov/about/privacy-information",
+   "licence_notes": [
+    "SEC fair access: \"Current guidelines limit each user to a total of no more than 10 requests per second, regardless of the number of machines used to submit requests.\" Airmid sends at most 4 requests a second with a User-Agent naming Priya Life Science and a contact address (https://www.sec.gov/about/developer-resources).",
+    "Item 1.01 covers any material definitive agreement, including financing agreements; the item number does not say what kind of agreement it is. Read the filing before describing it. Not endorsed by the SEC."
+   ],
+   "attribution": "Source: U.S. Securities and Exchange Commission, EDGAR submissions API, retrieved {retrieved_date}. Filtered to 8-K items 1.01 and 2.01 by Airmid Éireann.",
+   "fields_kept": [
+    "company",
+    "company_slug",
+    "cik",
+    "form",
+    "items",
+    "item_1_01",
+    "item_2_01",
+    "filing_date",
+    "report_date",
+    "accession",
+    "primary_document_description",
+    "filing_url",
+    "document_url"
+   ],
+   "fields_never": [
+    "document text of the filings and exhibits",
+    "names of individuals (Item 5.02 officer changes are out of scope)",
+    "6-K reports of foreign private issuers (no item numbers)"
+   ],
+   "status": "approved",
+   "field_docs": {
+    "company": "SEC registrant name, from the submissions API",
+    "company_slug": "Priya Life Science company key (the company list is fixed in the collector)",
+    "cik": "SEC Central Index Key, 10 digits",
+    "form": "8-K or 8-K/A (amendment)",
+    "items": "All 8-K item numbers the filer declared for this filing, e.g. 1.01, 2.03, 9.01",
+    "item_1_01": "yes when Item 1.01 Entry into a Material Definitive Agreement is declared",
+    "item_2_01": "yes when Item 2.01 Completion of Acquisition or Disposition of Assets is declared",
+    "filing_date": "Date filed with the SEC (YYYY-MM-DD)",
+    "report_date": "Date of the earliest event reported (YYYY-MM-DD), as given by the filer",
+    "accession": "SEC accession number",
+    "primary_document_description": "Description of the primary document, as given in EDGAR",
+    "filing_url": "Folder of the filing on sec.gov",
+    "document_url": "Primary document of the filing on sec.gov"
+   }
+  },
+  "ec_merger_cases_pharma": {
+   "name": "European Commission merger cases in the pharmaceutical sector (NACE C.21, G.46.46, G.47.73), with decisions",
+   "publisher": "European Commission, Directorate-General for Competition",
+   "endpoint": "https://webgate.ec.europa.eu/es/search-api/rest/search (the European Commission Search API behind https://competition-cases.ec.europa.eu/search, public dataset CS_PROD_ODSE_PROD; case and decision metadata) and https://api.tech.ec.europa.eu/casereferencedata/1/api/v1 (code labels, with the access value the case search site publishes in https://competition-cases.ec.europa.eu/assets/env-json-config.json)",
+   "licence": "CC BY 4.0, Commission reuse policy (Commission Decision 2011/833/EU). Commission legal notice: \"Unless otherwise indicated (e.g. in individual copyright notices), content owned by the EU on this website is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence. This means that reuse is allowed, provided appropriate credit is given and changes are indicated.\"",
+   "licence_url": "https://commission.europa.eu/legal-notice_en",
+   "licence_urls": {
+    "cc_by_4_0": "https://creativecommons.org/licenses/by/4.0/",
+    "decision_2011_833_eu": "https://eur-lex.europa.eu/eli/dec/2011/833/oj"
+   },
+   "licence_notes": [
+    "© European Union, 1995-2026. Changes by Airmid Éireann: cases filtered to pharmaceutical NACE sectors, decisions joined to cases, codes replaced by the Commission's own labels, dates converted to Brussels calendar dates.",
+    "The Search API is the one the public case search site uses; it has no separate published terms. The Commission assigns NACE sectors per case; deals coded only under other sectors are not included."
+   ],
+   "attribution": "Source: European Commission, DG Competition case search (competition-cases.ec.europa.eu), retrieved {retrieved_date}, CC BY 4.0. Filtered and reshaped by Airmid Éireann.",
+   "fields_kept": [
+    "case_number",
+    "title",
+    "title_withheld",
+    "nace_codes",
+    "nace_labels",
+    "case_type",
+    "regulation",
+    "procedure",
+    "notification_date",
+    "initiation_date",
+    "deadline_date",
+    "last_decision_date",
+    "decision_count",
+    "decision_dates",
+    "decision_types",
+    "oj_publication_dates",
+    "case_url"
+   ],
+   "fields_never": [
+    "decision texts and other case documents",
+    "case-team names and contact details",
+    "titles that read as naming a natural person (blanked, title_withheld = yes)"
+   ],
+   "status": "approved",
+   "field_docs": {
+    "case_number": "Commission case number, e.g. M.11383",
+    "title": "Case title as published (the undertakings concerned, e.g. 'COOPER / VIATRIS (EUROPEAN OTC BUSINESS)'); empty when withheld",
+    "title_withheld": "yes when Airmid blanked the title because it may name a natural person (honorific such as Mr, Dr); else no",
+    "nace_codes": "NACE codes the Commission assigned to the case (e.g. C.21.20)",
+    "nace_labels": "Labels of those NACE codes, from the Commission's reference data",
+    "case_type": "Merger, Additional Procedure (e.g. Art. 14 fines, interim measures) or other type, as labelled by the Commission",
+    "regulation": "Merger regulation the case falls under: Council Regulation (EC) No 139/2004 or Council Regulation (EEC) No 4064/89",
+    "procedure": "Normal, Simplified or Super-simplified procedure",
+    "notification_date": "Date the concentration was notified (Brussels date, YYYY-MM-DD); empty if not notified",
+    "initiation_date": "Date the case was opened (pre-notification contact or referral), as given",
+    "deadline_date": "Legal deadline as given by the Commission (for a closed case, the last deadline that applied); empty when none",
+    "last_decision_date": "Date of the latest decision in the case",
+    "decision_count": "Number of decisions published for the case",
+    "decision_dates": "Adoption date of each decision, oldest first",
+    "decision_types": "Type of each decision, same order (e.g. 'Art. 6(1)(b)' clearance, 'Art. 6(1)(b) with conditions & obligations', 'Art. 8(2) with conditions & obligations', 'Withdrawn')",
+    "oj_publication_dates": "Dates of Official Journal publications for the case",
+    "case_url": "Case page on competition-cases.ec.europa.eu"
+   }
+  },
+  "ccpc_merger_notifications": {
+   "name": "Competition and Consumer Protection Commission (Ireland): merger notifications",
+   "publisher": "Competition and Consumer Protection Commission",
+   "endpoint": "https://www.ccpc.ie/enforcement-and-regulation/mergers/find-a-merger-case",
+   "status": "blocked",
+   "reason": "No collector. The CCPC legal statement (https://www.ccpc.ie/legal) licenses website information under CC BY 4.0 but also says \"The content may not be used in a commercial context or for any commercial purposes without the prior written approval of the CCPC.\" Ask opendata@ccpc.ie in writing, under the Open Data Directive, before any reuse."
+  },
+  "pcrs_reimbursable_items": {
+   "name": "Ireland (HSE-PCRS): reimbursable items under the State schemes, with reimbursement and reference prices",
+   "publisher": "Health Service Executive, Primary Care Reimbursement Service (HSE-PCRS)",
+   "endpoint": "https://www.sspcrs.ie/druglist/search/category/{0,1,3,4,5,6,7,8,9}.csv (the Download button of the public page \"Search Reimbursable Items\", https://www.sspcrs.ie/druglist/pub); no login, cookie or token",
+   "licence": "Published with the publisher's written permission. HSE-PCRS (David Stratton, Business Manager, by email from PCRS.ReportQueries@hse.ie, 6 October 2026, in reply to a request that described Airmid, the website's advertising and possible paid services): \"HSE PCRS only requires that you reference your sources, but we take no responsibility for anything you publish. We will not provide you directly with data, but you may download and publish from our website.\" The page itself says: \"The information available on this site cannot be used in whole or in part for any commercial purpose without the express written consent from the Primary Care Reimbursement Service of the Health Service Executive.\" That email is the written consent. Copyright HSE. Reusers outside Airmid should check the PCRS page terms for their own use.",
+   "licence_url": "https://www.sspcrs.ie/druglist/pub",
+   "attribution": "Source: Health Service Executive, Primary Care Reimbursement Service (HSE-PCRS), Search Reimbursable Items (https://www.sspcrs.ie/druglist/pub), retrieved {retrieved_date}. Published with the permission of HSE-PCRS, which takes no responsibility for this publication and does not endorse Airmid Éireann. Changed by Airmid Éireann: one row per item code with the lists it appears on; a published price of 0.0 is shown as blank.",
+   "licence_notes": [
+    "HSE-PCRS takes no responsibility for anything published from its data and does not endorse Airmid Éireann.",
+    "The PCRS page says its information cannot be used in whole or in part for any commercial purpose without the express written consent of HSE-PCRS. Airmid publishes it with that consent (email of 6 October 2026); anyone reusing it commercially should ask PCRS themselves.",
+    "PCRS: the lists are for contractors; contractors should continue to refer to existing information sources for definitive rules on prescribing and dispensing eligibility.",
+    "The High Tech Drugs list publishes no price (0.0): those medicines are paid for through the separate High Tech arrangement. Airmid shows these prices as blank, not zero."
+   ],
+   "fields_kept": [
+    "code",
+    "item",
+    "name",
+    "pack_size",
+    "strength",
+    "inn",
+    "reimbursement_price_eur",
+    "reference_price_eur",
+    "reference_priced",
+    "dental",
+    "categories"
+   ],
+   "fields_never": [
+    "Non Proprietary Name (always empty in the published lists)"
+   ],
+   "status": "approved",
+   "field_docs": {
+    "code": "PCRS item code (the code contractors claim against)",
+    "item": "Item description as published (\"Drug Name\": product, form, strength, pack)",
+    "name": "Short product name as published",
+    "pack_size": "Pack size as published",
+    "strength": "Strength as published (\"Strength Measure\")",
+    "inn": "International non-proprietary name (active substance) or product group, as published",
+    "reimbursement_price_eur": "Reimbursement price in euro, as published; blank where the list publishes 0.0 (High Tech Drugs, paid through a separate arrangement)",
+    "reference_price_eur": "Reference price in euro for reference-priced (interchangeable) medicines; blank where the list shows 0.0",
+    "reference_priced": "yes if the item is reference priced (a set reimbursement price for a group of interchangeable medicines), else no",
+    "dental": "yes if PCRS marks the item as a dental item (column \"Dental\"), else no",
+    "categories": "The PCRS lists the item appears on, separated by \"; \" (Drugs, Diagnostic Agents, Dressings, Clinical Nutritional Products, Ostomy Appliances, Urinary Appliances, Syringes Needles and Lancets, High Tech Drugs); blank for items on the full list only"
+   }
   }
  }
 }

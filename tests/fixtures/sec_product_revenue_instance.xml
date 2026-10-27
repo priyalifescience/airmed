@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test instance modelled on a real 10-Q extracted XBRL instance (Pfizer, 2026-06-28; AbbVie, 2026-06-30).
+     Prefixes are deliberately unusual (gaap, s) to test normalisation to us-gaap and srt. Values are illustrative. -->
+<xbrl
+  xmlns="http://www.xbrl.org/2003/instance"
+  xmlns:country="http://xbrl.sec.gov/country/2026"
+  xmlns:dei="http://xbrl.sec.gov/dei/2026"
+  xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+  xmlns:xx="http://www.example.com/20260628"
+  xmlns:s="http://fasb.org/srt/2026"
+  xmlns:gaap="http://fasb.org/us-gaap/2026"
+  xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <context id="c-1">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier></entity>
+        <period><startDate>2026-01-01</startDate><endDate>2026-06-28</endDate></period>
+    </context>
+    <context id="c-q-ibrance">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier>
+            <segment>
+                <xbrldi:explicitMember dimension="s:ProductOrServiceAxis">xx:IbranceMember</xbrldi:explicitMember>
+                <xbrldi:explicitMember dimension="gaap:StatementBusinessSegmentsAxis">xx:BiopharmaSegmentMember</xbrldi:explicitMember>
+            </segment>
+        </entity>
+        <period><startDate>2026-03-30</startDate><endDate>2026-06-28</endDate></period>
+    </context>
+    <context id="c-q-ibrance-py">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier>
+            <segment>
+                <xbrldi:explicitMember dimension="s:ProductOrServiceAxis">xx:IbranceMember</xbrldi:explicitMember>
+                <xbrldi:explicitMember dimension="gaap:StatementBusinessSegmentsAxis">xx:BiopharmaSegmentMember</xbrldi:explicitMember>
+            </segment>
+        </entity>
+        <period><startDate>2025-03-31</startDate><endDate>2025-06-29</endDate></period>
+    </context>
+    <context id="c-ytd-ibrance-us">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier>
+            <segment>
+                <xbrldi:explicitMember dimension="s:ProductOrServiceAxis">xx:IbranceMember</xbrldi:explicitMember>
+                <xbrldi:explicitMember dimension="s:StatementGeographicalAxis">country:US</xbrldi:explicitMember>
+            </segment>
+        </entity>
+        <period><startDate>2026-01-01</startDate><endDate>2026-06-28</endDate></period>
+    </context>
+    <context id="c-q-skyrizi">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier>
+            <segment>
+                <xbrldi:explicitMember dimension="xx:KeyProductPortfolioAxis">xx:ImmunologyMember</xbrldi:explicitMember>
+                <xbrldi:explicitMember dimension="s:ProductOrServiceAxis">xx:SKYRIZIMember</xbrldi:explicitMember>
+            </segment>
+        </entity>
+        <period><startDate>2026-03-30</startDate><endDate>2026-06-28</endDate></period>
+    </context>
+    <context id="c-q-portfolio-only">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier>
+            <segment>
+                <xbrldi:explicitMember dimension="xx:KeyProductPortfolioAxis">xx:ImmunologyMember</xbrldi:explicitMember>
+            </segment>
+        </entity>
+        <period><startDate>2026-03-30</startDate><endDate>2026-06-28</endDate></period>
+    </context>
+    <context id="c-q-product-type">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier>
+            <segment>
+                <xbrldi:explicitMember dimension="s:ProductOrServiceAxis">gaap:ProductMember</xbrldi:explicitMember>
+            </segment>
+        </entity>
+        <period><startDate>2026-03-30</startDate><endDate>2026-06-28</endDate></period>
+    </context>
+    <context id="c-instant-ibrance">
+        <entity><identifier scheme="http://www.sec.gov/CIK">0000000001</identifier>
+            <segment>
+                <xbrldi:explicitMember dimension="s:ProductOrServiceAxis">xx:IbranceMember</xbrldi:explicitMember>
+            </segment>
+        </entity>
+        <period><instant>2026-06-28</instant></period>
+    </context>
+    <unit id="usd"><measure>iso4217:USD</measure></unit>
+    <dei:DocumentFiscalYearFocus contextRef="c-1">2026</dei:DocumentFiscalYearFocus>
+    <dei:DocumentFiscalPeriodFocus contextRef="c-1">Q2</dei:DocumentFiscalPeriodFocus>
+    <!-- company total: no product dimension, not kept -->
+    <gaap:RevenueFromContractWithCustomerExcludingAssessedTax contextRef="c-1" decimals="-6" unitRef="usd">29000000000</gaap:RevenueFromContractWithCustomerExcludingAssessedTax>
+    <gaap:RevenueFromContractWithCustomerExcludingAssessedTax contextRef="c-q-ibrance" decimals="-6" unitRef="usd">1058000000</gaap:RevenueFromContractWithCustomerExcludingAssessedTax>
+    <gaap:RevenueFromContractWithCustomerExcludingAssessedTax contextRef="c-q-ibrance-py" decimals="-6" unitRef="usd">1049000000</gaap:RevenueFromContractWithCustomerExcludingAssessedTax>
+    <gaap:Revenues contextRef="c-ytd-ibrance-us" decimals="-6" unitRef="usd">1200000000</gaap:Revenues>
+    <gaap:RevenueFromContractWithCustomerExcludingAssessedTax contextRef="c-q-skyrizi" decimals="-6" unitRef="usd">4767000000</gaap:RevenueFromContractWithCustomerExcludingAssessedTax>
+    <!-- company product axis on its own: accepted as the product axis -->
+    <gaap:RevenueFromContractWithCustomerExcludingAssessedTax contextRef="c-q-portfolio-only" decimals="-6" unitRef="usd">7000000000</gaap:RevenueFromContractWithCustomerExcludingAssessedTax>
+    <gaap:RevenueFromContractWithCustomerExcludingAssessedTax contextRef="c-q-product-type" decimals="-6" unitRef="usd">11863000000</gaap:RevenueFromContractWithCustomerExcludingAssessedTax>
+    <!-- not revenue: not kept -->
+    <gaap:CostOfGoodsAndServicesSold contextRef="c-q-ibrance" decimals="-6" unitRef="usd">100000000</gaap:CostOfGoodsAndServicesSold>
+    <!-- nil and instant: not kept -->
+    <gaap:Revenues contextRef="c-q-ibrance" xsi:nil="true" unitRef="usd"/>
+    <gaap:Revenues contextRef="c-instant-ibrance" decimals="-6" unitRef="usd">5</gaap:Revenues>
+</xbrl>
