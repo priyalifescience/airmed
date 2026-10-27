@@ -18,6 +18,9 @@ identifiers:
     value: "10.5281/zenodo.23336432"
     description: "Concept DOI: all versions, archived on Zenodo"
   - type: doi
+    value: "10.5281/zenodo.23688829"
+    description: "Version 1.5.0 (71 datasets: HSE-PCRS prices, product revenue, deal filings and EU pharma mergers)"
+  - type: doi
     value: "10.5281/zenodo.23532354"
     description: "Version 1.4.0 (67 datasets: Ireland compared with Europe and the world)"
   - type: doi
