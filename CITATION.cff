@@ -18,6 +18,9 @@ identifiers:
     value: "10.5281/zenodo.23336432"
     description: "Concept DOI: all versions, archived on Zenodo"
   - type: doi
+    value: "10.5281/zenodo.24032674"
+    description: "Version 1.6.0 (76 datasets: India and China trials, Swiss medicine prices, Czech medicines and supply notices)"
+  - type: doi
     value: "10.5281/zenodo.23688829"
     description: "Version 1.5.0 (71 datasets: HSE-PCRS prices, product revenue, deal filings and EU pharma mergers)"
   - type: doi
