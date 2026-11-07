@@ -12,7 +12,7 @@ from pathlib import Path
 
 BASE = "https://priyalifescience.com/opendata/airmid/v1/"
 GROUPS = [
-    ("Clinical trials", ["ctgov_ireland", "ctgov_europe"]),
+    ("Clinical trials", ["ctgov_ireland", "ctgov_europe", "ctgov_india", "ctgov_china"]),
     ("Medicines and approvals", ["hpra_medicines", "ema_medicines", "ema_orphans", "eu_orphan_exclusivity", "ema_prime",
                                  "ema_paediatric_plans", "fda_approvals", "fda_orange_book", "fda_purple_book",
                                  "hc_approvals", "hc_drug_product_database", "dailymed_spl_index"]),
@@ -38,6 +38,7 @@ GROUPS = [
                               "sg_hsa_registered_products", "nz_pharmac_schedule", "worldbank_health_indicators"]),
     ("Prices, deals and mergers", ["pcrs_reimbursable_items", "sec_product_revenue", "sec_8k_deals",
                                    "ec_merger_cases_pharma"]),
+    ("Switzerland and the Czech Republic", ["ch_specialities_list", "cz_sukl_medicines", "cz_sukl_supply_notices"]),
 ]
 
 

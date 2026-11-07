@@ -27,7 +27,9 @@ ORG_WORDS = re.compile(
     r"karolinska|hospices|rigshospital|sjukhus|sykehus|ziekenhuis|szpital|nemocnic|ltd|limited|\binc\b|gmbh|"
     r"\bag\b|s\.?p\.?a\b|\bs\.?a\.?\b|\bsas\b|\bbv\b|b\.v\.|\bab\b|\bas\b|\boy\b|\bplc\b|\bllc\b|\bcorp|company|"
     r"\bnv\b|s\.?r\.?l\b|sarl|\bkft\b|\bdac\b|technolog|diagnost|device|system|solution|innovation|regional|"
-    r"national|county|region|\buz\b|\bumc\b|\bchu\b|\bchru\b|\bihu\b|\birccs\b", re.I)
+    r"national|county|region|\buz\b|\bumc\b|\bchu\b|\bchru\b|\bihu\b|\birccs\b|"
+    r"initiative|islamia|neglected disease|\bpath\b|\bdndi\b|\baiims\b|\bpgims\b|\bpgimer\b|\bicmr\b|aurolab|"
+    r"sangath|columbia asia", re.I)
 
 
 def sponsor_or_blank(name: str, cls: str) -> str:

@@ -1,0 +1,147 @@
+{
+ "totalCount": 3,
+ "studies": [
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT06492395",
+     "briefTitle": "Lenvatinib Plus DEB-TACE and HAIC vs. Lenvatinib Plus DEB-TACE for Large HCC With PVTT"
+    },
+    "statusModule": {
+     "overallStatus": "RECRUITING",
+     "startDateStruct": {
+      "date": "2024-08-01"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2025-01-29"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "Second Affiliated Hospital of Guangzhou Medical University",
+      "class": "OTHER"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Hepatocellular Carcinoma Non-resectable"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "PHASE3"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "China"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT07673887",
+     "briefTitle": "A Study of ASP2138 Together With Chemotherapy and Pembrolizumab in Adults With Gastric Cancer"
+    },
+    "statusModule": {
+     "overallStatus": "RECRUITING",
+     "startDateStruct": {
+      "date": "2026-07-28"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2026-10-22"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "Astellas Pharma Global Development, Inc.",
+      "class": "INDUSTRY"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Gastric Adenocarcinoma",
+      "Gastroesophageal Junction (GEJ) Adenocarcinoma"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "PHASE3"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "United States"
+      },
+      {
+       "country": "China"
+      },
+      {
+       "country": "China"
+      },
+      {
+       "country": "Japan"
+      },
+      {
+       "country": "Japan"
+      },
+      {
+       "country": "Japan"
+      },
+      {
+       "country": "Japan"
+      },
+      {
+       "country": "Puerto Rico"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT06211439",
+     "briefTitle": "Transcranial Alternating Current Stimulation in Patients With Disorders of Consciousness"
+    },
+    "statusModule": {
+     "overallStatus": "COMPLETED",
+     "startDateStruct": {
+      "date": "2024-01-12"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2026-07-30"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "First Affiliated Hospital of Zhejiang University",
+      "class": "OTHER"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Consciousness Disorders"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "NA"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "China"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

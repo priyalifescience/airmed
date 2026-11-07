@@ -1,0 +1,318 @@
+{
+"total": 3,
+"items": [
+{
+"trademark": "3TC",
+"medicinalProducts": [
+{
+"mpid": "c1b2760a-3d73-4c96-8fcf-fb61c15de086",
+"trademark": "3TC",
+"dosageFormAndStrength": "Filmtabl 150 mg",
+"changeType": null,
+"comment": null,
+"costShare": 10,
+"delistingReason": null,
+"ingredients": [
+{
+"substance": "Lamivudinum",
+"quantity": "150",
+"unit": "mg"
+}
+],
+"itCode": {
+"code": "08.03.",
+"description": "Mittel gegen Viren",
+"limitations": []
+},
+"itcLimitationValid": true,
+"limitations": [],
+"packagedMedicinalProducts": [
+{
+"pcid": "7f41756a-7b21-4f37-a489-12dd3a251e86",
+"packSize": "60 Stk",
+"changeType": null,
+"delistingReason": null,
+"exFactoryPrice": 162.73,
+"expiration": false,
+"firstListed": "1996-03-15",
+"fophDossierNumber": "16577",
+"gtin": "7680536620137",
+"itcLimitationValid": null,
+"lastPriceChange": "2025-12-01",
+"lastPriceChangeType": "3JUEBERPRUEF",
+"legalStatusOfSupply": "A",
+"limitation": false,
+"limitations": [],
+"listType": "SL",
+"marketingAuthorisationNumbers": [
+"53662013"
+],
+"points": null,
+"priceModel": false,
+"retailPrice": 191.9,
+"uniformWholesaleMargin": true,
+"validFrom": "1996-03-15",
+"validTo": null
+}
+],
+"productType": "O"
+},
+{
+"mpid": "75ad2f23-5620-45fe-be0e-4284a72240be",
+"trademark": "3TC",
+"dosageFormAndStrength": "Filmtabl 300 mg",
+"changeType": null,
+"comment": null,
+"costShare": 10,
+"delistingReason": null,
+"ingredients": [
+{
+"substance": "Lamivudinum",
+"quantity": "300",
+"unit": "mg"
+}
+],
+"itCode": {
+"code": "08.03.",
+"description": "Mittel gegen Viren",
+"limitations": []
+},
+"itcLimitationValid": true,
+"limitations": [],
+"packagedMedicinalProducts": [
+{
+"pcid": "1e9b9633-5472-4319-bf20-b0eec698800d",
+"packSize": "30 Stk",
+"changeType": null,
+"delistingReason": null,
+"exFactoryPrice": 162.73,
+"expiration": false,
+"firstListed": "2004-11-01",
+"fophDossierNumber": "16577",
+"gtin": "7680536620212",
+"itcLimitationValid": null,
+"lastPriceChange": "2025-12-01",
+"lastPriceChangeType": "3JUEBERPRUEF",
+"legalStatusOfSupply": "A",
+"limitation": false,
+"limitations": [],
+"listType": "SL",
+"marketingAuthorisationNumbers": [
+"53662021"
+],
+"points": null,
+"priceModel": false,
+"retailPrice": 191.9,
+"uniformWholesaleMargin": true,
+"validFrom": "2004-11-01",
+"validTo": null
+}
+],
+"productType": "O"
+},
+{
+"mpid": "cde970e1-d480-49aa-8d70-101940addc4f",
+"trademark": "3TC",
+"dosageFormAndStrength": "Trink Lös 10 mg/ml o Alkohol",
+"changeType": null,
+"comment": null,
+"costShare": 10,
+"delistingReason": null,
+"ingredients": [
+{
+"substance": "Lamivudinum",
+"quantity": "150",
+"unit": "mg"
+}
+],
+"itCode": {
+"code": "08.03.",
+"description": "Mittel gegen Viren",
+"limitations": []
+},
+"itcLimitationValid": true,
+"limitations": [],
+"packagedMedicinalProducts": [
+{
+"pcid": "520bedbf-57e1-41f3-8e9a-044c1da1f780",
+"packSize": "240 ml",
+"changeType": null,
+"delistingReason": null,
+"exFactoryPrice": 50.28,
+"expiration": false,
+"firstListed": "1996-03-15",
+"fophDossierNumber": "16578",
+"gtin": "7680536630365",
+"itcLimitationValid": null,
+"lastPriceChange": "2025-12-01",
+"lastPriceChangeType": "3JUEBERPRUEF",
+"legalStatusOfSupply": "A",
+"limitation": false,
+"limitations": [],
+"listType": "SL",
+"marketingAuthorisationNumbers": [
+"53663036"
+],
+"points": null,
+"priceModel": false,
+"retailPrice": 71.1,
+"uniformWholesaleMargin": false,
+"validFrom": "1996-03-15",
+"validTo": null
+}
+],
+"productType": null
+}
+],
+"atcCode": "J05AF05",
+"marketingAuthorisationHolder": {
+"id": "79b0e689-cc8a-471f-889e-8b5c11aa572c",
+"name": "ViiV Healthcare GmbH",
+"gln": "7601001392175"
+},
+"substances": [
+"Lamivudinum"
+]
+},
+{
+"trademark": "Abacavir Lamivudin Sandoz",
+"medicinalProducts": [
+{
+"mpid": "cb220d04-edd5-4bfd-bd77-008f4883d431",
+"trademark": "Abacavir Lamivudin Sandoz",
+"dosageFormAndStrength": "Filmtabl 600/300mg",
+"changeType": null,
+"comment": null,
+"costShare": 10,
+"delistingReason": null,
+"ingredients": [
+{
+"substance": "Abacavirum",
+"quantity": "600",
+"unit": "mg"
+},
+{
+"substance": "Lamivudinum",
+"quantity": "300",
+"unit": "mg"
+}
+],
+"itCode": {
+"code": "08.03.",
+"description": "Mittel gegen Viren",
+"limitations": []
+},
+"itcLimitationValid": true,
+"limitations": [],
+"packagedMedicinalProducts": [
+{
+"pcid": "b243184f-f626-4a70-ad02-818b601a718c",
+"packSize": "Blist 30 Stk",
+"changeType": null,
+"delistingReason": null,
+"exFactoryPrice": 232.22,
+"expiration": false,
+"firstListed": "2020-09-01",
+"fophDossierNumber": "20759",
+"gtin": "7680666870013",
+"itcLimitationValid": null,
+"lastPriceChange": "2025-12-01",
+"lastPriceChangeType": "3JUEBERPRUEF",
+"legalStatusOfSupply": "A",
+"limitation": false,
+"limitations": [],
+"listType": "SL",
+"marketingAuthorisationNumbers": [
+"66687001"
+],
+"points": null,
+"priceModel": false,
+"retailPrice": 268.95,
+"uniformWholesaleMargin": true,
+"validFrom": "2020-09-01",
+"validTo": null
+}
+],
+"productType": "G"
+}
+],
+"atcCode": "J05AR02",
+"marketingAuthorisationHolder": {
+"id": "c451cee9-e077-4135-8980-b03fa87f15d9",
+"name": "Sandoz Pharmaceuticals AG",
+"gln": "7601001029439"
+},
+"substances": [
+"Abacavirum",
+"Lamivudinum"
+]
+},
+{
+"trademark": "Abasaglar",
+"medicinalProducts": [
+{
+"mpid": "2ec1f3f5-ef71-4050-9b64-a0ffd67f866a",
+"trademark": "Abasaglar",
+"dosageFormAndStrength": "Inj Lös 100 E/ml KwikPen",
+"changeType": null,
+"comment": null,
+"costShare": 10,
+"delistingReason": null,
+"ingredients": [
+{
+"substance": "Insulinum glarginum",
+"quantity": "100",
+"unit": "U"
+}
+],
+"itCode": {
+"code": "07.06.10.",
+"description": "Insuline",
+"limitations": []
+},
+"itcLimitationValid": true,
+"limitations": [],
+"packagedMedicinalProducts": [
+{
+"pcid": "bbb1a449-d198-4947-9ce5-379465d6e7e8",
+"packSize": "5 Fertspr 3 ml",
+"changeType": null,
+"delistingReason": null,
+"exFactoryPrice": 44.37,
+"expiration": false,
+"firstListed": "2015-09-01",
+"fophDossierNumber": "20346",
+"gtin": "7680650690023",
+"itcLimitationValid": null,
+"lastPriceChange": "2023-12-01",
+"lastPriceChangeType": "3JUEBERPRUEF",
+"legalStatusOfSupply": "B",
+"limitation": false,
+"limitations": [],
+"listType": "SL",
+"marketingAuthorisationNumbers": [
+"65069002"
+],
+"points": null,
+"priceModel": false,
+"retailPrice": 64.65,
+"uniformWholesaleMargin": true,
+"validFrom": "2017-03-01",
+"validTo": null
+}
+],
+"productType": "BioS"
+}
+],
+"atcCode": "A10AE04",
+"marketingAuthorisationHolder": {
+"id": "ebeb1628-db79-4629-b986-1f5104718058",
+"name": "Eli Lilly (Suisse) SA",
+"gln": "7601001261853"
+},
+"substances": [
+"Insulinum glarginum"
+]
+}
+]
+}

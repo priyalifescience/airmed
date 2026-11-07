@@ -1,0 +1,479 @@
+{
+ "totalCount": 3,
+ "studies": [
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT07085806",
+     "briefTitle": "To Study Effect of Injection Pentoxifylline on Liver Growth After Major Liver Surgery"
+    },
+    "statusModule": {
+     "overallStatus": "RECRUITING",
+     "startDateStruct": {
+      "date": "2025-01-01"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2025-07-25"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "Institute of Liver and Biliary Sciences, India",
+      "class": "OTHER"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Liver Regeneration"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "NA"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "India"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT06976216",
+     "briefTitle": "A Study to Evaluate the Efficacy and Safety of KarXT + KarX-EC for Cognitive Impairment in Alzheimer's Disease"
+    },
+    "statusModule": {
+     "overallStatus": "RECRUITING",
+     "startDateStruct": {
+      "date": "2025-07-14"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2026-10-27"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "Bristol-Myers Squibb",
+      "class": "INDUSTRY"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Alzheimer's Disease"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "PHASE3"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "United States"
+      },
+      {
+       "country": "Argentina"
+      },
+      {
+       "country": "Argentina"
+      },
+      {
+       "country": "Argentina"
+      },
+      {
+       "country": "Argentina"
+      },
+      {
+       "country": "Argentina"
+      },
+      {
+       "country": "Australia"
+      },
+      {
+       "country": "Australia"
+      },
+      {
+       "country": "Australia"
+      },
+      {
+       "country": "Australia"
+      },
+      {
+       "country": "Australia"
+      },
+      {
+       "country": "Brazil"
+      },
+      {
+       "country": "Brazil"
+      },
+      {
+       "country": "Brazil"
+      },
+      {
+       "country": "Brazil"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Canada"
+      },
+      {
+       "country": "Chile"
+      },
+      {
+       "country": "Chile"
+      },
+      {
+       "country": "Chile"
+      },
+      {
+       "country": "Chile"
+      },
+      {
+       "country": "Croatia"
+      },
+      {
+       "country": "Croatia"
+      },
+      {
+       "country": "Croatia"
+      },
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "Czechia"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "France"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Germany"
+      },
+      {
+       "country": "Greece"
+      },
+      {
+       "country": "Greece"
+      },
+      {
+       "country": "Greece"
+      },
+      {
+       "country": "Greece"
+      },
+      {
+       "country": "India"
+      },
+      {
+       "country": "India"
+      },
+      {
+       "country": "India"
+      },
+      {
+       "country": "India"
+      },
+      {
+       "country": "India"
+      },
+      {
+       "country": "Italy"
+      },
+      {
+       "country": "Italy"
+      },
+      {
+       "country": "Italy"
+      },
+      {
+       "country": "Italy"
+      },
+      {
+       "country": "Netherlands"
+      },
+      {
+       "country": "Netherlands"
+      },
+      {
+       "country": "Netherlands"
+      },
+      {
+       "country": "Poland"
+      },
+      {
+       "country": "Poland"
+      },
+      {
+       "country": "Poland"
+      },
+      {
+       "country": "Poland"
+      },
+      {
+       "country": "Puerto Rico"
+      },
+      {
+       "country": "Romania"
+      },
+      {
+       "country": "Romania"
+      },
+      {
+       "country": "Romania"
+      },
+      {
+       "country": "Romania"
+      },
+      {
+       "country": "Romania"
+      },
+      {
+       "country": "South Korea"
+      },
+      {
+       "country": "South Korea"
+      },
+      {
+       "country": "South Korea"
+      },
+      {
+       "country": "South Korea"
+      },
+      {
+       "country": "South Korea"
+      },
+      {
+       "country": "South Korea"
+      },
+      {
+       "country": "South Korea"
+      },
+      {
+       "country": "Spain"
+      },
+      {
+       "country": "Spain"
+      },
+      {
+       "country": "Spain"
+      },
+      {
+       "country": "Spain"
+      },
+      {
+       "country": "Spain"
+      },
+      {
+       "country": "Spain"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "protocolSection": {
+    "identificationModule": {
+     "nctId": "NCT06199843",
+     "briefTitle": "Efficacy of Rifaximin vs Norfloxacin for Secondary Prophylaxis of SBP (NORRIF Trial)"
+    },
+    "statusModule": {
+     "overallStatus": "UNKNOWN",
+     "startDateStruct": {
+      "date": "2024-01-05"
+     },
+     "lastUpdatePostDateStruct": {
+      "date": "2024-01-10"
+     }
+    },
+    "sponsorCollaboratorsModule": {
+     "leadSponsor": {
+      "name": "Institute of Liver and Biliary Sciences, India",
+      "class": "OTHER"
+     }
+    },
+    "conditionsModule": {
+     "conditions": [
+      "Spontaneous Bacterial Peritonitis"
+     ]
+    },
+    "designModule": {
+     "phases": [
+      "NA"
+     ]
+    },
+    "contactsLocationsModule": {
+     "locations": [
+      {
+       "country": "India"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
