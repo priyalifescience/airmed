@@ -39,7 +39,7 @@ from ..util import yes
 
 KEY = "fi_fimea_medicines"
 FIELDS = ["table", "register_date", "product_id", "trade_name", "atc_code", "atc_name", "strength", "dosage_form",
-          "routes", "active_substances", "ddd", "ddd_unit", "authorisation_type", "authorisation_number",
+          "routes", "active_substances", "authorisation_type", "authorisation_number",
           "eu_authorisation_number", "holder", "authorisation_status", "procedure", "authorisation_date",
           "authorisation_end_date", "parallel_import", "biological", "biosimilar",
           "narcotic", "additional_monitoring", "substitution_group", "packages", "packages_marketed",
@@ -176,8 +176,8 @@ def _product(el) -> dict:
         "strength": _t(el, "Vahvuus"),
         "dosage_form": _attr(el, "Laakemuoto"),
         "routes": [x.get("value", "").strip() for x in el.findall("Antoreitti") if x.get("value", "").strip()],
-        "ddd": _t(el, "DDD"),
-        "ddd_unit": _t(el, "DDDyksikko"),
+        # 1.6.1: WHO defined daily doses (DDD, DDDyksikko) are not kept. They are WHO material, whose terms do not
+        # allow copying for commercial purposes (same rule as cz_sukl_medicines).
         "biological": yes(_t(el, "Biologinen")),
         "biosimilar": yes(_t(el, "Biosimilaari")),
         "narcotic": _attr(el, "Huume"),

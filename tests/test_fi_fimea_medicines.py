@@ -51,8 +51,8 @@ class TestFiFimeaMedicines(unittest.TestCase):
         lip = [r for r in self.rows if r["product_id"] == "REL9173"][0]
         self.assertEqual((lip["trade_name"], lip["atc_code"], lip["atc_name"], lip["strength"], lip["dosage_form"]),
                          ("Lipitor", "C10AA05", "atorvastatiini", "10 mg", "tabletti, kalvopäällysteinen"))
-        self.assertEqual((lip["active_substances"], lip["routes"], lip["ddd"], lip["ddd_unit"]),
-                         (["Atorvastatin calcium trihydrate"], ["Suun kautta"], "20", "mg"))
+        self.assertEqual((lip["active_substances"], lip["routes"]), (["Atorvastatin calcium trihydrate"], ["Suun kautta"]))
+        self.assertNotIn("ddd", lip)  # 1.6.1: WHO defined daily doses are not kept
         self.assertEqual((lip["authorisation_number"], lip["holder"], lip["authorisation_status"], lip["procedure"],
                           lip["authorisation_date"], lip["substitution_group"]),
                          ("12612", "Viatris Healthcare Limited", "Myyntilupa myönnetty", "Tunnustaminen", "1997-04-21",

@@ -34,7 +34,7 @@ from ..http import fetch
 KEY = "no_fest_medicines"
 FIELDS = ["fest_date", "varenr", "ean", "atc_code", "atc_name", "name_form_strength", "brand_name", "company",
           "reference_product", "product_type", "prescription_group", "dosage_form", "routes", "active_substances",
-          "pack_size", "pack_unit", "pack_type", "ddd", "ddd_unit", "marketing_date", "temporarily_unavailable_from",
+          "pack_size", "pack_unit", "pack_type", "marketing_date", "temporarily_unavailable_from",
           "black_triangle", "aup_nok", "aip_nok", "reimbursement_price_nok", "step_price_nok", "aup_valid_from",
           "reimbursed", "reimbursement_groups", "reimbursement_basis", "substitution_group",
           "substitution_group_name"]
@@ -182,8 +182,7 @@ def parse(raw: bytes, min_packages: int = MIN_PACKAGES) -> list:
             "pack_size": _t(info, F + "Pakningsstr") if info is not None else "",
             "pack_unit": _a(info, F + "EnhetPakning", "V") if info is not None else "",
             "pack_type": _a(info, F + "Pakningstype", "DN") if info is not None else "",
-            "ddd": _num(_a(info, F + "DDD", "V")) if info is not None else "",
-            "ddd_unit": _a(info, F + "DDD", "U") if info is not None else "",
+            # 1.6.1: WHO defined daily doses (DDD) are not kept: WHO material, no commercial copying allowed.
             "marketing_date": _t(p, _f("Markedsforingsinfo/Markedsforingsdato")),
             "temporarily_unavailable_from": _t(p, _f("Markedsforingsinfo/MidlUtgattDato")),
             "black_triangle": "yes" if _a(p, F + "SvartTrekant", "V") == "1" else "no",

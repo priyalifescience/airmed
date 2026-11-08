@@ -12,7 +12,9 @@ from ..http import fetch
 KEY = "ctgov_ireland"
 FIELDS = ["nct_id", "title", "phases", "overall_status", "lead_sponsor", "conditions", "start_date", "last_update"]
 API = "https://clinicaltrials.gov/api/v2/studies"
-API_FIELDS = "NCTId,BriefTitle,Phase,OverallStatus,LeadSponsorName,LeadSponsorClass,Condition,StartDate,LastUpdatePostDate"
+# ResponsiblePartyType (only the type, never the investigator's name) tells us when the sponsor is the investigator.
+API_FIELDS = ("NCTId,BriefTitle,Phase,OverallStatus,LeadSponsorName,LeadSponsorClass,ResponsiblePartyType,Condition,"
+              "StartDate,LastUpdatePostDate")
 
 # Investigator-led studies often name a PERSON as lead sponsor, and Airmid never publishes personal names. Keep the
 # sponsor only when ClinicalTrials.gov classes it as industry/government/network, or its name reads as an
@@ -32,11 +34,37 @@ ORG_WORDS = re.compile(
     r"sangath|columbia asia", re.I)
 
 
-def sponsor_or_blank(name: str, cls: str) -> str:
+# 1.6.1 (audit 9 Nov 2026): the sponsor class is not reliable. Investigators who sponsor their own study are often
+# classed OTHER_GOV or even INDUSTRY ("Katarina Hedin", "Prof. Dr. Thomas Forst"), so the class alone let names
+# through. Three extra rules, checked before the class:
+#  - a degree after a comma or semicolon ("Maja Kovacevic, MD", "Qinghua Xia,Prof", "X; PhD") is a person;
+#  - a personal title (Dr, Prof, Mr, Ms...) with no organisation word is a person ("Dr Eoin R Hyde");
+#  - when ClinicalTrials.gov says the responsible party is a SPONSOR_INVESTIGATOR, the sponsor is that person
+#    unless the name carries an organisation word.
+# Company names that contain a title are kept (BRANDS), as is any title followed by an organisation word
+# ("Dr. Rajendra Prasad Government Medical College").
+DEGREE_AFTER = re.compile(r"[,;]\s*(?:m\.?\s?d\b|ph\.?\s?d\b|mph\b|mbbs\b|frc[sp]\w*|pharm\.?\s?d\b|dds\b|"
+                          r"prof\b|professor\b|chief physician\b|associate professor\b)", re.I)
+PERSON_TITLE = re.compile(r"(?:^|[\s(,;])(?:dr|prof|professor|assoc\.?\s*prof|ass\.?\s*prof|asst\.?\s*prof|mr|mrs|ms|"
+                          r"miss)\.?\s", re.I)
+BRANDS = re.compile(r"dr\.?\s*reddy|dr\.?\s*falk|md anderson|dr\.?\s*willmar|dr\.?\s*august wolff|dr\.?\s*gerhard mann",
+                    re.I)
+
+
+def sponsor_or_blank(name: str, cls: str, responsible_party_type: str = "") -> str:
     name = (name or "").strip()
     if not name:
         return ""
-    if (cls or "").upper() in ORG_CLASSES or ORG_WORDS.search(name):
+    if BRANDS.search(name):
+        return name
+    if DEGREE_AFTER.search(name):
+        return ""
+    org_word = bool(ORG_WORDS.search(name))
+    if PERSON_TITLE.search(" " + name) and not org_word:
+        return ""
+    if (responsible_party_type or "").upper() == "SPONSOR_INVESTIGATOR" and not org_word:
+        return ""
+    if (cls or "").upper() in ORG_CLASSES or org_word:
         return name
     return ""
 
@@ -70,13 +98,15 @@ def parse(raw: bytes) -> list:
     for s in data.get("studies", []):
         p = s.get("protocolSection", {})
         ident, status = p.get("identificationModule", {}), p.get("statusModule", {})
-        lead = p.get("sponsorCollaboratorsModule", {}).get("leadSponsor", {})
+        scm = p.get("sponsorCollaboratorsModule", {})
+        lead = scm.get("leadSponsor", {})
+        rp_type = (scm.get("responsibleParty") or {}).get("type", "")
         out.append({
             "nct_id": ident.get("nctId", ""),
             "title": ident.get("briefTitle", ""),
             "phases": p.get("designModule", {}).get("phases", []),
             "overall_status": status.get("overallStatus", ""),
-            "lead_sponsor": sponsor_or_blank(lead.get("name", ""), lead.get("class", "")),
+            "lead_sponsor": sponsor_or_blank(lead.get("name", ""), lead.get("class", ""), rp_type),
             "conditions": p.get("conditionsModule", {}).get("conditions", []),
             "start_date": status.get("startDateStruct", {}).get("date", ""),
             "last_update": status.get("lastUpdatePostDateStruct", {}).get("date", ""),

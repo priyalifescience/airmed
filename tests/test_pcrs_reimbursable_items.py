@@ -29,13 +29,17 @@ class TestPcrsReimbursableItems(unittest.TestCase):
 
     def test_reference_priced_drug(self):
         r = self.row("11921")
-        self.assertEqual((r["item"], r["inn"], r["pack_size"], r["strength"], r["reimbursement_price_eur"],
-                          r["reference_price_eur"], r["reference_priced"], r["categories"]),
-                         ("Abilify Tabs. 5 mg. 28 (A)", "ARIPIPRAZOLE", "28", "5MG", "66.85", "10.5784", "yes", "Drugs"))
+        self.assertEqual((r["item"], r["inn"], r["pack_size"], r["strength"], r["reference_priced"], r["categories"]),
+                         ("Abilify Tabs. 5 mg. 28 (A)", "ARIPIPRAZOLE", "28", "5MG", "yes", "Drugs"))
 
-    def test_high_tech_price_is_blank_not_zero(self):
+    def test_prices_not_published(self):
+        # 1.6.1: no price columns until PCRS confirms prices for Airmid in writing
+        for r in self.rows:
+            self.assertFalse([k for k in r if "price" in k and k != "reference_priced"])
+
+    def test_high_tech_drug(self):
         r = self.row("88522")
-        self.assertEqual((r["reimbursement_price_eur"], r["reference_price_eur"], r["inn"]), ("", "", "USTEKINUMAB"))
+        self.assertEqual(r["inn"], "USTEKINUMAB")
         self.assertEqual(r["categories"], "Drugs; High Tech Drugs")
 
     def test_lists(self):

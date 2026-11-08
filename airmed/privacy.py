@@ -23,6 +23,11 @@ PHONE_RE = re.compile(
     r"|0[1-9]\d{0,3}\s\d{3,4}\s?\d{3,4}"                           # 01 234 5678, 087 123 4567 (not "10 000 000 000" in doses)
     r")(?![\w/-])")
 DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$")
+# Spam deposits in research indexes (1.6.1, audit 9 Nov 2026): pill adverts whose phone number runs straight into the
+# text ("+971-556-394139Abortion Pills...") or sits between symbols ("✚971529704578 ⭕"), which PHONE_RE rightly
+# refuses to match inside words. For TITLES of research works only, never for product data: a "+" followed by
+# 9 or more digits (separators allowed), a bare run of 11-13 digits, or a messenger name.
+SPAM_TITLE_RE = re.compile(r"\+\s?\d(?:[\s-]?\d){8,}|(?<!\d)\d{11,13}(?!\d)|whats\s?app|telegram\s*@", re.I)
 
 
 class ForbiddenField(Exception):

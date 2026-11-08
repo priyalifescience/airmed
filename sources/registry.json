@@ -90,7 +90,7 @@
    "endpoint": "https://assets.hpra.ie/products/xml/latestHumanlist.xml",
    "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), as listed on data.gov.ie: dataset \"Human Medicines - Authorised Products\" (medicines-authorised-or-transfer-pending-products), license_id \"CC-BY-4.0\". Its resource URL redirects to the HPRA file collected here.",
    "licence_url": "https://data.gov.ie/dataset/medicines-authorised-or-transfer-pending-products",
-   "attribution": "Source: Health Products Regulatory Authority (HPRA), CC BY 4.0.",
+   "attribution": "Source: Health Products Regulatory Authority (HPRA), CC BY 4.0. Contains Irish Public Sector Data licensed under a CC BY 4.0 licence (Human Medicines - Authorised Products, via data.gov.ie), retrieved {retrieved_date}. Changed by Airmid Éireann: one row per product licence, selected fields.",
    "fields_kept": [
     "licence_number",
     "product_name",
@@ -125,7 +125,10 @@
     "supply_status": "Legal supply status",
     "legal_basis": "Legal basis of the authorisation"
    },
-   "browse_url": "https://priyalifescience.com/medicines"
+   "browse_url": "https://priyalifescience.com/medicines",
+   "licence_notes": [
+    "HPRA's re-use page asks that its information is not used for advertising. Airmid Éireann never uses HPRA figures in advertisements or sponsored content; please do the same."
+   ]
   },
   "ema_medicines": {
    "name": "EMA: human medicines evaluated by the European Medicines Agency",
@@ -340,7 +343,7 @@
    "endpoint": "https://ws.cso.ie/public/api.jsonrpc",
    "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). CSO copyright policy: \"Statistical information on this website is accessible free of charge and licensed under Creative Commons Attribution (CC BY 4.0).\" (The CSO logo may not be used commercially; it is not used.)",
    "licence_url": "https://www.cso.ie/en/aboutus/whoweare/copyrightpolicy/",
-   "attribution": "Source: Central Statistics Office, Ireland (table TSM10), CC BY 4.0.",
+   "attribution": "Source: Central Statistics Office, Ireland (table TSM10), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Selected and reshaped (one row per month and country) by Airmid Éireann.",
    "fields_kept": [
     "month",
     "country_code",
@@ -631,7 +634,7 @@
    "endpoint": "https://api.fda.gov/drug/event.json (count= queries only)",
    "licence": "Public domain, CC0 1.0 (openFDA terms: \"Unless otherwise noted, the content, data, documentation, code, and related materials on openFDA is public domain and made available with a Creative Commons CC0 1.0 Universal dedication. ... You can copy, modify, distribute, and perform the work, even for commercial purposes, all without asking permission.\")",
    "licence_url": "https://open.fda.gov/terms/",
-   "attribution": "Data provided by the U.S. Food and Drug Administration (https://open.fda.gov), FAERS. Not endorsed by the FDA. Counts are reports, not proven side effects. FDA disclaimer: \"There is no certainty that the reported event (adverse event or medication error) was actually due to the product. FDA does not require that a causal relationship between a product and event be proven, and reports do not always contain enough detail to properly evaluate an event. Submission of a safety report does not constitute an admission that medical personnel, user facility, importer, distributor, manufacturer or product caused or contributed to the event.\" (https://open.fda.gov/apis/drug/event/)",
+   "attribution": "Data provided by the U.S. Food and Drug Administration (https://open.fda.gov), FAERS. Not endorsed by the FDA. Counts are reports, not proven side effects. FDA disclaimer: \"There is no certainty that the reported event (adverse event or medication error) was actually due to the product. FDA does not require that a causal relationship between a product and event be proven, and reports do not always contain enough detail to properly evaluate an event. Submission of a safety report does not constitute an admission that medical personnel, user facility, importer, distributor, manufacturer or product caused or contributed to the event.\" (https://open.fda.gov/apis/drug/event/) FAERS report counts cannot be used to estimate how often an event happens (its incidence) or to compare the safety of products.",
    "fields_kept": [
     "year",
     "row_type",
@@ -726,7 +729,10 @@
     "classification_date": "Date FDA classified the recall",
     "report_date": "Date the recall appeared in the FDA Enforcement Report",
     "termination_date": "Date FDA terminated the recall; empty while open"
-   }
+   },
+   "licence_notes": [
+    "openFDA enforcement report disclaimer (https://open.fda.gov/apis/device/enforcement/): \"This data should not be used as a method to collect data to issue alerts to the public, nor should it be used to track the lifecycle of a recall. ... FDA does not update the status of a recall after the recall has been classified according to its level of hazard.\""
+   ]
   },
   "mhra_safety_alerts": {
    "name": "MHRA (UK): drug and device alerts and Drug Safety Update",
@@ -1296,7 +1302,7 @@
    "endpoint": "https://opendata.nhsbsa.net/api/3/action/datastore_search_sql (one GROUP BY query plus one totals query per monthly table PCA_YYYYMM)",
    "licence": "Open Government Licence v3.0 (the dataset's licence on the NHSBSA portal: \"Open Government Licence 3.0 (United Kingdom)\"). OGL v3: \"You are free to: copy, publish, distribute and transmit the Information; adapt the Information; exploit the Information commercially and non-commercially for example, by combining it with other Information, or by including it in your own product or application.\" Condition: acknowledge the source and, where possible, link to the licence.",
    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
-   "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: NHS Business Services Authority, Prescription Cost Analysis (PCA) Monthly Administrative Data (https://opendata.nhsbsa.net/dataset/prescription-cost-analysis-pca-monthly-data). Summed by BNF chemical substance and unit of measure by Airmid Éireann. Monthly PCA is management information, not an Official Statistic.",
+   "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: NHS Business Services Authority, Prescription Cost Analysis (PCA) Monthly Administrative Data (https://opendata.nhsbsa.net/dataset/prescription-cost-analysis-pca-monthly-data). Summed by BNF chemical substance and unit of measure by Airmid Éireann. Monthly PCA is management information, not an Official Statistic. NHSBSA Copyright 2021-2026.",
    "fields_kept": [
     "year",
     "year_month",
@@ -1925,7 +1931,7 @@
    "endpoint": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/{table}/JSON-stat/2.0/en",
    "licence": "CC BY 4.0. data.gov.ie lists every one of these tables with license_id \"CC-BY-4.0\" (\"Creative Commons Attribution 4.0\"), publisher Department of Health (e.g. dataset dha77-total-hospital-discharges-by-principal-diagnosis-and-age-group) or Health Service Executive (e.g. hipe02-hospital-discharges), with the PxStat API as the download. The hosting CSO's copyright policy also licenses statistical information on its site \"under Creative Commons Attribution (CC BY 4.0)\".",
    "licence_url": "https://data.gov.ie/dataset/hipe02-hospital-discharges",
-   "attribution": "Source: Department of Health and Health Service Executive (Healthcare Pricing Office), Hospital In-Patient Enquiry summary tables, via CSO PxStat and data.gov.ie, CC BY 4.0. © Department of Health; © Health Service Executive (HIPE tables). Selected tables and statistics, one-way breakdowns only, reshaped to long format by Airmid Éireann.",
+   "attribution": "Source: Department of Health and Health Service Executive (Healthcare Pricing Office), Hospital In-Patient Enquiry summary tables, via CSO PxStat and data.gov.ie, CC BY 4.0. © Department of Health; © Health Service Executive (HIPE tables). Selected tables and statistics, one-way breakdowns only, reshaped to long format by Airmid Éireann. Contains Irish Public Sector Data licensed under a CC BY 4.0 licence.",
    "licence_notes": [
     "Empty cells are suppressed by the publisher (small counts: the smallest discharge count published is 5) and are left out of this file. They are not zero. Do not fill or back-calculate suppressed cells (for example total minus male)."
    ],
@@ -2099,7 +2105,7 @@
    "endpoint": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/{table}/JSON-stat/2.0/en",
    "licence": "CC BY 4.0. data.gov.ie lists the Key Trends tables with license_id \"CC-BY-4.0\" (\"Creative Commons Attribution 4.0\"): KTA09-KTA38 with publisher Department of Health (e.g. dataset kta38-prescription-items-dispensed-under-the-general-medical-services-gms-scheme), KTA08 with publisher Central Statistics Office (PxStat copyright holder \"Central Statistics Office, Ireland\"; data sourced from the Health Insurance Authority), with the PxStat API as the download. The hosting CSO's copyright policy also licenses statistical information on its site \"under Creative Commons Attribution (CC BY 4.0)\".",
    "licence_url": "https://data.gov.ie/dataset/kta38-prescription-items-dispensed-under-the-general-medical-services-gms-scheme",
-   "attribution": "Source: Department of Health (KTA09-KTA38) and Central Statistics Office (KTA08, data from the Health Insurance Authority), Health in Ireland: Key Trends (tables KTA08, KTA09, KTA13-KTA16, KTA30, KTA36-KTA38), via CSO PxStat and data.gov.ie, CC BY 4.0. Reshaped to long format by Airmid Éireann.",
+   "attribution": "Source: Department of Health (KTA09-KTA38) and Central Statistics Office (KTA08, data from the Health Insurance Authority), Health in Ireland: Key Trends (tables KTA08, KTA09, KTA13-KTA16, KTA30, KTA36-KTA38), via CSO PxStat and data.gov.ie, CC BY 4.0. Reshaped to long format by Airmid Éireann. Contains Irish Public Sector Data licensed under a CC BY 4.0 licence.",
    "fields_kept": [
     "table",
     "table_title",
@@ -2392,7 +2398,7 @@
    "endpoint": "https://data.gov.ie/dataset/research-ireland-grant-commitments and https://data.gov.ie/dataset/science-foundation-ireland-grants-commitments (CSV resources found through https://data.gov.ie/api/3/action/package_show)",
    "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/). data.gov.ie lists both datasets with license_id \"CC-BY-4.0\", license_title \"Creative Commons Attribution 4.0\" (checked 2026-10-20 via the CKAN API); both metadata PDFs state \"Licence CC-BY 4.0\"; the SFI open-data web page (https://www.sfi.ie/about-us/governance/open-data/) says the data are \"licensed under a Standard Irish PSI Licence (CC-BY 4.0)\".",
    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-   "attribution": "Source: Taighde Éireann – Research Ireland, Grant Commitments open data (and the Science Foundation Ireland Grant Commitments file, 2000–July 2024), via data.gov.ie, CC BY 4.0. Changed by Airmid Éireann: lead applicant names and ORCID iDs removed, personal names in titles replaced by \"[name withheld]\", dates converted to ISO and amounts to numbers.",
+   "attribution": "Source: Taighde Éireann – Research Ireland, Grant Commitments open data (and the Science Foundation Ireland Grant Commitments file, 2000–July 2024), via data.gov.ie, CC BY 4.0. Changed by Airmid Éireann: lead applicant names and ORCID iDs removed, personal names in titles replaced by \"[name withheld]\", dates converted to ISO and amounts to numbers. Contains Irish Public Sector Data licensed under a CC BY 4.0 licence.",
    "licence_notes": [
     "Irish Research Council grants are not included: Research Ireland's metadata says \"The data for its predecessor organisation's (Science Foundation Ireland and the Irish Research Council) are found on the respective websites.\" The Research Ireland file covers August 2024 onwards and the SFI file 2000 to July 2024."
    ],
@@ -2577,7 +2583,9 @@
    "licence": "Creative Commons Attribution 4.0 International (CC BY 4.0). Fimea's open-data page: \"Fimean tuottaman avoimen datan lisenssi, eli määritelmä siitä, kuinka avointa dataa saa käyttää, on CC BY 4.0. Mainitse Lisenssinantajan nimi, aineiston nimi ja ajankohta, jolloin Fimea on luovuttanut aineiston.\" (The licence of Fimea's open data is CC BY 4.0; state the licensor's name, the dataset's name and the date when Fimea released the data.) The avoindata.suomi.fi entry fimea-avoin-data also gives cc-by-4.0.",
    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
    "attribution": "Source: Fimea (Finnish Medicines Agency), Lääkevalmisteiden perusrekisteri and Saatavuushäiriötiedot, released by Fimea on the date in register_date; licensed under CC BY 4.0 (https://fimea.fi/tietoa_fimeasta/avoin-data). Reshaped by Airmid Éireann (human medicines only, one row per product, shortage notices joined to products).",
-   "licence_notes": "Checked 2026-10-21 in a browser (fimea.fi answers scripts with a Cloudflare challenge; the data files on data.pilvi.fimea.fi download normally). Fimea's page also carries a disclaimer (\"Vastuuvapauslauseke\": Fimea is not liable for any loss or claim arising directly or indirectly from its open data or its use) and asks, as a request rather than a licence condition, that users who build a service or continuing activity on the data tell Fimea their contact details and the dataset used. The register page adds that individual errors are possible and Fimea does not warrant completeness. Holder and company fields are organisations. The interchangeable-medicines list is represented by the register's own substitution group (Substituutioryhma: \"Ne lääkevalmisteet, joilla on sama substituutioryhmä, ovat keskenään vaihtokelpoisia\"); the separate quarterly list file and Lääke75+ are not downloaded.",
+   "licence_notes": [
+    "Checked 2026-10-21 in a browser (fimea.fi answers scripts with a Cloudflare challenge; the data files on data.pilvi.fimea.fi download normally). Fimea's page also carries a disclaimer (\"Vastuuvapauslauseke\": Fimea is not liable for any loss or claim arising directly or indirectly from its open data or its use) and asks, as a request rather than a licence condition, that users who build a service or continuing activity on the data tell Fimea their contact details and the dataset used. The register page adds that individual errors are possible and Fimea does not warrant completeness. Holder and company fields are organisations. The interchangeable-medicines list is represented by the register's own substitution group (Substituutioryhma: \"Ne lääkevalmisteet, joilla on sama substituutioryhmä, ovat keskenään vaihtokelpoisia\"); the separate quarterly list file and Lääke75+ are not downloaded."
+   ],
    "fields_kept": [
     "table",
     "register_date",
@@ -2589,8 +2597,6 @@
     "dosage_form",
     "routes",
     "active_substances",
-    "ddd",
-    "ddd_unit",
     "authorisation_type",
     "authorisation_number",
     "eu_authorisation_number",
@@ -2620,7 +2626,8 @@
     "package-level register rows (summed into packages / packages_marketed / packages_in_shortage per product)",
     "pharmacy advice texts, mandatory-reserve flags, traffic-hazard, children's-medicine, plasma-derived and EU-critical flags, previous trade names, withdrawal periods for animals",
     "the shortage notice's last-modified date and the parallel-distribution flag (dropped to stay under 30 MB)",
-    "the feedback contact named on Fimea's register page"
+    "the feedback contact named on Fimea's register page",
+    "WHO defined daily doses (DDD and its unit): WHO material whose terms do not allow copying for commercial purposes"
    ],
    "status": "approved",
    "field_docs": {
@@ -2634,8 +2641,6 @@
     "dosage_form": "Dosage form in Finnish as published (Laakemuoto), e.g. tabletti, kalvopäällysteinen",
     "routes": "Routes of administration in Finnish as published (Antoreitti), e.g. Suun kautta (oral), Laskimoon (intravenous); often empty for old withdrawn products",
     "active_substances": "Active substance names from the register's substance list (Aine), linked through the product's packages; the register uses English/Latin INN-style names, often including the salt (e.g. Atorvastatin calcium trihydrate)",
-    "ddd": "WHO defined daily dose as published (DDD), text",
-    "ddd_unit": "Unit of the DDD as published (e.g. mg, g)",
     "authorisation_type": "myyntilupa (marketing authorisation) or rekisteröinti (registration of a traditional herbal or homeopathic product); empty when the register gives neither",
     "authorisation_number": "Fimea's marketing authorisation number (Lupanumero) or registration number (Rekisterointinumero). Centrally authorised products have no Fimea number: see eu_authorisation_number",
     "eu_authorisation_number": "EU authorisation number for centrally authorised products (EU-lupanumero), e.g. EU/1/17/1251/002",
@@ -3359,7 +3364,9 @@
    "licence": "Norwegian Licence for Open Government Data (NLOD) 2.0. data.norge.no catalogue entry \"FEST (Forskrivnings- og ekspedisjonsstøtte)\" (id 09baaca8-61ba-38a2-9097-7a6bc2e5b172): access rights PUBLIC, distribution licence NLOD_2_0. DMP's page \"Ansvar ved bruk av FEST\": \"Systemleverandører kan fritt benytte informasjonen i FEST i sine systemer i henhold til Norsk lisens for offentlige data (NLOD).\" NLOD 2.0 section 2: the licensee \"may use the information for any purpose and in all contexts, by: copying the information and distributing the information to others, modifying the information and/or combining the information with other information, and copying and distributing such changed or combined information.\"",
    "licence_url": "https://data.norge.no/nlod/en/2.0",
    "attribution": "Contains data under the Norwegian licence for Open Government data (NLOD) 2.0 distributed by Direktoratet for medisinske produkter (DMP), FEST (https://www.dmp.no/om-oss/distribusjon-av-legemiddeldata/fest). Changed by Airmid Éireann: one row per package with current prices, reimbursement groups and substitution groups extracted from the FEST XML.",
-   "licence_notes": "Checked 2026-10-21. NLOD 2.0 section 5 requires attributing the licensor, referring to the licence, linking to licence and source where practical, and stating that the information has been changed (done in the attribution). Section 6: no misleading or distorted presentation and no use of DMP's name to endorse products. Section 3: the licence does not cover personal data (none in the fields kept; company is an organisation). DMP's FEST page describes FEST as including information from partners (\"aktuelle samarbeidspartnere\"); the interaction catalogue (KatInteraksjon) and warning texts are therefore not used. The FEST download page says the files for Farmalogg and NAV/HELFO are no longer open downloads; the Rekvirent file used here is open (no certificate needed).",
+   "licence_notes": [
+    "Checked 2026-10-21. NLOD 2.0 section 5 requires attributing the licensor, referring to the licence, linking to licence and source where practical, and stating that the information has been changed (done in the attribution). Section 6: no misleading or distorted presentation and no use of DMP's name to endorse products. Section 3: the licence does not cover personal data (none in the fields kept; company is an organisation). DMP's FEST page describes FEST as including information from partners (\"aktuelle samarbeidspartnere\"); the interaction catalogue (KatInteraksjon) and warning texts are therefore not used. The FEST download page says the files for Farmalogg and NAV/HELFO are no longer open downloads; the Rekvirent file used here is open (no certificate needed)."
+   ],
    "fields_kept": [
     "fest_date",
     "varenr",
@@ -3378,8 +3385,6 @@
     "pack_size",
     "pack_unit",
     "pack_type",
-    "ddd",
-    "ddd_unit",
     "marketing_date",
     "temporarily_unavailable_from",
     "black_triangle",
@@ -3400,7 +3405,8 @@
     "dose packs (KatLegemiddeldose), trade goods (KatHandelsvare), generic prescribing entries (KatLegemiddelVirkestoff)",
     "price history and future prices (only the price valid on fest_date is kept per type)",
     "FEST internal GUIDs and SPC links",
-    "the Institusjon (hospital in-house products) and veterinary FEST files"
+    "the Institusjon (hospital in-house products) and veterinary FEST files",
+    "WHO defined daily doses (DDD and its unit): WHO material whose terms do not allow copying for commercial purposes"
    ],
    "status": "approved",
    "field_docs": {
@@ -3421,8 +3427,6 @@
     "pack_size": "Pack size as published (Pakningsstr), text (e.g. 100, 1.5, \"5 x 5\"); for kits the first component",
     "pack_unit": "Unit of the pack size (EnhetPakning V), e.g. stk (pieces), ml, g, doser",
     "pack_type": "Container type in Norwegian as published (Pakningstype DN), e.g. Blisterpakning, Ferdigfylt penn",
-    "ddd": "WHO defined daily dose given for the package (DDD V), number",
-    "ddd_unit": "Unit of the DDD (DDD U), e.g. mg, g",
     "marketing_date": "Date the package was marketed (Markedsforingsdato)",
     "temporarily_unavailable_from": "Date from which the package is recorded as temporarily unavailable (MidlUtgattDato); empty when not",
     "black_triangle": "yes/no: medicine under additional monitoring (SvartTrekant)",
@@ -3445,7 +3449,7 @@
    "endpoint": "https://schedule.pharmac.govt.nz/pub/schedule/archive/",
    "licence": "Creative Commons Attribution 4.0 International. PHARMAC: \"The Pharmaceutical Schedule files are licensed under the Creative Commons Attribution 4.0 International licence. In essence, you are free to copy, distribute and adapt them, as long as you attribute them to PHARMAC and abide by the other licence terms.\"",
    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
-   "attribution": "Source: PHARMAC (Te Pātaka Whaioranga), New Zealand Pharmaceutical Schedule, XML edition as retrieved on {retrieved_date}, https://schedule.pharmac.govt.nz/pub/schedule/archive/, licensed under CC BY 4.0. Flattened to one row per pack by Airmid Éireann.",
+   "attribution": "Source: PHARMAC (Te Pātaka Whaioranga), New Zealand Pharmaceutical Schedule, XML edition as retrieved on {retrieved_date}, https://schedule.pharmac.govt.nz/pub/schedule/archive/, licensed under CC BY 4.0. Flattened to one row per pack by Airmid Éireann. © New Zealand Pharmaceutical Management Agency (PHARMAC).",
    "licence_notes": [
     "\"Attribution to PHARMAC should be in written form and not by reproduction of the PHARMAC logo.\" (https://schedule.pharmac.govt.nz/pub/schedule/archive/README.html)",
     "\"While care has been taken in compiling these files, PHARMAC takes no responsibility for any errors or omissions, and shall not be liable for any consequences arising there from.\"",
@@ -3523,7 +3527,9 @@
    "licence": "Open Government Licence v3.0 (the dataset's licence on the NHS Scotland Open Data platform: \"UK Open Government Licence (OGL)\", license_id uk-ogl). OGL v3: \"You are free to: copy, publish, distribute and transmit the Information; adapt the Information; exploit the Information commercially and non-commercially for example, by combining it with other Information, or by including it in your own product or application.\" Condition: acknowledge the source and, where possible, link to the licence.",
    "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
    "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: Public Health Scotland, Prescriptions in the Community (https://www.opendata.nhs.scot/dataset/prescriptions-in-the-community). Summed to Scotland by BNF chemical substance by Airmid Éireann.",
-   "licence_notes": "Checked 2026-10-21: CKAN package_show gives license_id uk-ogl, license_title \"UK Open Government Licence (OGL)\", CKAN organisation \"Health and care\"; publisher Public Health Scotland. OGL exempts third-party rights; BNF codes are the same NHS classification NHSBSA and the BSO publish under OGL. PHS dataset notes: data from May 2023 come from a new dispensing payment system and \"may not be directly comparable to data published previously\"; quantities for some formulations are counted in doses from May 2023; gross ingredient cost for some BNF sections drops from May 2023 and has been \"identified as anomalous\". No patient or prescriber names exist in the source; prescriber location codes are not kept.",
+   "licence_notes": [
+    "Checked 2026-10-21: CKAN package_show gives license_id uk-ogl, license_title \"UK Open Government Licence (OGL)\", CKAN organisation \"Health and care\"; publisher Public Health Scotland. OGL exempts third-party rights; BNF codes are the same NHS classification NHSBSA and the BSO publish under OGL. PHS dataset notes: data from May 2023 come from a new dispensing payment system and \"may not be directly comparable to data published previously\"; quantities for some formulations are counted in doses from May 2023; gross ingredient cost for some BNF sections drops from May 2023 and has been \"identified as anomalous\". No patient or prescriber names exist in the source; prescriber location codes are not kept."
+   ],
    "fields_kept": [
     "year",
     "year_month",
@@ -3832,17 +3838,16 @@
    "reason": "No collector. The CCPC legal statement (https://www.ccpc.ie/legal) licenses website information under CC BY 4.0 but also says \"The content may not be used in a commercial context or for any commercial purposes without the prior written approval of the CCPC.\" Ask opendata@ccpc.ie in writing, under the Open Data Directive, before any reuse."
   },
   "pcrs_reimbursable_items": {
-   "name": "Ireland (HSE-PCRS): reimbursable items under the State schemes, with reimbursement and reference prices",
+   "name": "Ireland (HSE-PCRS): reimbursable items under the State schemes (codes, names, packs and lists; prices not published)",
    "publisher": "Health Service Executive, Primary Care Reimbursement Service (HSE-PCRS)",
    "endpoint": "https://www.sspcrs.ie/druglist/search/category/{0,1,3,4,5,6,7,8,9}.csv (the Download button of the public page \"Search Reimbursable Items\", https://www.sspcrs.ie/druglist/pub); no login, cookie or token",
-   "licence": "Published with the publisher's written permission. HSE-PCRS (David Stratton, Business Manager, by email from PCRS.ReportQueries@hse.ie, 6 October 2026, in reply to a request that described Airmid, the website's advertising and possible paid services): \"HSE PCRS only requires that you reference your sources, but we take no responsibility for anything you publish. We will not provide you directly with data, but you may download and publish from our website.\" The page itself says: \"The information available on this site cannot be used in whole or in part for any commercial purpose without the express written consent from the Primary Care Reimbursement Service of the Health Service Executive.\" That email is the written consent. Copyright HSE. Reusers outside Airmid should check the PCRS page terms for their own use.",
+   "licence": "Published with the publisher's written permission. HSE-PCRS (David Stratton, Business Manager, by email from PCRS.ReportQueries@hse.ie, 6 October 2026, in reply to a request that described a reimbursable-items tracker on the Priya Life Science website, the website's advertising and possible paid services, and promised that no prices would be shown unless PCRS confirmed they may be; Airmid Éireann was not named in that request, so its written confirmation for Airmid Éireann is to be sought, and prices are not published): \"HSE PCRS only requires that you reference your sources, but we take no responsibility for anything you publish. We will not provide you directly with data, but you may download and publish from our website.\" The page itself says: \"The information available on this site cannot be used in whole or in part for any commercial purpose without the express written consent from the Primary Care Reimbursement Service of the Health Service Executive.\" That email is the written consent. Copyright HSE. Reusers outside Airmid should check the PCRS page terms for their own use.",
    "licence_url": "https://www.sspcrs.ie/druglist/pub",
-   "attribution": "Source: Health Service Executive, Primary Care Reimbursement Service (HSE-PCRS), Search Reimbursable Items (https://www.sspcrs.ie/druglist/pub), retrieved {retrieved_date}. Published with the permission of HSE-PCRS, which takes no responsibility for this publication and does not endorse Airmid Éireann. Changed by Airmid Éireann: one row per item code with the lists it appears on; a published price of 0.0 is shown as blank.",
+   "attribution": "Source: Health Service Executive, Primary Care Reimbursement Service (HSE-PCRS), Search Reimbursable Items (https://www.sspcrs.ie/druglist/pub), retrieved {retrieved_date}. Published with the permission of HSE-PCRS, which takes no responsibility for this publication and does not endorse Airmid Éireann. Changed by Airmid Éireann: one row per item code with the lists it appears on; prices are not published.",
    "licence_notes": [
     "HSE-PCRS takes no responsibility for anything published from its data and does not endorse Airmid Éireann.",
     "The PCRS page says its information cannot be used in whole or in part for any commercial purpose without the express written consent of HSE-PCRS. Airmid publishes it with that consent (email of 6 October 2026); anyone reusing it commercially should ask PCRS themselves.",
-    "PCRS: the lists are for contractors; contractors should continue to refer to existing information sources for definitive rules on prescribing and dispensing eligibility.",
-    "The High Tech Drugs list publishes no price (0.0): those medicines are paid for through the separate High Tech arrangement. Airmid shows these prices as blank, not zero."
+    "PCRS: the lists are for contractors; contractors should continue to refer to existing information sources for definitive rules on prescribing and dispensing eligibility."
    ],
    "fields_kept": [
     "code",
@@ -3851,14 +3856,13 @@
     "pack_size",
     "strength",
     "inn",
-    "reimbursement_price_eur",
-    "reference_price_eur",
     "reference_priced",
     "dental",
     "categories"
    ],
    "fields_never": [
-    "Non Proprietary Name (always empty in the published lists)"
+    "Non Proprietary Name (always empty in the published lists)",
+    "Reimbursement Price and Ref Price: not published. The 6 October 2026 request to PCRS promised that no prices would be shown unless PCRS confirmed they may be; PCRS has not yet confirmed prices for Airmid Éireann"
    ],
    "status": "approved",
    "field_docs": {
@@ -3868,8 +3872,6 @@
     "pack_size": "Pack size as published",
     "strength": "Strength as published (\"Strength Measure\")",
     "inn": "International non-proprietary name (active substance) or product group, as published",
-    "reimbursement_price_eur": "Reimbursement price in euro, as published; blank where the list publishes 0.0 (High Tech Drugs, paid through a separate arrangement)",
-    "reference_price_eur": "Reference price in euro for reference-priced (interchangeable) medicines; blank where the list shows 0.0",
     "reference_priced": "yes if the item is reference priced (a set reimbursement price for a group of interchangeable medicines), else no",
     "dental": "yes if PCRS marks the item as a dental item (column \"Dental\"), else no",
     "categories": "The PCRS lists the item appears on, separated by \"; \" (Drugs, Diagnostic Agents, Dressings, Clinical Nutritional Products, Ostomy Appliances, Urinary Appliances, Syringes Needles and Lancets, High Tech Drugs); blank for items on the full list only"
@@ -3926,7 +3928,7 @@
    "endpoint": "https://clinicaltrials.gov/api/v2/studies",
    "licence": "ClinicalTrials.gov Terms and Conditions (NLM). Data carry an international copyright outside the United States; reuse is allowed on the terms at https://clinicaltrials.gov/about-site/terms-conditions",
    "licence_url": "https://clinicaltrials.gov/about-site/terms-conditions",
-   "attribution": "Source: ClinicalTrials.gov, a U.S. Government database of the U.S. National Library of Medicine. Data processed by ClinicalTrials.gov as retrieved on {retrieved_date}. Modifications by Airmid Éireann: only studies with at least one site in mainland China (all statuses, all years); Hong Kong and Taiwan are separate countries on ClinicalTrials.gov and are not selected. only the fields nct_id, title, phases, overall_status, lead_sponsor, conditions, start_date, last_update and countries kept; contacts, investigators, officials, facility names, cities and coordinates not downloaded; lead sponsors that ClinicalTrials.gov does not class as industry, government or network and whose name does not read as an organisation blanked (possible personal names). This is a dated snapshot and may not be current; check ClinicalTrials.gov.",
+   "attribution": "Source: ClinicalTrials.gov, a U.S. Government database of the U.S. National Library of Medicine. Data processed by ClinicalTrials.gov as retrieved on {retrieved_date}. Modifications by Airmid Éireann: only studies with at least one site in mainland China (all statuses, all years); Hong Kong and Taiwan are separate countries on ClinicalTrials.gov and are not selected. Only the fields nct_id, title, phases, overall_status, lead_sponsor, conditions, start_date, last_update and countries kept; contacts, investigators, officials, facility names, cities and coordinates not downloaded; lead sponsors that ClinicalTrials.gov does not class as industry, government or network and whose name does not read as an organisation blanked (possible personal names). This is a dated snapshot and may not be current; check ClinicalTrials.gov.",
    "licence_notes": [
     "ClinicalTrials.gov Terms and Conditions (https://clinicaltrials.gov/about-site/terms-conditions): \"In any publication or distribution of these data, you should: Attribute the source of the data as ClinicalTrials.gov; Update the data such that they are current at all times; Clearly display the date the data were processed by ClinicalTrials.gov; State any modifications made to the content of the data, along with a complete description of the modifications\". The processing date and the modifications are stated in the attribution of this file.",
     "\"You shall not assert any proprietary rights to any portion of the database, or represent the database or any part thereof to anyone as other than a United States Government database.\" Airmid Éireann claims no proprietary rights in these data.",

@@ -39,9 +39,10 @@ class TestNoFestMedicines(unittest.TestCase):
     def test_values(self):
         lip = self.by["061561"]
         self.assertEqual((lip["atc_code"], lip["name_form_strength"], lip["brand_name"], lip["company"],
-                          lip["active_substances"], lip["pack_size"], lip["pack_unit"], lip["ddd"], lip["ddd_unit"]),
+                          lip["active_substances"], lip["pack_size"], lip["pack_unit"]),
                          ("C10AA05", "Lipitor tab 80 mg", "Lipitor", "Viatris Healthcare Limited", ["Atorvastatin"],
-                          "100", "stk", 0.02, "g"))
+                          "100", "stk"))
+        self.assertNotIn("ddd", lip)  # 1.6.1: WHO defined daily doses are not kept
         self.assertEqual((lip["aup_nok"], lip["aip_nok"], lip["reimbursement_price_nok"], lip["step_price_nok"],
                           lip["aup_valid_from"]), (832.9, 624.83, 169.7, 169.7, "2026-05-01"))
         self.assertEqual((lip["reimbursed"], lip["reimbursement_groups"], lip["reimbursement_basis"],

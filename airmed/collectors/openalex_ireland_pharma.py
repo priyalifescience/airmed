@@ -21,7 +21,7 @@ import json
 import urllib.parse
 
 from ..http import fetch
-from ..privacy import EMAIL_RE, PHONE_RE
+from ..privacy import EMAIL_RE, PHONE_RE, SPAM_TITLE_RE
 
 KEY = "openalex_ireland_pharma"
 FIELDS = ["openalex_id", "doi", "title", "publication_year", "publication_date", "type", "venue", "oa_status",
@@ -106,7 +106,7 @@ def parse(raw: bytes) -> list:
             continue
         seen.add(wid)
         title = w.get("title") or ""
-        if EMAIL_RE.search(title) or PHONE_RE.search(title):
+        if EMAIL_RE.search(title) or PHONE_RE.search(title) or SPAM_TITLE_RE.search(title):
             continue   # spam deposits (e.g. pill adverts with phone numbers) carrying an Irish affiliation
         pt = w.get("primary_topic") or {}
         matched = []

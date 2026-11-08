@@ -25,7 +25,7 @@ import json
 import urllib.parse
 
 from ..http import fetch
-from ..privacy import EMAIL_RE, PHONE_RE
+from ..privacy import EMAIL_RE, PHONE_RE, SPAM_TITLE_RE
 from .openalex_ireland_pharma import API, MAILTO, MAX_RESULTS, MEDCHEM_TOPICS, PER_PAGE, _short
 
 KEY = "openalex_europe_pharma"
@@ -142,7 +142,7 @@ def parse(raw: bytes) -> list:
             continue
         seen.add(wid)
         title = w.get("title") or ""
-        if EMAIL_RE.search(title) or PHONE_RE.search(title):
+        if EMAIL_RE.search(title) or PHONE_RE.search(title) or SPAM_TITLE_RE.search(title):
             continue   # spam deposits (e.g. pill adverts with phone numbers) carrying a European affiliation
         pt = w.get("primary_topic") or {}
         matched = [t.get("display_name") or "" for t in w.get("topics") or []

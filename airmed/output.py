@@ -16,7 +16,10 @@ def licence_metadata(source: dict, retrieved: str) -> dict:
     (licence_urls) become extra entries in "licenses"; licence_notes (conditions and disclaimers the publisher
     requires to be passed on) are appended to the description, so they travel with every copy of the file."""
     attribution = render(source["attribution"], retrieved)
-    notes = [render(n, retrieved) for n in source.get("licence_notes", [])]
+    raw_notes = source.get("licence_notes") or []
+    if isinstance(raw_notes, str):  # 1.6.1: a single note given as a string was published one character per note
+        raw_notes = [raw_notes]
+    notes = [render(n, retrieved) for n in raw_notes]
     licenses = [{"title": source["licence"], "path": source["licence_url"]}]
     licenses += [{"title": f"Licence terms: {name.replace('_', ' ')}", "path": url}
                  for name, url in source.get("licence_urls", {}).items() if url != source["licence_url"]]

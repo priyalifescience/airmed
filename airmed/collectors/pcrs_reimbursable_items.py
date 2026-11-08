@@ -1,4 +1,4 @@
-"""Ireland (HSE-PCRS): items reimbursed under the State schemes, with the reimbursement price and reference price.
+"""Ireland (HSE-PCRS): items reimbursed under the State schemes (prices not published since 1.6.1, see FIELDS).
 
 Source: the HSE Primary Care Reimbursement Service "Search Reimbursable Items" page (https://www.sspcrs.ie/druglist/pub).
 The page's Download button exports each list as CSV from /druglist/search/category/{n}.csv; this collector reads the
@@ -26,8 +26,10 @@ import re
 from ..http import fetch
 
 KEY = "pcrs_reimbursable_items"
-FIELDS = ["code", "item", "name", "pack_size", "strength", "inn", "reimbursement_price_eur", "reference_price_eur",
-          "reference_priced", "dental", "categories"]
+# 1.6.1 (audit 9 Nov 2026): the reimbursement and reference PRICES are not published. Our request to PCRS of
+# 6 October promised "No prices shown unless you confirm they may be", and PCRS has not confirmed prices for Airmid.
+# Prices are still validated on every run (_price), so adding them back after a written yes is a one-line change.
+FIELDS = ["code", "item", "name", "pack_size", "strength", "inn", "reference_priced", "dental", "categories"]
 URL = "https://www.sspcrs.ie/druglist/search/category/{}.csv"
 ALL = 0
 CATEGORIES = {1: "Drugs", 3: "Diagnostic Agents", 4: "Dressings", 5: "Clinical Nutritional Products",
@@ -81,6 +83,7 @@ def parse(raw: bytes, min_rows: int = MIN_ROWS) -> list:
         if code in seen:
             continue
         seen.add(code)
+        _price(r["Reimbursement Price"]), _price(r["Ref Price"])  # still checked, not published (see FIELDS)
         out.append({
             "code": code,
             "item": r["Drug Name"].strip(),
@@ -88,8 +91,6 @@ def parse(raw: bytes, min_rows: int = MIN_ROWS) -> list:
             "pack_size": r["Pack Size"].strip(),
             "strength": r["Strength Measure"].strip(),
             "inn": r["INN"].strip(),
-            "reimbursement_price_eur": _price(r["Reimbursement Price"]),
-            "reference_price_eur": _price(r["Ref Price"]),
             "reference_priced": _yn(r["Reference Priced"]),
             "dental": _yn(r["Dental"]),
             "categories": "; ".join(sorted(member.get(code, []), key=list(CATEGORIES.values()).index)),
