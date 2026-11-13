@@ -156,7 +156,7 @@ def parse_list(cls: str, name: str, text: str, atc: dict) -> list:
         ("aic", "Codice AIC" if cls == "H" else "AIC", True), ("code", "Codice Gruppo", True),
         ("tl", "X=in lista di trasparenza", cls == "A"), ("reg", "Solo in lista di Regione", cls == "A"),
         ("o2", "Metri cubi ossigeno", True)]}
-    m = re.search(r"(\d{2}-\d{2}-\d{4})", name)
+    m = re.search(r"(\d{1,2}-\d{1,2}-\d{4})", name)   # v1.7: new names use "30-6-2026" (was "31-05-2026")
     list_date = it_date(m[1]) if m else ""
     out = []
     for r in rows[1:]:
