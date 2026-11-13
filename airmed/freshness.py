@@ -3,7 +3,8 @@
 weekly.sh keeps last week's copy of a source that fails, which is safe but silent: on 2 Nov 2026 nine datasets had
 not been refreshed, one of them for three weeks, and nobody was told. Every dataset is collected by the weekly run,
 so the expected cadence is 7 days; a dataset is stale when its datapackage.json "created" time is more than
-CADENCE_DAYS + GRACE_DAYS old. Held sources are skipped. A per-source cadence can be set in CADENCE_OVERRIDES
+CADENCE_DAYS - MARGIN_DAYS old. The margin makes a source that failed in this Monday's run (its copy is then about
+7 days old, give or take how long the run took) show up in the same run, not a week later. Held sources are skipped. A per-source cadence can be set in CADENCE_OVERRIDES
 (none needed so far).
 
 The check only prints (one STALE line per dataset, which the weekly log keeps); it never stops a run or a release.
@@ -14,7 +15,7 @@ import json
 from pathlib import Path
 
 CADENCE_DAYS = 7
-GRACE_DAYS = 1
+MARGIN_DAYS = 0.5
 CADENCE_OVERRIDES = {}   # key -> days
 
 
@@ -34,7 +35,7 @@ def stale(out_dir: Path, keys, now: dt.datetime = None) -> list:
             found.append((key, "", None, cadence))   # never collected, or unreadable metadata
             continue
         age = (now - when).total_seconds() / 86400
-        if age > cadence + GRACE_DAYS:
+        if age > cadence - MARGIN_DAYS:
             found.append((key, created, round(age, 1), cadence))
     return found
 
