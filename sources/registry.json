@@ -2152,7 +2152,8 @@
    "licence_url": "https://sdi.eea.europa.eu/catalogue/srv/api/records/657ac3cb-affa-4295-a4a9-27b4f539adab?language=eng",
    "attribution": "Source: European Environment Agency, Industrial Reporting under the Industrial Emissions Directive 2010/75/EU and European Pollutant Release and Transfer Register Regulation (EC) No 166/2006 (https://www.eea.europa.eu/en/datahub/datahubitem-view/9405f714-8015-4b5b-a63c-280b82861b3d), licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Copyright holder: European Environment Agency (EEA). Filtered to Irish facilities in E-PRTR Annex I section 4 (chemical industry) and reshaped by Airmid Éireann. Not endorsed by the EEA or the EPA.",
    "licence_notes": [
-    "EEA legal notice (https://www.eea.europa.eu/en/legal-notice): re-use is allowed \"provided that the EEA is always acknowledged as the original source of the material and that the original meaning or message of the content is not distorted\". The permissions do not apply to content supplied by third parties; the EEA logo is not used."
+    "EEA legal notice (https://www.eea.europa.eu/en/legal-notice): re-use is allowed \"provided that the EEA is always acknowledged as the original source of the material and that the original meaning or message of the content is not distorted\". The permissions do not apply to content supplied by third parties; the EEA logo is not used.",
+    "Not refreshed since 26 October 2026: from 2 November 2026 the EEA's DiscoData service refuses the queries Airmid Éireann uses (HTTP 403). The rows are the 26 October 2026 copy of the EEA Industrial Reporting database (version 16.0, published February 2026, reporting years 2007-2024), so no newer EEA release is missed unless one has been published since."
    ],
    "fields_kept": [
     "reporting_year",
@@ -2216,7 +2217,8 @@
     "confidentiality_reason": "Reason given when part of the record is withheld as confidential; empty for almost all records",
     "eea_record_id": "EEA DiscoData id of the release or transfer record (distinguishes waste transfers that look alike once receiver names and addresses are dropped)"
    },
-   "browse_url": "https://priyalifescience.com/ireland-pharma-map"
+   "browse_url": "https://priyalifescience.com/ireland-pharma-map",
+   "stale_reason": "Since 2 Nov 2026 the EEA DiscoData SQL service (Azure Application Gateway) answers HTTP 403 to every query this collector sends (sub-selects and joins), while a one-table query from the same machine with the same honest User-Agent is answered; checked 13 Nov 2026. Not worked around: the fix is EEA's confirmation or a switch to the EEA's own downloadable copy of the Industrial Reporting database."
   },
   "etenders_health_awards": {
    "name": "eTenders (Ireland): public procurement notices and contract awards in health, medicines and medical technology, 2013 onwards",

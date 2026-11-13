@@ -43,7 +43,15 @@ def stale(out_dir: Path, keys, now: dt.datetime = None) -> list:
 def report(out_dir: Path, keys) -> int:
     """Print one STALE line per stale dataset and return how many there are."""
     rows = stale(out_dir, keys)
+    try:   # v1.7: a registry entry may carry "stale_reason" for a known, documented outage
+        from .registry import load_registry
+        reasons = {k: v.get("stale_reason", "") for k, v in load_registry().items() if isinstance(v, dict)}
+    except Exception:
+        reasons = {}
     for key, created, age, cadence in rows:
+        if reasons.get(key):
+            print(f"STALE {key}: last good collection {created[:10] or '?'} (known: {reasons[key][:160]})")
+            continue
         if age is None:
             print(f"STALE {key}: no readable collection in {out_dir} (expected every {cadence} days)")
         else:
