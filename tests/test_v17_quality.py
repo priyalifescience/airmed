@@ -128,6 +128,22 @@ class TestRetries(unittest.TestCase):
                 http.fetch("https://example.org/x")
         self.assertEqual(m.call_count, 1)
 
+    def test_openalex_cut_page_is_split_into_pages_of_50(self):
+        from airmed.collectors import openalex_ireland_pharma as oa
+        asked = []
+
+        def fake(url, timeout=120, attempts=4, retries=3, backoff=5.0):
+            asked.append(url)
+            if "per_page=200" in url:
+                raise json.JSONDecodeError("Unterminated string", "", 0)
+            page = int(url.split("page=")[-1])
+            return {"meta": {"count": 400}, "results": [{"id": f"W{page}-{i}"} for i in range(50)]}
+
+        with mock.patch.object(oa, "fetch_json_retry", side_effect=fake):
+            got = oa.get_page(lambda f, n, pp: f"https://x/?per_page={pp}&page={n}", "f", 2)
+        self.assertEqual(len(got["results"]), 200)
+        self.assertEqual([u.split("page=")[-1] for u in asked[1:]], ["5", "6", "7", "8"])
+
 
 if __name__ == "__main__":
     unittest.main()

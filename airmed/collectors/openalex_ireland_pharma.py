@@ -38,22 +38,41 @@ QUERIES = {
 }
 SELECT = ("id,doi,title,publication_year,publication_date,type,primary_location,open_access,cited_by_count,"
           "authorships,primary_topic,topics,is_retracted")
-# v1.7: 50 works a page (was 200). Pages of 200 works with full authorships ran to 2-4 MB, and OpenAlex cut some
-# replies short at about 2 MB, so the source failed (19 Oct to 2 Nov 2026). Each page is also fetched again when its
-# JSON does not parse (http.fetch_json_retry).
-PER_PAGE = 50
+# v1.7: pages of 200 works with full authorships run to 2-4 MB, and OpenAlex cut some replies short at about 2 MB, so
+# the source failed (19 Oct to 9 Nov 2026). A page is fetched again when its JSON does not parse; if it is cut short
+# twice, the same 200 works are fetched as four pages of 50 (page n of 200 = pages 4n-3 to 4n of 50). Pages of 50
+# throughout were tried on 13 Nov 2026 and ran into OpenAlex's rate limit (HTTP 429) after about 1,500 requests.
+PER_PAGE = 200
+SMALL_PAGE = 50
+SPLIT = PER_PAGE // SMALL_PAGE
 
 
 MAX_RESULTS = 10000   # OpenAlex page-number paging stops at 10,000 results per query
 MAX_PAGES = MAX_RESULTS // PER_PAGE
 
 
-def get_page(url: str) -> dict:
-    return fetch_json_retry(url, timeout=120)
+def _json(url: str, attempts: int) -> dict:
+    # 429 and 5xx: 4 tries, 30 s, 60 s and 120 s apart
+    return fetch_json_retry(url, timeout=120, attempts=attempts, retries=4, backoff=30)
 
 
-def _url(flt: str, page: int) -> str:
-    q = {"filter": flt, "select": SELECT, "per_page": str(PER_PAGE), "page": str(page), "mailto": MAILTO}
+def get_page(url_fn, flt: str, n: int) -> dict:
+    """Page n (of PER_PAGE works) for filter flt; url_fn(flt, page, per_page) builds the URL."""
+    try:
+        return _json(url_fn(flt, n, PER_PAGE), attempts=2)
+    except json.JSONDecodeError:
+        meta, results = None, []
+        for k in range(SPLIT):
+            p = _json(url_fn(flt, (n - 1) * SPLIT + k + 1, SMALL_PAGE), attempts=3)
+            meta = meta or p.get("meta")
+            results += p.get("results") or []
+            if not p.get("results"):
+                break
+        return {"meta": meta, "results": results}
+
+
+def _url(flt: str, page: int, per_page: int = PER_PAGE) -> str:
+    q = {"filter": flt, "select": SELECT, "per_page": str(per_page), "page": str(page), "mailto": MAILTO}
     return API + "?" + urllib.parse.urlencode(q, safe=":,|!*")
 
 
@@ -75,7 +94,7 @@ def _strip(work: dict, basis: str) -> dict:
 def _fetch_query(basis: str, flt: str, max_pages: int):
     got, ids, total = [], set(), None
     for n in range(1, max_pages + 1):
-        page = get_page(_url(flt, n))
+        page = get_page(_url, flt, n)
         if total is None:
             total = page["meta"]["count"]
             if total > MAX_RESULTS:

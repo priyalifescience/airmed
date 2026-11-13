@@ -68,8 +68,8 @@ def queries() -> dict:
     return q
 
 
-def _url(flt: str, page: int) -> str:
-    q = {"filter": flt, "select": SELECT, "per_page": str(PER_PAGE), "page": str(page), "mailto": MAILTO}
+def _url(flt: str, page: int, per_page: int = PER_PAGE) -> str:
+    q = {"filter": flt, "select": SELECT, "per_page": str(per_page), "page": str(page), "mailto": MAILTO}
     return API + "?" + urllib.parse.urlencode(q, safe=":,|!*")
 
 
@@ -96,7 +96,7 @@ def _strip(work: dict, basis: str) -> dict:
 def _fetch_query(flt: str, basis: str, max_pages: int = MAX_PAGES):
     got, ids, total = [], set(), None
     for n in range(1, max_pages + 1):
-        page = get_page(_url(flt, n))   # v1.7: 50 works a page, re-fetched when a reply is cut short
+        page = get_page(_url, flt, n)   # v1.7: re-fetched, then split into pages of 50, when a reply is cut short
         if total is None:
             total = page["meta"]["count"]
             if total > MAX_RESULTS:

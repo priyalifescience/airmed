@@ -62,13 +62,14 @@ def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, hea
     raise RuntimeError("unreachable")
 
 
-def fetch_json_retry(url: str, timeout: int = 120, attempts: int = 4, pause: float = 20.0):
+def fetch_json_retry(url: str, timeout: int = 120, attempts: int = 4, pause: float = 20.0, retries: int = 3,
+                     backoff: float = 5.0):
     """GET JSON; when the reply is cut short (it does not parse), wait and fetch it again (v1.7).
 
     OpenAlex sometimes ends a large reply at about 2 MB without an error, which left "Unterminated string" failures
     (openalex_ireland_pharma 26 Oct and 2 Nov, openalex_europe_pharma 9 Nov 2026)."""
     for attempt in range(1, attempts + 1):
-        body = fetch(url, timeout=timeout)
+        body = fetch(url, timeout=timeout, retries=retries, backoff=backoff)
         try:
             return json.loads(body)
         except json.JSONDecodeError:
