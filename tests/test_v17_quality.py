@@ -36,6 +36,9 @@ class TestSponsor17(unittest.TestCase):
     def test_org_word_inside_a_first_name_does_not_save_a_person(self):
         self.assertEqual(ctgov_ireland.sponsor_or_blank("Prof. Fabio Facchinetti", "OTHER"), "")
         self.assertEqual(ctgov_ireland.sponsor_or_blank("Fabio Rossi", "OTHER", "SPONSOR_INVESTIGATOR"), "")
+        self.assertEqual(ctgov_ireland.sponsor_or_blank("Cuibai Wei，Clinical Professor", "OTHER"), "")
+        putian = "The 95th Hospital of Putian，Putian, Fujian, China"
+        self.assertEqual(ctgov_ireland.sponsor_or_blank(putian, "OTHER"), putian)
 
     def test_titled_organisations_still_kept(self):
         for name in ("Dr. Rajendra Prasad Government Medical College", "Dr. Reddy's Laboratories Limited"):

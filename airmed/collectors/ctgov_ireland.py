@@ -43,8 +43,9 @@ ORG_WORDS = re.compile(
 #    unless the name carries an organisation word.
 # Company names that contain a title are kept (BRANDS), as is any title followed by an organisation word
 # ("Dr. Rajendra Prasad Government Medical College").
-DEGREE_AFTER = re.compile(r"[,;]\s*(?:m\.?\s?d\b|ph\.?\s?d\b|mph\b|mbbs\b|frc[sp]\w*|pharm\.?\s?d\b|dds\b|"
-                          r"prof\b|professor\b|chief physician\b|associate professor\b)", re.I)
+# v1.7: also the full-width comma and semicolon of Chinese records ("Cuibai Wei，Clinical Professor", ctgov_china)
+DEGREE_AFTER = re.compile(r"[,;，；]\s*(?:m\.?\s?d\b|ph\.?\s?d\b|mph\b|mbbs\b|frc[sp]\w*|pharm\.?\s?d\b|dds\b|"
+                          r"prof\b|professor\b|chief physician\b|associate professor\b|clinical professor\b)", re.I)
 PERSON_TITLE = re.compile(r"(?:^|[\s(,;])(?:dr|prof|professor|assoc\.?\s*prof|ass\.?\s*prof|asst\.?\s*prof|mr|mrs|ms|"
                           r"miss)\.?\s", re.I)
 ORG_WORD_START = re.compile(r"\b(?:" + ORG_WORDS.pattern + r")", re.I)
