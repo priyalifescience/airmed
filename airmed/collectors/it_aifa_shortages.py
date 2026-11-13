@@ -17,8 +17,7 @@ import csv
 import io
 import re
 
-from ..http import fetch
-from .it_aifa_reimbursed_medicines import clean, decode, it_date
+from .it_aifa_reimbursed_medicines import aifa_fetch, clean, decode, it_date
 
 KEY = "it_aifa_shortages"
 FIELDS = ["medicine", "aic_code", "active_substance", "form_and_strength", "marketing_authorisation_holder",
@@ -35,7 +34,7 @@ COLUMNS = [("Nome medicinale", "medicine"), ("Codice AIC", "aic_code"), ("Princi
 
 
 def fetch_raw() -> bytes:
-    return decode(fetch(URL, timeout=120)).encode("utf-8")
+    return decode(aifa_fetch(URL, timeout=120)).encode("utf-8")
 
 
 def parse(raw: bytes, min_rows: int = MIN_ROWS) -> list:

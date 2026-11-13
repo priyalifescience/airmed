@@ -47,6 +47,7 @@ DEGREE_AFTER = re.compile(r"[,;]\s*(?:m\.?\s?d\b|ph\.?\s?d\b|mph\b|mbbs\b|frc[sp
                           r"prof\b|professor\b|chief physician\b|associate professor\b)", re.I)
 PERSON_TITLE = re.compile(r"(?:^|[\s(,;])(?:dr|prof|professor|assoc\.?\s*prof|ass\.?\s*prof|asst\.?\s*prof|mr|mrs|ms|"
                           r"miss)\.?\s", re.I)
+ORG_WORD_START = re.compile(r"\b(?:" + ORG_WORDS.pattern + r")", re.I)
 BRANDS = re.compile(r"dr\.?\s*reddy|dr\.?\s*falk|md anderson|dr\.?\s*willmar|dr\.?\s*august wolff|dr\.?\s*gerhard mann",
                     re.I)
 
@@ -60,9 +61,13 @@ def sponsor_or_blank(name: str, cls: str, responsible_party_type: str = "") -> s
     if DEGREE_AFTER.search(name):
         return ""
     org_word = bool(ORG_WORDS.search(name))
-    if PERSON_TITLE.search(" " + name) and not org_word:
+    # v1.7: when the name has a personal title or the sponsor is the investigator, the organisation word must start
+    # a word. ORG_WORDS matches inside words ("Uniklinik"), so "bio" inside "Fabio" kept "Prof. Fabio Facchinetti"
+    # (the one name left in ctgov_europe on 13 Nov 2026).
+    org_word_start = bool(ORG_WORD_START.search(name))
+    if PERSON_TITLE.search(" " + name) and not org_word_start:
         return ""
-    if (responsible_party_type or "").upper() == "SPONSOR_INVESTIGATOR" and not org_word:
+    if (responsible_party_type or "").upper() == "SPONSOR_INVESTIGATOR" and not org_word_start:
         return ""
     if (cls or "").upper() in ORG_CLASSES or org_word:
         return name

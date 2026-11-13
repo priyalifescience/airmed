@@ -64,6 +64,19 @@ def parse(raw: bytes, min_rows: int = MIN_ROWS) -> list:
             "reason": r["DUVOD_PRERUSENI_UKONCENI"].strip(),
             "expected_resumption": _date(r["TERMIN_OBNOVENI"]),
         })
+    # v1.7: SUKL's file lists some notices twice, identical in every published field (295 of 84,156 rows on
+    # 9 Nov 2026). The key is the whole published row: notices that share product, type and dates but differ in
+    # reason, replacement or "latest" are different notices and are kept. The first copy is kept; the count dropped
+    # is printed in the run log.
+    seen, unique = set(), []
+    for rec in out:
+        k = tuple(rec[f] for f in FIELDS)
+        if k not in seen:
+            seen.add(k)
+            unique.append(rec)
+    if len(unique) != len(out):
+        print(f"note  {KEY}: {len(out) - len(unique)} exact duplicate notices dropped ({len(out)} -> {len(unique)})")
+    out = unique
     if len(out) < min_rows:
         raise RuntimeError(f"SUKL notices: only {len(out)} notices (expected at least {min_rows}); broken download?")
     out.sort(key=lambda x: (x["sukl_code"], x["effective_from"], x["notified_on"], x["notice_type"]))

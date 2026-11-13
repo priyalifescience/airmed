@@ -25,7 +25,7 @@ import re
 import zipfile
 
 from ..http import fetch
-from ..util import iso_date
+from ..util import check_bulk_counts, iso_date
 from .ctgov_ireland import sponsor_or_blank
 from .dete_employment_permits import looks_like_organisation
 from .fda_warning_letters import EXTRA_ORG, PERSON
@@ -115,9 +115,7 @@ def bulk_results(endpoint: str) -> tuple:
     data = json.loads(z.read(names[0]))
     results = data.get("results", [])
     total = data["meta"]["results"]["total"]
-    if len(results) != total or total != int(index["total_records"]):
-        raise RuntimeError(f"drug/{endpoint} bulk file holds {len(results)} records; its metadata says {total}, "
-                           f"the download index says {index['total_records']}")
+    check_bulk_counts(f"drug/{endpoint}", len(results), total, int(index["total_records"]))   # v1.7: index lag tolerated
     return results, data["meta"]
 
 

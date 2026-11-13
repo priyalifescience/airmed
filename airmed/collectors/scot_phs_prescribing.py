@@ -63,7 +63,10 @@ TOTAL_SQL = ('SELECT count(*) n, sum("NumberOfPaidItems") i, sum("PaidQuantity")
 
 def _sql(sql: str) -> dict:
     time.sleep(EXTRA_PAUSE)
-    j = json.loads(fetch(PORTAL + "datastore_search_sql?" + urllib.parse.urlencode({"sql": sql}), timeout=300))
+    # v1.7: 5 attempts, 30 s then 60, 120, 240 s apart. PHS's datastore sometimes closes the connection on a long
+    # GROUP BY ("Remote end closed connection without response", 26 Oct to 9 Nov 2026); before, one drop failed the run.
+    j = json.loads(fetch(PORTAL + "datastore_search_sql?" + urllib.parse.urlencode({"sql": sql}), timeout=300,
+                         retries=5, backoff=30))
     if not j.get("success"):
         raise RuntimeError("PHS datastore SQL failed")
     res = j["result"]
@@ -74,7 +77,7 @@ def _sql(sql: str) -> dict:
 
 def months_available() -> dict:
     """{'YYYY-MM': resource id} for every monthly "Data by Prescriber Location" table that is live in the datastore."""
-    j = json.loads(fetch(PORTAL + "package_show?id=" + PACKAGE, timeout=90))
+    j = json.loads(fetch(PORTAL + "package_show?id=" + PACKAGE, timeout=90, retries=5, backoff=30))
     out = {}
     for r in j.get("result", {}).get("resources", []):
         m = _NAME_RE.search(str(r.get("name") or "").strip())

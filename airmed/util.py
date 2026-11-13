@@ -38,3 +38,23 @@ def yes(value) -> str:
 
 def split_list(value: str, sep: str = ";") -> list:
     return [p.strip() for p in (value or "").split(sep) if p.strip()]
+
+
+INDEX_GAP_TOLERANCE = 0.005   # 0.5%
+
+
+def check_bulk_counts(label: str, in_file: int, meta_total: int, index_total: int,
+                      tolerance: float = INDEX_GAP_TOLERANCE) -> None:
+    """openFDA bulk files (v1.7): the file must hold exactly the number of records its own metadata states (else it
+    is truncated: refuse). The download index (download.json) is refreshed separately and often lags the file by a
+    few records (4 and 43 on 2 Nov 2026), so a gap of under 0.5% to the index is only a warning; a larger gap still
+    refuses."""
+    if in_file != meta_total:
+        raise RuntimeError(f"{label} bulk file holds {in_file} records; its own metadata says {meta_total}")
+    if index_total != meta_total:
+        gap = abs(index_total - meta_total) / max(meta_total, 1)
+        if gap >= tolerance:
+            raise RuntimeError(f"{label} bulk file holds {in_file} records; the download index says {index_total} "
+                               f"({gap:.2%} apart, over the {tolerance:.1%} tolerance)")
+        print(f"WARN  {label}: download index says {index_total}, the file and its metadata {meta_total} "
+              f"({gap:.3%} apart, within {tolerance:.1%}): accepted")

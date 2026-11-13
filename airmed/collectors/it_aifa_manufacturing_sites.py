@@ -21,8 +21,7 @@ import csv
 import io
 import re
 
-from ..http import fetch
-from .it_aifa_reimbursed_medicines import clean, decode, it_date, page_links
+from .it_aifa_reimbursed_medicines import aifa_fetch, clean, decode, it_date, page_links
 
 KEY = "it_aifa_manufacturing_sites"
 FIELDS = ["company", "town", "province", "region", "site_type", "list_date"]
@@ -53,7 +52,7 @@ def fetch_raw() -> bytes:
         urls = page_links(PAGE, pattern)
         if len(urls) != 1:
             raise RuntimeError(f"AIFA officine autorizzate: expected one {site_type} file, found {urls}")
-        parts.append(f"#FILE {site_type}|{urls[0].rsplit('/', 1)[-1]}\n" + decode(fetch(urls[0], timeout=120)))
+        parts.append(f"#FILE {site_type}|{urls[0].rsplit('/', 1)[-1]}\n" + decode(aifa_fetch(urls[0], timeout=120)))
     return "\n".join(parts).encode("utf-8")
 
 

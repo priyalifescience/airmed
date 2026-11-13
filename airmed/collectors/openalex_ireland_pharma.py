@@ -20,7 +20,7 @@ each authorship are kept in the raw file), so they are never stored.
 import json
 import urllib.parse
 
-from ..http import fetch
+from ..http import fetch_json_retry
 from ..privacy import EMAIL_RE, PHONE_RE, SPAM_TITLE_RE
 
 KEY = "openalex_ireland_pharma"
@@ -38,10 +38,18 @@ QUERIES = {
 }
 SELECT = ("id,doi,title,publication_year,publication_date,type,primary_location,open_access,cited_by_count,"
           "authorships,primary_topic,topics,is_retracted")
-PER_PAGE = 200
+# v1.7: 50 works a page (was 200). Pages of 200 works with full authorships ran to 2-4 MB, and OpenAlex cut some
+# replies short at about 2 MB, so the source failed (19 Oct to 2 Nov 2026). Each page is also fetched again when its
+# JSON does not parse (http.fetch_json_retry).
+PER_PAGE = 50
 
 
 MAX_RESULTS = 10000   # OpenAlex page-number paging stops at 10,000 results per query
+MAX_PAGES = MAX_RESULTS // PER_PAGE
+
+
+def get_page(url: str) -> dict:
+    return fetch_json_retry(url, timeout=120)
 
 
 def _url(flt: str, page: int) -> str:
@@ -64,24 +72,32 @@ def _strip(work: dict, basis: str) -> dict:
     return w
 
 
-def fetch_raw(max_pages: int = 60) -> bytes:
+def _fetch_query(basis: str, flt: str, max_pages: int):
+    got, ids, total = [], set(), None
+    for n in range(1, max_pages + 1):
+        page = get_page(_url(flt, n))
+        if total is None:
+            total = page["meta"]["count"]
+            if total > MAX_RESULTS:
+                raise RuntimeError(f"OpenAlex query {basis} has {total} works, above the {MAX_RESULTS} paging limit")
+        for w in page.get("results", []):
+            if w.get("id") not in ids:
+                ids.add(w.get("id"))
+                got.append(_strip(w, basis))
+        if not page.get("results") or n * PER_PAGE >= total:
+            break
+    return got, total
+
+
+def fetch_raw(max_pages: int = MAX_PAGES) -> bytes:
     """Page-number paging (OpenAlex now needs an API key for cursor paging; we use none). Each page is fetched
-    in OpenAlex's default order; duplicates across pages are dropped and the unique count must equal the total."""
+    in OpenAlex's default order; duplicates across pages are dropped and the unique count must equal the total
+    (one retry per query, since page-number paging over a changing index can shift by a work or two)."""
     works, counts = [], {}
     for basis, flt in QUERIES.items():
-        got, ids, total = [], set(), None
-        for n in range(1, max_pages + 1):
-            page = json.loads(fetch(_url(flt, n), timeout=120))
-            if total is None:
-                total = page["meta"]["count"]
-                if total > MAX_RESULTS:
-                    raise RuntimeError(f"OpenAlex query {basis} has {total} works, above the {MAX_RESULTS} paging limit")
-            for w in page.get("results", []):
-                if w.get("id") not in ids:
-                    ids.add(w.get("id"))
-                    got.append(_strip(w, basis))
-            if not page.get("results") or n * PER_PAGE >= total:
-                break
+        got, total = _fetch_query(basis, flt, max_pages)
+        if len(got) != total:
+            got, total = _fetch_query(basis, flt, max_pages)
         if len(got) != total:
             raise RuntimeError(f"OpenAlex query {basis} returned {len(got)} unique of {total} works")
         counts[basis] = total

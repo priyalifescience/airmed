@@ -13,7 +13,7 @@ import json
 import zipfile
 
 from ..http import fetch
-from ..util import iso_date
+from ..util import check_bulk_counts, iso_date
 
 KEY = "fda_approvals"
 FIELDS = ["application_number", "application_type", "sponsor_name", "brand_names", "active_ingredients",
@@ -53,9 +53,7 @@ def fetch_raw() -> bytes:
     data = json.loads(z.read(names[0]))
     results = data.get("results", [])
     total = data["meta"]["results"]["total"]
-    if len(results) != total or total != int(index["total_records"]):
-        raise RuntimeError(f"drugsfda bulk file holds {len(results)} records; its metadata says {total}, "
-                           f"the download index says {index['total_records']}")
+    check_bulk_counts("drugsfda", len(results), total, int(index["total_records"]))   # v1.7: index lag tolerated
     kept = [_slim(r) for r in results if any(_is_orig_ap(s) for s in r.get("submissions", []))]
     return json.dumps({"total_in_file": total, "last_updated": data["meta"].get("last_updated", ""),
                        "results": kept}).encode("utf-8")

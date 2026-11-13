@@ -43,6 +43,12 @@ MIN_ROWS = {"A": 5000, "H": 1000}
 
 # ---------- helpers shared by the it_aifa_* collectors ----------
 
+def aifa_fetch(url: str, timeout: int = 120) -> bytes:
+    """v1.7: AIFA's servers answer 502 for minutes at a time (all four AIFA sets failed on 2 Nov 2026), so AIFA
+    downloads get 5 attempts, 30 s, 60 s, 120 s and 240 s apart (about 7.5 minutes in all)."""
+    return fetch(url, timeout=timeout, retries=5, backoff=30)
+
+
 def decode(b: bytes) -> str:
     """AIFA CSVs are UTF-8 or Windows-1252 (euro sign, curly apostrophes)."""
     try:
@@ -53,7 +59,7 @@ def decode(b: bytes) -> str:
 
 def page_links(page_url: str, pattern: str) -> list:
     """Absolute https links on an AIFA page whose href matches `pattern` (in page order, no duplicates)."""
-    text = decode(fetch(page_url, timeout=60))
+    text = decode(aifa_fetch(page_url, timeout=60))
     out = []
     for href in re.findall(r'href="([^"]+)"', text):
         href = html.unescape(href)
@@ -98,17 +104,18 @@ def fetch_raw() -> bytes:
     """{"lists": {"A": {"name", "text"}, "H": {...}}, "atc": {aic: atc}} as JSON."""
     lists = {}
     for cls in ("A", "H"):
-        urls = page_links(PAGE, rf"Classe_{cls}_per_principio_attivo[^/]*\.csv$")
+        # v1.7: by 9 Nov 2026 AIFA had renamed the files ("Classe_A_per_principio_attivo" -> "Classe-A_per_principio-attivo")
+        urls = page_links(PAGE, rf"Classe[_-]{cls}_per_principio[_-]attivo[^/]*\.csv$")
         if len(urls) != 1:
             raise RuntimeError(f"AIFA liste dei farmaci: expected one Class {cls} file, found {urls}")
-        lists[cls] = {"name": urls[0].rsplit("/", 1)[-1], "text": decode(fetch(urls[0], timeout=120))}
+        lists[cls] = {"name": urls[0].rsplit("/", 1)[-1], "text": decode(aifa_fetch(urls[0], timeout=120))}
     wanted = set()
     for cls, v in lists.items():
         rows = _rows(v["text"])
         i = _col([clean(x) for x in rows[0]], "Codice AIC" if cls == "H" else "AIC")
         wanted |= {r[i].strip() for r in rows[1:] if len(r) > i}
     atc = {}
-    for r in csv.DictReader(io.StringIO(decode(fetch(REGISTER, timeout=600))), delimiter=";"):
+    for r in csv.DictReader(io.StringIO(decode(aifa_fetch(REGISTER, timeout=600))), delimiter=";"):
         aic = (r.get("CODICE_AIC") or "").strip()
         if aic in wanted and (r.get("CODICE_ATC") or "").strip():
             atc[aic] = r["CODICE_ATC"].strip()

@@ -3,6 +3,7 @@
 No API keys, tokens or cookies are ever sent. Only https URLs are allowed.
 """
 
+import http.client
 import json
 import time
 import urllib.error
@@ -27,8 +28,14 @@ class _HttpsOnlyRedirects(urllib.request.HTTPRedirectHandler):
 _opener = urllib.request.build_opener(_HttpsOnlyRedirects)
 
 
-def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, headers: dict = None) -> bytes:
-    """GET (or POST when `data` is given) and return the body."""
+def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, headers: dict = None,
+          backoff: float = 5.0) -> bytes:
+    """GET (or POST when `data` is given) and return the body.
+
+    Retries 429, 5xx and dropped connections. The pause before attempt n+1 is backoff * 2**(n-1) seconds, capped at
+    5 minutes (the default 5 s gives 5 s then 10 s, as before 1.7). v1.7: a connection the server closes without a
+    reply ("Remote end closed connection", IncompleteRead, reset, timeout) is retried too; before, only URLError was,
+    and one dropped connection failed the whole source (scot_phs_prescribing, 21 Oct to 9 Nov 2026)."""
     if not url.startswith("https://"):
         raise ValueError("only https URLs are allowed")
     global _last_request
@@ -48,10 +55,26 @@ def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, hea
             # 4xx other than 429 will not get better by retrying
             if e.code != 429 and e.code < 500 or attempt == retries:
                 raise
-        except urllib.error.URLError:
+        except (urllib.error.URLError, http.client.HTTPException, ConnectionError, TimeoutError):
             if attempt == retries:
                 raise
-        time.sleep(5 * attempt)
+        time.sleep(min(backoff * 2 ** (attempt - 1), 300))
+    raise RuntimeError("unreachable")
+
+
+def fetch_json_retry(url: str, timeout: int = 120, attempts: int = 4, pause: float = 20.0):
+    """GET JSON; when the reply is cut short (it does not parse), wait and fetch it again (v1.7).
+
+    OpenAlex sometimes ends a large reply at about 2 MB without an error, which left "Unterminated string" failures
+    (openalex_ireland_pharma 26 Oct and 2 Nov, openalex_europe_pharma 9 Nov 2026)."""
+    for attempt in range(1, attempts + 1):
+        body = fetch(url, timeout=timeout)
+        try:
+            return json.loads(body)
+        except json.JSONDecodeError:
+            if attempt == attempts:
+                raise
+            time.sleep(pause * attempt)
     raise RuntimeError("unreachable")
 
 

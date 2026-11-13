@@ -27,8 +27,7 @@ import json
 import re
 import zipfile
 
-from ..http import fetch
-from .it_aifa_reimbursed_medicines import clean, decode, page_links
+from .it_aifa_reimbursed_medicines import aifa_fetch, clean, decode, page_links
 
 KEY = "it_aifa_medicines_spending"
 FIELDS = ["year", "reimbursement_class", "atc_code", "atc_description",
@@ -99,7 +98,7 @@ def fetch_raw() -> bytes:
         raise RuntimeError(f"AIFA spesa e consumo: unexpected file list {urls}")
     out = {}
     for u in urls:
-        body = fetch(u, timeout=600)
+        body = aifa_fetch(u, timeout=600)
         if body[:2] == b"PK":
             z = zipfile.ZipFile(io.BytesIO(body))
             names = [n for n in z.namelist() if n.lower().endswith(".csv")]

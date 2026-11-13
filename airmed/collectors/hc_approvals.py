@@ -5,6 +5,7 @@ with the brand names and medicinal ingredients of each.
 import json
 
 from ..http import fetch
+from .hc_notice_of_compliance import TYPES as NOC_TYPES
 
 KEY = "hc_approvals"
 FIELDS = ["noc_number", "noc_date", "company", "submission_type", "submission_class", "product_type",
@@ -26,7 +27,9 @@ def parse(raw: bytes) -> list:
     for r in parts["noticeofcompliancemain"]:
         if r.get("noc_is_admin") == "Y" or r.get("noc_product_type") == "Veterinary":
             continue
-        if r.get("noc_on_submission_type") != "New Drug Submission (NDS)" or (r.get("noc_date") or "") < SINCE:
+        # v1.7: Health Canada now writes "New Drug Submission" (was "New Drug Submission (NDS)"): both accepted,
+        # through the same table as hc_notice_of_compliance
+        if NOC_TYPES.get(r.get("noc_on_submission_type")) != "NDS" or (r.get("noc_date") or "") < SINCE:
             continue
         n = int(r["noc_number"])
         keep[n] = {"noc_number": n, "noc_date": r.get("noc_date", ""), "company": (r.get("noc_manufacturer_name") or "").strip(),

@@ -29,8 +29,7 @@ import json
 import re
 import zipfile
 
-from ..http import fetch
-from .it_aifa_reimbursed_medicines import clean, decode, it_date
+from .it_aifa_reimbursed_medicines import aifa_fetch, clean, decode, it_date
 
 KEY = "it_aifa_clinical_trials"
 FIELDS = ["eudract_number", "aifa_file", "title", "study_name", "phase", "condition_technical", "condition",
@@ -68,7 +67,7 @@ def fetch_raw() -> bytes:
     """{file stem: {"name": csv name inside the zip, "text": csv text}} as JSON."""
     out = {}
     for stem in FILES:
-        z = zipfile.ZipFile(io.BytesIO(fetch(BASE + stem + ".zip", timeout=180)))
+        z = zipfile.ZipFile(io.BytesIO(aifa_fetch(BASE + stem + ".zip", timeout=180)))
         names = [n for n in z.namelist() if n.lower().endswith(".csv")]
         if len(names) != 1:
             raise RuntimeError(f"AIFA {stem}.zip: expected one CSV, found {names}")

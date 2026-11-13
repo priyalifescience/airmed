@@ -18,7 +18,12 @@ FIELDS = ["noc_number", "noc_date", "company", "submission_type", "is_supplement
 BASE = "https://health-products.canada.ca/api/notice-of-compliance/"
 TYPES = {"New Drug Submission (NDS)": "NDS", "Supplement to a New Drug Submission (SNDS)": "SNDS",
          "Abbreviated New Drug Submission (ANDS)": "ANDS",
-         "Supplement to an Abbreviated New Drug Submission (SANDS)": "SANDS"}
+         "Supplement to an Abbreviated New Drug Submission (SANDS)": "SANDS",
+         # v1.7: by 9 Nov 2026 the API gives the type without the abbreviation, cut to 20 characters
+         # (38,307 notices: "New Drug Submission", "Supplement to a New", "Abbreviated New Drug",
+         # "Supplement to an Abb"); both spellings are accepted, and anything else still refuses the run.
+         "New Drug Submission": "NDS", "Supplement to a New": "SNDS", "Abbreviated New Drug": "ANDS",
+         "Supplement to an Abb": "SANDS"}
 
 
 def fetch_raw() -> bytes:

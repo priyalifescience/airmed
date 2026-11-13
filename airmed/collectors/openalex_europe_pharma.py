@@ -24,9 +24,8 @@ names, author ids, ORCIDs and raw affiliation strings are never stored.
 import json
 import urllib.parse
 
-from ..http import fetch
 from ..privacy import EMAIL_RE, PHONE_RE, SPAM_TITLE_RE
-from .openalex_ireland_pharma import API, MAILTO, MAX_RESULTS, MEDCHEM_TOPICS, PER_PAGE, _short
+from .openalex_ireland_pharma import API, MAILTO, MAX_PAGES, MAX_RESULTS, MEDCHEM_TOPICS, PER_PAGE, _short, get_page
 
 KEY = "openalex_europe_pharma"
 FIELDS = ["openalex_id", "doi", "title", "publication_year", "publication_date", "type", "venue", "oa_status",
@@ -94,10 +93,10 @@ def _strip(work: dict, basis: str) -> dict:
     return w
 
 
-def _fetch_query(flt: str, basis: str, max_pages: int = 60):
+def _fetch_query(flt: str, basis: str, max_pages: int = MAX_PAGES):
     got, ids, total = [], set(), None
     for n in range(1, max_pages + 1):
-        page = json.loads(fetch(_url(flt, n), timeout=120))
+        page = get_page(_url(flt, n))   # v1.7: 50 works a page, re-fetched when a reply is cut short
         if total is None:
             total = page["meta"]["count"]
             if total > MAX_RESULTS:

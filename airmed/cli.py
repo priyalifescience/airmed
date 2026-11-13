@@ -1,4 +1,4 @@
-"""Command line: python -m airmed list | run <source|all> [--out DIR] | check"""
+"""Command line: python -m airmed list | run <source|all> [--out DIR] | check | freshness [--out DIR]"""
 
 import argparse
 import sys
@@ -56,6 +56,8 @@ def main(argv=None) -> int:
     r = sub.add_parser("run")
     r.add_argument("source")
     r.add_argument("--out", default="out")
+    fr = sub.add_parser("freshness")
+    fr.add_argument("--out", default="out")
     rel = sub.add_parser("release")
     rel.add_argument("--src", default="out")
     rel.add_argument("--dist", default="dist/v1")
@@ -66,6 +68,11 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "check":
         return check()
+    if a.cmd == "freshness":   # v1.7: report only; exit code 0 so it never stops a run
+        from .freshness import report
+        held = held_sources()
+        report(Path(a.out), [k for k in ALL if k not in held])
+        return 0
     if a.cmd == "release":
         from .release import ReleaseRefused, build
         try:
@@ -94,6 +101,9 @@ def main(argv=None) -> int:
         except Exception as e:
             print(f"FAIL  {key}: {e}")
             rc = 1
+    if a.source == "all":   # v1.7: say which datasets are now older than their expected cadence
+        from .freshness import report
+        report(Path(a.out), [k for k in ALL if k not in held])
     return rc
 
 

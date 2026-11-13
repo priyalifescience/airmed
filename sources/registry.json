@@ -35,7 +35,7 @@
     "title": "Brief study title",
     "phases": "Trial phase(s); NA = not applicable",
     "overall_status": "Recruitment status as registered",
-    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names).",
+    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names). v1.7: when the name has a personal title or the responsible party is the sponsor-investigator, an organisation word must start a word (so a first name such as Fabio no longer counts as 'bio').",
     "conditions": "Conditions studied",
     "start_date": "Study start date (YYYY-MM or YYYY-MM-DD)",
     "last_update": "Date the record was last updated on ClinicalTrials.gov"
@@ -330,12 +330,15 @@
     "submission_type": "Submission type (NDS = New Drug Submission)",
     "submission_class": "Submission class",
     "product_type": "Product type",
-    "therapeutic_class": "Therapeutic class",
+    "therapeutic_class": "Therapeutic class, as published. Empty for every NDS approval since 2016: Health Canada's NOC database has not filled noc_therapeutic_class since April 2018 (last filled 2018-04-27, checked 13 November 2026). Kept so the column order does not change.",
     "brand_names": "Brand names",
     "ingredients": "Medicinal ingredients",
     "with_conditions": "Issued with conditions (yes/no)"
    },
-   "browse_url": "https://priyalifescience.com/health-canada-approvals"
+   "browse_url": "https://priyalifescience.com/health-canada-approvals",
+   "licence_notes": [
+    "therapeutic_class is empty because Health Canada stopped filling it in the NOC database after April 2018 (checked 13 November 2026). Health Canada's API now names submission types without the abbreviation (\"New Drug Submission\"); Airmid Éireann reads both spellings (v1.7)."
+   ]
   },
   "cso_pharma_exports": {
    "name": "CSO: Irish exports of medicinal and pharmaceutical products by country (TSM10)",
@@ -546,7 +549,7 @@
     "title": "Brief study title",
     "phases": "Trial phase(s); NA = not applicable",
     "overall_status": "Recruitment status as registered",
-    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names).",
+    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names). v1.7: when the name has a personal title or the responsible party is the sponsor-investigator, an organisation word must start a word (so a first name such as Fabio no longer counts as 'bio').",
     "conditions": "Conditions studied",
     "start_date": "Study start date (YYYY-MM or YYYY-MM-DD); only studies starting on or after 2015-01-01 are included",
     "last_update": "Date the record was last updated on ClinicalTrials.gov",
@@ -1156,14 +1159,17 @@
     "license_number": "US licence number of the licence holder (an establishment number, not a person)",
     "center": "FDA centre that regulates the product: CDER or CBER",
     "date_of_first_licensure": "Date of first licensure for 12-year reference product exclusivity, YYYY-MM-DD, or text such as 'Not Eligible'",
-    "exclusivity_expiry": "Exclusivity expiration date column of the FDA file, YYYY-MM-DD (often empty)",
+    "exclusivity_expiry": "Exclusivity expiration date column of the FDA file, YYYY-MM-DD. Empty in every row: FDA's own monthly file leaves this column blank (checked 13 November 2026, October 2026 file); reference-product, first-interchangeable and orphan exclusivity dates are in the next three columns. Kept so the column order does not change.",
     "first_interchangeable_exclusivity_expiry": "End of first-interchangeable exclusivity, YYYY-MM-DD, or text such as 'Date TBD'",
     "ref_product_exclusivity_expiry": "End of 12-year reference product exclusivity, YYYY-MM-DD",
     "orphan_exclusivity_expiry": "End of 7-year orphan drug exclusivity, YYYY-MM-DD",
     "patent_list_provided": "yes if a patent list has been provided for the product",
     "data_month": "Monthly Purple Book release the row comes from, YYYY-MM"
    },
-   "browse_url": "https://priyalifescience.com/drug-patent-expiry"
+   "browse_url": "https://priyalifescience.com/drug-patent-expiry",
+   "licence_notes": [
+    "exclusivity_expiry is empty because the FDA download leaves it blank for every product (checked 13 November 2026); it is not removed by Airmid Éireann."
+   ]
   },
   "fda_warning_letters": {
    "name": "US FDA: warning letters about human drugs, biologics and medical devices (2021 onwards)",
@@ -2938,7 +2944,8 @@
    "attribution": "Contains information licensed under the Open Government Licence - Canada. Source: Health Canada, Notice of Compliance database.",
    "licence_notes": [
     "OGL-Canada does not cover personal information, third-party rights the provider cannot license, or Government of Canada names, crests and logos; no logo is used.",
-    "Overlaps hc_approvals only for NDS approvals since 2016 (about 1,060 of about 23,650 records); this dataset adds supplements (new indications), generics (ANDS/SANDS) and the years 1994 to 2015."
+    "Overlaps hc_approvals only for NDS approvals since 2016 (about 1,060 of about 23,650 records); this dataset adds supplements (new indications), generics (ANDS/SANDS) and the years 1994 to 2015.",
+    "By November 2026 Health Canada's API gives submission types without the abbreviation and cut to 20 characters (\"Supplement to a New\"); Airmid Éireann maps both spellings to NDS, SNDS, ANDS and SANDS (v1.7)."
    ],
    "fields_kept": [
     "noc_number",
@@ -2973,7 +2980,7 @@
     "is_supplement": "yes for supplements (SNDS, SANDS)",
     "submission_class": "Submission class, as published",
     "product_type": "Product type (Prescription Pharmaceutical, Biologic, Nonprescription Pharmaceutical, Radiopharmaceutical)",
-    "therapeutic_class": "Therapeutic class, as published (often empty in recent records)",
+    "therapeutic_class": "Therapeutic class, as published. Health Canada last filled it on 2018-04-27; later notices have it empty (checked 13 November 2026).",
     "reason_supplement": "Reason for the supplement, as published (for example a new indication)",
     "reason_submission": "Reason for the submission, as published",
     "with_conditions": "Issued under the NOC with conditions policy (yes/no)",
@@ -3915,7 +3922,7 @@
     "title": "Brief study title",
     "phases": "Trial phase(s); NA = not applicable",
     "overall_status": "Recruitment status as registered",
-    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names).",
+    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names). v1.7: when the name has a personal title or the responsible party is the sponsor-investigator, an organisation word must start a word (so a first name such as Fabio no longer counts as 'bio').",
     "conditions": "Conditions studied",
     "start_date": "Study start date (YYYY-MM or YYYY-MM-DD) as registered",
     "last_update": "Date the record was last updated on ClinicalTrials.gov",
@@ -3960,7 +3967,7 @@
     "title": "Brief study title",
     "phases": "Trial phase(s); NA = not applicable",
     "overall_status": "Recruitment status as registered",
-    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names).",
+    "lead_sponsor": "Lead sponsor organisation. Blank when ClinicalTrials.gov does not class it as industry, government or network AND the name does not read as an organisation (investigator-led studies often name a person; Airmid never publishes personal names). v1.7: when the name has a personal title or the responsible party is the sponsor-investigator, an organisation word must start a word (so a first name such as Fabio no longer counts as 'bio').",
     "conditions": "Conditions studied",
     "start_date": "Study start date (YYYY-MM or YYYY-MM-DD) as registered",
     "last_update": "Date the record was last updated on ClinicalTrials.gov",
@@ -4102,7 +4109,7 @@
    "endpoint": "https://opendata.sukl.gov.cz/soubory/MR/mr.zip",
    "licence": "SUKL open-data terms (https://opendata.sukl.gov.cz/podminky-uziti-otevrenych-dat): the data may be copied, distributed, communicated to the public and used commercially, if SUKL is named as the source, the terms are given (ideally by a direct link), the credit does not suggest SUKL endorses the user or the use, and the data are used in a way that does not change their meaning. Not CC BY. Confirmed by SUKL by email (Communication and Director Support Unit, 5 November 2026): \"The data can be used. The conditions are available here\", with that link.",
    "licence_url": "https://opendata.sukl.gov.cz/podminky-uziti-otevrenych-dat",
-   "attribution": "Source: SUKL (State Institute for Drug Control, Czech Republic), notices of placing on the market, interruption, end and resumption of supply (https://opendata.sukl.gov.cz), retrieved {retrieved_date}. Terms: https://opendata.sukl.gov.cz/podminky-uziti-otevrenych-dat. Changed by Airmid Éireann: notice types in English; dates as YYYY-MM-DD. Reasons and notes stay in Czech as published. SUKL does not endorse Airmid Éireann.",
+   "attribution": "Source: SUKL (State Institute for Drug Control, Czech Republic), notices of placing on the market, interruption, end and resumption of supply (https://opendata.sukl.gov.cz), retrieved {retrieved_date}. Terms: https://opendata.sukl.gov.cz/podminky-uziti-otevrenych-dat. Changed by Airmid Éireann: notice types in English; dates as YYYY-MM-DD; notices listed twice in SUKL's file, identical in every published field, kept once (v1.7). Reasons and notes stay in Czech as published. SUKL does not endorse Airmid Éireann.",
    "licence_notes": [
     "Terms of use: https://opendata.sukl.gov.cz/podminky-uziti-otevrenych-dat. Anyone redistributing these files must include the terms, ideally with this link.",
     "SUKL does not endorse Airmid Éireann or any use of the data.",
