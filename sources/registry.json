@@ -1632,7 +1632,8 @@
    "licence_url": "https://www.ema.europa.eu/en/about-us/about-website/legal-notice",
    "attribution": "Source: European Medicines Agency (EMA), PSUSA outcomes.",
    "licence_notes": [
-    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here)."
+    "EMA legal notice (https://www.ema.europa.eu/en/about-us/about-website/legal-notice): the acknowledgement of EMA as the source must be included in each copy. The permissions do not apply to content supplied by third parties, and the EMA logo may not be used (it is not used here).",
+    "related_medicines is empty because EMA's PSUSA report leaves that field blank for every procedure (checked 14 November 2026); it is not removed by Airmid Éireann."
    ],
    "fields_kept": [
     "procedure_number",
@@ -1650,7 +1651,7 @@
     "procedure_number": "PSUSA procedure number (PSUSA/substance id/data lock point yyyymm)",
     "active_substances_in_scope": "Active substance(s) in scope of the procedure, as EMA words it",
     "active_substance": "Active substance(s), separated by ';'",
-    "related_medicines": "Centrally authorised medicines concerned, where listed",
+    "related_medicines": "Centrally authorised medicines concerned, where listed. Empty in every row: the key is present in EMA's JSON report but EMA leaves it blank for all 2,754 procedures (checked 14 November 2026). Kept so the column order does not change.",
     "regulatory_outcome": "Regulatory outcome: maintenance, variation, suspension or revocation of the marketing authorisations",
     "url": "EMA PSUSA page",
     "first_published": "First published by EMA",
