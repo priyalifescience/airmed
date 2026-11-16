@@ -25,7 +25,8 @@ import json
 import urllib.parse
 
 from ..privacy import EMAIL_RE, PHONE_RE, SPAM_TITLE_RE
-from .openalex_ireland_pharma import API, MAILTO, MAX_PAGES, MAX_RESULTS, MEDCHEM_TOPICS, PER_PAGE, _short, get_page
+from .openalex_ireland_pharma import (API, MAILTO, MAX_PAGES, MAX_RESULTS, MEDCHEM_TOPICS, PER_PAGE, _short, get_page,
+                                      with_key)
 
 KEY = "openalex_europe_pharma"
 FIELDS = ["openalex_id", "doi", "title", "publication_year", "publication_date", "type", "venue", "oa_status",
@@ -70,7 +71,7 @@ def queries() -> dict:
 
 def _url(flt: str, page: int, per_page: int = PER_PAGE) -> str:
     q = {"filter": flt, "select": SELECT, "per_page": str(per_page), "page": str(page), "mailto": MAILTO}
-    return API + "?" + urllib.parse.urlencode(q, safe=":,|!*")
+    return API + "?" + urllib.parse.urlencode(with_key(q), safe=":,|!*")
 
 
 def _strip(work: dict, basis: str) -> dict:

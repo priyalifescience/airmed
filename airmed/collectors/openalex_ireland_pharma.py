@@ -18,6 +18,7 @@ each authorship are kept in the raw file), so they are never stored.
 """
 
 import json
+import os
 import urllib.parse
 
 from ..http import fetch_json_retry
@@ -71,9 +72,31 @@ def get_page(url_fn, flt: str, n: int) -> dict:
         return {"meta": meta, "results": results}
 
 
+KEY_FILE = "~/.openalex_key"
+
+
+def api_key() -> str:
+    """The optional free OpenAlex API key (raises the daily limit from 1,000 to 10,000 requests; added in v1.7).
+    Read from the OPENALEX_API_KEY environment variable, else from ~/.openalex_key (chmod 600 on the box). It never
+    lives in the repository or in any output file, and http.redact() masks it in messages. Without a key the
+    collectors run exactly as before."""
+    k = os.environ.get("OPENALEX_API_KEY", "").strip()
+    if not k:
+        p = os.path.expanduser(KEY_FILE)
+        if os.path.isfile(p):
+            with open(p, encoding="utf-8") as f:
+                k = f.read().strip()
+    return k
+
+
+def with_key(q: dict) -> dict:
+    k = api_key()
+    return {**q, "api_key": k} if k else q
+
+
 def _url(flt: str, page: int, per_page: int = PER_PAGE) -> str:
     q = {"filter": flt, "select": SELECT, "per_page": str(per_page), "page": str(page), "mailto": MAILTO}
-    return API + "?" + urllib.parse.urlencode(q, safe=":,|!*")
+    return API + "?" + urllib.parse.urlencode(with_key(q), safe=":,|!*")
 
 
 def _strip(work: dict, basis: str) -> dict:

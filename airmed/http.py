@@ -1,10 +1,12 @@
 """Polite HTTP for public APIs: identifying User-Agent, timeouts, a pause between requests, limited retries.
 
-No API keys, tokens or cookies are ever sent. Only https URLs are allowed.
+No tokens or cookies are ever sent. The one API key is the optional OpenAlex key (see collectors/openalex_ireland_pharma),
+read from outside the repository and masked by redact() in every message. Only https URLs are allowed.
 """
 
 import http.client
 import json
+import re
 import time
 import urllib.error
 import urllib.request
@@ -26,6 +28,13 @@ class _HttpsOnlyRedirects(urllib.request.HTTPRedirectHandler):
 
 
 _opener = urllib.request.build_opener(_HttpsOnlyRedirects)
+
+_SECRET_PARAM = re.compile(r"((?:api_key|apikey|token)=)[^&#]+", re.I)
+
+
+def redact(url: str) -> str:
+    """The URL with any API key in its query string masked, for log lines and error messages."""
+    return _SECRET_PARAM.sub(r"\1***", url)
 
 
 def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, headers: dict = None,
@@ -49,7 +58,7 @@ def fetch(url: str, timeout: int = 60, retries: int = 3, data: bytes = None, hea
             with _opener.open(req, timeout=timeout) as resp:
                 body = resp.read(MAX_BYTES + 1)
                 if len(body) > MAX_BYTES:
-                    raise ValueError(f"{url}: reply larger than {MAX_BYTES} bytes, refused")
+                    raise ValueError(f"{redact(url)}: reply larger than {MAX_BYTES} bytes, refused")
                 return body
         except urllib.error.HTTPError as e:
             # 4xx other than 429 will not get better by retrying
