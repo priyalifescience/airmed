@@ -18,6 +18,9 @@ identifiers:
     value: "10.5281/zenodo.23336432"
     description: "Concept DOI: all versions, archived on Zenodo"
   - type: doi
+    value: "10.5281/zenodo.24412018"
+    description: "Version 1.7.0 (quality release: more reliable downloads, stalled sources refreshed, freshness check)"
+  - type: doi
     value: "10.5281/zenodo.24071868"
     description: "Version 1.6.1 (audit fixes: no personal names among trial sponsors, WHO DDDs and PCRS prices removed, spam removed)"
   - type: doi
